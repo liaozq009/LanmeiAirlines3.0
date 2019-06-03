@@ -1,0 +1,697 @@
+@charset "utf-8";
+
+/* 引入字体 */
+@font-face {
+	font-family: CamptonBook;
+	src: url(../../common/EN/fonts/Campton/Rene.Bieder_Campton.Book.otf);
+}
+@font-face {
+	font-family: CamptonBookLight;
+	src: url(../../common/EN/fonts/Campton/Rene.Bieder_Campton.Light.otf);
+}
+@font-face {
+	font-family: CamptonBookBold;
+	src: url(../../common/EN/fonts/Campton/Rene.Bieder_Campton.Bold.otf);
+	font-weight:bold;
+}
+
+/* 定义变量 */
+@url:"../../images/EN/";
+@url2:"../../imgage_demo/";
+/* 定义颜色变量 */
+@green:#8ec060;
+@purple:#1f2c5c;
+@gray:#808080;
+@red:#d0011b;
+@link:#4aa374;
+@webkit-linear:-webkit-linear-gradient(left, #42958a 0%, #1f2c5c 100%);
+@o-linear:-o-linear-gradient(right, #42958a 0%, #1f2c5c 100%);
+@moz-linear:-moz-linear-gradient(right, #42958a 0%, #1f2c5c 100%);
+@linear:linear-gradient(to right, #42958a 0%, #1f2c5c 100%);
+@filter:alpha progid:DXImageTransform.Microsoft.gradient(startcolorstr=#42958a, endcolorstr=#1f2c5c, gradientType=1); /*ie8*/
+@FBook:CamptonBook;
+@FBold:CamptonBookBold;
+@FLight:CamptonBookLight;
+
+.greenRgb(@opacity){
+	color: rgba(142,192,96,@opacity);
+}
+.purpleRgb(@opacity){
+	color: rgba(31,44,92,@opacity);
+}
+.blackRgb(@opacity){
+	color: rgba(0,0,0,@opacity);
+}
+.blackBgRgb(@opacity){
+	background: rgba(0,0,0,@opacity);
+}
+.whiteRgb(@opacity){
+	color: rgba(255,255,255,@opacity);
+}
+.whiteBgRgb(@opacity){
+	background: rgba(255,255,255,@opacity);
+}
+.purpleBgRgb(@opacity){
+	background: rgba(31,44,92,@opacity);
+}
+
+/* Bootstrap修改样式 */
+.carousel-control{
+	width: 30px;
+	height: 45px;
+	top: 9px;
+}
+.carousel-control.PreviousArrow{
+	left: 6px;
+	z-index: 999;
+}
+.carousel-control.NextArrow{
+	right: 20px;
+	left: auto;
+	z-index: 999;
+}
+.carousel-indicators{
+	bottom: 16px;
+	margin-bottom: 0;
+	.active{
+		width: 30px;
+		height: 14px;
+		background: #8EC060;
+		border-color: #8EC060;
+	}
+	li{
+		margin: 1px 12px;
+		background:#fff;
+		box-shadow: 0 2px 4px rgba(0,0,0,.16);
+	}
+}
+label{
+	margin-bottom: 0;
+	font-weight: 400;
+}
+.arrowBox{
+	width: 270px;
+	height: 60px;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	margin-left: -135px;
+}
+
+/* 登录模态框 */
+.modal{
+	z-index: 99999;
+	background:rgba(0,0,0,0.5);
+	overflow-x: hidden;
+    overflow-y: auto;
+	.modal-dialog{
+		width: 400px;
+		// margin-top: 110px;
+		.modal-content{
+			border-radius: 2px;
+			.modal-header{
+				background: url('../../images/EN/login-close.png') no-repeat top right;
+				border-bottom:none;
+				.close{
+					position: relative;
+					color: #fff;
+					opacity: 1;
+					font-size:18px;
+					font-weight: 400;
+					text-shadow: none; 
+					top: -3px;
+					right: 30px;
+					outline: none;
+					transition:all 0.6s;
+					-webkit-transition:all 0.6s;
+					&:hover{
+						color: #fff;
+						transition:all 0.6s;
+						-webkit-transition:all 0.6s;
+					}
+					span{
+						margin-left: 10px;
+						font-size: 20px;
+						position: absolute;
+						top: 0;
+					}
+				}
+			}
+			.modal-body{
+				padding:0;
+				.loginTitle{
+					width: 100%;
+					text-align: center;
+					color:@purple;
+					font-size:36px;
+					font-family: @FBold;
+					margin-top: 24px;
+				}
+				.verifyInfo,.verifyInfoRegis,.verifyInfoForget {
+					visibility: hidden;
+					display: inline-block;
+					width: 100%;
+					font-size: 12px;
+					text-align: center;
+					color: @red;
+					margin-top: 8px;
+					padding-left: 10px;
+					padding-right: 10px;
+				}
+				.visible{visibility: visible;}
+				form{
+					margin-top: 20px;
+					.form-group{
+						position: relative;
+						text-align: center;
+						margin:0;
+						padding:0;
+					}
+					input{
+						width: 340px;
+						height: 50px;
+						font-size: 14px;
+						color:@purple;
+						font-family: @FBold;
+						padding:0 20px;
+						margin:0 auto;
+						.purpleBgRgb(.04);
+						border:none;
+						border-radius:2px;
+					}
+					:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+						.purpleRgb(.3);font-size: 14px; 
+					}
+
+					::-moz-placeholder { /* Mozilla Firefox 19+ */
+						.purpleRgb(.3);font-size: 14px;
+					}
+
+					input:-ms-input-placeholder{
+						.purpleRgb(.3);font-size: 14px;
+					}
+
+					input::-webkit-input-placeholder{
+						.purpleRgb(.3);font-size: 14px;
+					}
+					
+					.on_changes{
+						width:340px; 
+						position:absolute; 
+						top:49px; 
+						left: 29px;
+						z-index: 99;
+						list-style:none; 
+						background:#FFF; 
+						border:1px solid rgba(31, 44, 92, 0.3); 
+						display:none; 
+						padding:10px 0;
+						li{
+							margin:4px 0;
+							padding:2px 0;
+							cursor: pointer;
+							color: @gray;
+						}
+						li.active{ background:@purple;color:#fff;}
+					}
+					.form-control:focus{
+						box-shadow: none;
+						border-color:@green !important;
+					}
+					#LanmeiUserName,#registerUserName{
+						padding-left: 50px;
+						background: url('@{url}register-email.png') 15px no-repeat rgba(31, 44, 92, 0.04);
+					}
+					.lastName {
+						padding-left: 50px;
+						background: url('@{url}register-user.png') 15px no-repeat rgba(31, 44, 92, 0.04);
+					}
+					.passport{
+						padding-left: 50px;
+						background: url('@{url}register-passport.png') 15px no-repeat rgba(31, 44, 92, 0.04);
+					}
+					#LanmeiPassword{
+						margin-top: 20px;
+						padding-left: 50px;
+						background: url('@{url}register-password.png') 15px no-repeat rgba(31, 44, 92, 0.04);
+					}
+					#registerPassword,#repeatPassword{
+						padding-left: 50px;
+						background: url('@{url}register-password.png') 15px no-repeat rgba(31, 44, 92, 0.04);
+					}
+					#f-LanmeiPassword{
+						margin-top: 30px;
+						width: 210px;
+						display: inline-block;
+					}
+					#f-getPasswordBtn{
+						width: 120px;
+						height: 50px;
+						background: @purple;
+						color:#fff;
+						font-size: 14px;
+						border:none;
+						margin-left: 10px;
+						transition: all 0.6s;
+					    -webkit-transition: all 0.6s;
+						&:hover{
+							background: @green;
+							transition: all 0.6s;
+						    -webkit-transition: all 0.6s;
+						}
+					}
+					.getPwActive{
+						background: @purple;
+					}
+					.agree{
+						margin-top: 10px;
+						padding:0 30px;
+						overflow: hidden;
+						span{
+							float: left;
+							display: inline-block;
+							width: 16px;
+							height: 16px;
+							border: 1px solid rgba(31,44,92,.7);
+							border-radius: 2px;
+							margin-right: 10px;
+							margin-top: 4px;
+							cursor: pointer;
+						}
+						.active{
+							background: @linear;
+							background: @webkit-linear;
+							background: @o-linear;
+							background: @moz-linear;
+						}
+						.active + p{
+							color: @purple;
+						}
+						p{
+							float: left;
+							display: inline-block;
+							text-align: left;
+							.purpleRgb(.7);
+							line-height: 25px;
+						}
+						a{
+							display: inline-block;
+							height: 25px;
+							line-height: 25px;
+							float: right;
+							color: @link;
+							transition:all 0.6s;
+							-webkit-transition:all 0.6s;
+							&:hover{
+								color: @green;
+								transition:all 0.6s;
+								-webkit-transition:all 0.6s;
+							}
+						}
+					}
+					button{
+						width: 340px;
+						height: 40px;
+						line-height: 40px;
+						text-align: center;
+						margin:0 auto;
+						padding:0;
+						border-radius:2px;
+					}
+					.userLoginBtn,.f-userLoginBtn{
+						margin-top: 30px;
+						background:@purple;
+						color:#fff;
+						font-size:18px;
+						transition:all 0.6s;
+						-webkit-transition:all 0.6s;
+						&:hover{
+							transition:all 0.6s;
+							-webkit-transition:all 0.6s;
+							background: @green;
+							color:#fff;
+						}
+					}
+					.loginOther{
+						position: relative;
+						width: 340px;
+						margin:0 auto;
+						margin-top: 36px;
+						border-top: 2px solid #d8d8d8;
+						>p{
+							position: absolute;
+							left: 50%;
+							width: 70px;
+							text-align: center;
+							margin-left: -30px;
+							top: -8px;
+							background: #fff;
+							color:#cccccc;
+						}
+						.Facebook{
+							margin-top: 34px;
+							background: #f2f2f2;
+							font-size:14px;
+							font-family: @FBold;
+							color:#cccccc;
+							&:hover{background-image:linear-gradient(-90deg, #6c8fca 0%, #3a569a 100%);color:#fff;}
+						}
+						.Wechat{
+							margin-top: 20px;
+							background: #f2f2f2;
+							font-size:14px;
+							font-family: @FBold;
+							color:#cccccc;
+							&:hover{background-image:linear-gradient(-90deg, #12d421 0%, #00b80d 100%);color:#fff;}
+						}
+					}
+					.getVerCode{
+						margin-bottom: 20px;
+						text-align: left;
+					    margin-left: 30px;
+						input{
+							width: 180px;
+						}
+						button{
+							width: 150px;
+							height: 50px;
+							line-height: 50px;
+							text-align: center;
+						    margin-left: 10px;
+						    color: #fff;
+					        font-size: 14px;
+					        border: none;
+					        outline: none;
+					        background: @purple;
+					        transition: all 0.6s;
+					        -webkit-transition: all 0.6s;
+					        &:hover{
+					        	background: @green;
+					        	transition: all 0.6s;
+					        	-webkit-transition: all 0.6s;
+					        }
+						}
+						>p{color: #d0011b;}
+					}
+					.getVerCode-login{
+						margin-top:20px;
+						margin-bottom:0;
+					}			
+				}
+			}
+			.modal-footer{
+				width: 100%;
+				overflow: hidden;
+				text-align: center;
+				.purpleRgb(.3);
+				border-top: none;
+				padding:15px;
+				a{
+					color: @link;
+					transition:all 0.6s;
+					-webkit-transition:all 0.6s;
+					&:hover{
+						color: @green;
+						transition:all 0.6s;
+						-webkit-transition:all 0.6s;
+					}
+				}
+				.a_login{
+					float: left;
+					font-size: 14px;
+				}
+				.a_registered{
+					float: right;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+/* 注册模态框 */
+.registerWrapper{
+	width: 100%;
+	text-align: center;
+	>h2{
+		font-family: @FBold;
+		font-size:36px;
+		color:#1f2c5c;
+	}
+	>img{display: none;}
+	>p{
+		font-size:14px;
+		color:@gray;
+		margin-top:10px;
+		a{
+			color:@green;
+			transition:all 0.6s;
+			-webkit-transition:all 0.6s;
+			&:hover{
+				color:@purple;
+				transition:all 0.6s;
+				-webkit-transition:all 0.6s;
+			}
+		}
+	}
+	.registerContent{
+		>div{margin-top: 20px;}
+		.registerInfo,.registerPassword,.repeatPassword{
+			position: relative;
+			img{
+				position: absolute;
+				left:50px;
+				top:18px;
+			}
+			input{
+				font-size:14px;
+				color:@gray;
+				border:1px solid #cccccc;
+				border-radius:2px;
+				width:338px;
+				&:focus{border-color:@green;}
+			}
+			p{
+				display: none;
+				color:@red;
+				text-align: left;
+				padding:8px 10px 10px 29px;
+				visibility: hidden;
+			}
+			.visible{visibility: visible;}
+		}
+		.registerInfo{
+			.on_changes{
+				width:338px; 
+				position:absolute; 
+				top:40px; 
+				left: 1px;
+				z-index: 99;
+				list-style:none; 
+				background:#FFF; 
+				border:1px solid rgba(31, 44, 92, 0.3); 
+				display:none; 
+				padding:10px 0;
+				li{
+					margin:4px 0;
+					padding:2px 0;
+					cursor: pointer;
+					color: @gray;
+				}
+				li.active{ background:@purple;color:#fff;}
+			}
+		}
+		.registerName {
+			.lastName{margin-right: 20px !important;width: 130px !important;}
+			.firstName{width: 190px !important;}
+			p{
+				color: #d0011b;
+				padding: 8px 29px 10px;
+				text-align: left;
+			}
+		}
+		.registerPassport{
+			margin-top: 20px;
+			p{
+				font-size: 12px;
+				color: #d0011b;
+				padding: 8px 29px 0;
+				text-align: left;
+			}
+		}
+		.registerPassword{
+			p{
+				color:#ccc;
+				span{margin-left: 5px;}
+				i{
+					display: inline-block;
+					width:30px;
+					height:4px;
+					margin-right: 4px;
+				}
+				.i1{background: #1f2c5c;}
+				.i2{background: #004190;}
+				.i3{background: #006d94;}
+				.i4{background: #00908c;}
+				.i5{background: #4aa374;}
+				.i6{background: #8ec060;}
+			}
+		}
+		.repeatPassword{
+			span{
+				display: inline-block;
+				font-size:14px;
+				color:@gray;
+				padding:0;
+				text-align: left;
+				display: none;
+			}
+		}
+		.getVerCode p{
+			visibility: hidden;
+		}
+		.agree{
+			margin-top:0 !important;
+			margin-bottom: 10px;
+			overflow: hidden;
+			padding:0 0 0 29px!important;
+			span{
+				float: left;
+				display: inline-block;
+				width: 16px;
+				height: 16px;
+				border:1px solid #cccccc;
+				border-radius:2px;
+				margin-right: 10px;
+				margin-top:4px;
+				cursor: pointer;
+			}
+			.agreeConditions{
+				background: @green;
+			}
+			p{
+				float: left;
+				width: 314px;
+				display: inline-block;
+				font-size:14px;
+				text-align: left;
+				color:@gray;
+				line-height: 25px;
+				a{
+					float: none !important;
+					font-size:14px;
+					color:@link !important;
+					transition:all 0.6s;
+					-webkit-transition:all 0.6s;
+					&:hover{
+						color:@purple !important;
+						transition:all 0.6s;
+						-webkit-transition:all 0.6s;
+					}
+				}
+			}
+		}
+		.registerBtn{
+			button{
+				border:none;
+				outline: none;
+				background:@purple;
+				border-radius:2px;
+				width:340px;
+				color:#fff;
+				font-size:18px;
+				transition:all 0.6s;
+				-webkit-transition:all 0.6s;
+				&:hover{
+					background: @green;
+					transition:all 0.6s;
+					-webkit-transition:all 0.6s;
+				}
+			}
+		}
+	}
+}
+
+/* layer弹出框修改样式 */
+body .layui-layer-title{
+	color: #fff;
+	background: @purple;
+}
+body .layui-layer-setwin .layui-layer-close1{
+	background-position: -156px -40px;
+}
+body .layui-layer-setwin a{
+	width: 15px;
+	height: 15px;
+}
+body .layui-layer-btn .layui-layer-btn0 {
+    border-color: @purple;
+    background-color: @purple;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+}
+.layui-layer-btn a:hover{
+	opacity: 1;
+	border-color: @green;
+	background-color: @green;
+	transition: all .3s;
+	-webkit-transition: all .3s;
+}
+body .layui-layer-page .layui-layer-content{
+	padding:20px;
+	line-height: 24px;
+	font-size: 20px;
+	text-align: center;
+}
+
+/* 移动端 */
+@media (max-width: 767px) {
+	body .layui-layer{width: 300px !important;}
+	.modal .modal-dialog .modal-content .modal-body form .getVerCode{
+		margin-left: 5%;
+		margin-bottom: 10px;
+	}
+	.modal .modal-dialog .modal-content .modal-body form .getVerCode-login{
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.modal .modal-dialog .modal-content .modal-body form #f-getPasswordBtn {height: 40px;}
+	.modal .modal-dialog .modal-content .modal-body form .getVerCode input{width: 46% !important;}
+	#registerModal {
+		.modal-dialog {margin-top: 20px;}
+		.modal-footer{
+			padding: 0;
+			padding-bottom: 10px;
+		}
+	}
+	.modal .modal-dialog .modal-content .modal-body form .firstName {
+		padding-left: 50px;
+		background: url('@{url}register-user.png') 15px no-repeat rgba(31, 44, 92, 0.04);
+	}
+	.registerWrapper .registerContent {
+		margin-top: 0;
+		// height: 380px;
+	    // overflow-y: scroll;
+	    >div{margin-top: 10px;}
+	    .registerInfo{margin-top: 0;}
+	    .registerPassport {
+	    	margin-top: 10px;
+		    p{
+				font-size: 10px;
+				width: 100%;
+			    padding: 2px 5% 2px;
+		    }
+	    }
+		.registerName {
+			.firstName{width: 90% !important;}
+			.lastName{
+				width: 90% !important;
+				margin-right: 0 !important;
+				margin-bottom: 10px !important;
+			}
+			p{
+				color: #d0011b;
+			}
+		}
+	}
+}

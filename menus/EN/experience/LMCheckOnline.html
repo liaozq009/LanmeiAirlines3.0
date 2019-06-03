@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- 让 Bootstrap 兼容 IE 兼容模型 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- 让 Bootstrap 兼容 国产浏览器的高速模型 -->
+	<meta name="renderer" content="webkit">
+	<!-- 实现响应式的设置 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Online check-in</title>
+	<!-- 引入图标 -->
+	<link rel="icon" href="../../../images/EN/lanmeiLogo.ico">
+	<link rel="stylesheet" type="text/css" href="../../../libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../common/EN/fonts/lm-iconfont.css">
+	<link rel="stylesheet" type="text/css" href="../../../common/EN/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="../../../common/EN/css/Lanmei-common.css">
+	<link rel="stylesheet" type="text/css" href="../../../libsEdit/css/lanmeiLibsEdit.css">
+	<link rel="stylesheet" type="text/css" href="../common/menu-common.css">
+	<link rel="stylesheet" type="text/css" href="css/LMCheckOnline.css">
+	<!--[if lt IE 9]>
+	<script src="../../../libs/bootstrap/js/html5shiv.min.js"></script>
+	<script src="../../../libs/bootstrap/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<!-- 页面顶部 -->
+	<header class="lm-header lm-sub-header">
+	</header>
+
+	<!-- 页面主体 -->
+	<section class="lm-section">
+		<div class="lm-title">
+			<h1>Online check-in</h1>
+		</div>
+		<div class="check-start">
+			<div class="c-1">
+				<p>ID Number</p>
+				<input type="text" class="" name="flightCode" value="" placeholder="">
+			</div>
+			<div class="c-2">
+				<p>Name</p>
+				<input type="text" class="" name="flightCode" value="" placeholder="">
+			</div>
+			<!-- <div class="nextBtn startBtn"> -->
+			<div class="startBtn">
+				<!-- <a href="javascript:void(0)">Start<img src="../../../images/EN/schedulesArrow.png"></a> -->
+				<p style="height: 40px;line-height: 40px;font-size: 16px;">
+					Please wait and see! 
+					<a href="http://lanmeiairlines.com/routemsg/verification.jhtml?language=EN" style="float: none;color:#8ec060;margin-left: 30px; " target="_blank">Ticket verification</a>
+				</p>
+			</div>
+		</div>
+		<div class="lm-content">
+			<h2>How does online check-in work?</h2>
+			<h2 class="h2-steps">Login </h2> 
+			<p>Enter your ID number and your name.</p> 
+			<h2 class="h2-steps">Step 1 – Your information </h2>
+			<p>Select your flights and enter the names of any other passengers in your party that you want to check in. </p> 
+			<h2 class="h2-steps">Step 2 – Extra options </h2>
+			<p>Choose your seat, or arrange an extra comfortable seat. <br>
+			<h2 class="h2-steps">Step 3 – Print documents </h2>
+			<p>Print out your boarding pass and those of any passengers travelling with you. You can also e-mail the boarding pass to someone who can print the boarding pass for you, or print it out at a self-service kiosk at the airport.</p>
+			<h2 class="h2-steps">Or get an electronic boarding pass</h2>
+			<p>On many routes, you can request an electronic boarding pass. You will receive it on your smartphone, PDA, Blackberry or mobile phone with Internet access. The text message or e-mail you receive will include all the flight information and a barcode that you can scan at the airport. Read more about the electronic boarding pass.</p>
+			<p>In some cases, electronic boarding passes may be not available. You must then print out your check-in confirmation and exchange it at the airport for a boarding pass.</p>
+		</div>
+	</section>
+
+	<!-- 页脚 -->
+	<footer class="lm-footer">
+	</footer>
+
+	<!-- 回到顶部 -->
+	<div class="BackToTop">
+	</div>
+
+	<!-- 第三方库-->
+	<script type="text/javascript" src="../../../libs/jQuery/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="../../../libs/layer/layer.js"></script>
+	<script type="text/javascript" src="../../../libs/bootstrap/js/bootstrap.min.js"></script>
+	<!-- 公共JS -->
+	<script type="text/javascript" src="../../../common/EN/js/Lanmei-common.js"></script>
+	<script type="text/javascript" src="../../../common/EN/js/head-footer.js"></script>
+	<script type="text/javascript" src="../common/menu-common.js"></script>
+	<!-- 业务代码 -->
+	<script type="text/javascript" src="js/LMCheckOnline.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.js-lang-menu .lang-en').attr("href","http://lanmeiairlines.com/lanmeiairlines2.0/default/menus/EN/experience/LMCheckOnline.html");
+			$('.js-lang-menu .lang-zh').attr("href","http://lanmeiairlines.com/lanmeiairlines2.0/default/menus/CN/experience/LMCheckOnline.html");
+		});
+	</script>
+</body>
+</html>

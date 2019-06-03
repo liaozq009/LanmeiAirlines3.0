@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<!-- 让 Bootstrap 兼容 IE 兼容模型 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- 让 Bootstrap 兼容 国产浏览器的高速模型 -->
+	<meta name="renderer" content="webkit">
+	<!-- 实现响应式的设置 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>登机及行李托运时间</title>
+	<!-- 引入图标 -->
+	<link rel="icon" href="../../../images/CN/lanmeiLogo.ico">
+	<link rel="stylesheet" type="text/css" href="../../../libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../common/CN/fonts/lm-iconfont.css">
+	<link rel="stylesheet" type="text/css" href="../../../common/CN/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="../../../common/CN/css/Lanmei-common.css">
+	<link rel="stylesheet" type="text/css" href="../../../libsEdit/css/lanmeiLibsEdit.css">
+	<link rel="stylesheet" type="text/css" href="../common/menu-common.css">
+	<link rel="stylesheet" type="text/css" href="css/LMCheckTime.css">
+	<!--[if lt IE 9]>
+	<script src="../../../libs/bootstrap/js/html5shiv.min.js"></script>
+	<script src="../../../libs/bootstrap/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<!-- 页面顶部 -->
+	<header class="lm-header lm-sub-header">
+	</header>
+
+	<!-- 页面主体 -->
+	<section class="lm-section">
+		<div class="lm-title">
+			<h1>登机及行李托运时间</h1>
+		</div>
+		<div class="lm-content">
+			<h2>登机时间</h2>
+			<p>请查找飞往我们所有目的地的航班的登机及行李托运时间。如果您乘坐的航班是伙伴航空公司的航班，登机时间可能会有所不同；请在相关网站查看正确的登机时间。 您可以在预订确认文件中查找航班运营公司。</p>
+			<h2>网上值机</h2>
+			<p>您可以在预订起飞时间前 20 小时至 2 小时办理网上登机。</p>
+			<a href="LMCheckOnline.html">如何在网上值机 ></a>
+
+			<h2>在机场办理登机手续和行李托运</h2>
+			<p>在多数机场起飞当天，自助值机终端的自助服务均可用于办理登机手续。多数机场的机场值机柜台和行李托运处的一般工作时间为预订起飞时间前至少 2 小时或3 小时；多数机场的截止时间为预订起飞时间前 40 分钟或 60 分钟。 </p> 
+			<p>由于存在可能的等候时间，我们建议您在航班起飞至少 2 小时前到达机场。 </p> 
+			<a href="LMCheckAirport.html">如何在机场值机 ></a>
+		</div>
+	</section>
+
+	<!-- 页脚 -->
+	<footer class="lm-footer">
+	</footer>
+
+	<!-- 回到顶部 -->
+	<div class="BackToTop">
+	</div>
+
+	<!-- 第三方库-->
+	<script type="text/javascript" src="../../../libs/jQuery/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="../../../libs/layer/layer.js"></script>
+	<script type="text/javascript" src="../../../libs/bootstrap/js/bootstrap.min.js"></script>
+	<!-- 公共JS -->
+	<script type="text/javascript" src="../../../common/CN/js/Lanmei-common.js"></script>
+	<script type="text/javascript" src="../../../common/CN/js/head-footer.js"></script>
+	<script type="text/javascript" src="../common/menu-common.js"></script>
+	<!-- 业务代码 -->
+	<script type="text/javascript" src="js/LMCheckTime.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.js-lang-menu .lang-en').attr("href","http://lanmeiairlines.com/lanmeiairlines2.0/default/menus/EN/experience/LMCheckTime.html");
+			$('.js-lang-menu .lang-zh').attr("href","http://lanmeiairlines.com/lanmeiairlines2.0/default/menus/CN/experience/LMCheckTime.html");
+		});
+	</script>
+</body>
+</html>

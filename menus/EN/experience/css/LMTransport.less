@@ -1,0 +1,58 @@
+/* 定义变量 */
+@url:"../images/CN/";
+/* 定义颜色变量 */
+@green:#8ec060;
+@purple:#1f2c5c;
+@gray:#808080;
+@red:#d0011b;
+@link:#4aa374;
+
+.lm-section{
+	width: 940px;
+	min-height: 300px;
+	margin:0 auto;
+	.catalog{
+		overflow: hidden;
+		border:1px solid #808080;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		>div{
+			float: left;
+			width: 25%;
+			padding:10px;
+			a{
+				display: block;
+				margin-top: 6px;
+				color:#00908c;
+				font-size: 14px;
+				overflow: hidden;
+			    text-overflow: ellipsis;
+			    white-space: nowrap;
+			}
+			p{color:@purple;}
+		}
+	}
+}
+
+@media screen and (max-width:992px){
+	.lm-section{
+		width: 100%;
+		padding:15px;
+		.catalog{
+			margin-top: 0;
+			>div{
+				width: 50%;
+			}
+		}
+	}
+}
+@media screen and (max-width:767px){
+	.lm-section{
+		.catalog{
+			>div{
+				width: 100%;
+				padding:6px 10px;
+			}
+		}
+	}
+}

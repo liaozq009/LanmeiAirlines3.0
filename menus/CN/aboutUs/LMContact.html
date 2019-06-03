@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<!-- 让 Bootstrap 兼容 IE 兼容模型 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- 让 Bootstrap 兼容 国产浏览器的高速模型 -->
+	<meta name="renderer" content="webkit">
+	<!-- 实现响应式的设置 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>联系我们</title>
+	<!-- 引入图标 -->
+	<link rel="icon" href="../../../images/CN/lanmeiLogo.ico">
+	<link rel="stylesheet" type="text/css" href="../../../libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../common/CN/fonts/lm-iconfont.css">
+	<link rel="stylesheet" type="text/css" href="../../../common/CN/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="../../../common/CN/css/Lanmei-common.css">
+	<link rel="stylesheet" type="text/css" href="../../../libs/loading/lm-loading.css">
+	<link rel="stylesheet" type="text/css" href="../../../libsEdit/css/lanmeiLibsEdit.css">
+	<link rel="stylesheet" type="text/css" href="../common/menu-common.css">
+	<link rel="stylesheet" type="text/css" href="css/LMContact.css">
+	<!--[if lt IE 9]>
+	<script src="../../../libs/bootstrap/js/html5shiv.min.js"></script>
+	<script src="../../../libs/bootstrap/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<!-- 页面顶部 -->
+	<header class="lm-header lm-sub-header"></header>
+
+	<!-- 页面主体 -->
+	<section class="lm-section">
+		<div class="lm-title">
+			<h1>联系我们</h1>
+			<img src="../../../images/CN/verticalTitleLine.png">
+		</div>
+		<div class="lm-content">
+			<p class="commerce">官网联系方式 </p>
+			<div class="c-2">
+				<input type="text" class="userName" name="userName" value="" placeholder="姓名" maxlength="20" autocomplete="off">
+				<input type="text" class="email" name="email" value="" placeholder="邮箱" maxlength="35" autocomplete="off">
+				<input type="text" class="subject" name="subject" value="" placeholder="主题" maxlength="40" autocomplete="off">
+				<textarea class="message" placeholder="您要反馈的信息" maxlength="500"></textarea>
+				<button class="submitBtn" onClick="mailsome1()"><span>提交</span> <div class="lm-loading-timer" style="top: 5px;left: 16px;display: none;"></button>
+			</div>
+			<div class="c-1">
+				<p class="p1"><img src="images/local-green.png"><span>柬埔寨金边市俄罗斯大道575号</span></p>
+				<p class="p2"><img src="images/local-map.jpg"></p>
+			</div>
+			<div class="c-3 c-com">
+				<p class="title"><img src="images/hr-icon.png" alt="hr"><span>HR</span></p>
+				<p class="detail"><img src="images/phone-green.png" alt="phone"><span>+855 23981363 EXT 8028</span></p>
+				<p class="detail"><img src="images/email-green.png" alt="email"><span>hr@lanmeiairlines.com</span></p>
+				<p class="detail p3"><img src="images/local-green.png" alt="hr"><span>柬埔寨金边市俄罗斯大道575号</span></p>
+			</div>
+			<div class="c-4 c-com">
+				<p class="title"><img src="images/ticket-icon.png" alt="ticket"><span>客票中心</span></p>
+				<p class="detail"><img src="images/phone-green.png" alt="phone"><span>+855 23981363</span></p>
+				<p class="detail"><img src="images/email-green.png" alt="email"><span>ticketing@lanmeiairlines.com</span></p>
+				<p class="detail p3"><img src="images/local-green.png" alt="hr"><span>柬埔寨金边市俄罗斯大道575号</span></p>
+			</div>
+			<div class="c-5 c-com">
+				<p class="title"><img src="images/service-icon.png" alt="service"><span>旅客服务投诉邮箱</span></p>
+				<p class="detail"><img src="images/email-green.png" alt="email"><span>service@lanmeiairlines.com</span></p>
+				<p class="detail p3"><img src="images/local-green.png" alt="hr"><span>柬埔寨金边市俄罗斯大道575号</span></p>
+			</div>
+		</div>
+	</section>
+
+	<!-- 页脚 -->
+	<footer class="lm-footer"></footer>
+
+	<!-- 回到顶部 -->
+	<div class="BackToTop">
+	</div>
+
+	<!-- 第三方库-->
+	<script type="text/javascript" src="../../../libs/jQuery/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="../../../libs/layer/layer.js"></script>
+	<script type="text/javascript" src="../../../libs/bootstrap/js/bootstrap.min.js"></script>
+	<!-- 公共JS -->
+	<script type="text/javascript" src="../../../common/CN/js/Lanmei-common.js"></script>
+	<script type="text/javascript" src="../../../common/CN/js/head-footer.js"></script>
+	<script type="text/javascript" src="../common/menu-common.js"></script>
+	<!-- 业务代码 -->
+	<script type="text/javascript" src="js/LMContact.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.js-lang-menu .lang-en').attr("href","http://lanmeiairlines.com/lanmeiairlines2.0/default/menus/EN/aboutUs/LMContact.html");
+			$('.js-lang-menu .lang-zh').attr("href","http://lanmeiairlines.com/lanmeiairlines2.0/default/menus/CN/aboutUs/LMContact.html");
+		});
+	</script>
+</body>
+</html>

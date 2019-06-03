@@ -1,0 +1,48 @@
+/* 定义变量 */
+/* 定义颜色变量 */
+.lm-section {
+  width: 940px;
+  min-height: 300px;
+  margin: 0 auto;
+}
+.lm-section .catalog {
+  overflow: hidden;
+  border: 1px solid #808080;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.lm-section .catalog > div {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+.lm-section .catalog > div a {
+  display: block;
+  margin-top: 6px;
+  color: #00908c;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.lm-section .catalog > div p {
+  color: #1f2c5c;
+}
+@media screen and (max-width: 992px) {
+  .lm-section {
+    width: 100%;
+    padding: 15px;
+  }
+  .lm-section .catalog {
+    margin-top: 0;
+  }
+  .lm-section .catalog > div {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .lm-section .catalog > div {
+    width: 100%;
+    padding: 6px 10px;
+  }
+}
