@@ -297,16 +297,11 @@
 		<!-- 机票选择 -->
 		<div class="ticket-content-wrap js-flight-com js-ticket-wrap">
 			<!-- 炫酷白云 -->
-			<div class="ticket-bg bg-com js-ticket-bg">
-				<iframe src="" scrolling="auto" width="100%" height="100%" class="cloud-iframe js-cloud-iframe"></iframe>
-				<!-- <video width="100%" height="auto" class="videoSource" id="videoSource" autoplay="autoplay" loop="loop" muted="true" poster="/">
-					<source src="video/cloud-video.mp4" type="video/mp4">
-				</video> -->
-			</div>
+			<div class="ticket-bg bg-com js-ticket-bg"></div>
 			<!-- 白云上面的内容 -->
-			<div class="content-com-wrap" style="display: none;">
+			<div class="content-com-wrap">
 				<div class="content-com-inner">
-					<h1 class="animated fadeInUp">Be unique <br>Lanmei Airlines </h1>
+					<h1 class="animated fadeInUp">Be unique Lanmei Airlines</h1>
 				</div>
 			</div>
 			<!-- 航班选择 -->
@@ -323,8 +318,7 @@
 					<input type="hidden" name="language" value="US">
 					<input type="hidden" name="CURRENCY" value="USD">
 					
-					<p class="tips-com js-tips-com" style="display: none;">- &nbsp;Make each one of us unique</p>
-					<div class="select-way js-select-way animated fadeInUp" style="display: none;">
+					<div class="select-way ticket-select-way js-select-way animated fadeInUp">
 						<a href="javascript:;" class="round-trip active" data-way="round">Round trip</a>
 						<a href="javascript:;" class="one-way" data-way="one">One-way</a>
 						<a href="javascript:;" class="multi" data-way="multi">Stopover/Multi-city</a>
@@ -352,7 +346,7 @@
 						</div>
 					</div>
 					<div class="search-flight-wrap js-search-ticket">
-						<a href="https://lanmeiairlines.com/routemsg/verification.jhtml?language=EN" class="flight-cancel js-ticket-cancel" style="background:#1f2c5c;display: none;" target="_blank"><img src="https://lanmeiairlines.com/lanmeiairlines2.0/default/images/CN/lanmeiServe4.png" style="height: 40px;margin-right:10px;" />Ticket Verification</a>
+						<a href="javascript:;" class="multi" data-way="multi">Stopover/Multi-city</a>
 						<a href="javascript:;" class="flight-search js-ticket-search">Search</a>
 					</div>
 				</form>
@@ -380,7 +374,14 @@
 							</div>
 							<!-- 日期选择 -->
 							<div class="popup-date js-popup-date">
-								
+								<div class="date-select-way js-ticket-radio">
+									<label><input type="radio"><i class="active"></i><b></b><span data-way="round">Round Trip</span></label>
+									<label><input type="radio" checked=""><i class=""></i><b></b><span data-way="one">One way</span></label>
+								</div>
+								<!-- <div class="date-select-way js-select-way">
+									<a href="javascript:;" class="round-trip active" data-way="round">Round trip</a>
+									<a href="javascript:;" class="one-way" data-way="one">One-way</a>
+								</div> -->
 							</div>
 							<!-- 人数选择 -->
 							<div class="popup-people js-popup-people">
@@ -919,8 +920,8 @@
 				<li class="li-child1 active"><a href="javascript:;" data-href="ticket-content" class="nth-child1 active js-a-ticket"><span>Ticket</span></a></li>
 				<li class="li-child2"><a href="javascript:;" data-href="hotel-content" class="nth-child2 js-a-hotel"><span>Hotel</span></a></li>
 				<li class="li-child3"><a href="javascript:;" data-href="ticketHotel-content" class="nth-child3 js-a-ticketHotel"><span>Flight+Hotel</span></a></li>
-				<li class="li-child4"><a href="javascript:;" data-href="car-content" class="nth-child3 js-a-car"><span>Car</span></a></li>
-				<li class="li-child5"><a href="javascript:;" data-href="flight-content" class="nth-child4 js-a-flight"><span>Flight status</span></a></li>
+				<li class="li-child4"><a href="javascript:;" data-href="flight-content" class="nth-child4 js-a-flight"><span>Flight status</span></a></li>
+				<li class="li-child5"><a href="javascript:;" data-href="news-content" class="nth-child3 js-a-news"><span>Lanmei status</span></a></li>
 				<li class="li-slide" style="display: none;"></li>
 			</ul>
 			<!-- <a href="javascript:void(0)" class="flight-up-arrow js-flight-up"></a>

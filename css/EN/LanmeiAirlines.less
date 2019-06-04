@@ -35,6 +35,16 @@
 	:root .gradient{filter:none;} ; /*ie9*/
 }
 
+.linearBg2 {
+	background: #42958a;
+	background: -webkit-linear-gradient(left, #B4EC80 0%, #00908C 100%);
+	background: -o-linear-gradient(right, #B4EC80 0%, #00908C 100%);
+	background: -moz-linear-gradient(right, #B4EC80 0%, #00908C 100%);
+	background: linear-gradient(to right, #B4EC80 0%, #00908C 100%);
+	filter: alpha progid:DXImageTransform.Microsoft.gradient(startcolorstr=#B4EC80, endcolorstr=#00908C, gradientType=1); /*ie8*/
+	:root .gradient{filter:none;} ; /*ie9*/
+}
+
 .greenRgb(@opacity){
 	color: rgba(142,192,96,@opacity);
 }
@@ -71,7 +81,7 @@ body{
 /* 内容样式 */
 .lm-section-main{
 	position: relative;
-	top: -60px;
+	top: 60px;
 	width: 100%;
 	height: 768px;
 	min-height: 300px;
@@ -92,7 +102,6 @@ body{
 	position: absolute;
 	right: 0;
 	top: 0;
-	z-index: -1;
 	width: 100%;
 	height: 100%;
 	box-shadow:0 0 100px 0 rgba(31,44,92,0.50);
@@ -121,23 +130,20 @@ body{
 }
 .content-com-wrap{
 	position: absolute;
-	top:60px;
-	right: 0;
-	width: 94%;
-	height: 220px;
-	padding-left: 10%;
+	top:70px;
+	left: 50%;
+	width: 1200px;
+	margin-left: -600px;
 	color: #fff;
-	background-image:-webkit-linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.1) 100%);
 }
 .content-com-inner{
-	padding-top: 40px;
 	>h1{
-		opacity:0.9;
-		filter:alpha(opacity=90);
+		height: 72px;
+		line-height: 72px;
+		font-size:50px;
 		font-family:@FBold;
-		font-size:64px;
-		line-height:80px;
-		span{color: @green;}
+		text-align: center;
+		text-shadow:0px 0px 30px rgba(31,44,92,0.5);
 	}
 }
 
@@ -232,7 +238,7 @@ body{
 /* 重要提醒 */
 .lm-important{
 	position: absolute;
-	bottom: 90px;
+	bottom: -190px;
 	left: 50%;
 	width:1200px;
 	height:60px;
@@ -316,10 +322,11 @@ body{
 /* 航班选择公共样式 */
 .flight-com{
 	position: absolute;
-	top: 360px;
+	top: 270px;
 	left: 50%;
 	z-index: 11;
 	width: 1200px;
+	height: 180px;
 	margin-left: -600px;
 	.tips-com{
 		opacity:0.5;
@@ -330,7 +337,6 @@ body{
 		-webkit-animation-delay:.3s; /* Safari 和 Chrome */
 	}
 	.select-way{
-		height: 0;
 		margin-top: 0;
 		overflow: hidden;
 		transition: all .6s;
@@ -362,14 +368,13 @@ body{
 	}
 }
 .select-air-com{
-	margin-top: 30px;
 	overflow: hidden;
 	>div{
 		position: relative;
 		float: left;
-		width: 310px;
-		height: 60px;
-		margin-right: 40px;
+		width: 264px;
+		height: 50px;
+		margin-right: 20px;
 		margin-bottom: 20px;
 		border-radius: 2px;
 		box-shadow:0 0 0px 0 rgba(31,44,92,0.1);
@@ -459,7 +464,7 @@ body{
 	.local-change {
 		position: absolute;
 		right: -30px;
-		top: 20px;
+		top: 16px;
 		display: block;
 		width: 20px;
 		height: 18px;
@@ -467,7 +472,7 @@ body{
 		cursor: pointer;
 		display: none;
 		&:hover{
-			background: url('@{url}ticket-change-active.png') center no-repeat;
+			background: url('@{url}ticket-change2.png') center no-repeat;
 		}
 	}
 	.date-result {
@@ -548,20 +553,6 @@ body{
 	.car-people-num{margin-right: 0;}
 }
 .search-flight-wrap{
-	margin-top: 20px;
-	a{
-		float: right;
-		display: block;
-		width:310px;
-		height:60px;
-		line-height: 60px;
-		text-align: center;
-		font-size: 20px;
-		color: #fff;
-		border:none;
-		outline: none;
-		border-radius:2px;
-	}
 	.flight-cancel{
 		margin-right: 40px;
 		background:#ff8989;
@@ -569,6 +560,17 @@ body{
 		-webkit-animation-delay: .1s; /* Safari 和 Chrome */
 	}
 	.flight-search{
+		float: right;
+		display: block;
+		width:200px;
+		height:50px;
+		line-height: 50px;
+		text-align: center;
+		font-size: 16px;
+		color: #fff;
+		border:none;
+		outline: none;
+		border-radius:2px;
 		.linearBg;
 		animation-delay: .4s;
 		-webkit-animation-delay: .4s; /* Safari 和 Chrome */
@@ -733,6 +735,7 @@ body{
 .lm-section-service{
 	width: 100%;
 	height: 300px;
+	margin-top: 60px;
 	margin-bottom: 60px;
 	background: url('@{url}lanmeiService-bg.jpg') center no-repeat;
 	background-size: cover;
@@ -968,13 +971,14 @@ body{
 	.popup-close{display: none;}
 	.popup-box{
 		position: absolute;
+		top: -40px;
 		left: 0;
 		transition: left .5s ease-out;
 		-webkit-transition: left .5s ease-out;
 		&::before{
 			position: absolute;
 			top: -23px;
-			left: 150px;
+			left: 132px;
 			z-index: 9;
 			opacity: 0;
 			filter:alpha(opacity=0);
@@ -994,6 +998,11 @@ body{
 			left: 580px;
 		}
 	}
+	.ticket-popup-box{
+		&::before{
+			left: 264px;
+		}
+	}
 	.popup-box-before::before{
 		opacity: 1;
 		filter:alpha(opacity=100);
@@ -1009,7 +1018,7 @@ body{
 		.purpleRgb(.5);
 		background:#fff;
 		border-radius: 2px;
-		box-shadow:0 0 100px 0 #34406c;
+		box-shadow:0 0 100px 0 rgba(52,64,108,0.2);
 		transition: all .2s ease-out;
 		transition: all .2s ease-out;
 		.popup-airport{
@@ -1111,7 +1120,7 @@ body{
 			width: 588px;
 			.date-title {
 				padding-left: 10px;
-				padding-top: 20px;
+				padding-top: 12px;
 				font-size: 20px;
 				font-family: @FBold;
 				.purpleRgb(.8); 
@@ -1623,19 +1632,20 @@ body{
 	.pc-section-main {
 		.lm-aside-flight {
 			position: absolute;
-			top: 300px;
+			top: 220px;
 			left: 50%;
-			z-index: 9;
+			z-index: 11;
 			width: 1200px;
-			height: 100px;
+			height: 50px;
 			margin-left: -600px;
 			>ul {
 				>li {
 					float: left;
-					width: 200px;
-					height: 60px;
+					width: 190px;
+					height: 50px;
 					.linearBg;
-					margin-right: 20px;
+					margin-right: 10px;
+					border-top-left-radius: 10px;
 					border-top-right-radius: 60px;
 					a {
 						display: inline-block;
@@ -1643,13 +1653,11 @@ body{
 						height: 100%;
 						border-left: 6px solid transparent;
 						border-right: 6px solid transparent !important;
-						.purpleRgb(.2);
+						color: #fff;
 						text-align: center;
-						background-size: 50px 50px !important;
 						span {
 							display: inline-block;
 							height: 100%;
-							padding-left: 60px;
 							line-height: 60px;
 						}
 					}
@@ -1661,12 +1669,14 @@ body{
 					}
 				}
 				.li-child1{
-					a{background: url('@{url}ticket-icon.png') 20% center no-repeat;}
-					&.active a{background: url('@{url}ticket-icon-active.png') 20% center no-repeat;}
+					a{background: url('@{url}ticket-icon.png') 30% center no-repeat;}
+					&.active a{background: url('@{url}ticket-icon-active.png') 30% center no-repeat;}
+					a span {padding-left: 30px;}
 				}
 				.li-child2{
-					a{background: url('@{url}hotel-icon.png') 20% center no-repeat;}
-					&.active a{background: url('@{url}hotel-icon-active.png') 20% center no-repeat;}
+					a{background: url('@{url}hotel-icon.png') 30% center no-repeat;}
+					&.active a{background: url('@{url}hotel-icon-active.png') 30% center no-repeat;}
+					a span {padding-left: 30px;}
 				}
 				.li-child3{
 					display: none;
@@ -1674,12 +1684,14 @@ body{
 					&.active a{background: url('@{url}ticketHotel-icon-active.png') 20% center no-repeat;}
 				}
 				.li-child4{
-					a{background: url('@{url}car-icon.png') 20% center no-repeat;}
-					&.active a{background: url('@{url}car-icon-active.png') 20% center no-repeat;}
-				}
-				.li-child5{
 					a{background: url('@{url}flight-icon.png')  20% center no-repeat;}
 					&.active a{background: url('@{url}flight-icon-active.png') 20% center no-repeat;}
+					a span {padding-left: 48px;}
+				}
+				.li-child5{
+					a{background: url('@{url}news-icon.png') 14% center no-repeat;}
+					&.active a{background: url('@{url}news-icon-active.png') 14% center no-repeat;}
+					a span {padding-left: 48px;}
 				}
 			}
 		}
@@ -1687,19 +1699,75 @@ body{
 
 	/* PC端航班选择 */
 	.pc-section-main {
-		.select-air-com { 
-			padding-left: 30px;
+		.select-air-com {
 			>div {
-				width: 254px;
+				>input {
+					font-size: 16px;
+				}
 			}
+			.from-com {
+				margin-right: 44px;
+			}
+			.date-result {font-size: 16px;}
+			.people-com .t-people-result > p {font-size: 16px;}
 		}
 		.flight-com {
+			padding: 30px;
 			background: #fff;
 		}
+		.ticket-select-way {
+			display: none;
+		}
 		.search-flight-wrap {
-			margin-bottom: 20px;
-			padding-right: 30px;
 			overflow: hidden;
+			.flight-search {.linearBg2;}
+			.multi {
+				color: #00908C;
+			}
+		}
+		.date-select-way{
+			position: absolute;
+			right: 0;
+			top: 20px;
+			z-index: 3302;
+			label{
+				position: relative;
+				margin-right: 20px;
+				cursor: pointer;
+				input{display: none;}
+			}
+			i{
+				background: #E8E9EE;
+				width:20px;
+				height:20px;
+				border-radius:50%;
+				display: inline-block;
+				vertical-align: middle;
+				position: relative;
+				top: -2px;
+				z-index: 999999;
+			}
+			i.active{
+				border:4px solid #B9EA87;
+				background: #8EC060; 
+				z-index: 9999999;
+			}
+			b{
+				width:14px;
+				height:14px;
+				border-radius:100%;
+				display: inline-block;
+				vertical-align: middle;
+				position: relative;
+				top: -2px;
+				left: -17px;
+				background: #1a244b;
+			}
+			span{
+				font-size:14px;
+				color:@purple;
+				text-align:left;
+			}
 		}
 	}
 }
@@ -1712,7 +1780,7 @@ body{
 		-webkit-transform-origin: top;
 		transform-origin: top;
 	}
-	.lm-aside-code {
+	.lm-aside-code, .date-select-way {
 		display: none;
 	}
 	.lm-section-main{
@@ -2355,6 +2423,7 @@ body{
 		animation: fadeInUp 1.5s;
 		animation-delay: 0s;
 		-webkit-animation-delay: 0s;
+		.multi {display: none;}
 		.flight-cancel{display: none;}
 		.flight-search{
 			width: 100%;
@@ -2433,12 +2502,12 @@ body{
 				.active{background: url('@{url}svg/ticketHotel-icon-active.svg') center 30% no-repeat;}
 			}
 			.li-child4 {
-				a{background: url('@{url}svg/car-icon.svg') center 30% no-repeat;}
-				.active{background: url('@{url}svg/car-icon-active.svg') center 30% no-repeat;}
-			}
-			.li-child5 {
 				a{background: url('@{url}svg/flight-icon.svg') center 30% no-repeat;}
 				.active{background: url('@{url}svg/flight-icon-active.svg') center 30% no-repeat;}
+			}
+			.li-child5 {
+				a{background: url('@{url}svg/car-icon.svg') center 30% no-repeat;}
+				.active{background: url('@{url}svg/car-icon-active.svg') center 30% no-repeat;}
 			}
 		}
 	}
