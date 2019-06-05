@@ -34,6 +34,10 @@
 .linearBg2 :root .gradient {
   filter: none;
 }
+.transition3 {
+  transition: all .3s;
+  -webkit-transition: all .3s;
+}
 /* 公共样式 */
 input {
   -webkit-appearance: none;
@@ -70,7 +74,6 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  box-shadow: 0 0 100px 0 rgba(31, 44, 92, 0.5);
   background-size: cover;
 }
 .cloud-iframe {
@@ -206,95 +209,55 @@ body {
 /* 重要提醒 */
 .lm-important {
   position: absolute;
-  bottom: -190px;
+  bottom: -70px;
   left: 50%;
   width: 1200px;
-  height: 60px;
+  height: 26px;
   margin-left: -600px;
   padding-left: 30px;
-  background: #fff;
-  box-shadow: 0 0 50px 0 rgba(31, 44, 92, 0.2);
-  border-radius: 30px 0 0 30px;
 }
 .lm-important > h3 {
   position: relative;
   float: left;
   width: 110px;
-  height: 30px;
-  line-height: 34px;
-  margin-top: 15px;
-  padding-left: 30px;
-  color: #fff;
+  height: 26px;
+  line-height: 26px;
+  padding-left: 36px;
+  color: #1f2c5c;
   font-size: 14px;
   font-family: CamptonBookBold;
-  background: #42958a;
-  background: -webkit-linear-gradient(left, #42958a 0%, #1f2c5c 100%);
-  background: -o-linear-gradient(right, #42958a 0%, #1f2c5c 100%);
-  background: -moz-linear-gradient(right, #42958a 0%, #1f2c5c 100%);
-  background: linear-gradient(to right, #42958a 0%, #1f2c5c 100%);
-  filter: alpha progid:DXImageTransform.Microsoft.gradient(startcolorstr=#42958a, endcolorstr=#1f2c5c, gradientType=1);
-  /*ie8*/
-  /*ie9*/
-  border-radius: 0 20px 20px 0;
-}
-.lm-important > h3 :root .gradient {
-  filter: none;
-}
-.lm-important > h3 > p {
-  display: inline-block;
-  position: absolute;
-  left: -20px;
-  top: -5px;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  background: #fff;
-  box-shadow: 0 0 10px 0 rgba(31, 44, 92, 0.2);
-  border-radius: 100%;
+  background: url('../../images/EN/important.png') left center no-repeat;
 }
 .lm-important > a {
-  display: block;
   float: right;
-  height: 60px;
-  line-height: 60px;
-  padding-left: 10px;
-  padding-right: 20px;
-  color: #42958a;
-  font-family: CamptonBookBold;
-  font-size: 14px;
-  transition: color .3s;
-  -webkit-transition: color .3s;
+  display: block;
+  height: 26px;
+  line-height: 26px;
+  margin-right: 30px;
+  transition: all .3s;
+  -webkit-transition: all .3s;
 }
 .lm-important > a:hover {
   color: #8ec060;
-  transition: color .3s;
-  -webkit-transition: color .3s;
+  transition: all .3s;
+  -webkit-transition: all .3s;
 }
 .lm-important > ul {
-  height: 40px;
+  height: 26px;
   float: left;
-  margin-top: 10px;
   overflow: hidden;
 }
 .lm-important > ul > li {
-  width: 350px;
-  height: 40px;
-  line-height: 40px;
-  opacity: 0.7;
-  filter: alpha(opacity=70);
-  color: #000;
-  font-family: CamptonBookBold;
+  width: 900px;
+  height: 26px;
+  line-height: 26px;
   margin-left: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 .lm-important > ul > li > a {
-  font-family: CamptonBookBold;
-  opacity: 0.7;
-  filter: alpha(opacity=70);
-  color: #000;
+  color: rgba(31, 44, 92, 0.7);
 }
 /* 航班选择公共样式 */
 .flight-com {
@@ -415,23 +378,20 @@ body {
 .select-air-com > div .f-from-input {
   background: url('../../images/EN/flight-number.png') 20px no-repeat rgba(31, 44, 92, 0.04);
 }
-.select-air-com .hotel-from {
-  width: 660px;
-}
 .select-air-com .car-route-id {
   width: 660px;
 }
 .select-air-com .flight-number-box,
 .select-air-com .fStatus-date {
-  width: 660px;
+  width: 560px;
 }
 .select-air-com .fStatus-date {
   margin-right: 0;
 }
-.select-air-com .from-com {
+.select-air-com .to-com {
   visibility: visible;
-  animation-delay: .6s;
-  -webkit-animation-delay: .6s;
+  animation-delay: .2s;
+  -webkit-animation-delay: .2s;
   /* Safari 和 Chrome */
 }
 .select-air-com .route-from-box {
@@ -442,19 +402,24 @@ body {
 }
 .select-air-com .route-to-box {
   visibility: visible;
-  animation-delay: .6s;
-  -webkit-animation-delay: .6s;
+  animation-delay: .2s;
+  -webkit-animation-delay: .2s;
   /* Safari 和 Chrome */
 }
 .select-air-com .route-date-box {
   visibility: visible;
-  animation-delay: .9s;
-  -webkit-animation-delay: .9s;
+  animation-delay: .6s;
+  -webkit-animation-delay: .6s;
   /* Safari 和 Chrome */
 }
-.select-air-com .date-com {
-  animation-delay: .3s;
-  -webkit-animation-delay: .3s;
+.select-air-com .date-com-2 {
+  animation-delay: .2s;
+  -webkit-animation-delay: .2s;
+  /* Safari 和 Chrome */
+}
+.select-air-com .date-com-3 {
+  animation-delay: .4s;
+  -webkit-animation-delay: .4s;
   /* Safari 和 Chrome */
 }
 .select-air-com .local-change {
@@ -507,7 +472,7 @@ body {
 .select-air-com .people-com .t-people-result {
   width: 100%;
   height: 100%;
-  line-height: 60px;
+  line-height: 50px;
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 2px;
@@ -564,9 +529,6 @@ body {
 .search-flight-wrap .flight-cancel {
   margin-right: 40px;
   background: #ff8989;
-  animation-delay: .1s;
-  -webkit-animation-delay: .1s;
-  /* Safari 和 Chrome */
 }
 .search-flight-wrap .flight-search {
   float: right;
@@ -588,9 +550,6 @@ body {
   filter: alpha progid:DXImageTransform.Microsoft.gradient(startcolorstr=#42958a, endcolorstr=#1f2c5c, gradientType=1);
   /*ie8*/
   /*ie9*/
-  animation-delay: .4s;
-  -webkit-animation-delay: .4s;
-  /* Safari 和 Chrome */
 }
 .search-flight-wrap .flight-search :root .gradient {
   filter: none;
@@ -755,23 +714,8 @@ body {
   height: 300px;
   margin-top: 60px;
   margin-bottom: 60px;
-  background: url('../../images/EN/lanmeiService-bg.jpg') center no-repeat;
   background-size: cover;
   background-position: 50% -660px;
-}
-.lm-section-service .service-bg {
-  height: 100%;
-  padding-top: 80px;
-  background: -webkit-linear-gradient(left, rgba(66, 149, 138, 0.6), rgba(31, 44, 92, 0.6));
-  background: -o-linear-gradient(right, rgba(66, 149, 138, 0.6), rgba(31, 44, 92, 0.6));
-  background: -moz-linear-gradient(right, rgba(66, 149, 138, 0.6), rgba(31, 44, 92, 0.6));
-  background: linear-gradient(to right, rgba(66, 149, 138, 0.6), rgba(31, 44, 92, 0.6));
-  filter: alpha(opacity=60) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#42958a, endcolorstr=#1f2c5c, gradientType=1);
-  /*ie8*/
-  /*ie9*/
-}
-.lm-section-service .service-bg :root .gradient {
-  filter: none;
 }
 .lm-section-service ul {
   width: 680px;
@@ -1036,8 +980,12 @@ body {
     transition: opacity 0.2s ease-out;
     -webkit-transition: opacity 0.2s ease-out;
   }
+  .hotel-popup-box,
+  .fStatus-popup-box {
+    top: 10px;
+  }
   .hotelPeople-popup-box::before {
-    left: 580px;
+    left: 280px;
   }
   .ticket-popup-box::before {
     left: 264px;
@@ -1059,6 +1007,7 @@ body {
     border-radius: 2px;
     box-shadow: 0 0 100px 0 rgba(52, 64, 108, 0.2);
     transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
   }
   .popup-content .popup-airport {
     width: 660px;
@@ -1328,6 +1277,9 @@ body {
   .popup-content .popup-people .disable .off-add-operation:hover {
     background: url('../../images/EN/add-people.png') center no-repeat rgba(31, 44, 92, 0.1);
   }
+  .popup-content .popup-hotel-from {
+    width: 636px;
+  }
   .popup-content .hotel-popus-people {
     width: 750px;
     height: auto;
@@ -1359,8 +1311,8 @@ body {
   }
   .popup-content .hotel-popus-people .rooms-content-com {
     float: left;
-    margin-left: 20px;
-    margin-left: 18px\9;
+    margin-left: 10px;
+    margin-left: 8px\9;
   }
   .popup-content .hotel-popus-people .rooms-content-com .hotel-people-prompt .p1 {
     height: 50px;
@@ -1371,7 +1323,7 @@ body {
   }
   .popup-content .hotel-popus-people .rooms-content-com .hotel-people-number {
     float: left;
-    width: 166px;
+    width: 140px;
   }
   .popup-content .hotel-popus-people .adult-rooms-content .hotel-people-prompt .p1 {
     width: 110px;
@@ -1397,7 +1349,7 @@ body {
   }
   .popup-content .hotel-popus-people .hotel-age-wrap .age-result {
     float: left;
-    display: inline-block;
+    display: block;
     width: 78px;
     height: 34px;
     line-height: 38px;
@@ -1405,7 +1357,6 @@ body {
     text-align: left;
     padding-left: 20px;
     padding-right: 20px;
-    margin-left: 20px;
     border-radius: 2px;
     background: url('../../images/EN/menu-down-arrow.png') 90% center no-repeat rgba(31, 44, 92, 0.3);
     cursor: pointer;
@@ -1442,7 +1393,7 @@ body {
     background: rgba(31, 44, 92, 0.7);
   }
   .popup-content .hotel-popus-people .adult-rooms-content {
-    margin-left: 30px;
+    margin-left: 26px;
   }
   .popup-content .hotel-popus-people .add-rooms-wrap {
     height: 50px;
@@ -1568,7 +1519,7 @@ body {
   /************************** PC端新增代码 LZQ 20190531 ******************************/
   /* PC端导航栏 */
   .pc-nav-container {
-    position: absolute;
+    position: fixed;
     left: 50%;
     z-index: 100;
     margin-left: -350px;
@@ -1761,6 +1712,9 @@ body {
   .pc-section-main .lm-aside-flight > ul .li-child5 a span {
     padding-left: 48px;
   }
+  .pc-section-main .lm-aside-flight > ul .li-child5 .mobile-news {
+    display: none;
+  }
   /* PC端航班选择 */
   .pc-section-main .select-air-com > div > input {
     font-size: 16px;
@@ -1768,15 +1722,40 @@ body {
   .pc-section-main .select-air-com .from-com {
     margin-right: 44px;
   }
+  .pc-section-main .select-air-com .route-from-box {
+    width: 270px;
+    margin-right: 20px;
+  }
+  .pc-section-main .select-air-com .route-to-box {
+    width: 270px;
+  }
+  .pc-section-main .select-air-com .flight-number-box {
+    margin-right: 20px;
+  }
+  .pc-section-main .select-air-com .hotel-from {
+    width: 352px;
+    margin-right: 20px;
+  }
   .pc-section-main .select-air-com .date-result {
     font-size: 16px;
   }
   .pc-section-main .select-air-com .people-com .t-people-result > p {
+    width: 74px;
     font-size: 16px;
+  }
+  .pc-section-main .select-air-com .people-com .t-people-result .p-hotelAdult {
+    margin-left: 0;
+    margin-right: 0;
   }
   .pc-section-main .flight-com {
     padding: 30px;
     background: #fff;
+    border-radius: 0px 8px 8px 8px;
+    box-shadow: 0px 2px 20px 2px rgba(31, 44, 92, 0.16);
+  }
+  .pc-section-main .flight-com .pc-fStatus-way {
+    position: absolute;
+    bottom: 50px;
   }
   .pc-section-main .ticket-select-way {
     display: none;
@@ -1799,6 +1778,9 @@ body {
   }
   .pc-section-main .search-flight-wrap .multi {
     color: #00908C;
+  }
+  .pc-section-main .fStatus-content .search-flight-wrap {
+    float: right;
   }
   .pc-section-main .date-select-way {
     position: absolute;
@@ -1845,6 +1827,19 @@ body {
     font-size: 14px;
     color: #1f2c5c;
     text-align: left;
+  }
+  .pc-section-main .select-hotel-time {
+    width: 920px;
+  }
+  .pc-section-main .hotel-content {
+    padding-top: 65px;
+  }
+  .pc-section-main .hotel-content .search-flight-wrap {
+    position: absolute;
+    top: 65px;
+    right: 30px;
+    animation-delay: .8s;
+    -webkit-animation-delay: .8s;
   }
 }
 /* 手机端 */
@@ -2646,10 +2641,13 @@ body {
     background: url('../../images/EN/svg/flight-icon-active.svg') center 30% no-repeat;
   }
   .lm-aside-flight > ul .li-child5 a {
-    background: url('../../images/EN/svg/car-icon.svg') center 30% no-repeat;
+    background: url('../../images/EN/svg/news-icon.svg') center 30% no-repeat;
   }
   .lm-aside-flight > ul .li-child5 .active {
-    background: url('../../images/EN/svg/car-icon-active.svg') center 30% no-repeat;
+    background: url('../../images/EN/svg/news-icon-active.svg') center 30% no-repeat;
+  }
+  .lm-aside-flight > ul .li-child5 .pc-news {
+    display: none;
   }
   .popup-title-wrap {
     position: relative;
@@ -2946,6 +2944,10 @@ body {
   .popup-content .hotel-popus-people .s-room-2 {
     position: relative;
     z-index: 2;
+    clear: both;
+  }
+  .popup-content .hotel-popus-people .s-room-3 {
+    clear: both;
   }
   .popup-content .hotel-popus-people .rooms-title {
     float: none;
@@ -2971,6 +2973,9 @@ body {
   .popup-content .hotel-popus-people .rooms-content-com .hotel-people-number {
     float: left;
     width: 160px;
+  }
+  .popup-content .hotel-popus-people .add-rooms-wrap {
+    clear: both;
   }
   .popup-content .hotel-popus-people .adult-rooms-content .people-prompt .p1 {
     background: url('../../images/EN/svg/adult-icon.svg') 10px center no-repeat rgba(31, 44, 92, 0.04);
