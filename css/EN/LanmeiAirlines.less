@@ -266,6 +266,9 @@ body{
 		height: 26px;
     line-height: 26px;
 		margin-right: 30px;
+		color: @purple;
+		font-size: 14px;
+		font-family: @FBold;
 		.transition3; 
 		&:hover {
 			color: @green;
@@ -685,10 +688,10 @@ body{
 
 .section-content-title{
 	position: relative;
-	height: 130px;
-	line-height: 140px;
+	height: 100px;
+	line-height: 100px;
 	margin-bottom: 30px;
-	font-size: 90px;
+	font-size: 70px;
 	font-family: @FBold;
 	.purpleRgb(.1);
 	text-align: center;
@@ -704,51 +707,98 @@ body{
 
 /* 澜湄服务 */
 .lm-section-service{
-	width: 100%;
-	height: 300px;
-	margin-top: 60px;
-	margin-bottom: 60px;
-	background-size: cover;
-	background-position: 50% -660px;
+	width: 1200px;
+	margin: 160px auto 30px;
+	padding: 0 90px;
 	ul{
-		width: 680px;
-		height: 140px;
-		margin:0 auto;
+		overflow: hidden;
 		>li{
 			float: left;
-			width: 140px;
-			height: 140px;
-			margin-left: 40px;
-			border-radius: 2px;
+			width: 25%;
 			text-align: center;
 			a{
+				p {
+					margin-top: 20px;
+					.purpleRgb(.7);
+				}
+			}
+		}
+	}
+}
+
+/* 澜湄酒店 */
+.lm-section-hotel {
+	width: 1200px;
+	margin: 0 auto 40px;
+	.hotel-content {
+		overflow: hidden;
+		>li {
+			position: relative;
+			float: left;
+			width: 282px;
+			height:300px;
+			border-radius:8px;
+			margin-right: 24px;
+			overflow: hidden;
+			a {
+				position: absolute;
 				display: block;
 				width: 100%;
 				height: 100%;
-				color:#fff;
-				transition: all .3s;
-				-webkit-transition: all .3s;
-				img{
-					margin-top: 20px;
+				border-radius:8px;
+				text-align: center;
+				.purpleBgRgb(.29);
+				color: #fff;
+				>div {
+					position: absolute;
+					top: 115px;
+					width: 100%;
 				}
-				p{margin-top: 16px;}
-				&:hover{
-					.purpleBgRgb(0.4);
-					transition: all .3s;
-					-webkit-transition: all .3s;
+				h2 {
+					font-size: 24px;
+					font-weight: 300;
+					font-family: @FBold;
+				}
+				p {
+					margin-top: 6px;
+					font-size: 20px;
+					font-weight: 300;
 				}
 			}
-		}
-		>li:nth-child(3){
-			a {
-				cursor: default;
-				&:hover{background: none;}
-				p{color: rgba(255,255,255,.3);}
+			img {
+				position: absolute;
+				left: 0;
+				z-index: -1;
+				width: 100%;
+				height: 100%;
+				.transition3;
 			}
 		}
-		.nth-child1{
-			margin-left: 0;
+		.nth-child4 {
+			margin-right: 0;
 		}
+	}
+}
+
+/* 澜湄banner */
+.lm-section-banner {
+	width: 1200px;
+	margin: 0 auto 70px;
+	overflow: hidden;
+	.banner {
+		float: left;
+		width: 588px;
+		height: 276px;
+		overflow: hidden;
+		a {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+		img {width: 100%;}
+	}
+	.banner1 {
+		margin-right: 24px;
 	}
 }
 
@@ -791,9 +841,6 @@ body{
 	}
 	.lm-section-fares .fares-item .fares-trip .p2{
 		color: #999999;
-	}
-	.lm-section-service ul > li a:hover{
-		background: #2B516C;
 	}
 	.lm-section-travel .travel-item .travel-inner .nights{
 		color: #969799;
@@ -907,17 +954,12 @@ body{
 			clear: both;
 		}
 	}
-	.lm-section-banner, .lm-section-service, .lm-section-hotel{
+	.lm-section-banner, .lm-section-hotel{
 		margin-bottom: 50px;
 	}
 	.lm-section-hotel .hotel-com .hotel-img .save-percent{
 		background: #FC4A1A;
 	}
-}
-
-/* 适配PC小屏幕 */
-@media screen and (max-width: 1450px) {
-	
 }
 
 /* 手机端以外 */
@@ -1782,23 +1824,78 @@ body{
 			}
 		}
 	}
+
+	/* 澜湄酒店 */
+	.lm-section-hotel {
+		.hotel-content {
+			>li {
+				&:hover {
+					img {
+						transform: scale(1.2);
+						transform: scale(1.1, 1.1);
+						-webkit-transform: scale(1.1, 1.1);
+						transform-origin: center;
+						-webkit-transform-origin: center;
+						.transition3;
+					}
+				}
+			}
+		}
+	}
+
+	/* 澜湄banner */
+	.lm-section-banner {
+		.banner {
+			a {
+				&:hover {
+					img {
+						transform: scale(1.2);
+						transform: scale(1.1, 1.1);
+						-webkit-transform: scale(1.1, 1.1);
+						transform-origin: center;
+						-webkit-transform-origin: center;
+						.transition3;
+					}
+				}
+				img {.transition3;}
+			}
+		}
+	}
+}
+
+/* 适配PC小屏幕 */
+@media screen and (min-width: 768px) and (max-width: 1450px) {
+	.lm-section-main {
+		top: 50px;
+	}
+	.pc-nav-container .m-nav-1 {
+		height: 50px;
+		line-height: 50px;
+	}
+	.lm-section-service {
+		margin-top: 150px;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+	.lm-aside-code {display: none;}
+	.lm-section-main {width: 1200px;}
+	.pc-nav-container {
+		position: absolute;
+		left: 0;
+		margin-left: 200px;
+	}
 }
 
 /* 手机端 */
 @media (max-width: 767px) {
-	.flight-com,.content-com-inner,.lm-aside-flight,.lm-important{
-		-webkit-transform: scale(1); 
-		transform: scale(1); 
-		-webkit-transform-origin: top;
-		transform-origin: top;
-	}
 	.lm-aside-code, .date-select-way {
 		display: none;
 	}
 	.lm-section-main{
 		top: 0;
 		overflow: initial;
-		height: 508px !important;
+		height: 470px !important;
 	}
 	.lm-nav-wrap {padding-top: 50px;}
 	.ticket-bg{
@@ -1821,7 +1918,6 @@ body{
 		background: url('@{url2}ticket-bg-mobile.jpg') center no-repeat;
 		background-size: cover;
 	}
-	.content-com-wrap{top: 0;}
 	.lm-aside-flight,.lm-important{display: none;}
 	.nav-container{
 		position: fixed;
@@ -2222,11 +2318,10 @@ body{
 			word-wrap: break-word;
 		}
 	}
-	.content-com-wrap{height: auto;}
 	.flight-com{
 		width: 100%;
 		left: 0;
-		top: 90px;
+		top: 70px;
 		margin-left: 0;
 		-webkit-transform: scale(1);
 		transform: scale(1);
@@ -3079,13 +3174,9 @@ body{
 			}
 		}
 	}
-	.lm-section-banner, .lm-section-service, .lm-section-hotel{
-		margin-bottom: 20px;
-	}
 	.lm-section-hotel .hotel-com .hotel-img .save-percent{
 		top: 20px;
 	}
-	.lm-section-news{margin-bottom: 40px;}
 	.section-content-title{
 		font-size: 28px;
 		height: 38px;
@@ -3094,34 +3185,6 @@ body{
 		>h2{
 			font-size: 16px;
 			margin-top: -9px;
-		}
-	}
-	.lm-section-service{
-		height: 120px;
-		.service-bg{
-			padding-top: 30px;
-		}
-		ul{
-			width: 288px;
-			height: 60px;
-			>li{
-				width: 60px;
-				height: 60px;
-				margin-left: 16px;
-				a{
-					img{
-						width: 35px;
-						margin-top: 6px;
-					}
-					p{
-						font-size: 10px;
-						margin-top: 5px;
-						overflow: hidden;
-						text-overflow: ellipsis;
-						white-space: nowrap;
-					}
-				}
-			}
 		}
 	}
 	.bus-download-wrap{
@@ -3171,4 +3234,67 @@ body{
 		}
 	}
 	#bus-download-id{height: auto !important;}
+	
+	.content-com-wrap {
+		top: 0;
+		width: 100%;
+		left: 0;
+		margin-left: 0;
+		.content-com-inner > h1 {
+			height: 26px;
+		}
+	}
+	.lm-section-service {
+		width: 100%;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		padding: 0 15px;
+		ul {
+			>li {
+				img {
+					width: 45px;
+				}
+				a p {
+					font-size: 12px;
+					margin-top: 6px;
+				}
+			}
+		}
+	}
+	.lm-section-hotel {
+		width: 100%;
+		padding: 0 15px;
+		margin-bottom: 20px;
+		.hotel-content {
+			> li {
+				width: 49%;
+				height: 170px;
+				margin-right: 0;
+				margin-bottom: 2%;
+				border-radius: 2px;
+				img {height: auto;}
+				a {
+					border-radius: 2px;
+					>div {top: 60px;}
+					h2 {font-size: 18px;}
+					p {font-size: 14px;}
+				}
+			}
+			.nth-child1 ,.nth-child3 {margin-right: 2%;}
+			.nth-child3 ,.nth-child4 {margin-bottom: 0;}
+		}
+	}
+	.lm-section-banner {
+		width: 100%;
+		padding: 0 15px;
+		margin-bottom: 30px;
+		.banner {
+			width: 100%;
+			height: auto;
+			margin-right: 0;
+		}
+		.banner1 {
+			margin-bottom: 2%;
+		}
+	}
 }

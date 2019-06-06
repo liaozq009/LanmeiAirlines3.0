@@ -661,7 +661,7 @@ body {
   color: rgba(0, 0, 0, 0.8);
 }
 /* 1366新调整20190218 */
-@media screen and (max-width: 1400px) {
+@media screen and (min-width: 768px) and (max-width: 1450px) {
   .lm-header {
     height: 50px;
     line-height: 50px;
@@ -673,13 +673,13 @@ body {
   }
   .lm-header .h-logo-wrap {
     height: 50px;
-    background-size: 240px;
   }
   .lm-header .h-phone {
     background-position-y: 13px;
   }
   .lm-header .h-phone .phone-menu {
     padding: 18px;
+    top: 66px;
   }
   .lm-header .h-phone .phone-menu > h2 {
     font-size: 18px;
@@ -696,6 +696,7 @@ body {
     background-position-y: 12px;
   }
   .lm-header .h-lang .lang-menu {
+    top: 66px;
     height: 146px;
     padding: 18px;
   }
@@ -718,6 +719,10 @@ body {
   }
   .lm-header .h-right > div > .REGISTEREDBtn > span {
     margin-left: 8px;
+  }
+  .pc-nav-container .m-nav-1 {
+    height: 50px;
+    line-height: 50px;
   }
   .lm-footer {
     height: 226px;
@@ -750,9 +755,21 @@ body {
     margin-top: -20px;
   }
 }
-/* 移动端新增代码 */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .lm-header {
+    position: absolute;
+    width: 1200px;
+    padding: 0;
+  }
+  .lm-footer {
+    width: 1200px;
+  }
+}
 @media screen and (max-width: 1200px) {
   .lm-header .h-logo {
+    display: none;
+  }
+  .lm-header .menu-guide {
     display: none;
   }
   .lm-header .mobile-logo {
@@ -828,18 +845,6 @@ body {
   .lm-footer .f-email {
     margin-top: 16px;
   }
-  .BackToTop {
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    padding: 0;
-  }
-  .BackToTop .top p {
-    display: none;
-  }
-  .BackToTop .top img {
-    width: 16px;
-  }
 }
 @media (min-width: 768px) {
   .lm-header {
@@ -890,6 +895,16 @@ body {
   .lm-header :root .gradient {
     filter: none;
   }
+  .lm-header .h-logo {
+    display: none;
+  }
+  .lm-header .menu-guide {
+    display: none;
+  }
+  .lm-header .mobile-logo {
+    display: inline-block;
+    height: 40px;
+  }
   .lm-header .header-wrap {
     width: 100%;
   }
@@ -909,6 +924,13 @@ body {
   }
   .lm-header .h-right > div {
     display: none;
+  }
+  .lm-header .h-right .v-line {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .lm-header .h-right .v-line-2 {
+    margin-right: 40px;
   }
   .lm-header .h-right .h-login {
     display: block;
@@ -958,6 +980,10 @@ body {
     border-right: 7px solid transparent;
     border-bottom: 7px solid #fff;
   }
+  .lm-header .h-login span,
+  .lm-header .h-registered span {
+    display: none;
+  }
   .lm-header .h-lang > p {
     height: 60px;
   }
@@ -969,6 +995,7 @@ body {
     display: block;
   }
   .lm-sub-header .h-phone {
+    left: -110px;
     background: url('../../../images/EN/svg/phone.svg') center 20px no-repeat;
   }
   .lm-sub-header .h-phone .phone-menu > p {
@@ -977,14 +1004,45 @@ body {
   .lm-sub-header .h-phone .phone-menu::before {
     left: 60%;
   }
+  .lm-sub-header .h-phone .phone-menu {
+    width: 186px;
+    height: 80px;
+    padding: 10px;
+  }
+  .lm-sub-header .h-phone .phone-menu > h2 {
+    font-size: 16px;
+  }
+  .lm-sub-header .h-phone .phone-menu > p {
+    font-size: 14px;
+    padding-left: 30px;
+    background-size: 16px;
+  }
+  .lm-sub-header .h-phone .phone-menu .p1 {
+    margin-top: 12px;
+  }
   .lm-sub-header .h-lang > p {
     background: url('../../../images/EN/svg/lang-en.svg') center 15px no-repeat;
+  }
+  .lm-sub-header .h-lang .lang-menu {
+    left: -130px;
+    width: 190px;
+    height: 126px;
+    padding: 10px;
   }
   .lm-sub-header .h-lang .lang-menu .lang-en {
     background: url('../../../images/EN/svg/lang-en.svg') left center no-repeat;
   }
   .lm-sub-header .h-lang .lang-menu .lang-zh {
     background: url('../../../images/EN/svg/lang-zh.svg') left center no-repeat;
+  }
+  .lm-sub-header .h-lang .lang-menu > h2 {
+    font-size: 16px;
+  }
+  .lm-sub-header .h-lang .lang-menu .lang-en {
+    margin-top: 12px;
+  }
+  .lm-subLogin-header .h-right .h-phone {
+    left: -50px;
   }
   .lm-subLogin-header .h-right .h-phone,
   .lm-subLogin-header .h-right .v-line,
@@ -998,6 +1056,27 @@ body {
   .lm-footer {
     height: 240px;
     padding-top: 20px;
+  }
+  .lm-footer .footer-right,
+  .lm-footer .footer-bottom {
+    display: none;
+  }
+  .lm-footer .footer-left {
+    width: auto;
+    float: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .lm-footer .f-email {
+    text-align: center;
+  }
+  .lm-footer .f-local,
+  .lm-footer .copyright {
+    display: block;
+  }
+  .lm-footer .facebook,
+  .lm-footer .f-email {
+    margin-top: 16px;
   }
   .lm-footer .lm-logo {
     width: 100px;
@@ -1044,6 +1123,25 @@ body {
   }
   .lm-footer .copyright a {
     font-size: 12px;
+  }
+  .BackToTop {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0;
+    border-radius: 2px 0 0 2px;
+  }
+  .BackToTop .top {
+    width: 30px;
+    height: 30px;
+    background: url('../../../images/EN/svg/ToTop-icon.svg') center 30% no-repeat;
+    background-size: 22px;
+  }
+  .BackToTop .top p {
+    display: none;
+  }
+  .BackToTop .top img {
+    display: none;
   }
   .lm-loading img {
     width: 160px;
@@ -1184,52 +1282,4 @@ body {
     height: 25px;
     line-height: 25px;
   }
-}
-/* 游记弹出框样式 */
-.travel-diary .diaryModal {
-  background: #ffffff;
-}
-.travel-diary .modal-content {
-  width: 100%;
-  height: 760px;
-  background: rgba(241, 250, 255, 0.8);
-  box-shadow: 0 0 50px 0 rgba(111, 162, 246, 0.5);
-  border-radius: 10px;
-  border: none;
-}
-.travel-diary .close-diary {
-  position: absolute;
-  top: 50px;
-  left: 50%;
-  margin-left: 300px;
-  background: url('../../../images/EN/mobal-close.png') center no-repeat #fff;
-  box-shadow: 0 0 30px 0 rgba(170, 199, 249, 0.5);
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  border: none;
-  opacity: 1;
-  cursor: pointer;
-}
-@media (max-width: 1600px) {
-  .travel-diary .close-diary {
-    top: 20px;
-  }
-}
-/* 公共按钮 */
-.lm-btn {
-  color: #fff;
-  border: none;
-  outline: none;
-  border-radius: 2px;
-  text-align: center;
-  background: #1f2c5c;
-  transition: all .3s;
-  -webkit-transition: all .3s;
-}
-.lm-btn:hover {
-  color: #fff;
-  background: #8ec060;
-  transition: all .3s;
-  -webkit-transition: all .3s;
 }
