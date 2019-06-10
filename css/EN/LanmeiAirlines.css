@@ -10,11 +10,11 @@
 /*ie8*/
 .linearBg {
   background: #42958a;
-  background: -webkit-linear-gradient(left, #42958a 0%, #1f2c5c 100%);
-  background: -o-linear-gradient(right, #42958a 0%, #1f2c5c 100%);
-  background: -moz-linear-gradient(right, #42958a 0%, #1f2c5c 100%);
-  background: linear-gradient(to right, #42958a 0%, #1f2c5c 100%);
-  filter: alpha progid:DXImageTransform.Microsoft.gradient(startcolorstr=#42958a, endcolorstr=#1f2c5c, gradientType=1);
+  background: -webkit-linear-gradient(left, #00908C 0%, #1f2c5c 100%);
+  background: -o-linear-gradient(right, #00908C 0%, #1f2c5c 100%);
+  background: -moz-linear-gradient(right, #00908C 0%, #1f2c5c 100%);
+  background: linear-gradient(to right, #00908C 0%, #1f2c5c 100%);
+  filter: alpha progid:DXImageTransform.Microsoft.gradient(startcolorstr=#00908C, endcolorstr=#1f2c5c, gradientType=1);
   /*ie8*/
   /*ie9*/
 }
@@ -261,6 +261,13 @@ body {
 }
 .lm-important > ul > li > a {
   color: rgba(31, 44, 92, 0.7);
+  transition: all .3s;
+  -webkit-transition: all .3s;
+}
+.lm-important > ul > li > a:hover {
+  color: #8ec060;
+  transition: all .3s;
+  -webkit-transition: all .3s;
 }
 /* 航班选择公共样式 */
 .flight-com {
@@ -335,20 +342,20 @@ body {
 .select-air-com > div :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
   color: rgba(31, 44, 92, 0.3);
-  font-size: 20px;
+  font-size: 16px;
 }
 .select-air-com > div ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
   color: rgba(31, 44, 92, 0.3);
-  font-size: 20px;
+  font-size: 16px;
 }
 .select-air-com > div input:-ms-input-placeholder {
   color: rgba(31, 44, 92, 0.3);
-  font-size: 20px;
+  font-size: 16px;
 }
 .select-air-com > div input::-webkit-input-placeholder {
   color: rgba(31, 44, 92, 0.3);
-  font-size: 20px;
+  font-size: 16px;
 }
 .select-air-com > div input::-webkit-outer-spin-button,
 .select-air-com > div input::-webkit-inner-spin-button {
@@ -364,7 +371,7 @@ body {
   background: url('../../images/EN/city-to.png') 20px no-repeat rgba(31, 44, 92, 0.04);
 }
 .select-air-com > div .h-from-input {
-  background: url('../../images/EN/hotel-from.png') 20px no-repeat rgba(31, 44, 92, 0.04);
+  background: url('../../images/EN/hotel-from.png') 25px no-repeat rgba(31, 44, 92, 0.04);
 }
 .select-air-com > div .ticket-num-input {
   background: url('../../images/EN/ticket-num.png') 20px no-repeat rgba(31, 44, 92, 0.04);
@@ -546,11 +553,11 @@ body {
   outline: none;
   border-radius: 2px;
   background: #42958a;
-  background: -webkit-linear-gradient(left, #42958a 0%, #1f2c5c 100%);
-  background: -o-linear-gradient(right, #42958a 0%, #1f2c5c 100%);
-  background: -moz-linear-gradient(right, #42958a 0%, #1f2c5c 100%);
-  background: linear-gradient(to right, #42958a 0%, #1f2c5c 100%);
-  filter: alpha progid:DXImageTransform.Microsoft.gradient(startcolorstr=#42958a, endcolorstr=#1f2c5c, gradientType=1);
+  background: -webkit-linear-gradient(left, #00908C 0%, #1f2c5c 100%);
+  background: -o-linear-gradient(right, #00908C 0%, #1f2c5c 100%);
+  background: -moz-linear-gradient(right, #00908C 0%, #1f2c5c 100%);
+  background: linear-gradient(to right, #00908C 0%, #1f2c5c 100%);
+  filter: alpha progid:DXImageTransform.Microsoft.gradient(startcolorstr=#00908C, endcolorstr=#1f2c5c, gradientType=1);
   /*ie8*/
   /*ie9*/
 }
@@ -724,6 +731,13 @@ body {
   float: left;
   width: 25%;
   text-align: center;
+  transition: all .3s;
+  -webkit-transition: all .3s;
+}
+.lm-section-service ul > li:hover p {
+  color: #8ec060;
+  transition: all .3s;
+  -webkit-transition: all .3s;
 }
 .lm-section-service ul > li a p {
   margin-top: 20px;
@@ -1223,11 +1237,11 @@ body {
     padding: 4px;
     text-align: center;
     background: #42958a;
-    background: -webkit-linear-gradient(left, #42958a 0%, #1f2c5c 100%);
-    background: -o-linear-gradient(right, #42958a 0%, #1f2c5c 100%);
-    background: -moz-linear-gradient(right, #42958a 0%, #1f2c5c 100%);
-    background: linear-gradient(to right, #42958a 0%, #1f2c5c 100%);
-    filter: alpha progid:DXImageTransform.Microsoft.gradient(startcolorstr=#42958a, endcolorstr=#1f2c5c, gradientType=1);
+    background: -webkit-linear-gradient(left, #00908C 0%, #1f2c5c 100%);
+    background: -o-linear-gradient(right, #00908C 0%, #1f2c5c 100%);
+    background: -moz-linear-gradient(right, #00908C 0%, #1f2c5c 100%);
+    background: linear-gradient(to right, #00908C 0%, #1f2c5c 100%);
+    filter: alpha progid:DXImageTransform.Microsoft.gradient(startcolorstr=#00908C, endcolorstr=#1f2c5c, gradientType=1);
     /*ie8*/
     /*ie9*/
     border-radius: 2px;
@@ -1593,6 +1607,7 @@ body {
     position: absolute;
     left: -250px;
     width: 1200px;
+    padding: 0 50px;
     background: #fff;
     border-radius: 0px 0px 4px 4px;
     transition: all 400ms;
@@ -1673,11 +1688,11 @@ body {
     width: 190px;
     height: 50px;
     background: #42958a;
-    background: -webkit-linear-gradient(left, #42958a 0%, #1f2c5c 100%);
-    background: -o-linear-gradient(right, #42958a 0%, #1f2c5c 100%);
-    background: -moz-linear-gradient(right, #42958a 0%, #1f2c5c 100%);
-    background: linear-gradient(to right, #42958a 0%, #1f2c5c 100%);
-    filter: alpha progid:DXImageTransform.Microsoft.gradient(startcolorstr=#42958a, endcolorstr=#1f2c5c, gradientType=1);
+    background: -webkit-linear-gradient(left, #00908C 0%, #1f2c5c 100%);
+    background: -o-linear-gradient(right, #00908C 0%, #1f2c5c 100%);
+    background: -moz-linear-gradient(right, #00908C 0%, #1f2c5c 100%);
+    background: linear-gradient(to right, #00908C 0%, #1f2c5c 100%);
+    filter: alpha progid:DXImageTransform.Microsoft.gradient(startcolorstr=#00908C, endcolorstr=#1f2c5c, gradientType=1);
     /*ie8*/
     /*ie9*/
     margin-right: 10px;
@@ -1818,6 +1833,7 @@ body {
   }
   .pc-section-main .search-flight-wrap .multi {
     color: #00908C;
+    text-decoration: underline;
   }
   .pc-section-main .fStatus-content .search-flight-wrap {
     float: right;
@@ -2879,11 +2895,11 @@ body {
     padding: 4px;
     text-align: center;
     background: #42958a;
-    background: -webkit-linear-gradient(left, #42958a 0%, #1f2c5c 100%);
-    background: -o-linear-gradient(right, #42958a 0%, #1f2c5c 100%);
-    background: -moz-linear-gradient(right, #42958a 0%, #1f2c5c 100%);
-    background: linear-gradient(to right, #42958a 0%, #1f2c5c 100%);
-    filter: alpha progid:DXImageTransform.Microsoft.gradient(startcolorstr=#42958a, endcolorstr=#1f2c5c, gradientType=1);
+    background: -webkit-linear-gradient(left, #00908C 0%, #1f2c5c 100%);
+    background: -o-linear-gradient(right, #00908C 0%, #1f2c5c 100%);
+    background: -moz-linear-gradient(right, #00908C 0%, #1f2c5c 100%);
+    background: linear-gradient(to right, #00908C 0%, #1f2c5c 100%);
+    filter: alpha progid:DXImageTransform.Microsoft.gradient(startcolorstr=#00908C, endcolorstr=#1f2c5c, gradientType=1);
     /*ie8*/
     /*ie9*/
     border-radius: 2px;
@@ -2992,7 +3008,7 @@ body {
     text-align: center;
     color: #fff;
     font-size: 20px;
-    background: linear-gradient(to right, #42958a 0%, #1f2c5c 100%);
+    background: linear-gradient(to right, #00908C 0%, #1f2c5c 100%);
     border-radius: 2px;
   }
   .popup-content .hotel-popus-people {
@@ -3199,7 +3215,7 @@ body {
     text-align: center;
     color: #fff;
     font-size: 20px;
-    background: linear-gradient(to right, #42958a 0%, #1f2c5c 100%);
+    background: linear-gradient(to right, #00908C 0%, #1f2c5c 100%);
   }
   .popup-content .th-popus-people .people-prompt {
     width: 80px;
@@ -3283,7 +3299,7 @@ body {
     text-align: center;
     color: #fff;
     font-size: 20px;
-    background: linear-gradient(to right, #42958a 0%, #1f2c5c 100%);
+    background: linear-gradient(to right, #00908C 0%, #1f2c5c 100%);
     padding: 0;
     border: none;
     border-radius: 2px;

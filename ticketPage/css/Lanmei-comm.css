@@ -1,0 +1,20 @@
+.buyTicketList {
+  height: auto;
+  padding: 20px 10px 10px;
+  overflow: hidden;
+}
+.buyTicketList .SelectDate,
+.buyTicketList .SelectFlight,
+.buyTicketList .PassengerInformation,
+.buyTicketList .LanmeiPay,
+.buyTicketList .Complete {
+  width: 114px;
+}
+.buyTicketList .SelectDate dt img,
+.buyTicketList .SelectFlight dt img,
+.buyTicketList .PassengerInformation dt img,
+.buyTicketList .LanmeiPay dt img,
+.buyTicketList .Complete dt img {
+  width: 80px;
+  height: 62px;
+}

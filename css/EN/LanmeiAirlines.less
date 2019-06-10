@@ -18,20 +18,20 @@
 @green:#8ec060;
 @purple:#1f2c5c;
 @link:#42958a;
-@webkit-linear:-webkit-linear-gradient(left, #42958a 0%, #1f2c5c 100%);
-@o-linear:-o-linear-gradient(right, #42958a 0%, #1f2c5c 100%);
-@moz-linear:-moz-linear-gradient(right, #42958a 0%, #1f2c5c 100%);
-@linear:linear-gradient(to right, #42958a 0%, #1f2c5c 100%);
-@filter:alpha progid:DXImageTransform.Microsoft.gradient(startcolorstr=#42958a, endcolorstr=#1f2c5c, gradientType=1); /*ie8*/
+@webkit-linear:-webkit-linear-gradient(left, #00908C 0%, #1f2c5c 100%);
+@o-linear:-o-linear-gradient(right, #00908C 0%, #1f2c5c 100%);
+@moz-linear:-moz-linear-gradient(right, #00908C 0%, #1f2c5c 100%);
+@linear:linear-gradient(to right, #00908C 0%, #1f2c5c 100%);
+@filter:alpha progid:DXImageTransform.Microsoft.gradient(startcolorstr=#00908C, endcolorstr=#1f2c5c, gradientType=1); /*ie8*/
 @FBold:CamptonBookBold;
 
 .linearBg {
 	background: #42958a;
-	background: -webkit-linear-gradient(left, #42958a 0%, #1f2c5c 100%);
-	background: -o-linear-gradient(right, #42958a 0%, #1f2c5c 100%);
-	background: -moz-linear-gradient(right, #42958a 0%, #1f2c5c 100%);
-	background: linear-gradient(to right, #42958a 0%, #1f2c5c 100%);
-	filter: alpha progid:DXImageTransform.Microsoft.gradient(startcolorstr=#42958a, endcolorstr=#1f2c5c, gradientType=1); /*ie8*/
+	background: -webkit-linear-gradient(left, #00908C 0%, #1f2c5c 100%);
+	background: -o-linear-gradient(right, #00908C 0%, #1f2c5c 100%);
+	background: -moz-linear-gradient(right, #00908C 0%, #1f2c5c 100%);
+	background: linear-gradient(to right, #00908C 0%, #1f2c5c 100%);
+	filter: alpha progid:DXImageTransform.Microsoft.gradient(startcolorstr=#00908C, endcolorstr=#1f2c5c, gradientType=1); /*ie8*/
 	:root .gradient{filter:none;} ; /*ie9*/
 }
 
@@ -289,6 +289,11 @@ body{
 			white-space: nowrap;
 			>a{
 				.purpleRgb(.7);
+				.transition3;
+				&:hover {
+					color: @green;
+					.transition3;
+				}
 			}
 		}
 	}
@@ -362,19 +367,19 @@ body{
 			border-radius: 2px;
 		}
 		:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-			.purpleRgb(.3);font-size: 20px; 
+			.purpleRgb(.3);font-size: 16px; 
 		}
 
 		::-moz-placeholder { /* Mozilla Firefox 19+ */
-			.purpleRgb(.3);font-size: 20px;
+			.purpleRgb(.3);font-size: 16px;
 		}
 
 		input:-ms-input-placeholder{
-			.purpleRgb(.3);font-size: 20px;
+			.purpleRgb(.3);font-size: 16px;
 		}
 
 		input::-webkit-input-placeholder{
-			.purpleRgb(.3);font-size: 20px;
+			.purpleRgb(.3);font-size: 16px;
 		}
 		input::-webkit-outer-spin-button,
 	    input::-webkit-inner-spin-button {
@@ -390,7 +395,7 @@ body{
 			background: url('@{url}city-to.png') 20px no-repeat rgba(31, 44, 92, 0.04);
 		}
 		.h-from-input{
-			background: url('@{url}hotel-from.png') 20px no-repeat rgba(31, 44, 92, 0.04);
+			background: url('@{url}hotel-from.png') 25px no-repeat rgba(31, 44, 92, 0.04);
 		}
 		.ticket-num-input{
 			background: url('@{url}ticket-num.png') 20px no-repeat rgba(31, 44, 92, 0.04);
@@ -716,6 +721,13 @@ body{
 			float: left;
 			width: 25%;
 			text-align: center;
+			.transition3;
+			&:hover {
+				p {
+					color: @green;
+					.transition3;
+				}
+			}
 			a{
 				p {
 					margin-top: 20px;
@@ -1565,6 +1577,7 @@ body{
 			position: absolute;
 			left: -250px;
 			width: 1200px;
+			padding: 0 50px;
 			background: #fff;
 			border-radius:0px 0px 4px 4px;
 			transition: all 400ms;
@@ -1761,6 +1774,7 @@ body{
 			.flight-search {.linearBg2;}
 			.multi {
 				color: #00908C;
+				text-decoration: underline;
 			}
 		}
 		.fStatus-content .search-flight-wrap {

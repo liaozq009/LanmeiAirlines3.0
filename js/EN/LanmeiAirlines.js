@@ -103,23 +103,9 @@ var LanmeiAirlines = {
 		// 	mousescrollstep: 36,
 		// });
 
-		/* 澜湄服务背景特效 */
+		/* 二维码隐藏 */
 		$(window).scroll(function(){
 			var sTop = $(window).scrollTop();
-			var offsetTop = $('.js-section-service').offset().top; //总高度
-			var scrollTop = $(document).scrollTop(); //隐藏高度
-			var windowHeight = $(window).height();//可见窗口
-
-			var totleH = scrollTop+windowHeight;
-
-			if(totleH>=offsetTop && totleH<=offsetTop+windowHeight+300){
-				var y = totleH-offsetTop;
-				$('.js-section-service').css('backgroundPosition','center '+(parseInt(y/3)-660)+'px');
-			}else{
-				// console.log(222);
-				// $('.section-4').css('backgroundPosition','center 0');
-			}
-
 			if(sTop>150){$('.lm-aside-code .small-code').fadeOut()}else{$('.lm-aside-code .small-code').fadeIn()}
 		});
 	},
@@ -165,13 +151,13 @@ var LanmeiAirlines = {
 			if(subHeight != '0') {
 				$subNav.css({'height': subHeight,'padding': '30px 50px'});
 			}else {
-				$subNav.css({'height': subHeight,'padding': '0'});
+				$subNav.css({'height': subHeight,'padding': '0 50px'});
 			}
 			// $subNav.show();
 		}
 		function hideSub() {
 			// $subNav.stop().slideUp();
-			$subNav.css({'height': '0','padding': '0'});
+			$subNav.css({'height': '0','padding': '0 50px'});
 			// $subNav.hide();
 		}
 
