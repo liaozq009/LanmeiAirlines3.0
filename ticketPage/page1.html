@@ -36,6 +36,9 @@
   <script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/bootstrap.min.js"></script> 
   <!-- 公共JS --> 
   <script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/common/CN/js/Lanmei-common1.js"></script> 
+
+  <!-- 新增js -->
+  <script type="text/javascript" src="js/Lanmei-common2.js"></script>
  </head> 
  <body> 
   <input type="hidden" id="totalPeopleNum" value="8" /> 
@@ -182,9 +185,7 @@
     <div class="selectAir selectAirCommon"> 
      <div class="local_timeSelect"> 
       <div class="localSelectStart"> 
-       <p><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/originStart2.png" /><span>出发地</span></p> 
-       <input type="text" autocomplete="off" class="fromcityinput inputDown Autocomplete" id="fromcity" value="" placeholder="" /> 
-       <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/downArrow.png" /> 
+       <input type="text" autocomplete="off" class="fromcityinput inputDown Autocomplete" id="fromcity" value="" placeholder="出发地" /> 
        <i class="img01" id="localChangeImg"></i> 
        <b class="bottomLine" style="display: none;"></b> 
        <ul class="fromcityMenu" style="display: none;"> 
@@ -225,9 +226,7 @@
        </ul> 
       </div> 
       <div class="localSelectEnd"> 
-       <p><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/originEnd2.png" /><span>目的地</span></p> 
-       <input type="text" autocomplete="off" class="tocityinput inputDown Autocomplete" id="tocity" value="" placeholder="" /> 
-       <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/downArrow.png" /> 
+       <input type="text" autocomplete="off" class="tocityinput inputDown Autocomplete" id="tocity" value="" placeholder="目的地" /> 
        <b class="bottomLine" style="display: none;"></b> 
        <ul class="tocityMenu" style="display: none;"> 
         <!-- <li><a href="#" title="曼谷" id="BKK">曼谷</a></li> --> 
@@ -299,44 +298,39 @@
        </ul> 
       </div> 
       <div class="timeSelectStart"> 
-       <p><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/departureDate2.png" /><span>出发日期</span></p> 
        <div style="position: relative; display: inline-block; width: 220px; height: 38px;">
-        <input type="text" id="timeFrom" name="takeoffDate" value="" placeholder="" readonly="" style="position: absolute;" />
+        <input type="text" id="timeFrom" name="takeoffDate" value="" placeholder="出发日期" readonly="" style="position: absolute;" />
         <span class="date-info">星期二</span>
        </div> 
-       <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/downArrow.png" /> 
       </div> 
       <div class="timeSelectEnd" style="visibility: visible;"> 
-       <p><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/departureDate2.png" /><span>返程日期</span></p> 
        <div style="position: relative; display: inline-block; width: 220px; height: 38px;">
-        <input type="text" id="timeTo" name="returnDate" value="" placeholder="" readonly="" style="position: absolute;" />
+        <input type="text" id="timeTo" name="returnDate" value="" placeholder="返程日期" readonly="" style="position: absolute;" />
         <span class="date-info">星期三</span>
        </div> 
        <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/downArrow.png" /> 
       </div> 
      </div> 
      <div class="passenger_Select"> 
-      <div class="AdultSelect"> 
-       <p><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/adult-icon2.png" /><span>成人</span></p> 
+      <!-- <div class="AdultSelect"> 
        <div> 
         <input type="text" class="cityinput" id="Adult" value="1" readonly="" name="adultCount" /> 
-        <i class="addArrow"><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/addArrow.png" /></i> 
-        <i class="downArrow"><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/downArrow.png" /></i> 
        </div> 
       </div> 
       <div class="ChildSelect"> 
-       <p><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/child-icon2.png" /><span>儿童</span></p> 
        <div> 
         <input type="text" readonly="readonly" id="Child" value="0" class="" name="childCount" /> 
-        <i class="addArrow"><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/addArrow.png" /></i> 
-        <i class="downArrow"><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/downArrow.png" /></i> 
-        <span class="ageTip">2-11 years</span> 
        </div> 
-      </div> 
+      </div>  -->
+      <div class="people-com">
+        <div class="t-people-result hidden-infant">
+        <p class="p-adult js-p-adult">x <span>1</span></p>
+        <p class="p-child js-p-child">x <span>0</span></p>
+        <p class="p-infant js-p-infant">x <span>0</span></p>
+      </div>
+      </div>
       <div class="CabinSelect"> 
-       <p><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/cabin-icon2.png" /><span>客舱</span></p> 
        <input type="text" class="cityinput inputDown" id="Cabin" value="" placeholder="" readonly="" /> 
-       <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/downArrow.png" /> 
        <b class="bottomLine" style="display: none;"></b> 
        <ul class="dropdownMenu CabinMenu" style="display: none;"> 
         <li><a href="#" id="ECONOMY">经济舱</a></li> 

@@ -1,3 +1,16 @@
+.linearBg2 {
+  background: #42958a;
+  background: -webkit-linear-gradient(left, #b4ec80 0%, #00908c 100%);
+  background: -o-linear-gradient(right, #b4ec80 0%, #00908c 100%);
+  background: -moz-linear-gradient(right, #b4ec80 0%, #00908c 100%);
+  background: linear-gradient(to right, #b4ec80 0%, #00908c 100%);
+  filter: alpha progid:DXImageTransform.Microsoft.gradient(startcolorstr=#b4ec80, endcolorstr=#00908c, gradientType=1);
+  /*ie8*/
+  /*ie9*/
+}
+.linearBg2 :root .gradient {
+  filter: none;
+}
 .buyTicketList {
   height: auto;
   padding: 20px 10px 10px;
@@ -17,4 +30,173 @@
 .buyTicketList .Complete dt img {
   width: 80px;
   height: 62px;
+}
+.selectAir .local_timeSelect > div,
+.selectAir .passenger_Select > div {
+  height: 50px;
+}
+.selectAir .local_timeSelect > div input,
+.selectAir .passenger_Select > div input {
+  height: 50px;
+  line-height: 50px;
+  margin-top: 0;
+  padding: 0 20px 0 70px;
+  font-size: 16px;
+  color: #1f2c5c;
+  border-radius: 2px;
+  border: none;
+  background: rgba(31, 44, 92, 0.04);
+}
+.selectAir .local_timeSelect > div #localChangeImg,
+.selectAir .passenger_Select > div #localChangeImg {
+  top: 16px;
+}
+.selectAir .local_timeSelect > div .fromcityinput,
+.selectAir .passenger_Select > div .fromcityinput {
+  background: url('../imgs/originStart3.png') 20px no-repeat rgba(31, 44, 92, 0.04);
+}
+.selectAir .local_timeSelect > div .tocityinput,
+.selectAir .passenger_Select > div .tocityinput {
+  background: url('../imgs/originEnd3.png') 20px no-repeat rgba(31, 44, 92, 0.04);
+}
+.selectAir .local_timeSelect > div .img01,
+.selectAir .passenger_Select > div .img01 {
+  background: url('../imgs/localChange3-active.png') center no-repeat;
+}
+.selectAir .local_timeSelect > div :-moz-placeholder,
+.selectAir .passenger_Select > div :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: rgba(31, 44, 92, 0.3);
+  font-size: 16px;
+}
+.selectAir .local_timeSelect > div ::-moz-placeholder,
+.selectAir .passenger_Select > div ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: rgba(31, 44, 92, 0.3);
+  font-size: 16px;
+}
+.selectAir .local_timeSelect > div input:-ms-input-placeholder,
+.selectAir .passenger_Select > div input:-ms-input-placeholder {
+  color: rgba(31, 44, 92, 0.3);
+  font-size: 16px;
+}
+.selectAir .local_timeSelect > div input::-webkit-input-placeholder,
+.selectAir .passenger_Select > div input::-webkit-input-placeholder {
+  color: rgba(31, 44, 92, 0.3);
+  font-size: 16px;
+}
+.selectAir .local_timeSelect > div {
+  width: 267px;
+}
+.selectAir .local_timeSelect > div input {
+  width: 267px;
+}
+.selectAir .local_timeSelect > div #timeFrom,
+.selectAir .local_timeSelect > div #timeTo {
+  width: 267px;
+  background: url('../imgs/departureDate3.png') 20px no-repeat rgba(31, 44, 92, 0.04);
+}
+.selectAir .local_timeSelect .localSelectStart {
+  width: 313px;
+}
+.selectAir .local_timeSelect .timeSelectStart {
+  width: 267px;
+  margin-right: 46px;
+}
+.selectAir .passenger_Select {
+  padding-left: 20px;
+}
+.selectAir .passenger_Select .CabinSelect {
+  width: 180px;
+  margin-right: 20px;
+}
+.selectAir .passenger_Select .cityinput {
+  width: 100%;
+  background: url('../imgs/cabin-icon3.png') 20px no-repeat rgba(31, 44, 92, 0.04);
+}
+.selectAir .passenger_Select .searchAir {
+  width: 140px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.selectAir .passenger_Select .searchAir a {
+  width: 140px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  background: #42958a;
+  background: -webkit-linear-gradient(left, #b4ec80 0%, #00908c 100%);
+  background: -o-linear-gradient(right, #b4ec80 0%, #00908c 100%);
+  background: -moz-linear-gradient(right, #b4ec80 0%, #00908c 100%);
+  background: linear-gradient(to right, #b4ec80 0%, #00908c 100%);
+  filter: alpha progid:DXImageTransform.Microsoft.gradient(startcolorstr=#b4ec80, endcolorstr=#00908c, gradientType=1);
+  /*ie8*/
+  /*ie9*/
+}
+.selectAir .passenger_Select .searchAir a :root .gradient {
+  filter: none;
+}
+.selectAir .passenger_Select .searchAir a:hover {
+  background: #42958a;
+  background: -webkit-linear-gradient(left, #b4ec80 0%, #00908c 100%);
+  background: -o-linear-gradient(right, #b4ec80 0%, #00908c 100%);
+  background: -moz-linear-gradient(right, #b4ec80 0%, #00908c 100%);
+  background: linear-gradient(to right, #b4ec80 0%, #00908c 100%);
+  filter: alpha progid:DXImageTransform.Microsoft.gradient(startcolorstr=#b4ec80, endcolorstr=#00908c, gradientType=1);
+  /*ie8*/
+  /*ie9*/
+}
+.selectAir .passenger_Select .searchAir a:hover :root .gradient {
+  filter: none;
+}
+.people-com {
+  width: 100% !important;
+  margin-right: 0;
+}
+.people-com .t-people-result {
+  width: 100%;
+  height: 100%;
+  line-height: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 2px;
+  background: rgba(31, 44, 92, 0.04);
+}
+.people-com .t-people-result > p {
+  float: left;
+  width: 80px;
+  padding-left: 36px;
+  font-size: 20px;
+  color: #1f2c5c;
+}
+.people-com .t-people-result .p-adult {
+  background: url('../imgs/adult-icon3.png') 0 center no-repeat;
+}
+.people-com .t-people-result .p-child {
+  margin-left: 15px;
+  margin-right: 15px;
+  background: url('../imgs/child-icon3.png') 0 center no-repeat;
+}
+.people-com .t-people-result .p-infant {
+  background: url('../imgs/infant-icon3.png') 0 center no-repeat;
+}
+.people-com .hidden-infant {
+  text-align: center;
+}
+.people-com .hidden-infant > p {
+  float: none;
+  display: inline;
+}
+.people-com .hidden-infant .p-infant {
+  display: none;
+}
+.people-com .hidden-infant .p-child {
+  margin-left: 30px;
+  margin-right: 0;
+}
+.BackToTop {
+  display: none;
 }
