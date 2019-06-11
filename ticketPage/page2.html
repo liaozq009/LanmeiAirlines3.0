@@ -1,8 +1,8 @@
 <html lang="en">
  <head> 
   <!--[if lt IE 9]>
-<script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/respond.min.js"></script>
-<script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/respond.min.js"></script>
+<script type="text/javascript" src="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/html5shiv.min.js"></script>
 <![endif]--> 
   <meta charset="UTF-8" /> 
   <!-- 让 Bootstrap 兼容 IE 兼容模型 --> 
@@ -19,10 +19,10 @@
   <!-- 引入图标 --> 
   <link rel="icon" href="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/lanmeiLogo.ico" /> 
   <link rel="stylesheet" type="text/css" href="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/libs/bootstrap/css/bootstrap.min.css" /> 
-  <link rel="stylesheet" type="text/css" href="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/common/CN/css/Lanmei-common.css" /> 
-  <link rel="stylesheet" type="text/css" href="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/css/CN/LanmeiAirlinesSelectFlight.css" /> 
+  <link rel="stylesheet" type="text/css" href="css/Lanmei-common.css" /> 
+  <link rel="stylesheet" type="text/css" href="css/LanmeiAirlinesSelectFlight.css" /> 
   <link rel="stylesheet" type="text/css" href="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/libsEdit/css/lanmeiLibsEdit.css" /> 
-  <link rel="stylesheet" type="text/css" href="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/dataRange/lanmei-calendar.css" /> 
+  <link rel="stylesheet" type="text/css" href="css/lanmei-calendar.css" />
   <!--<link href='http://b2c.lanmeiairlines.com:80/lqWeb/css/insideout_CN.css' rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" type="text/css" href='http://b2c.lanmeiairlines.com:80/lqWeb/css/jqueryUI/jquery.flexbox.css' />
 		<link rel="stylesheet" type="text/css" href='http://b2c.lanmeiairlines.com:80/lqWeb/css/jqueryUI/jquery.ui.datepicker.css' />
@@ -38,302 +38,21 @@
   <script type="text/javascript" src="http://b2c.lanmeiairlines.com:80/lqWeb/js/front/frontinfo.js"></script> 
   <script type="text/javascript" src="http://b2c.lanmeiairlines.com:80/lqWeb/js/front/reservation.js"></script> 
   <script type="text/javascript" src="http://b2c.lanmeiairlines.com:80/lqWeb/js/citychoose.js"></script> 
-  <script src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/cityselect/jquery-migrate-1.2.1.js"></script> 
-  <script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/layer/layer.js"></script>
-  <link rel="stylesheet" href="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/layer/skin/default/layer.css?v=3.0.3303" id="layuicss-skinlayercss" /> 
-  <script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/bootstrap.min.js"></script> 
+  <script src="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/cityselect/jquery-migrate-1.2.1.js"></script> 
+  <script type="text/javascript" src="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/layer/layer.js"></script>
+  <link rel="stylesheet" href="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/layer/skin/default/layer.css?v=3.0.3303" id="layuicss-skinlayercss" /> 
+  <script type="text/javascript" src="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/bootstrap.min.js"></script> 
   <!-- 公共JS --> 
-  <script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/common/CN/js/Lanmei-common1.js"></script> 
+  <script type="text/javascript" src="js/Lanmei-comon1.js"></script> 
  </head> 
  <body> 
   <input type="hidden" id="totalPeopleNum" value="8" /> 
   <input type="hidden" id="language" value="CN" /> 
-  <!-- 页面顶部 --> 
-  <style type="text/css">
-	/* reset.css */
-	body,h1,h2,h3,h4,h5,h6,p,ul,li,input {
-		margin: 0;
-		padding: 0;
-	}
-	ul,li {
-		list-style: none;
-	}
-	*{
-		box-sizing: border-box;
-	}
-	a {
-		text-decoration: none;
-	}
-
-	/* 页面顶部 */
-	.lm-header {
-		position: fixed;
-		z-index: 99;
-		width: 100%;
-		min-width:960px;
-		height: 60px;
-		max-width: 1920px;
-		padding: 0 20px;
-		text-align: center;
-		background: -webkit-linear-gradient(left, #42958a 0%, #1f2c5c 100%);
-		background: -o-linear-gradient(right, #42958a 0%, #1f2c5c 100%);
-		background: -moz-linear-gradient(right, #42958a 0%, #1f2c5c 100%);
-		background: linear-gradient(to right, #42958a 0%, #1f2c5c 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#42958a', endColorstr='#1f2c5c', GradientType=1);
-	}
-	.lm-header .h-logo-wrap {
-		width: 262px;
-		height: 60px;
-		margin: 0 auto;
-		background: url('/lqWeb/lqweb/common/images/CN/logo.png') center no-repeat;
-	}
-	.lm-header .h-right {
-		position: absolute;
-		right: 20px;
-		top: 0;
-	}
-	.lm-header .h-phone {
-		position: absolute;
-		left: -50px;
-		width: 80px;
-		height: 80px;
-		background: url('/lqWeb/lqweb/common/images/CN/phone.png') center 20px no-repeat;
-	}
-	.lm-header .h-phone .phone-menu {
-		display: none;
-		position: absolute;
-		top: 76px;
-		left: -66px;
-		width: 230px;
-		
-		border-radius: 2px;
-		background: #fff;
-		padding: 20px;
-		text-align: left;
-		box-shadow: 0 0 50px 0 rgba(31, 44, 92, 0.2);
-	}
-	.lm-header .h-phone .phone-menu > h2 {
-		color: rgba(31, 44, 92, 0.8);
-		font-size: 20px;
-		font-weight: bold;
-	}
-	.lm-header .h-phone .phone-menu > p {
-		font-size: 16px;
-		color: rgba(0, 0, 0, 0.7);
-		height: 25px;
-		line-height: 32px;
-		margin-top: 10px;
-		margin-left: 10px;
-		padding-left: 40px;
-		background: url('/lqWeb/lqweb/common/images/CN/phone-bg.png') left center no-repeat;
-	}
-	.lm-header .h-phone .phone-menu .p1 {
-		margin-top: 20px;
-	}
-	.lm-header .h-phone .phone-menu::before {
-		position: absolute;
-		top: -14px;
-		left: 96px;
-		z-index: 9;
-		filter: alpha(opacity=0);
-		content: "";
-		display: block;
-		width: 0;
-		height: 0;
-		border-left: 14px solid transparent;
-		border-right: 14px solid transparent;
-		border-bottom: 14px solid #fff;
-	}
-	.lm-header .h-phone:hover .phone-menu {
-		display: block;
-	}
-	.lm-header .h-lang {
-		position: absolute;
-		right: -20px;
-		width: 70px;
-		height: 80px;
-	}
-	.lm-header .h-lang > p {
-		width: 70px;
-		height: 80px;
-		background: url('/lqWeb/lqweb/common/images/CN/lang.png') center 15px no-repeat;
-    }
-	.lm-header .h-lang .lang-menu {
-		display: none;
-		position: absolute;
-		top: 76px;
-		left: -216px;
-		width: 278px;
-		height: 160px;
-		border-radius: 2px;
-		background: #fff;
-		padding: 20px;
-		text-align: left;
-		box-shadow: 0 0 50px 0 rgba(31, 44, 92, 0.2);
-	}
-	.lm-header .h-lang .lang-menu > h2 {
-		color: rgba(31, 44, 92, 0.8);
-		font-size: 20px;
-		font-weight: bold;
-	}
-	.lm-header .h-lang .lang-menu > a {
-		display: block;
-		font-size: 16px;
-		color: rgba(0, 0, 0, 0.7);
-		height: 34px;
-		line-height: 40px;
-		margin-top: 10px;
-		margin-left: 10px;
-		padding-left: 40px;
-		transition: all .3s;
-		-webkit-transition: all .3s;
-	}
-	.lm-header .h-lang .lang-menu > a:hover {
-		color: #8ec060;
-		transition: all .3s;
-		-webkit-transition: all .3s;
-	}
-	.lm-header .h-lang .lang-menu .lang-en {
-		margin-top: 20px;
-		background: url('/lqWeb/lqweb/common/images/CN/lang-en.png') left center no-repeat;
-	}
-	.lm-header .h-lang .lang-menu .lang-zh {
-		background: url('/lqWeb/lqweb/common/images/CN/lang-zh.png') left center no-repeat;
-	}
-	.lm-header .h-lang .lang-menu::before {
-		position: absolute;
-		top: -14px;
-		right: 12px;
-		z-index: 9;
-		filter: alpha(opacity=0);
-		content: "";
-		display: block;
-		width: 0;
-		height: 0;
-		border-left: 14px solid transparent;
-		border-right: 14px solid transparent;
-		border-bottom: 14px solid #fff;
-	}
-	.lm-header .h-lang:hover .lang-menu {
-		display: block;
-	}
-	.lm-sub-header {
-		position: relative;
-		top: 0;
-	}
-	.lm-sub-header .h-logo-wrap {
-		margin: 0;
-		display: block;
-		cursor: pointer;
-	}
-	.lm-sub-header .h-right .h-phone {
-		left: -150px;
-	}
-
-	.lm-footer {
-		width: 100%;
-		min-width:960px;
-		height: 250px;
-		padding-top: 24px;
-		text-align: center;
-		background: #1f2c5c;
-	}
-	.lm-footer .lm-logo {
-		width: 140px;
-		height: 58px;
-		margin: 0 auto;
-		background: url('/lqWeb/lqweb/common/images/CN/lanmeiFooterLogo.png') center no-repeat;
-	}
-	.lm-footer .facebook {
-		margin-top: 16px;
-	}
-	.lm-footer .facebook > .a1 {
-		margin-right: 40px;
-	}
-	.lm-footer .facebook a {
-		display: inline-block;
-		width: 26px;
-		height: 26px;
-	}
-	.lm-footer .facebook .icon-facebook {
-		background: url('/lqWeb/lqweb/common/images/CN/icon-facebook.png') center no-repeat;
-	}
-	.lm-footer .facebook .icon-facebook:hover{
-		background: url('/lqWeb/lqweb/common/images/CN/icon-facebook-active.png') center no-repeat;
-	}
-	.lm-footer .facebook .icon-weibo {
-		background: url('/lqWeb/lqweb/common/images/CN/icon-weibo.png') center no-repeat;
-	}
-	.lm-footer .facebook .icon-weibo:hover{
-		background: url('/lqWeb/lqweb/common/images/CN/icon-weibo-active.png') center no-repeat;
-	}
-	.lm-footer .facebook a img {
-		width: 26px;
-		height: 26px;
-	}
-	.lm-footer .f-email {
-		color: #fff;
-		margin-top: 18px;
-	}
-	.lm-footer .f-email > img {
-		width: 20px;
-		height: 20px;
-		margin-right: 12px;
-		vertical-align: middle;
-	}
-	.lm-footer .f-local {
-		margin-top: 14px;
-	}
-	.lm-footer .f-local > img {
-		width: 20px;
-		height: 20px;
-		margin-right: 12px;
-		vertical-align: middle;
-	}
-	.lm-footer .f-local > i::before {
-		color: #fff;
-	}
-	.lm-footer .f-local a {
-		color: #fff;
-	}
-	.lm-footer .copyright {
-		margin-top: 14px;
-		color: rgba(255, 255, 255, 0.4);
-	}
-	.lm-footer .copyright a {
-		color: rgba(255, 255, 255, 0.4);
-		transition: all .3s;
-		-webkit-transition: all .3s;
-	}
-	.lm-footer .copyright a:hover {
-		color: #8ec060;
-		transition: all .3s;
-		-webkit-transition: all .3s;
-	}
-</style> 
   <!-- 页面顶部CN --> 
-  <header class="lm-header lm-sub-header"> 
-   <a href="http://lanmeiairlines.com/index_cn.html?lang=cn" class="h-logo-wrap"></a> 
-   <div class="h-right"> 
-    <div class="h-phone js-h-phone"> 
-     <div class="phone-menu js-phone-menu"> 
-      <h2>24小时客服电话:</h2> 
-      <p class="p1">+855 0023981800</p> 
-     </div> 
-    </div> 
-    <div class="h-lang js-h-lang"> 
-     <p class="js-choose-lang"></p> 
-     <div class="lang-menu js-lang-menu"> 
-      <h2>选择语言:</h2> 
-      <a href="http://lanmeiairlines.com?lang=en" class="lang-en" data="en">English</a> 
-      <a href="http://lanmeiairlines.com?lang=cn" class="lang-zh" data="zh">简体中文</a> 
-     </div> 
-    </div> 
-   </div> 
-  </header> 
+  <header class="lm-header lm-sub-header"></header>
   <!-- 订票步骤列表 --> 
-  <!--<script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/jQuery/jquery-1.11.3.js"></script>
-<script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/layer/layer.js"></script>--> 
+  <!--<script type="text/javascript" src="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/jQuery/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/layer/layer.js"></script>--> 
   <div class="buyTicketList"> 
    <dl class="SelectDate"> 
     <dt>
@@ -398,8 +117,8 @@
   </div> 
   <!-- 搜索框 --> 
   <!--[if lt IE 9]>
-<script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/respond.min.js"></script>
-<script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/respond.min.js"></script>
+<script type="text/javascript" src="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/html5shiv.min.js"></script>
 <![endif]--> 
   <form id="searchform" action="http://b2c.lanmeiairlines.com:80/lqWeb/reservation/AVQuery.do" method="post"> 
    <input name="tripType" type="hidden" value="RT" id="tripTypehidden" /> 
@@ -421,6 +140,8 @@
    <input id="vertifyCode2" name="vertifyCode" type="hidden" value="" /> 
    <input id="btnVal2" name="btnVal" type="hidden" value="search" /> 
    <input type="hidden" name="pageConstant" id="pageConstant" value="1" /> 
+   <input type="hidden" id="Adult" value="1" name="adultCount" /> 
+   <input type="hidden" id="Child" value="0" name="childCount" /> 
    <div class="changeSearch"> 
     <div class="changeSearchTitle"> 
      <h2> <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/leftTitleLine.png" /> 更改搜索 </h2> 
@@ -469,12 +190,10 @@
     <div class="selectAir selectAirCommon"> 
      <div class="local_timeSelect"> 
       <div class="localSelectStart"> 
-       <p><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/originStart2.png" /><span>出发地</span></p> 
-       <input type="text" autocomplete="off" class="fromcityinput inputDown Autocomplete" id="fromcity" value="" placeholder="" /> 
-       <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/downArrow.png" /> 
+       <input type="text" autocomplete="off" class="fromcityinput inputDown Autocomplete" id="fromcity" value="" placeholder="出发地" /> 
        <i class="img01" id="localChangeImg"></i> 
-       <b class="bottomLine" style="display: none;"></b> 
-       <ul class="fromcityMenu" style="display: none;"> 
+       <div class="downMenu-com">
+       <ul class="fromcityMenu"> 
         <li><a href="#" title="曼谷" id="BKK">曼谷(mangu)/BKK/泰国</a></li> 
         <li><a href="#" title="广州" id="CAN">广州(Guangzhou)/CAN/中国</a></li> 
         <li><a href="#" title="郑州" id="CGO">郑州(Zhengzhou)/CGO/中国</a></li> 
@@ -510,13 +229,12 @@
         <li><a href="#" title="Phnom Penh, Cambodia (Pochentong - PNH)">Phnom Penh, Cambodia (Pochentong - PNH)</a></li>
         <li><a href="#" title="Siem Reap, Cambodia (Siem Reap - REP)">Siem Reap, Cambodia (Siem Reap - REP)</a></li>
        </ul> 
+	     </div>
       </div> 
       <div class="localSelectEnd"> 
-       <p><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/originEnd2.png" /><span>目的地</span></p> 
-       <input type="text" autocomplete="off" class="tocityinput inputDown Autocomplete" id="tocity" value="" placeholder="" /> 
-       <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/downArrow.png" /> 
-       <b class="bottomLine" style="display: none;"></b> 
-       <ul class="tocityMenu" style="display: none;"> 
+       <input type="text" autocomplete="off" class="tocityinput inputDown Autocomplete" id="tocity" value="" placeholder="目的地" /> 
+       <div class="downMenu-com">
+       <ul class="tocityMenu">
         <!-- <li><a href="#" title="曼谷" id="BKK">曼谷</a></li> --> 
         <li><a href="#" title="曼谷" id="BKK">曼谷(mangu)/BKK/泰国</a></li> 
         <!-- <li><a href="#" title="广州" id="CAN">广州</a></li> --> 
@@ -584,51 +302,72 @@
         <li><a href="#" title="Phnom Penh, Cambodia (Pochentong - PNH)">Phnom Penh, Cambodia (Pochentong - PNH)</a></li>
         <li><a href="#" title="Siem Reap, Cambodia (Siem Reap - REP)">Siem Reap, Cambodia (Siem Reap - REP)</a></li>
        </ul> 
+	     </div>
       </div> 
       <div class="timeSelectStart"> 
-       <p><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/departureDate2.png" /><span>出发日期</span></p> 
        <div style="position: relative; display: inline-block; width: 220px; height: 38px;">
-        <input type="text" id="timeFrom" name="takeoffDate" value="" placeholder="" readonly="" style="position: absolute;" />
+        <input type="text" id="timeFrom" name="takeoffDate" value="" placeholder="出发日期" readonly="" />
         <span class="date-info">星期二</span>
        </div> 
-       <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/downArrow.png" /> 
       </div> 
       <div class="timeSelectEnd" style="visibility: visible;"> 
-       <p><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/departureDate2.png" /><span>返程日期</span></p> 
        <div style="position: relative; display: inline-block; width: 220px; height: 38px;">
-        <input type="text" id="timeTo" name="returnDate" value="" placeholder="" readonly="" style="position: absolute;" />
+        <input type="text" id="timeTo" name="returnDate" value="" placeholder="返程日期" readonly="" />
         <span class="date-info">星期三</span>
        </div> 
-       <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/downArrow.png" /> 
       </div> 
      </div> 
      <div class="passenger_Select"> 
-      <div class="AdultSelect"> 
-       <p><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/adult-icon2.png" /><span>成人</span></p> 
-       <div> 
-        <input type="text" class="cityinput" id="Adult" value="1" readonly="" name="adultCount" /> 
-        <i class="addArrow"><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/addArrow.png" /></i> 
-        <i class="downArrow"><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/downArrow.png" /></i> 
-       </div> 
-      </div> 
-      <div class="ChildSelect"> 
-       <p><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/child-icon2.png" /><span>儿童</span></p> 
-       <div> 
-        <input type="text" readonly="readonly" id="Child" value="0" class="" name="childCount" /> 
-        <i class="addArrow"><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/addArrow.png" /></i> 
-        <i class="downArrow"><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/downArrow.png" /></i> 
-        <span class="ageTip">2-11 years</span> 
-       </div> 
-      </div> 
+      <div class="people-com">
+        <div class="t-people-result hidden-infant js-people-select">
+          <p class="p-adult js-p-adult">x <span>1</span></p>
+          <p class="p-child js-p-child">x <span>0</span></p>
+          <p class="p-infant js-p-infant">x <span>0</span></p>
+        </div>
+        <div class="select-people-container downMenu-com">
+          <div class="s-adult s-people-com js-s-adult">
+            <div class="people-prompt">
+              <p class="p1">成人</p>
+              <p class="p2 adult-tip">( 12+ )</p>
+            </div>
+            <div class="people-number">
+              <a href="javascript:;" class="sub-people off-sub-operation js-adult-sub"></a>
+              <span class="adult-num">1</span>
+              <a href="javascript:;" class="add-people js-adult-add"></a>
+            </div>
+          </div>
+          <div class="s-child s-people-com js-s-child">
+            <div class="people-prompt">
+              <p class="p1">儿童</p>
+              <p class="p2 child-tip">(2-11)</p>
+            </div>
+            <div class="people-number disable">
+              <a href="javascript:;" class="sub-people off-sub-operation js-child-sub"></a>
+              <span class="child-num">0</span>
+              <a href="javascript:;" class="add-people js-child-add"></a>
+            </div>
+          </div>
+          <div class="s-infant s-people-com">
+            <div class="people-prompt">
+              <p class="p1"><img src="images/EN/infant-icon.png">婴儿</p>
+              <p class="p2 infant-tip">( < 2 )</p>
+            </div>
+            <div class="people-number disable">
+              <a href="javascript:;" class="sub-people off-sub-operation js-infant-sub"></a>
+              <span class="infant-num">0</span>
+              <a href="javascript:;" class="add-people js-infant-add"></a>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="CabinSelect"> 
-       <p><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/cabin-icon2.png" /><span>客舱</span></p> 
        <input type="text" class="cityinput inputDown" id="Cabin" value="" placeholder="" readonly="" /> 
-       <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/downArrow.png" /> 
-       <b class="bottomLine" style="display: none;"></b> 
-       <ul class="dropdownMenu CabinMenu" style="display: none;"> 
-        <li><a href="#" id="ECONOMY">经济舱</a></li> 
-       </ul> 
-      </div> 
+       <div class="downMenu-com Cabin-downMenu">
+         <ul class="dropdownMenu CabinMenu"> 
+          <li><a href="#" id="ECONOMY">经济舱</a></li> 
+         </ul> 
+       </div>
+      </div>
       <div class="searchAir"> 
        <a href="#" class="btn" id="search" onclick="doCheckTwo();">搜索</a> 
       </div> 
@@ -762,7 +501,7 @@
 		$(".selectAirCommon>div>div ul a").click(function(e){
 				e.preventDefault();e.stopPropagation();
 				var val = $(this).html();
-				$(this).parent().parent().hide().siblings(".bottomLine").hide().siblings("input").val(val);
+				$(this).parents('.downMenu-com').hide().siblings('input').val(val);
 				$(".selectAirCommon>div>div .inputDown").removeClass("active");
 				// 自动获取焦点
 				var inputId = $(this).parent().parent().siblings("input").attr("id"); 
@@ -844,20 +583,16 @@
  /* 舱位选择 */
 		var CabinSelect = function(){
 			$('#Cabin').val('经济舱');//设置默认值
-			$('.dropdownMenu').hide();
 			$('#Cabin').click(function(e){
 				e.stopPropagation();
-				$('.dropdownMenu').show();
+        $(this).siblings('.downMenu-com').show();
 			});
 			$('.dropdownMenu a').click(function(e){
 				e.preventDefault();
 				e.stopPropagation();
-				$('.dropdownMenu').hide();
+        $(this).parents('.downMenu-com').hide();
 				var val = $(this).html();
 				$('#Cabin').val(val);
-			});
-			$('html').click(function(){
-				$('.dropdownMenu').hide();
 			});
 		};
 		CabinSelect();
@@ -1596,13 +1331,7 @@
   </div> 
   <!-- 页脚 --> 
   <!-- 页脚CN --> 
-  <footer class="lm-footer"> 
-   <p class="lm-logo"></p> 
-   <p class="facebook"> <a href="https://www.facebook.com/lanmeiairlines/" class="a1 icon-facebook"></a> <a href="http://weibo.com/lanmeiair" class="icon-weibo"></a> </p> 
-   <p class="f-email"><img src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/common/images/CN/icon-email.png" class="icon-email" /><span>lm-ec@lanmeiairlines.com</span></p> 
-   <p class="f-local"> <img src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/common/images/CN/icon-location.png" class="icon-location" /> <a href="https://goo.gl/maps/7pyBze8BFe52" target="_Blank">柬埔寨金边市俄罗斯大道575号</a> </p> 
-   <p class="copyright">&copy; Copyright 2017 澜湄航空 粤 <a href="http://www.miitbeian.gov.cn" target="_Blank" rel="nofollow">ICP-17005494-1</a></p> 
-  </footer> 
+  <footer class="lm-footer"></footer> 
   <!-- 回到顶部 --> 
   <div class="BackToTop" style="bottom: 70px;"> 
    <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/ToTop-icon.png" /> 
@@ -1619,8 +1348,8 @@
   <input type="hidden" name="childNameUS" value="Child" /> 
   <input type="hidden" name="childNameKR" value="" /> 
   <input type="hidden" name="countryHidden" id="countryHidden" value="CN" /> 
-  <script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/dataRange/lanmei-calendar-zh.js"></script> 
-  <script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/lanmei-date-select.js"></script> 
+  <script type="text/javascript" src="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/dataRange/lanmei-calendar-zh.js"></script> 
+  <script type="text/javascript" src="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/lanmei-date-select.js"></script> 
   <script type="text/javascript">
 var loen="CN";
 $(document).ready(function(){	
@@ -1662,7 +1391,7 @@ $(document).ready(function(){
    <input type="hidden" name="random" value="2951" /> 
   </form> 
   <!-- 引入wait页面 --> 
-  <link rel="stylesheet" type="text/css" href="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/common/CN/css/Lanmei-wait.css" /> 
+  <link rel="stylesheet" type="text/css" href="https://b2c.lanmeiairlines.com:80/lqWeb/lqweb/common/CN/css/Lanmei-wait.css" /> 
   <div id="LanmeiOver" class="LanmeiOver" style="background: url(&quot;http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/gif-bg.jpg&quot;) center no-repeat;"></div> 
   <div id="LanmeiLayout" class="LanmeiLayout"> 
    <!--  	

@@ -19,12 +19,9 @@
   <!-- 引入图标 --> 
   <link rel="icon" href="https://b2c.lanmeiairlines.com/lqWeb/lqweb/Lanmei_project/images/CN/lanmeiLogo.ico" /> 
   <link rel="stylesheet" type="text/css" href="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/css/bootstrap.min.css" />
-  <!-- 新增代码 -->
   <link rel="stylesheet" type="text/css" href="css/Lanmei-common.css" /> 
-  <!-- 新增代码 -->
   <link rel="stylesheet" type="text/css" href="css/LanmeiAirlinesSelectDate.css" /> 
   <link rel="stylesheet" type="text/css" href="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libsEdit/css/lanmeiLibsEdit.css" /> 
-  <!-- 新增代码 -->
   <link rel="stylesheet" type="text/css" href="css/lanmei-calendar.css" />
 
   <!-- 第三方库--> 
@@ -35,7 +32,6 @@
   <link rel="stylesheet" href="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/layer/skin/default/layer.css?v=3.0.3303" id="layuicss-skinlayercss" /> 
   <script type="text/javascript" src="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/bootstrap.min.js"></script> 
   <!-- 公共JS --> 
-  <!-- 新增代码 -->
   <script type="text/javascript" src="js/Lanmei-comon1.js"></script> 
 
  </head> 
@@ -46,7 +42,7 @@
   <!--<script type="text/javascript" src="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/jQuery/jquery-1.11.3.js"></script>
   <script type="text/javascript" src="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/layer/layer.js"></script>--> 
 
-  <!-- 头部信息  新增代码 -->
+  <!-- 页面顶部CN -->
   <header class="lm-header lm-sub-header"></header>
 
   <div class="buyTicketList"> 
@@ -303,28 +299,18 @@
       </div> 
       <div class="timeSelectStart"> 
        <div style="position: relative; display: inline-block; width: 220px; height: 38px;">
-        <input type="text" id="timeFrom" name="takeoffDate" value="" placeholder="出发日期" readonly="" style="position: absolute;" />
+        <input type="text" id="timeFrom" name="takeoffDate" value="" placeholder="出发日期" readonly="" />
         <span class="date-info">星期二</span>
        </div> 
       </div> 
       <div class="timeSelectEnd" style="visibility: visible;"> 
        <div style="position: relative; display: inline-block; width: 220px; height: 38px;">
-        <input type="text" id="timeTo" name="returnDate" value="" placeholder="返程日期" readonly="" style="position: absolute;" />
+        <input type="text" id="timeTo" name="returnDate" value="" placeholder="返程日期" readonly="" />
         <span class="date-info">星期三</span>
        </div> 
       </div> 
      </div> 
      <div class="passenger_Select"> 
-      <!-- <div class="AdultSelect"> 
-       <div> 
-        <input type="text" class="cityinput" id="Adult" value="1" readonly="" name="adultCount" /> 
-       </div> 
-      </div> 
-      <div class="ChildSelect"> 
-       <div> 
-        <input type="text" readonly="readonly" id="Child" value="0" class="" name="childCount" /> 
-       </div> 
-      </div>  -->
       <div class="people-com">
         <div class="t-people-result hidden-infant js-people-select">
           <p class="p-adult js-p-adult">x <span>1</span></p>
@@ -508,7 +494,6 @@
 		$(".selectAirCommon>div>div ul a").click(function(e){
 				e.preventDefault();e.stopPropagation();
 				var val = $(this).html();
-				// $(this).parent().parent().hide().siblings(".bottomLine").hide().siblings("input").val(val);
         $(this).parents('.downMenu-com').hide().siblings('input').val(val);
 				$(".selectAirCommon>div>div .inputDown").removeClass("active");
 				// 自动获取焦点
@@ -839,7 +824,7 @@
    </div> 
   </div> 
   <!-- 页脚 --> 
-  <!-- 页脚CN  新增代码 --> 
+  <!-- 页脚CN --> 
   <footer class="lm-footer"></footer> 
   <!-- 回到顶部 --> 
   <div class="BackToTop" style="bottom: 70px;"> 
@@ -847,7 +832,7 @@
    <p>UP</p> 
   </div> 
   <!-- 引入wait页面 --> 
-  <link rel="stylesheet" type="text/css" href="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/common/CN/css/Lanmei-wait.css" /> 
+  <link rel="stylesheet" type="text/css" href="https://b2c.lanmeiairlines.com:80/lqWeb/lqweb/common/CN/css/Lanmei-wait.css" /> 
   <div id="LanmeiOver" class="LanmeiOver" style="background: url(&quot;http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/gif-bg.jpg&quot;) center no-repeat;"></div> 
   <div id="LanmeiLayout" class="LanmeiLayout"> 
    <!--  	
