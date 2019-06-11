@@ -1,0 +1,2052 @@
+<html lang="en">
+ <head> 
+  <!--[if lt IE 9]>
+<script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/respond.min.js"></script>
+<script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/html5shiv.min.js"></script>
+<![endif]--> 
+  <meta charset="UTF-8" /> 
+  <!-- 让 Bootstrap 兼容 IE 兼容模型 --> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+  <!-- 让 Bootstrap 兼容 国产浏览器的高速模型 --> 
+  <meta name="renderer" content="webkit" /> 
+  <!-- 实现响应式的设置 --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <!-- 禁用缓存 --> 
+  <meta http-equiv="pragma" content="no-cache" /> 
+  <meta http-equiv="cache-control" content="no-cache" /> 
+  <meta http-equiv="expires" content="0" /> 
+  <title>LanmeiAirlines</title> 
+  <!-- 引入图标 --> 
+  <link rel="icon" href="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/lanmeiLogo.ico" /> 
+  <link rel="stylesheet" type="text/css" href="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/libs/bootstrap/css/bootstrap.min.css" /> 
+  <link rel="stylesheet" type="text/css" href="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/common/CN/css/Lanmei-common.css" /> 
+  <link rel="stylesheet" type="text/css" href="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/css/CN/LanmeiAirlinesSelectFlight.css" /> 
+  <link rel="stylesheet" type="text/css" href="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/libsEdit/css/lanmeiLibsEdit.css" /> 
+  <link rel="stylesheet" type="text/css" href="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/dataRange/lanmei-calendar.css" /> 
+  <!--<link href='http://b2c.lanmeiairlines.com:80/lqWeb/css/insideout_CN.css' rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href='http://b2c.lanmeiairlines.com:80/lqWeb/css/jqueryUI/jquery.flexbox.css' />
+		<link rel="stylesheet" type="text/css" href='http://b2c.lanmeiairlines.com:80/lqWeb/css/jqueryUI/jquery.ui.datepicker.css' />
+		<script type="text/javascript" src='http://b2c.lanmeiairlines.com:80/lqWeb/js/jqueryUI/jquery.ui.widget.min.js'></script>
+		<script type="text/javascript" src='http://b2c.lanmeiairlines.com:80/lqWeb/js/jqueryUI/jquery.ui.accordion.min.js'></script>--> 
+  <link href="http://b2c.lanmeiairlines.com:80/lqWeb/css/insideout_CN.css" rel="stylesheet" type="text/css" /> 
+  <!-- 第三方库1--> 
+  <script type="text/javascript" src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/libs/jQuery/jquery-1.11.3.js"></script> 
+  <!-- 公共JS --> 
+  <!-- 业务代码 --> 
+  <script type="text/javascript" src="http://b2c.lanmeiairlines.com:80/lqWeb/js/webtrends.js"></script> 
+  <script type="text/javascript" src="http://b2c.lanmeiairlines.com:80/lqWeb/js/layercommon.js"></script> 
+  <script type="text/javascript" src="http://b2c.lanmeiairlines.com:80/lqWeb/js/front/frontinfo.js"></script> 
+  <script type="text/javascript" src="http://b2c.lanmeiairlines.com:80/lqWeb/js/front/reservation.js"></script> 
+  <script type="text/javascript" src="http://b2c.lanmeiairlines.com:80/lqWeb/js/citychoose.js"></script> 
+  <script src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/cityselect/jquery-migrate-1.2.1.js"></script> 
+  <script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/layer/layer.js"></script>
+  <link rel="stylesheet" href="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/layer/skin/default/layer.css?v=3.0.3303" id="layuicss-skinlayercss" /> 
+  <script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/bootstrap.min.js"></script> 
+  <!-- 公共JS --> 
+  <script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/common/CN/js/Lanmei-common1.js"></script> 
+ </head> 
+ <body> 
+  <input type="hidden" id="totalPeopleNum" value="8" /> 
+  <input type="hidden" id="language" value="CN" /> 
+  <!-- 页面顶部 --> 
+  <style type="text/css">
+	/* reset.css */
+	body,h1,h2,h3,h4,h5,h6,p,ul,li,input {
+		margin: 0;
+		padding: 0;
+	}
+	ul,li {
+		list-style: none;
+	}
+	*{
+		box-sizing: border-box;
+	}
+	a {
+		text-decoration: none;
+	}
+
+	/* 页面顶部 */
+	.lm-header {
+		position: fixed;
+		z-index: 99;
+		width: 100%;
+		min-width:960px;
+		height: 60px;
+		max-width: 1920px;
+		padding: 0 20px;
+		text-align: center;
+		background: -webkit-linear-gradient(left, #42958a 0%, #1f2c5c 100%);
+		background: -o-linear-gradient(right, #42958a 0%, #1f2c5c 100%);
+		background: -moz-linear-gradient(right, #42958a 0%, #1f2c5c 100%);
+		background: linear-gradient(to right, #42958a 0%, #1f2c5c 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#42958a', endColorstr='#1f2c5c', GradientType=1);
+	}
+	.lm-header .h-logo-wrap {
+		width: 262px;
+		height: 60px;
+		margin: 0 auto;
+		background: url('/lqWeb/lqweb/common/images/CN/logo.png') center no-repeat;
+	}
+	.lm-header .h-right {
+		position: absolute;
+		right: 20px;
+		top: 0;
+	}
+	.lm-header .h-phone {
+		position: absolute;
+		left: -50px;
+		width: 80px;
+		height: 80px;
+		background: url('/lqWeb/lqweb/common/images/CN/phone.png') center 20px no-repeat;
+	}
+	.lm-header .h-phone .phone-menu {
+		display: none;
+		position: absolute;
+		top: 76px;
+		left: -66px;
+		width: 230px;
+		
+		border-radius: 2px;
+		background: #fff;
+		padding: 20px;
+		text-align: left;
+		box-shadow: 0 0 50px 0 rgba(31, 44, 92, 0.2);
+	}
+	.lm-header .h-phone .phone-menu > h2 {
+		color: rgba(31, 44, 92, 0.8);
+		font-size: 20px;
+		font-weight: bold;
+	}
+	.lm-header .h-phone .phone-menu > p {
+		font-size: 16px;
+		color: rgba(0, 0, 0, 0.7);
+		height: 25px;
+		line-height: 32px;
+		margin-top: 10px;
+		margin-left: 10px;
+		padding-left: 40px;
+		background: url('/lqWeb/lqweb/common/images/CN/phone-bg.png') left center no-repeat;
+	}
+	.lm-header .h-phone .phone-menu .p1 {
+		margin-top: 20px;
+	}
+	.lm-header .h-phone .phone-menu::before {
+		position: absolute;
+		top: -14px;
+		left: 96px;
+		z-index: 9;
+		filter: alpha(opacity=0);
+		content: "";
+		display: block;
+		width: 0;
+		height: 0;
+		border-left: 14px solid transparent;
+		border-right: 14px solid transparent;
+		border-bottom: 14px solid #fff;
+	}
+	.lm-header .h-phone:hover .phone-menu {
+		display: block;
+	}
+	.lm-header .h-lang {
+		position: absolute;
+		right: -20px;
+		width: 70px;
+		height: 80px;
+	}
+	.lm-header .h-lang > p {
+		width: 70px;
+		height: 80px;
+		background: url('/lqWeb/lqweb/common/images/CN/lang.png') center 15px no-repeat;
+    }
+	.lm-header .h-lang .lang-menu {
+		display: none;
+		position: absolute;
+		top: 76px;
+		left: -216px;
+		width: 278px;
+		height: 160px;
+		border-radius: 2px;
+		background: #fff;
+		padding: 20px;
+		text-align: left;
+		box-shadow: 0 0 50px 0 rgba(31, 44, 92, 0.2);
+	}
+	.lm-header .h-lang .lang-menu > h2 {
+		color: rgba(31, 44, 92, 0.8);
+		font-size: 20px;
+		font-weight: bold;
+	}
+	.lm-header .h-lang .lang-menu > a {
+		display: block;
+		font-size: 16px;
+		color: rgba(0, 0, 0, 0.7);
+		height: 34px;
+		line-height: 40px;
+		margin-top: 10px;
+		margin-left: 10px;
+		padding-left: 40px;
+		transition: all .3s;
+		-webkit-transition: all .3s;
+	}
+	.lm-header .h-lang .lang-menu > a:hover {
+		color: #8ec060;
+		transition: all .3s;
+		-webkit-transition: all .3s;
+	}
+	.lm-header .h-lang .lang-menu .lang-en {
+		margin-top: 20px;
+		background: url('/lqWeb/lqweb/common/images/CN/lang-en.png') left center no-repeat;
+	}
+	.lm-header .h-lang .lang-menu .lang-zh {
+		background: url('/lqWeb/lqweb/common/images/CN/lang-zh.png') left center no-repeat;
+	}
+	.lm-header .h-lang .lang-menu::before {
+		position: absolute;
+		top: -14px;
+		right: 12px;
+		z-index: 9;
+		filter: alpha(opacity=0);
+		content: "";
+		display: block;
+		width: 0;
+		height: 0;
+		border-left: 14px solid transparent;
+		border-right: 14px solid transparent;
+		border-bottom: 14px solid #fff;
+	}
+	.lm-header .h-lang:hover .lang-menu {
+		display: block;
+	}
+	.lm-sub-header {
+		position: relative;
+		top: 0;
+	}
+	.lm-sub-header .h-logo-wrap {
+		margin: 0;
+		display: block;
+		cursor: pointer;
+	}
+	.lm-sub-header .h-right .h-phone {
+		left: -150px;
+	}
+
+	.lm-footer {
+		width: 100%;
+		min-width:960px;
+		height: 250px;
+		padding-top: 24px;
+		text-align: center;
+		background: #1f2c5c;
+	}
+	.lm-footer .lm-logo {
+		width: 140px;
+		height: 58px;
+		margin: 0 auto;
+		background: url('/lqWeb/lqweb/common/images/CN/lanmeiFooterLogo.png') center no-repeat;
+	}
+	.lm-footer .facebook {
+		margin-top: 16px;
+	}
+	.lm-footer .facebook > .a1 {
+		margin-right: 40px;
+	}
+	.lm-footer .facebook a {
+		display: inline-block;
+		width: 26px;
+		height: 26px;
+	}
+	.lm-footer .facebook .icon-facebook {
+		background: url('/lqWeb/lqweb/common/images/CN/icon-facebook.png') center no-repeat;
+	}
+	.lm-footer .facebook .icon-facebook:hover{
+		background: url('/lqWeb/lqweb/common/images/CN/icon-facebook-active.png') center no-repeat;
+	}
+	.lm-footer .facebook .icon-weibo {
+		background: url('/lqWeb/lqweb/common/images/CN/icon-weibo.png') center no-repeat;
+	}
+	.lm-footer .facebook .icon-weibo:hover{
+		background: url('/lqWeb/lqweb/common/images/CN/icon-weibo-active.png') center no-repeat;
+	}
+	.lm-footer .facebook a img {
+		width: 26px;
+		height: 26px;
+	}
+	.lm-footer .f-email {
+		color: #fff;
+		margin-top: 18px;
+	}
+	.lm-footer .f-email > img {
+		width: 20px;
+		height: 20px;
+		margin-right: 12px;
+		vertical-align: middle;
+	}
+	.lm-footer .f-local {
+		margin-top: 14px;
+	}
+	.lm-footer .f-local > img {
+		width: 20px;
+		height: 20px;
+		margin-right: 12px;
+		vertical-align: middle;
+	}
+	.lm-footer .f-local > i::before {
+		color: #fff;
+	}
+	.lm-footer .f-local a {
+		color: #fff;
+	}
+	.lm-footer .copyright {
+		margin-top: 14px;
+		color: rgba(255, 255, 255, 0.4);
+	}
+	.lm-footer .copyright a {
+		color: rgba(255, 255, 255, 0.4);
+		transition: all .3s;
+		-webkit-transition: all .3s;
+	}
+	.lm-footer .copyright a:hover {
+		color: #8ec060;
+		transition: all .3s;
+		-webkit-transition: all .3s;
+	}
+</style> 
+  <!-- 页面顶部CN --> 
+  <header class="lm-header lm-sub-header"> 
+   <a href="http://lanmeiairlines.com/index_cn.html?lang=cn" class="h-logo-wrap"></a> 
+   <div class="h-right"> 
+    <div class="h-phone js-h-phone"> 
+     <div class="phone-menu js-phone-menu"> 
+      <h2>24小时客服电话:</h2> 
+      <p class="p1">+855 0023981800</p> 
+     </div> 
+    </div> 
+    <div class="h-lang js-h-lang"> 
+     <p class="js-choose-lang"></p> 
+     <div class="lang-menu js-lang-menu"> 
+      <h2>选择语言:</h2> 
+      <a href="http://lanmeiairlines.com?lang=en" class="lang-en" data="en">English</a> 
+      <a href="http://lanmeiairlines.com?lang=cn" class="lang-zh" data="zh">简体中文</a> 
+     </div> 
+    </div> 
+   </div> 
+  </header> 
+  <!-- 订票步骤列表 --> 
+  <!--<script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/jQuery/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/layer/layer.js"></script>--> 
+  <div class="buyTicketList"> 
+   <dl class="SelectDate"> 
+    <dt>
+     <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/date-icon-active.png" />
+    </dt> 
+    <dd>
+     选择日期
+    </dd> 
+   </dl> 
+   <dl class="circleArrow"> 
+    <dt>
+     <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/circleArrowGray-active.png" />
+    </dt> 
+   </dl> 
+   <dl class="SelectFlight"> 
+    <dt>
+     <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/Select-the-flight-icon-active.png" />
+    </dt> 
+    <dd>
+     选择航班
+    </dd> 
+   </dl> 
+   <dl class="circleArrow"> 
+    <dt>
+     <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/circleArrowGray-active.png" />
+    </dt> 
+   </dl> 
+   <dl class="PassengerInformation"> 
+    <dt>
+     <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/Passenger-informatio-icon.png" />
+    </dt> 
+    <dd>
+     乘客资料 
+    </dd> 
+   </dl> 
+   <dl class="circleArrow"> 
+    <dt>
+     <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/circleArrowGray.png" />
+    </dt> 
+   </dl> 
+   <dl class="LanmeiPay"> 
+    <dt>
+     <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/pay-icon.png" />
+    </dt> 
+    <dd>
+     支付
+    </dd> 
+   </dl> 
+   <dl class="circleArrow"> 
+    <dt>
+     <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/circleArrowGray.png" />
+    </dt> 
+   </dl> 
+   <dl class="Complete"> 
+    <dt>
+     <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/Complete-icon.png" />
+    </dt> 
+    <dd>
+     完成
+    </dd> 
+   </dl> 
+  </div> 
+  <!-- 搜索框 --> 
+  <!--[if lt IE 9]>
+<script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/respond.min.js"></script>
+<script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/html5shiv.min.js"></script>
+<![endif]--> 
+  <form id="searchform" action="http://b2c.lanmeiairlines.com:80/lqWeb/reservation/AVQuery.do" method="post"> 
+   <input name="tripType" type="hidden" value="RT" id="tripTypehidden" /> 
+   <input name="sureDate" type="hidden" value="1" id="sureDatehidden" /> 
+   <input name="cabinType" type="hidden" value="ECONOMY" id="cabinTypehidden" /> 
+   <input name="orgcity" type="hidden" value="PNH" id="orgcityhidden" /> 
+   <input name="dstcity" type="hidden" value="REP" id="dstcityhidden" /> 
+   <input type="hidden" name="rad" id="rad" value="15699" /> 
+   <input name="userIp" type="hidden" value="58.249.3.180" /> 
+   <input type="hidden" name="fromPage" id="fromPage" value="" /> 
+   <input name="sign" type="hidden" value="E3022A712A3884DBA78A9C05DF2E1102" /> 
+   <input name="CURRENCY" type="hidden" value="CNY" /> 
+   <input name="currencyCode" type="hidden" value="CNY" /> 
+   <input name="language" type="hidden" value="CN" id="languagehidden" /> 
+   <input type="hidden" id="sslBaseUrl" value="http://b2c.lanmeiairlines.com:80/lqWeb/" /> 
+   <input name="orgcity_name" type="hidden" value="" id="orgcity_name" /> 
+   <input name="dstcity_name" type="hidden" value="" id="dstcity_name" /> 
+   <input name="cabinType_name" type="hidden" value="" id="cabinType_name" /> 
+   <input id="vertifyCode2" name="vertifyCode" type="hidden" value="" /> 
+   <input id="btnVal2" name="btnVal" type="hidden" value="search" /> 
+   <input type="hidden" name="pageConstant" id="pageConstant" value="1" /> 
+   <div class="changeSearch"> 
+    <div class="changeSearchTitle"> 
+     <h2> <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/leftTitleLine.png" /> 更改搜索 </h2> 
+     <div class="departureDate"> 
+      <label class="nth-child1"><i></i><b id="1" style="display: block;"></b><span>固定出发日期</span></label> 
+      <label><i class="active"></i><b></b><span>无指定旅游日期 (+/- 3日)</span></label> 
+     </div> 
+    </div> 
+    <div class="selectWay"> 
+     <a href="#" class="OneWay nth-child1" data-way="One - way" id="OW">单程</a> 
+     <a href="#" class="RoundTrip active" data-way="Round Trip" id="RT">往返</a> 
+     <a href="#" class="Stopover" data-way="Stopover / Multi - city" id="MT">停留/多个城市</a> 
+    </div> 
+    <input type="hidden" class="citysHidden" id="BKK" value="曼谷(mangu)/BKK/泰国" /> 
+    <input type="hidden" class="citysHidden" id="CAN" value="广州(Guangzhou)/CAN/中国" /> 
+    <input type="hidden" class="citysHidden" id="CGO" value="郑州(Zhengzhou)/CGO/中国" /> 
+    <input type="hidden" class="citysHidden" id="CKG" value="重庆(Chongqing)/CKG/中国" /> 
+    <input type="hidden" class="citysHidden" id="CSX" value="长沙(Changsha)/CSX/中国" /> 
+    <input type="hidden" class="citysHidden" id="CTU" value="成都(Chengdu)/CTU/中国" /> 
+    <input type="hidden" class="citysHidden" id="DSN" value="鄂尔多斯(Eerduosi)/DSN/中国" /> 
+    <input type="hidden" class="citysHidden" id="HET" value="呼和浩特(Huhehaote)/HET/中国" /> 
+    <input type="hidden" class="citysHidden" id="HKG" value="香港(xiaggang)/HKG/中华人民共和国香港特别行政区" /> 
+    <input type="hidden" class="citysHidden" id="KHN" value="南昌(Nanchang)/KHN/中国" /> 
+    <input type="hidden" class="citysHidden" id="KMG" value="昆明(Kunming)/KMG/中国" /> 
+    <input type="hidden" class="citysHidden" id="KOS" value="西哈努克市(xihanuke)/KOS/柬埔寨" /> 
+    <input type="hidden" class="citysHidden" id="KWE" value="贵阳(Guiyang)/KWE/中国" /> 
+    <input type="hidden" class="citysHidden" id="LYI" value="临沂(Linyi)/LYI/中国" /> 
+    <input type="hidden" class="citysHidden" id="MFM" value="澳门(aomen)/MFM/中华人民共和国澳门特别行政区" /> 
+    <input type="hidden" class="citysHidden" id="NGB" value="宁波(Ningbo)/NGB/中国" /> 
+    <input type="hidden" class="citysHidden" id="NKG" value="南京(Nanjing)/NKG/中国" /> 
+    <input type="hidden" class="citysHidden" id="NNG" value="南宁(Nanning)/NNG/中国" /> 
+    <input type="hidden" class="citysHidden" id="PNH" value="金边(jinbian)/PNH/柬埔寨" /> 
+    <input type="hidden" class="citysHidden" id="REP" value="暹粒(XianLi)/REP/柬埔寨" /> 
+    <input type="hidden" class="citysHidden" id="SHE" value="沈阳(Shenyang)/SHE/中国" /> 
+    <input type="hidden" class="citysHidden" id="SJW" value="石家庄(shi jia zhuang)/SJW/中国" /> 
+    <input type="hidden" class="citysHidden" id="SWA" value="揭阳(Jieyang)/SWA/中国" /> 
+    <input type="hidden" class="citysHidden" id="TNA" value="济南(Jinan)/TNA/中国" /> 
+    <input type="hidden" class="citysHidden" id="TSN" value="天津(Tianjin)/TSN/中国" /> 
+    <input type="hidden" class="citysHidden" id="TYN" value="太原(Taiyuan)/TYN/中国" /> 
+    <input type="hidden" class="citysHidden" id="WUH" value="武汉(Wuhan)/WUH/中国" /> 
+    <input type="hidden" class="citysHidden" id="XIY" value="西安(Xi'an)/XIY/中国" /> 
+    <input type="hidden" class="citysHidden" id="XNN" value="西宁(Xining)/XNN/中国" /> 
+    <input type="hidden" class="citysHidden" id="YIH" value="宜昌(Yichang)/YIH/中國" /> 
+    <input type="hidden" class="citysHidden" id="YTY" value="扬州(Yangzhou)/YTY/中国" /> 
+    <input type="hidden" class="citysHidden" id="ZYI" value="遵义(Zunyi)/ZYI/中国" /> 
+    <div class="selectAir selectAirCommon"> 
+     <div class="local_timeSelect"> 
+      <div class="localSelectStart"> 
+       <p><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/originStart2.png" /><span>出发地</span></p> 
+       <input type="text" autocomplete="off" class="fromcityinput inputDown Autocomplete" id="fromcity" value="" placeholder="" /> 
+       <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/downArrow.png" /> 
+       <i class="img01" id="localChangeImg"></i> 
+       <b class="bottomLine" style="display: none;"></b> 
+       <ul class="fromcityMenu" style="display: none;"> 
+        <li><a href="#" title="曼谷" id="BKK">曼谷(mangu)/BKK/泰国</a></li> 
+        <li><a href="#" title="广州" id="CAN">广州(Guangzhou)/CAN/中国</a></li> 
+        <li><a href="#" title="郑州" id="CGO">郑州(Zhengzhou)/CGO/中国</a></li> 
+        <li><a href="#" title="重庆" id="CKG">重庆(Chongqing)/CKG/中国</a></li> 
+        <li><a href="#" title="长沙" id="CSX">长沙(Changsha)/CSX/中国</a></li> 
+        <li><a href="#" title="成都" id="CTU">成都(Chengdu)/CTU/中国</a></li> 
+        <li><a href="#" title="鄂尔多斯" id="DSN">鄂尔多斯(Eerduosi)/DSN/中国</a></li> 
+        <li><a href="#" title="呼和浩特" id="HET">呼和浩特(Huhehaote)/HET/中国</a></li> 
+        <li><a href="#" title="香港" id="HKG">香港(xiaggang)/HKG/中华人民共和国香港特别行政区</a></li> 
+        <li><a href="#" title="南昌" id="KHN">南昌(Nanchang)/KHN/中国</a></li> 
+        <li><a href="#" title="昆明" id="KMG">昆明(Kunming)/KMG/中国</a></li> 
+        <li><a href="#" title="西哈努克市" id="KOS">西哈努克市(xihanuke)/KOS/柬埔寨</a></li> 
+        <li><a href="#" title="贵阳" id="KWE">贵阳(Guiyang)/KWE/中国</a></li> 
+        <li><a href="#" title="临沂" id="LYI">临沂(Linyi)/LYI/中国</a></li> 
+        <li><a href="#" title="澳门" id="MFM">澳门(aomen)/MFM/中华人民共和国澳门特别行政区</a></li> 
+        <li><a href="#" title="宁波" id="NGB">宁波(Ningbo)/NGB/中国</a></li> 
+        <li><a href="#" title="南京" id="NKG">南京(Nanjing)/NKG/中国</a></li> 
+        <li><a href="#" title="南宁" id="NNG">南宁(Nanning)/NNG/中国</a></li> 
+        <li><a href="#" title="金边" id="PNH">金边(jinbian)/PNH/柬埔寨</a></li> 
+        <li><a href="#" title="暹粒" id="REP">暹粒(XianLi)/REP/柬埔寨</a></li> 
+        <li><a href="#" title="沈阳" id="SHE">沈阳(Shenyang)/SHE/中国</a></li> 
+        <li><a href="#" title="石家庄" id="SJW">石家庄(shi jia zhuang)/SJW/中国</a></li> 
+        <li><a href="#" title="揭阳" id="SWA">揭阳(Jieyang)/SWA/中国</a></li> 
+        <li><a href="#" title="济南" id="TNA">济南(Jinan)/TNA/中国</a></li> 
+        <li><a href="#" title="天津" id="TSN">天津(Tianjin)/TSN/中国</a></li> 
+        <li><a href="#" title="太原" id="TYN">太原(Taiyuan)/TYN/中国</a></li> 
+        <li><a href="#" title="武汉" id="WUH">武汉(Wuhan)/WUH/中国</a></li> 
+        <li><a href="#" title="西安" id="XIY">西安(Xi'an)/XIY/中国</a></li> 
+        <li><a href="#" title="西宁" id="XNN">西宁(Xining)/XNN/中国</a></li> 
+        <li><a href="#" title="宜昌" id="YIH">宜昌(Yichang)/YIH/中國</a></li> 
+        <li><a href="#" title="扬州" id="YTY">扬州(Yangzhou)/YTY/中国</a></li> 
+        <li><a href="#" title="遵义" id="ZYI">遵义(Zunyi)/ZYI/中国</a></li> 
+        <li><a href="#" title="Phnom Penh, Cambodia (Pochentong - PNH)">Phnom Penh, Cambodia (Pochentong - PNH)</a></li>
+        <li><a href="#" title="Siem Reap, Cambodia (Siem Reap - REP)">Siem Reap, Cambodia (Siem Reap - REP)</a></li>
+       </ul> 
+      </div> 
+      <div class="localSelectEnd"> 
+       <p><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/originEnd2.png" /><span>目的地</span></p> 
+       <input type="text" autocomplete="off" class="tocityinput inputDown Autocomplete" id="tocity" value="" placeholder="" /> 
+       <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/downArrow.png" /> 
+       <b class="bottomLine" style="display: none;"></b> 
+       <ul class="tocityMenu" style="display: none;"> 
+        <!-- <li><a href="#" title="曼谷" id="BKK">曼谷</a></li> --> 
+        <li><a href="#" title="曼谷" id="BKK">曼谷(mangu)/BKK/泰国</a></li> 
+        <!-- <li><a href="#" title="广州" id="CAN">广州</a></li> --> 
+        <li><a href="#" title="广州" id="CAN">广州(Guangzhou)/CAN/中国</a></li> 
+        <!-- <li><a href="#" title="郑州" id="CGO">郑州</a></li> --> 
+        <li><a href="#" title="郑州" id="CGO">郑州(Zhengzhou)/CGO/中国</a></li> 
+        <!-- <li><a href="#" title="重庆" id="CKG">重庆</a></li> --> 
+        <li><a href="#" title="重庆" id="CKG">重庆(Chongqing)/CKG/中国</a></li> 
+        <!-- <li><a href="#" title="长沙" id="CSX">长沙</a></li> --> 
+        <li><a href="#" title="长沙" id="CSX">长沙(Changsha)/CSX/中国</a></li> 
+        <!-- <li><a href="#" title="成都" id="CTU">成都</a></li> --> 
+        <li><a href="#" title="成都" id="CTU">成都(Chengdu)/CTU/中国</a></li> 
+        <!-- <li><a href="#" title="鄂尔多斯" id="DSN">鄂尔多斯</a></li> --> 
+        <li><a href="#" title="鄂尔多斯" id="DSN">鄂尔多斯(Eerduosi)/DSN/中国</a></li> 
+        <!-- <li><a href="#" title="呼和浩特" id="HET">呼和浩特</a></li> --> 
+        <li><a href="#" title="呼和浩特" id="HET">呼和浩特(Huhehaote)/HET/中国</a></li> 
+        <!-- <li><a href="#" title="香港" id="HKG">香港</a></li> --> 
+        <li><a href="#" title="香港" id="HKG">香港(xiaggang)/HKG/中华人民共和国香港特别行政区</a></li> 
+        <!-- <li><a href="#" title="南昌" id="KHN">南昌</a></li> --> 
+        <li><a href="#" title="南昌" id="KHN">南昌(Nanchang)/KHN/中国</a></li> 
+        <!-- <li><a href="#" title="昆明" id="KMG">昆明</a></li> --> 
+        <li><a href="#" title="昆明" id="KMG">昆明(Kunming)/KMG/中国</a></li> 
+        <!-- <li><a href="#" title="西哈努克市" id="KOS">西哈努克市</a></li> --> 
+        <li><a href="#" title="西哈努克市" id="KOS">西哈努克市(xihanuke)/KOS/柬埔寨</a></li> 
+        <!-- <li><a href="#" title="贵阳" id="KWE">贵阳</a></li> --> 
+        <li><a href="#" title="贵阳" id="KWE">贵阳(Guiyang)/KWE/中国</a></li> 
+        <!-- <li><a href="#" title="临沂" id="LYI">临沂</a></li> --> 
+        <li><a href="#" title="临沂" id="LYI">临沂(Linyi)/LYI/中国</a></li> 
+        <!-- <li><a href="#" title="澳门" id="MFM">澳门</a></li> --> 
+        <li><a href="#" title="澳门" id="MFM">澳门(aomen)/MFM/中华人民共和国澳门特别行政区</a></li> 
+        <!-- <li><a href="#" title="宁波" id="NGB">宁波</a></li> --> 
+        <li><a href="#" title="宁波" id="NGB">宁波(Ningbo)/NGB/中国</a></li> 
+        <!-- <li><a href="#" title="南京" id="NKG">南京</a></li> --> 
+        <li><a href="#" title="南京" id="NKG">南京(Nanjing)/NKG/中国</a></li> 
+        <!-- <li><a href="#" title="南宁" id="NNG">南宁</a></li> --> 
+        <li><a href="#" title="南宁" id="NNG">南宁(Nanning)/NNG/中国</a></li> 
+        <!-- <li><a href="#" title="金边" id="PNH">金边</a></li> --> 
+        <li><a href="#" title="金边" id="PNH">金边(jinbian)/PNH/柬埔寨</a></li> 
+        <!-- <li><a href="#" title="暹粒" id="REP">暹粒</a></li> --> 
+        <li><a href="#" title="暹粒" id="REP">暹粒(XianLi)/REP/柬埔寨</a></li> 
+        <!-- <li><a href="#" title="沈阳" id="SHE">沈阳</a></li> --> 
+        <li><a href="#" title="沈阳" id="SHE">沈阳(Shenyang)/SHE/中国</a></li> 
+        <!-- <li><a href="#" title="石家庄" id="SJW">石家庄</a></li> --> 
+        <li><a href="#" title="石家庄" id="SJW">石家庄(shi jia zhuang)/SJW/中国</a></li> 
+        <!-- <li><a href="#" title="揭阳" id="SWA">揭阳</a></li> --> 
+        <li><a href="#" title="揭阳" id="SWA">揭阳(Jieyang)/SWA/中国</a></li> 
+        <!-- <li><a href="#" title="济南" id="TNA">济南</a></li> --> 
+        <li><a href="#" title="济南" id="TNA">济南(Jinan)/TNA/中国</a></li> 
+        <!-- <li><a href="#" title="天津" id="TSN">天津</a></li> --> 
+        <li><a href="#" title="天津" id="TSN">天津(Tianjin)/TSN/中国</a></li> 
+        <!-- <li><a href="#" title="太原" id="TYN">太原</a></li> --> 
+        <li><a href="#" title="太原" id="TYN">太原(Taiyuan)/TYN/中国</a></li> 
+        <!-- <li><a href="#" title="武汉" id="WUH">武汉</a></li> --> 
+        <li><a href="#" title="武汉" id="WUH">武汉(Wuhan)/WUH/中国</a></li> 
+        <!-- <li><a href="#" title="西安" id="XIY">西安</a></li> --> 
+        <li><a href="#" title="西安" id="XIY">西安(Xi'an)/XIY/中国</a></li> 
+        <!-- <li><a href="#" title="西宁" id="XNN">西宁</a></li> --> 
+        <li><a href="#" title="西宁" id="XNN">西宁(Xining)/XNN/中国</a></li> 
+        <!-- <li><a href="#" title="宜昌" id="YIH">宜昌</a></li> --> 
+        <li><a href="#" title="宜昌" id="YIH">宜昌(Yichang)/YIH/中國</a></li> 
+        <!-- <li><a href="#" title="扬州" id="YTY">扬州</a></li> --> 
+        <li><a href="#" title="扬州" id="YTY">扬州(Yangzhou)/YTY/中国</a></li> 
+        <!-- <li><a href="#" title="遵义" id="ZYI">遵义</a></li> --> 
+        <li><a href="#" title="遵义" id="ZYI">遵义(Zunyi)/ZYI/中国</a></li> 
+        <li><a href="#" title="Phnom Penh, Cambodia (Pochentong - PNH)">Phnom Penh, Cambodia (Pochentong - PNH)</a></li>
+        <li><a href="#" title="Siem Reap, Cambodia (Siem Reap - REP)">Siem Reap, Cambodia (Siem Reap - REP)</a></li>
+       </ul> 
+      </div> 
+      <div class="timeSelectStart"> 
+       <p><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/departureDate2.png" /><span>出发日期</span></p> 
+       <div style="position: relative; display: inline-block; width: 220px; height: 38px;">
+        <input type="text" id="timeFrom" name="takeoffDate" value="" placeholder="" readonly="" style="position: absolute;" />
+        <span class="date-info">星期二</span>
+       </div> 
+       <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/downArrow.png" /> 
+      </div> 
+      <div class="timeSelectEnd" style="visibility: visible;"> 
+       <p><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/departureDate2.png" /><span>返程日期</span></p> 
+       <div style="position: relative; display: inline-block; width: 220px; height: 38px;">
+        <input type="text" id="timeTo" name="returnDate" value="" placeholder="" readonly="" style="position: absolute;" />
+        <span class="date-info">星期三</span>
+       </div> 
+       <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/downArrow.png" /> 
+      </div> 
+     </div> 
+     <div class="passenger_Select"> 
+      <div class="AdultSelect"> 
+       <p><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/adult-icon2.png" /><span>成人</span></p> 
+       <div> 
+        <input type="text" class="cityinput" id="Adult" value="1" readonly="" name="adultCount" /> 
+        <i class="addArrow"><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/addArrow.png" /></i> 
+        <i class="downArrow"><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/downArrow.png" /></i> 
+       </div> 
+      </div> 
+      <div class="ChildSelect"> 
+       <p><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/child-icon2.png" /><span>儿童</span></p> 
+       <div> 
+        <input type="text" readonly="readonly" id="Child" value="0" class="" name="childCount" /> 
+        <i class="addArrow"><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/addArrow.png" /></i> 
+        <i class="downArrow"><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/downArrow.png" /></i> 
+        <span class="ageTip">2-11 years</span> 
+       </div> 
+      </div> 
+      <div class="CabinSelect"> 
+       <p><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/cabin-icon2.png" /><span>客舱</span></p> 
+       <input type="text" class="cityinput inputDown" id="Cabin" value="" placeholder="" readonly="" /> 
+       <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/downArrow.png" /> 
+       <b class="bottomLine" style="display: none;"></b> 
+       <ul class="dropdownMenu CabinMenu" style="display: none;"> 
+        <li><a href="#" id="ECONOMY">经济舱</a></li> 
+       </ul> 
+      </div> 
+      <div class="searchAir"> 
+       <a href="#" class="btn" id="search" onclick="doCheckTwo();">搜索</a> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </form> 
+  <script type="text/javascript"> 
+	   var locale; 
+	   $(document).ready(function(){	
+	    
+	    var orgcity='金边';	
+		var fromcountryName='柬埔寨';
+		var tocountryName='柬埔寨';
+	    var from_cityPinyin='jinbian';	
+	    var back_cityPinyin='XianLi';	
+		var from_threecode= 'PNH';			
+	    locale = 'zh_CN';
+		
+		//根据 中英文 组装一个查询窜 城市名/拼音/三字码/国家
+		var orgcityStr="";
+		var dstcityStr="";
+		
+        var orgcitycode='PNH';	
+		var dstcity='暹粒';
+		
+		var dstcitycode='REP';
+		var cabintype='ECONOMY';
+		var adultcount='1';
+		var childcount='0';
+	    var trip='RT';
+	    var takeoffdate='2019-06-11';
+   		var returndate='2019-06-12';
+   		var suredate="1"; 
+   		var reg=new RegExp("null",""); 
+   		returndate=returndate.replace(reg,""); 
+		//如果是中文环境
+		if(orgcity!="" && dstcity != ""){
+			if(locale=="zh_CN"){
+				orgcityStr=orgcity + "(" + from_cityPinyin + ")/" + from_threecode + "/" + fromcountryName;
+				dstcityStr=dstcity + "(" + back_cityPinyin + ")/" + dstcitycode + "/" + tocountryName;
+			}else{
+		   	    orgcityStr=orgcity + "/" + from_threecode + "/" + fromcountryName;  
+		   	    dstcityStr=dstcity + "/" + dstcitycode + "/" + tocountryName;
+			}
+		}else{
+		    if(takeoffdate==""){
+		        var day2 = new Date();
+		        takeoffdate=day2.getFullYear()+"-" + (day2.getMonth()+1) + "-" + day2.getDate();
+		     }
+		     adultcount=1;
+		     suredate="";
+			 cabintype="ECONOMY"; 
+		}
+		 
+   		if(compareDate(returndate,takeoffdate)){
+   		   returndate="";
+   		}
+		if(suredate)
+		{		
+			$(".departureDate label b").eq(0).css('display','block');
+			$("#sureDatehidden").val($(".departureDate label b").eq(0).attr("id") );
+		}else{
+		    $(".departureDate label b").eq(1).css('display','block');
+		    $("#sureDatehidden").val($(".departureDate label b").eq(1).attr("id") );
+		    
+		};
+		 $(".selectWay a").click(function(e){  
+		    var type=$(this).attr("id");
+	        $("#tripTypehidden").val(type);
+	        if("RT" === type)
+	        {
+	         $(".timeSelectEnd").css("visibility","visible");
+	        }else if("OW" === type){
+	         $(".timeSelectEnd").css("visibility","hidden");
+	        }else if("MT" == type){
+	        
+	       		//var url = 'http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/tpls/CN/LanmeiAirlinesMultiCities.jsp';
+	       		var url = 'http://b2c.lanmeiairlines.com:80/lqWeb/reservation/mulCity.do';
+				$("#orgcity_name").val($("#fromcity").val());
+				$("#dstcity_name").val($("#tocity").val());
+				$("#cabinType_name").val($("#Cabin").val());
+	       		$("#searchform").attr("action", url);
+	       		$("#pageConstant").val("2");
+	       		$("#searchform").submit();	
+	        }else{}   
+	    });
+
+	    if("RT" === trip)
+	    {
+	        $(".selectWay a").eq(1).click();
+	    }else{
+	    	$(".selectWay a").eq(0).click();
+	    }
+	    
+	    if(cabintype === "ECONOMY")
+	    {
+	        $(".dropdownMenu a").eq(0).click();	  
+	        $("#cabinTypehidden").val("ECONOMY");  
+	    }else{
+	        $(".dropdownMenu a").eq(1).click();	
+	        $("#cabinTypehidden").val("BUSINESS");
+	    }
+	    
+	   // $("#fromcity").val(orgcity);
+	    $("#fromcity").val(orgcityStr);
+	    
+	   // $("#tocity").val(dstcity);
+	    $("#tocity").val(dstcityStr);
+	        
+	    $("#orgcityhidden").val(orgcitycode);
+	    $("#dstcityhidden").val(dstcitycode);	    
+	    $("#timeFrom").val(takeoffdate);
+	    $("#timeTo").val(returndate);
+	    $("#Adult").val(adultcount);
+	    $("#Child").val(childcount);
+	    $("#ui-datepicker-div").css("display","none");
+	    
+	    
+	    $(".departureDate label i").click(function(){
+				$("#sureDatehidden").val($(this).siblings('b').attr("id") );
+		});
+		$(".departureDate label span").click(function(){
+				$("#sureDatehidden").val($(this).siblings('b').attr("id") );
+		});
+	    
+	    $(".CabinMenu a").click(function(e){
+			$("#cabinTypehidden").val($(this).attr("id"));
+		});
+		
+		$(".selectAirCommon>div>div ul a").click(function(e){
+				e.preventDefault();e.stopPropagation();
+				var val = $(this).html();
+				$(this).parent().parent().hide().siblings(".bottomLine").hide().siblings("input").val(val);
+				$(".selectAirCommon>div>div .inputDown").removeClass("active");
+				// 自动获取焦点
+				var inputId = $(this).parent().parent().siblings("input").attr("id"); 
+				var focusInput = $(this).parent().parent().parent();
+				if(inputId=="fromcity"){
+				    $("#orgcityhidden").val($(this).attr("id"));
+					focusInput.siblings(".localSelectEnd").children("#tocity").click();
+				}else if(inputId=="tocity"){
+				    $("#dstcityhidden").val($(this).attr("id"));
+					//focusInput.siblings(".timeSelectStart").children("#timeFrom").focus();
+				}
+		});
+		
+	// 模糊匹配
+	$("#fromcity").keyup(function(event) {
+	    
+	    $(this).siblings("ul").empty();
+		var currentVal = $(this).val().toLowerCase();
+		$(".citysHidden").each(function()
+		{
+		    var threeCode=$(this).attr("id");
+		    var showName=$(this).val(); 
+	
+		   // alert(threeCode);
+		   // alert(showName);
+		    if (currentVal.trim().length > 0 && showName.toLowerCase().indexOf(currentVal) > -1) 
+		    {
+				$(".fromcityMenu").append("<li><a href='javascript:void(0)' onclick='liclickfromCity(this)'  title='"+showName+"' id='"+threeCode+"'>"+showName+"</a></li>");
+			}
+		});
+	 });
+	 
+	 $("#fromcity").click(function(event) {
+	    
+     	$(".fromcityMenu").html("");
+		$(".citysHidden").each(function()
+		{
+		    var threeCode=$(this).attr("id");
+		    var showName=$(this).val();
+			$(".fromcityMenu").append("<li><a href='javascript:void(0)' onclick='liclickfromCity(this)'  title='"+showName+"' id='"+threeCode+"'>"+showName+"</a></li>");
+		});
+	 });
+	 
+	
+	 //updatae
+	 // 模糊匹配
+
+	$("#tocity").keyup(function(event) {
+	
+	    $(this).siblings("ul").empty();
+		var currentVal = $(this).val().toLowerCase();
+		$(".citysHidden").each(function()
+		{
+		    var threeCode=$(this).attr("id");
+		    var showName=$(this).val();
+ 
+		   // alert(threeCode);
+		   // alert(showName);
+		    if (currentVal.trim().length > 0 && showName.toLowerCase().indexOf(currentVal) > -1) 
+		    {
+				$(".tocityMenu").append("<li><a href='javascript:void(0)' onclick='liclicktoCity(this)'  title='"+showName+"' id='"+threeCode+"'>"+showName+"</a></li>");
+			}
+		});
+		
+		
+	 });
+	
+	 //点击 
+	 $("#tocity").click(function(event) { 
+	 	$(".tocityMenu").html("");
+		$(".citysHidden").each(function()
+		{
+		    var threeCode=$(this).attr("id");
+		    var showName=$(this).val();
+			$(".tocityMenu").append("<li><a href='javascript:void(0)' onclick='liclicktoCity(this)' title='"+showName+"' id='"+threeCode+"'>"+showName+"</a></li>");
+		});
+	 });  
+	  
+ /* 舱位选择 */
+		var CabinSelect = function(){
+			$('#Cabin').val('经济舱');//设置默认值
+			$('.dropdownMenu').hide();
+			$('#Cabin').click(function(e){
+				e.stopPropagation();
+				$('.dropdownMenu').show();
+			});
+			$('.dropdownMenu a').click(function(e){
+				e.preventDefault();
+				e.stopPropagation();
+				$('.dropdownMenu').hide();
+				var val = $(this).html();
+				$('#Cabin').val(val);
+			});
+			$('html').click(function(){
+				$('.dropdownMenu').hide();
+			});
+		};
+		CabinSelect();
+ });
+				function doSearch() { 
+				if(""==$("#fromcity").val()){
+					tipContext('请选择出发地');
+					return;
+				}
+				if(""==$("#tocity").val()){
+					tipContext('请选择目的地');
+					return ;
+			    }
+				$("#pageConstant").val("2");
+				 
+				$("#searchform").submit();
+				};
+
+				function liclickfromCity(obj) {
+
+					$("#fromcity").val($(obj).attr("title"));
+
+					//赋值给隐藏字段
+					$("#orgcityhidden").val($(obj).attr("id"));
+				};
+
+				function liclicktoCity(obj) {
+
+					$("#tocity").val($(obj).attr("title"));
+
+					//赋值给隐藏字段
+					$("#dstcityhidden").val($(obj).attr("id"));
+				};
+				
+				
+				//比较日期大小    
+			    function compareDate(checkStartDate, checkEndDate) {        
+			        var arys1= new Array();        
+			        var arys2= new Array();        
+				    if(checkStartDate != null && checkEndDate != null) {        
+			     	   arys1=checkStartDate.split('-');        
+			     	   var sdate=new Date(arys1[0],parseInt(arys1[1]-1),arys1[2]);        
+			    	   arys2=checkEndDate.split('-');        
+			   		   var edate=new Date(arys2[0],parseInt(arys2[1]-1),arys2[2]);        
+				       if(sdate>=edate) {        
+			    	      return false;           
+				        }else{     
+			   		      return true;        
+			            }     
+			        }        
+			    }   	
+		 
+			   
+			</script> 
+  <!-- 品牌票价选择 --> 
+  <div class="flightPriceWrapper"> 
+   <div class="economyPrice1 brandrdo li4 economyPriceActive" val="LQB2C201903011539454023" cabin="" seqno="1_0"> 
+    <div class="economyLine"></div> 
+    <h2 class="priceTip"> <span> 澜湄假期 </span> <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/important-icon.png" class="img1" style="display: none;" /> <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/important-icon2.png" class="img2" /> </h2> 
+    <div class="economyPriceFooter"> 
+     <div class="leftInfo"> 
+      <p> <br /> CNY </p> 
+      <h2> 70 </h2> 
+      <p>起</p> 
+     </div> 
+     <p class="rightInfo">数量：1乘客</p> 
+    </div> 
+    <div class="priceTipInfo priceTipInfo1 " style="display: none;"> 
+     <div class="priceTipInfoTitle li4background">
+       澜湄假期 使用条款 
+     </div> 
+     <div class="priceTipInfoContent"> 
+      <div class="priceTipInfoContent1"> 
+       <h2>改期规定</h2> 
+       <p> 每张客票每次收取60美金改期费。A) 低票价变更至高票价：收取相应票价的差额。B) 高票价变更至低票价：票价差额不予退还。* 旅客必须于航班起飞前24小时取消原有航班，否则将收取误机费。 </p> 
+      </div> 
+      <div class="priceTipInfoContent2"> 
+       <h2>退票规定</h2> 
+       <p> 每张客票每次收取60美金退票费。 旅客必须于航班起飞前24小时取消原有航班，否则将收取误机费。客票全部未使用：允许退票；客票已部分使用：不允许退票。燃油附加费不予退还。 </p> 
+      </div> 
+      <div class="priceTipInfoContent3"> 
+       <h2>误机规定</h2> 
+       <p> 误机费30美元 </p> 
+      </div> 
+      <div class="priceTipInfoContent4"> 
+       <h2>转签及更改行程</h2> 
+       <p> 不允许。 </p> 
+      </div> 
+     </div> 
+    </div> 
+    <input type="hidden" name="fareRulesCNHidden" value="1,票价不含税及其他附加费.                                                       
+2,票价和航班时刻可能变动,请留意最新发布票价及GDS系统中航班时刻.                 
+3,去程第一段航程的始发日期决定了整个行程的票价.                                 
+4,婴儿免改期费和退票费.改期,误机,退票,行政费和其它收费项目没有儿童折扣.         
+5,所有客票必须按顺序使用.                                                       
+6,升舱,改期必须在客票有效期内进行.                                              
+7,若此规则和GDS不一致时,则以GDS为准.   " /> 
+    <input type="hidden" name="fareRulesTWHidden" value="" /> 
+    <input type="hidden" name="fareRulesUSHidden" value="1. Fares are exclusive of taxes and other surcharges.                           
+2. Please refer to GDS display for latest update on flight schedule, fares and taxes.                                                                           
+3. Departure date of the first outbound sector determines the fare for the entire journey.                                                                      
+4. No child discount is applied to Rebooking no-show/Refund/Handling Fee and other charges.                                                                     
+5. All sectors must be used in sequence.                                        
+6. Should there be any discrepancy between this rule and what shown in GDS, the latter prevail.    " /> 
+    <input type="hidden" name="fareRulesKRHidden" value="" /> 
+    <input type="hidden" name="brandRebookCNHidden" value="每张客票每次收取60美金改期费。A) 低票价变更至高票价：收取相应票价的差额。B) 高票价变更至低票价：票价差额不予退还。* 旅客必须于航班起飞前24小时取消原有航班，否则将收取误机费。" /> 
+    <input type="hidden" name="brandRebookTWHidden" value="" /> 
+    <input type="hidden" name="brandRebookUSHidden" value="Rebooking fee USD 60 A) Rebooked to higher class (fare): fare difference would be charged.B) Rebooked to lower class (fare): residual fare value is non-refundable. The original sector(s) must be cancelled 24 hours before departure; otherwise, no-show" /> 
+    <input type="hidden" name="brandRebookKRHidden" value="" /> 
+    <input type="hidden" name="brandRefundCNHidden" value="每张客票每次收取60美金退票费。 旅客必须于航班起飞前24小时取消原有航班，否则将收取误机费。客票全部未使用：允许退票；客票已部分使用：不允许退票。燃油附加费不予退还。" /> 
+    <input type="hidden" name="brandRefundTWHidden" value="" /> 
+    <input type="hidden" name="brandRefundUSHidden" value="USD 60 per ticket. The original sector(s) must be cancelled 24 hours before departure; otherwise, no-show fee will be charged. Fuel surcharges/For partially used ticket: are non-refundable." /> 
+    <input type="hidden" name="brandRefundKRHidden" value="" /> 
+    <input type="hidden" name="brandNoShowCNHidden" value="误机费30美元" /> 
+    <input type="hidden" name="brandNoShowTWHidden" value="" /> 
+    <input type="hidden" name="brandNoShowUSHidden" value="USD 30 per ticket." /> 
+    <input type="hidden" name="brandNoShowKRHidden" value="" /> 
+    <input type="hidden" name="brandReRouteCNHidden" value="不允许。" /> 
+    <input type="hidden" name="brandReRouteTWHidden" value="" /> 
+    <input type="hidden" name="brandReRouteUSHidden" value="Not permitted." /> 
+    <input type="hidden" name="brandReRouteKRHidden" value="" /> 
+    <input type="hidden" name="rebookTitleCNHidden" value="改期规定" /> 
+    <input type="hidden" name="rebookTitleTWHidden" value="" /> 
+    <input type="hidden" name="rebookTitleUSHidden" value="Rebook Rule" /> 
+    <input type="hidden" name="rebookTitleKRHidden" value="" /> 
+    <input type="hidden" name="refundTitleCNHidden" value="退票规定" /> 
+    <input type="hidden" name="refundTitleTWHidden" value="" /> 
+    <input type="hidden" name="refundTitleUSHidden" value="Refund Rule" /> 
+    <input type="hidden" name="refundTitleKRHidden" value="" /> 
+    <input type="hidden" name="noshowTitleCNHidden" value="误机规定" /> 
+    <input type="hidden" name="noshowTitleTWHidden" value="" /> 
+    <input type="hidden" name="noshowTitleUSHidden" value="No-show Rule" /> 
+    <input type="hidden" name="noshowTitleKRHidden" value="" /> 
+    <input type="hidden" name="eroutableTitleCNHidden" value="转签及更改行程" /> 
+    <input type="hidden" name="eroutableTitleTWHidden" value="" /> 
+    <input type="hidden" name="eroutableTitleUSHidden" value="Endorse/Reroute" /> 
+    <input type="hidden" name="eroutableTitleKRHidden" value="" /> 
+    <input type="hidden" name="descTitleCNHidden" value="运价条款" /> 
+    <input type="hidden" name="descTitleTWHidden" value="" /> 
+    <input type="hidden" name="descTitleUSHidden" value="Fare Clause" /> 
+    <input type="hidden" name="descTitleKRHidden" value="" /> 
+   </div> 
+   <div class="economyPrice2 brandrdo li4" val="LQB2C201903011541034024" cabin="" seqno="2_0"> 
+    <div class="economyLine"></div> 
+    <h2 class="priceTip"> <span> 畅享经济舱 </span> <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/important-icon.png" class="img1" style="display: none;" /> <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/important-icon2.png" class="img2" /> </h2> 
+    <div class="economyPriceFooter"> 
+     <div class="leftInfo"> 
+      <p> <br /> CNY </p> 
+      <h2> 180 </h2> 
+      <p>起</p> 
+     </div> 
+     <p class="rightInfo">数量：1乘客</p> 
+    </div> 
+    <div class="priceTipInfo priceTipInfo1 " style="display: none;"> 
+     <div class="priceTipInfoTitle li4background">
+       畅享经济舱 使用条款 
+     </div> 
+     <div class="priceTipInfoContent"> 
+      <div class="priceTipInfoContent1"> 
+       <h2>改期规定</h2> 
+       <p> 每张客票每次收取50美金改期费。A) 低票价变更至高票价：收取相应票价的差额。B) 高票价变更至低票价：票价差额不予退还。* 旅客必须于航班起飞前24小时取消原有航班，否则将收取误机费。 </p> 
+      </div> 
+      <div class="priceTipInfoContent2"> 
+       <h2>退票规定</h2> 
+       <p> 每张客票每次收取50美金退票费。 旅客必须于航班起飞前24小时取消原有航班，否则将收取误机费。客票全部未使用：允许退票；客票已部分使用：不允许退票。燃油附加费不予退还。 </p> 
+      </div> 
+      <div class="priceTipInfoContent3"> 
+       <h2>误机规定</h2> 
+       <p> 每张客票收取30美金。 </p> 
+      </div> 
+      <div class="priceTipInfoContent4"> 
+       <h2>转签及更改行程</h2> 
+       <p> 不允许。 </p> 
+      </div> 
+     </div> 
+    </div> 
+    <input type="hidden" name="fareRulesCNHidden" value="1、票价不含税及其他附加费。
+2、票价和航班时刻可能变动，请留意最新发布票价及GDS系统中航班时刻。
+3、改期、误机、退票、行政费和其它收费项目没有儿童折扣。
+4、婴儿退改改签免费
+5、去程第一段航程的始发日期决定了整个旅行日期。
+6、升舱、改期必须在客票有效期内进行。
+7、当规则和GDS不一致时，请以GDS为准。
+" /> 
+    <input type="hidden" name="fareRulesTWHidden" value="" /> 
+    <input type="hidden" name="fareRulesUSHidden" value="1. Fares are exclusive of taxes and other surcharges.                           
+2. Please refer to GDS display for latest update on flight schedule, fares and taxes.                                                                           
+3. Departure date of the first outbound sector determines the fare for the entire journey.                                                                      
+4. No child discount is applied to Rebooking no-show/Refund/Handling Fee and other charges.                                                                     
+5. All sectors must be used in sequence.                                        
+6. Should there be any discrepancy between this rule and what shown in GDS, the latter prevail.  " /> 
+    <input type="hidden" name="fareRulesKRHidden" value="" /> 
+    <input type="hidden" name="brandRebookCNHidden" value="每张客票每次收取50美金改期费。A) 低票价变更至高票价：收取相应票价的差额。B) 高票价变更至低票价：票价差额不予退还。* 旅客必须于航班起飞前24小时取消原有航班，否则将收取误机费。" /> 
+    <input type="hidden" name="brandRebookTWHidden" value="" /> 
+    <input type="hidden" name="brandRebookUSHidden" value="Rebooking fee USD 50 A) Rebooked to higher class (fare): fare difference would be charged.B) Rebooked to lower class (fare): residual fare value is non-refundable. The original sector(s) must be cancelled 24 hours before departure; otherwise, no-show" /> 
+    <input type="hidden" name="brandRebookKRHidden" value="" /> 
+    <input type="hidden" name="brandRefundCNHidden" value="每张客票每次收取50美金退票费。 旅客必须于航班起飞前24小时取消原有航班，否则将收取误机费。客票全部未使用：允许退票；客票已部分使用：不允许退票。燃油附加费不予退还。" /> 
+    <input type="hidden" name="brandRefundTWHidden" value="" /> 
+    <input type="hidden" name="brandRefundUSHidden" value="USD 50 per ticket. The original sector(s) must be cancelled 24 hours before departure; otherwise, no-show fee will be charged. Fuel surcharges/For partially used ticket: are non-refundable." /> 
+    <input type="hidden" name="brandRefundKRHidden" value="" /> 
+    <input type="hidden" name="brandNoShowCNHidden" value="每张客票收取30美金。" /> 
+    <input type="hidden" name="brandNoShowTWHidden" value="" /> 
+    <input type="hidden" name="brandNoShowUSHidden" value="USD 30 per ticket." /> 
+    <input type="hidden" name="brandNoShowKRHidden" value="" /> 
+    <input type="hidden" name="brandReRouteCNHidden" value="不允许。" /> 
+    <input type="hidden" name="brandReRouteTWHidden" value="" /> 
+    <input type="hidden" name="brandReRouteUSHidden" value="Not permitted." /> 
+    <input type="hidden" name="brandReRouteKRHidden" value="" /> 
+    <input type="hidden" name="rebookTitleCNHidden" value="改期规定" /> 
+    <input type="hidden" name="rebookTitleTWHidden" value="" /> 
+    <input type="hidden" name="rebookTitleUSHidden" value="Rebook Rule" /> 
+    <input type="hidden" name="rebookTitleKRHidden" value="" /> 
+    <input type="hidden" name="refundTitleCNHidden" value="退票规定" /> 
+    <input type="hidden" name="refundTitleTWHidden" value="" /> 
+    <input type="hidden" name="refundTitleUSHidden" value="Refund Rule" /> 
+    <input type="hidden" name="refundTitleKRHidden" value="" /> 
+    <input type="hidden" name="noshowTitleCNHidden" value="误机规定" /> 
+    <input type="hidden" name="noshowTitleTWHidden" value="" /> 
+    <input type="hidden" name="noshowTitleUSHidden" value="No-show Rule" /> 
+    <input type="hidden" name="noshowTitleKRHidden" value="" /> 
+    <input type="hidden" name="eroutableTitleCNHidden" value="转签及更改行程" /> 
+    <input type="hidden" name="eroutableTitleTWHidden" value="" /> 
+    <input type="hidden" name="eroutableTitleUSHidden" value="Endorse/Reroute" /> 
+    <input type="hidden" name="eroutableTitleKRHidden" value="" /> 
+    <input type="hidden" name="descTitleCNHidden" value="运价条款" /> 
+    <input type="hidden" name="descTitleTWHidden" value="" /> 
+    <input type="hidden" name="descTitleUSHidden" value="Fare Clause" /> 
+    <input type="hidden" name="descTitleKRHidden" value="" /> 
+   </div> 
+   <div class="economyPrice3 brandrdo li4" val="LQB2C201903011519274022" cabin="" seqno="3_0"> 
+    <div class="economyLine"></div> 
+    <h2 class="priceTip"> <span> 商务经济舱 </span> <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/important-icon.png" class="img1" style="display: none;" /> <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/important-icon2.png" class="img2" /> </h2> 
+    <div class="economyPriceFooter"> 
+     <div class="leftInfo"> 
+      <p> <br /> CNY </p> 
+      <h2> 240 </h2> 
+      <p>起</p> 
+     </div> 
+     <p class="rightInfo">数量：1乘客</p> 
+    </div> 
+    <div class="priceTipInfo priceTipInfo1 " style="display: none;"> 
+     <div class="priceTipInfoTitle li4background">
+       商务经济舱 使用条款 
+     </div> 
+     <div class="priceTipInfoContent"> 
+      <div class="priceTipInfoContent1"> 
+       <h2>改期规定</h2> 
+       <p> 每张客票每次收取50美金改期费。A) 低票价变更至高票价：收取相应票价的差额。B) 高票价变更至低票价：票价差额不予退还。* 旅客必须于航班起飞前24小时取消原有航班，否则将收取误机费。 </p> 
+      </div> 
+      <div class="priceTipInfoContent2"> 
+       <h2>退票规定</h2> 
+       <p> 每张客票每次收取50美金退票费。 旅客必须于航班起飞前24小时取消原有航班，否则将收取误机费。客票全部未使用：允许退票；客票已部分使用：不允许退票。燃油附加费不予退还。 </p> 
+      </div> 
+      <div class="priceTipInfoContent3"> 
+       <h2>误机规定</h2> 
+       <p> 每张客票收取30美金。 </p> 
+      </div> 
+      <div class="priceTipInfoContent4"> 
+       <h2>转签及更改行程</h2> 
+       <p> 不允许。 </p> 
+      </div> 
+     </div> 
+    </div> 
+    <input type="hidden" name="fareRulesCNHidden" value="1、票价不含税及其他附加费。
+2、票价和航班时刻可能变动，请留意最新发布票价及GDS系统中航班时刻。
+3、改期、误机、退票、行政费和其它收费项目没有儿童折扣。
+4、婴儿退改改签免费
+5、去程第一段航程的始发日期决定了整个旅行日期。
+6、升舱、改期必须在客票有效期内进行。
+7、当规则和GDS不一致时，请以GDS为准。
+" /> 
+    <input type="hidden" name="fareRulesTWHidden" value="" /> 
+    <input type="hidden" name="fareRulesUSHidden" value="1. Fares are exclusive of taxes and other surcharges.                           
+2. Please refer to GDS display for latest update on flight schedule, fares and taxes.                                                                           
+3. Departure date of the first outbound sector determines the fare for the entire journey.                                                                      
+4. No child discount is applied to Rebooking no-show/Refund/Handling Fee and other charges.                                                                     
+5. All sectors must be used in sequence.                                        
+6. Should there be any discrepancy between this rule and what shown in GDS, the latter prevail.    " /> 
+    <input type="hidden" name="fareRulesKRHidden" value="" /> 
+    <input type="hidden" name="brandRebookCNHidden" value="每张客票每次收取50美金改期费。A) 低票价变更至高票价：收取相应票价的差额。B) 高票价变更至低票价：票价差额不予退还。* 旅客必须于航班起飞前24小时取消原有航班，否则将收取误机费。" /> 
+    <input type="hidden" name="brandRebookTWHidden" value="" /> 
+    <input type="hidden" name="brandRebookUSHidden" value="Rebooking fee USD 50 A) Rebooked to higher class (fare): fare difference would be charged.B) Rebooked to lower class (fare): residual fare value is non-refundable. The original sector(s) must be cancelled 24 hours before departure; otherwise, no-show" /> 
+    <input type="hidden" name="brandRebookKRHidden" value="" /> 
+    <input type="hidden" name="brandRefundCNHidden" value="每张客票每次收取50美金退票费。 旅客必须于航班起飞前24小时取消原有航班，否则将收取误机费。客票全部未使用：允许退票；客票已部分使用：不允许退票。燃油附加费不予退还。" /> 
+    <input type="hidden" name="brandRefundTWHidden" value="" /> 
+    <input type="hidden" name="brandRefundUSHidden" value="USD 50 per ticket. The original sector(s) must be cancelled 24 hours before departure; otherwise, no-show fee will be charged. Fuel surcharges/For partially used ticket: are non-refundable." /> 
+    <input type="hidden" name="brandRefundKRHidden" value="" /> 
+    <input type="hidden" name="brandNoShowCNHidden" value="每张客票收取30美金。" /> 
+    <input type="hidden" name="brandNoShowTWHidden" value="" /> 
+    <input type="hidden" name="brandNoShowUSHidden" value="USD 30 per ticket." /> 
+    <input type="hidden" name="brandNoShowKRHidden" value="" /> 
+    <input type="hidden" name="brandReRouteCNHidden" value="不允许。" /> 
+    <input type="hidden" name="brandReRouteTWHidden" value="" /> 
+    <input type="hidden" name="brandReRouteUSHidden" value="Not permitted." /> 
+    <input type="hidden" name="brandReRouteKRHidden" value="" /> 
+    <input type="hidden" name="rebookTitleCNHidden" value="改期规定" /> 
+    <input type="hidden" name="rebookTitleTWHidden" value="" /> 
+    <input type="hidden" name="rebookTitleUSHidden" value="Rebook Rule" /> 
+    <input type="hidden" name="rebookTitleKRHidden" value="" /> 
+    <input type="hidden" name="refundTitleCNHidden" value="退票规定" /> 
+    <input type="hidden" name="refundTitleTWHidden" value="" /> 
+    <input type="hidden" name="refundTitleUSHidden" value="Refund Rule" /> 
+    <input type="hidden" name="refundTitleKRHidden" value="" /> 
+    <input type="hidden" name="noshowTitleCNHidden" value="误机规定" /> 
+    <input type="hidden" name="noshowTitleTWHidden" value="" /> 
+    <input type="hidden" name="noshowTitleUSHidden" value="No-show Rule" /> 
+    <input type="hidden" name="noshowTitleKRHidden" value="" /> 
+    <input type="hidden" name="eroutableTitleCNHidden" value="转签及更改行程" /> 
+    <input type="hidden" name="eroutableTitleTWHidden" value="" /> 
+    <input type="hidden" name="eroutableTitleUSHidden" value="Endorse/Reroute" /> 
+    <input type="hidden" name="eroutableTitleKRHidden" value="" /> 
+    <input type="hidden" name="descTitleCNHidden" value="运价条款" /> 
+    <input type="hidden" name="descTitleTWHidden" value="" /> 
+    <input type="hidden" name="descTitleUSHidden" value="Fare Clause" /> 
+    <input type="hidden" name="descTitleKRHidden" value="" /> 
+   </div> 
+   <div class="economyPrice4 brandrdo li4" val="LQB2C201903011545114027" cabin="" seqno="4_0"> 
+    <div class="economyLine"></div> 
+    <h2 class="priceTip"> <span> 超值经济舱 </span> <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/important-icon.png" class="img1" style="display: none;" /> <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/important-icon2.png" class="img2" /> </h2> 
+    <div class="economyPriceFooter"> 
+     <div class="leftInfo"> 
+      <p> <br /> CNY </p> 
+      <h2> 1150 </h2> 
+      <p>起</p> 
+     </div> 
+     <p class="rightInfo">数量：1乘客</p> 
+    </div> 
+    <div class="priceTipInfo priceTipInfo1 " style="display: none;"> 
+     <div class="priceTipInfoTitle li4background">
+       超值经济舱 使用条款 
+     </div> 
+     <div class="priceTipInfoContent"> 
+      <div class="priceTipInfoContent1"> 
+       <h2>改期规定</h2> 
+       <p> 每张客票每次收取30美金改期费。A) 低票价变更至高票价：收取相应票价的差额。 B) 高票价变更至低票价：票价差额不予退还。 * 适用于公布运价或同一开票代码中的私有运价。 * 旅客必须于航班起飞前24小时取消原有航班，否则将收取误机费。 </p> 
+      </div> 
+      <div class="priceTipInfoContent2"> 
+       <h2>退票规定</h2> 
+       <p> 每张客票每次收取30美金退票费。 旅客必须于航班起飞前24小时取消原有航班，否则将收取误机费。客票全部未使用：允许退票；客票已部分使用：不允许退票。燃油附加费不予退还。 </p> 
+      </div> 
+      <div class="priceTipInfoContent3"> 
+       <h2>误机规定</h2> 
+       <p> 每张客票收取30美金。 </p> 
+      </div> 
+      <div class="priceTipInfoContent4"> 
+       <h2>转签及更改行程</h2> 
+       <p> 不允许。 </p> 
+      </div> 
+     </div> 
+    </div> 
+    <input type="hidden" name="fareRulesCNHidden" value="1,票价不含税及其他附加费.                                                       
+2,票价和航班时刻可能变动,请留意最新发布票价及GDS系统中航班时刻.                 
+3,去程第一段航程的始发日期决定了整个行程的票价.                                 
+4,婴儿免改期费和退票费.改期,误机,退票,行政费和其它收费项目没有儿童折扣.         
+5,所有客票必须按顺序使用.                                                       
+6,升舱,改期必须在客票有效期内进行.                                              
+7,若此规则和GDS不一致时,则以GDS为准. " /> 
+    <input type="hidden" name="fareRulesTWHidden" value="" /> 
+    <input type="hidden" name="fareRulesUSHidden" value="1. Fares are exclusive of taxes and other surcharges.                           
+2. Please refer to GDS display for latest update on flight schedule, fares and taxes.                                                                           
+3. Departure date of the first outbound sector determines the fare for the entire journey.                                                                      
+4. No child discount is applied to Rebooking no-show/Refund/Handling Fee and other charges.                                                                     
+5. All sectors must be used in sequence.                                        
+6. Should there be any discrepancy between this rule and what shown in GDS, the latter prevail. " /> 
+    <input type="hidden" name="fareRulesKRHidden" value="" /> 
+    <input type="hidden" name="brandRebookCNHidden" value="每张客票每次收取30美金改期费。A) 低票价变更至高票价：收取相应票价的差额。 B) 高票价变更至低票价：票价差额不予退还。 * 适用于公布运价或同一开票代码中的私有运价。 * 旅客必须于航班起飞前24小时取消原有航班，否则将收取误机费。" /> 
+    <input type="hidden" name="brandRebookTWHidden" value="" /> 
+    <input type="hidden" name="brandRebookUSHidden" value="Rebooking fee USD 30 per ticket per transaction.A) Rebooked to higher  fare: fare difference would be charged. B) Rebooked to lower fare: residual fare value is non-refundable. *The original sector(s) must be cancelled 24 hours before departure " /> 
+    <input type="hidden" name="brandRebookKRHidden" value="" /> 
+    <input type="hidden" name="brandRefundCNHidden" value="每张客票每次收取30美金退票费。 旅客必须于航班起飞前24小时取消原有航班，否则将收取误机费。客票全部未使用：允许退票；客票已部分使用：不允许退票。燃油附加费不予退还。" /> 
+    <input type="hidden" name="brandRefundTWHidden" value="" /> 
+    <input type="hidden" name="brandRefundUSHidden" value="USD 30 per ticket. The original sector(s) must be cancelled 24 hours before departure; otherwise, no-show fee will be charged. Fuel surcharges/For partially used ticket: are non-refundable." /> 
+    <input type="hidden" name="brandRefundKRHidden" value="" /> 
+    <input type="hidden" name="brandNoShowCNHidden" value="每张客票收取30美金。" /> 
+    <input type="hidden" name="brandNoShowTWHidden" value="" /> 
+    <input type="hidden" name="brandNoShowUSHidden" value="USD 30 per ticket." /> 
+    <input type="hidden" name="brandNoShowKRHidden" value="" /> 
+    <input type="hidden" name="brandReRouteCNHidden" value="不允许。" /> 
+    <input type="hidden" name="brandReRouteTWHidden" value="" /> 
+    <input type="hidden" name="brandReRouteUSHidden" value="Not permitted." /> 
+    <input type="hidden" name="brandReRouteKRHidden" value="" /> 
+    <input type="hidden" name="rebookTitleCNHidden" value="改期规定" /> 
+    <input type="hidden" name="rebookTitleTWHidden" value="" /> 
+    <input type="hidden" name="rebookTitleUSHidden" value="Rebook Rule" /> 
+    <input type="hidden" name="rebookTitleKRHidden" value="" /> 
+    <input type="hidden" name="refundTitleCNHidden" value="退票规定" /> 
+    <input type="hidden" name="refundTitleTWHidden" value="" /> 
+    <input type="hidden" name="refundTitleUSHidden" value="Refund Rule" /> 
+    <input type="hidden" name="refundTitleKRHidden" value="" /> 
+    <input type="hidden" name="noshowTitleCNHidden" value="误机规定" /> 
+    <input type="hidden" name="noshowTitleTWHidden" value="" /> 
+    <input type="hidden" name="noshowTitleUSHidden" value="No-show Rule" /> 
+    <input type="hidden" name="noshowTitleKRHidden" value="" /> 
+    <input type="hidden" name="eroutableTitleCNHidden" value="转签及更改行程" /> 
+    <input type="hidden" name="eroutableTitleTWHidden" value="" /> 
+    <input type="hidden" name="eroutableTitleUSHidden" value="Endorse/Reroute" /> 
+    <input type="hidden" name="eroutableTitleKRHidden" value="" /> 
+    <input type="hidden" name="descTitleCNHidden" value="运价条款" /> 
+    <input type="hidden" name="descTitleTWHidden" value="" /> 
+    <input type="hidden" name="descTitleUSHidden" value="Fare Clause" /> 
+    <input type="hidden" name="descTitleKRHidden" value="" /> 
+   </div> 
+   <div class="economyPrice5 brandrdo li4" val="LQB2C201903011544294026" cabin="" seqno="5_0"> 
+    <div class="economyLine"></div> 
+    <h2 class="priceTip"> <span> 尊享经济舱 </span> <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/important-icon.png" class="img1" style="display: none;" /> <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/important-icon2.png" class="img2" /> </h2> 
+    <div class="economyPriceFooter"> 
+     <div class="leftInfo"> 
+      <p> <br /> CNY </p> 
+      <h2> 1720 </h2> 
+      <p>起</p> 
+     </div> 
+     <p class="rightInfo">数量：1乘客</p> 
+    </div> 
+    <div class="priceTipInfo priceTipInfo1 " style="display: none;"> 
+     <div class="priceTipInfoTitle li4background">
+       尊享经济舱 使用条款 
+     </div> 
+     <div class="priceTipInfoContent"> 
+      <div class="priceTipInfoContent1"> 
+       <h2>改期规定</h2> 
+       <p> 免改期费 </p> 
+      </div> 
+      <div class="priceTipInfoContent2"> 
+       <h2>退票规定</h2> 
+       <p> 每张客票每次收取20美金退票费。 旅客必须于航班起飞前24小时取消原有航班，否则将收取误机费。客票全部未使用：允许退票；客票已部分使用：不允许退票。燃油附加费不予退还。 </p> 
+      </div> 
+      <div class="priceTipInfoContent3"> 
+       <h2>误机规定</h2> 
+       <p> 每张客票收取30美金。 </p> 
+      </div> 
+      <div class="priceTipInfoContent4"> 
+       <h2>转签及更改行程</h2> 
+       <p> 不允许。 </p> 
+      </div> 
+     </div> 
+    </div> 
+    <input type="hidden" name="fareRulesCNHidden" value="1,票价不含税及其他附加费.                                                       
+2,票价和航班时刻可能变动,请留意最新发布票价及GDS系统中航班时刻.                 
+3,去程第一段航程的始发日期决定了整个行程的票价.                                 
+4,婴儿免改期费和退票费.改期,误机,退票,行政费和其它收费项目没有儿童折扣.         
+5,所有客票必须按顺序使用.                                                       
+6,升舱,改期必须在客票有效期内进行.                                              
+7,若此规则和GDS不一致时,则以GDS为准. " /> 
+    <input type="hidden" name="fareRulesTWHidden" value="" /> 
+    <input type="hidden" name="fareRulesUSHidden" value="1. Fares are exclusive of taxes and other surcharges.                           
+2. Please refer to GDS display for latest update on flight schedule, fares and taxes.                                                                           
+3. Departure date of the first outbound sector determines the fare for the entire journey.                                                                      
+4. No child discount is applied to Rebooking no-show/Refund/Handling Fee and other charges.                                                                     
+5. All sectors must be used in sequence.                                        
+6. Should there be any discrepancy between this rule and what shown in GDS, the latter prevail. " /> 
+    <input type="hidden" name="fareRulesKRHidden" value="" /> 
+    <input type="hidden" name="brandRebookCNHidden" value="免改期费" /> 
+    <input type="hidden" name="brandRebookTWHidden" value="" /> 
+    <input type="hidden" name="brandRebookUSHidden" value="Permitted without charges." /> 
+    <input type="hidden" name="brandRebookKRHidden" value="" /> 
+    <input type="hidden" name="brandRefundCNHidden" value="每张客票每次收取20美金退票费。 旅客必须于航班起飞前24小时取消原有航班，否则将收取误机费。客票全部未使用：允许退票；客票已部分使用：不允许退票。燃油附加费不予退还。" /> 
+    <input type="hidden" name="brandRefundTWHidden" value="" /> 
+    <input type="hidden" name="brandRefundUSHidden" value="USD 20 per ticket. The original sector(s) must be cancelled 24 hours before departure; otherwise, no-show fee will be charged. Fuel surcharges/For partially used ticket: are non-refundable." /> 
+    <input type="hidden" name="brandRefundKRHidden" value="" /> 
+    <input type="hidden" name="brandNoShowCNHidden" value="每张客票收取30美金。" /> 
+    <input type="hidden" name="brandNoShowTWHidden" value="" /> 
+    <input type="hidden" name="brandNoShowUSHidden" value="USD 30 per ticket." /> 
+    <input type="hidden" name="brandNoShowKRHidden" value="" /> 
+    <input type="hidden" name="brandReRouteCNHidden" value="不允许。" /> 
+    <input type="hidden" name="brandReRouteTWHidden" value="" /> 
+    <input type="hidden" name="brandReRouteUSHidden" value="Not permitted." /> 
+    <input type="hidden" name="brandReRouteKRHidden" value="" /> 
+    <input type="hidden" name="rebookTitleCNHidden" value="改期规定" /> 
+    <input type="hidden" name="rebookTitleTWHidden" value="" /> 
+    <input type="hidden" name="rebookTitleUSHidden" value="Rebook Rule" /> 
+    <input type="hidden" name="rebookTitleKRHidden" value="" /> 
+    <input type="hidden" name="refundTitleCNHidden" value="退票规定" /> 
+    <input type="hidden" name="refundTitleTWHidden" value="" /> 
+    <input type="hidden" name="refundTitleUSHidden" value="Refund Rule" /> 
+    <input type="hidden" name="refundTitleKRHidden" value="" /> 
+    <input type="hidden" name="noshowTitleCNHidden" value="误机规定" /> 
+    <input type="hidden" name="noshowTitleTWHidden" value="" /> 
+    <input type="hidden" name="noshowTitleUSHidden" value="No-show Rule" /> 
+    <input type="hidden" name="noshowTitleKRHidden" value="" /> 
+    <input type="hidden" name="eroutableTitleCNHidden" value="转签及更改行程" /> 
+    <input type="hidden" name="eroutableTitleTWHidden" value="" /> 
+    <input type="hidden" name="eroutableTitleUSHidden" value="Endorse/Reroute" /> 
+    <input type="hidden" name="eroutableTitleKRHidden" value="" /> 
+    <input type="hidden" name="descTitleCNHidden" value="运价条款" /> 
+    <input type="hidden" name="descTitleTWHidden" value="" /> 
+    <input type="hidden" name="descTitleUSHidden" value="Fare Clause" /> 
+    <input type="hidden" name="descTitleKRHidden" value="" /> 
+   </div> 
+   <div class="economyPrice6 brandrdo li4" val="LQB2C201903011545244028" cabin="" seqno="6_0"> 
+    <div class="economyLine"></div> 
+    <h2 class="priceTip"> <span> 精选商务经济舱 </span> <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/important-icon.png" class="img1" style="display: none;" /> <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/important-icon2.png" class="img2" /> </h2> 
+    <div class="economyPriceFooter"> 
+     <div class="leftInfo"> 
+      <p> <br /> CNY </p> 
+      <h2> 2070 </h2> 
+      <p>起</p> 
+     </div> 
+     <p class="rightInfo">数量：1乘客</p> 
+    </div> 
+    <div class="priceTipInfo priceTipInfo1 " style="display: none;"> 
+     <div class="priceTipInfoTitle li4background">
+       精选商务经济舱 使用条款 
+     </div> 
+     <div class="priceTipInfoContent"> 
+      <div class="priceTipInfoContent1"> 
+       <h2>改期规定</h2> 
+       <p> 免改期费 </p> 
+      </div> 
+      <div class="priceTipInfoContent2"> 
+       <h2>退票规定</h2> 
+       <p> 每张客票每次收取20美金退票费。 旅客必须于航班起飞前24小时取消原有航班，否则将收取误机费。客票全部未使用：允许退票；客票已部分使用：不允许退票。燃油附加费不予退还。 </p> 
+      </div> 
+      <div class="priceTipInfoContent3"> 
+       <h2>误机规定</h2> 
+       <p> 每张客票收取30美金。 </p> 
+      </div> 
+      <div class="priceTipInfoContent4"> 
+       <h2>转签及更改行程</h2> 
+       <p> 不允许。 </p> 
+      </div> 
+     </div> 
+    </div> 
+    <input type="hidden" name="fareRulesCNHidden" value="1,票价不含税及其他附加费.                                                       
+2,票价和航班时刻可能变动,请留意最新发布票价及GDS系统中航班时刻.                 
+3,去程第一段航程的始发日期决定了整个行程的票价.                                 
+4,婴儿免改期费和退票费.改期,误机,退票,行政费和其它收费项目没有儿童折扣.         
+5,所有客票必须按顺序使用.                                                       
+6,升舱,改期必须在客票有效期内进行.                                              
+7,若此规则和GDS不一致时,则以GDS为准. " /> 
+    <input type="hidden" name="fareRulesTWHidden" value="" /> 
+    <input type="hidden" name="fareRulesUSHidden" value="1. Fares are exclusive of taxes and other surcharges.                           
+2. Please refer to GDS display for latest update on flight schedule, fares and taxes.                                                                           
+3. Departure date of the first outbound sector determines the fare for the entire journey.                                                                      
+4. No child discount is applied to Rebooking no-show/Refund/Handling Fee and other charges.                                                                     
+5. All sectors must be used in sequence.                                        
+6. Should there be any discrepancy between this rule and what shown in GDS, the latter prevail. " /> 
+    <input type="hidden" name="fareRulesKRHidden" value="" /> 
+    <input type="hidden" name="brandRebookCNHidden" value="免改期费" /> 
+    <input type="hidden" name="brandRebookTWHidden" value="" /> 
+    <input type="hidden" name="brandRebookUSHidden" value="Permitted without charges." /> 
+    <input type="hidden" name="brandRebookKRHidden" value="" /> 
+    <input type="hidden" name="brandRefundCNHidden" value="每张客票每次收取20美金退票费。 旅客必须于航班起飞前24小时取消原有航班，否则将收取误机费。客票全部未使用：允许退票；客票已部分使用：不允许退票。燃油附加费不予退还。" /> 
+    <input type="hidden" name="brandRefundTWHidden" value="" /> 
+    <input type="hidden" name="brandRefundUSHidden" value="USD 20 per ticket. The original sector(s) must be cancelled 24 hours before departure; otherwise, no-show fee will be charged. Fuel surcharges/For partially used ticket: are non-refundable." /> 
+    <input type="hidden" name="brandRefundKRHidden" value="" /> 
+    <input type="hidden" name="brandNoShowCNHidden" value="每张客票收取30美金。" /> 
+    <input type="hidden" name="brandNoShowTWHidden" value="" /> 
+    <input type="hidden" name="brandNoShowUSHidden" value="USD 30 per ticket." /> 
+    <input type="hidden" name="brandNoShowKRHidden" value="" /> 
+    <input type="hidden" name="brandReRouteCNHidden" value="不允许。" /> 
+    <input type="hidden" name="brandReRouteTWHidden" value="" /> 
+    <input type="hidden" name="brandReRouteUSHidden" value="Not permitted." /> 
+    <input type="hidden" name="brandReRouteKRHidden" value="" /> 
+    <input type="hidden" name="rebookTitleCNHidden" value="改期规定" /> 
+    <input type="hidden" name="rebookTitleTWHidden" value="" /> 
+    <input type="hidden" name="rebookTitleUSHidden" value="Rebook Rule" /> 
+    <input type="hidden" name="rebookTitleKRHidden" value="" /> 
+    <input type="hidden" name="refundTitleCNHidden" value="退票规定" /> 
+    <input type="hidden" name="refundTitleTWHidden" value="" /> 
+    <input type="hidden" name="refundTitleUSHidden" value="Refund Rule" /> 
+    <input type="hidden" name="refundTitleKRHidden" value="" /> 
+    <input type="hidden" name="noshowTitleCNHidden" value="误机规定" /> 
+    <input type="hidden" name="noshowTitleTWHidden" value="" /> 
+    <input type="hidden" name="noshowTitleUSHidden" value="No-show Rule" /> 
+    <input type="hidden" name="noshowTitleKRHidden" value="" /> 
+    <input type="hidden" name="eroutableTitleCNHidden" value="转签及更改行程" /> 
+    <input type="hidden" name="eroutableTitleTWHidden" value="" /> 
+    <input type="hidden" name="eroutableTitleUSHidden" value="Endorse/Reroute" /> 
+    <input type="hidden" name="eroutableTitleKRHidden" value="" /> 
+    <input type="hidden" name="descTitleCNHidden" value="运价条款" /> 
+    <input type="hidden" name="descTitleTWHidden" value="" /> 
+    <input type="hidden" name="descTitleUSHidden" value="Fare Clause" /> 
+    <input type="hidden" name="descTitleKRHidden" value="" /> 
+   </div> 
+  </div> 
+  <!-- 票价详情 set out --> 
+  <div class="flightSetOut flightPriceDetailWrapper" id="goflightContent"> 
+   <div class="flightPriceTitle">
+    <h2><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/leftTitleLine.png" /><span>去程 &nbsp;&nbsp;-</span><p class="flightFrom">金边，柬埔寨(PNH)</p>&nbsp; to &nbsp; <p class="flightTo">暹粒，柬埔寨(REP)</p></h2> 
+   </div>
+   <div class="flightPriceMain flightPriceMainSetOut">
+    <div name="fltrdo0" val="1_0" fltno="LQ671" class="fltgocss flightSelect1 flightSelectCommon goflight flightActive"> 
+     <div class="flightBg"> 
+      <div class="flightSelectTitle">
+       飞行时间：
+       <span>50m</span>
+      </div>
+     </div>
+     <div class="flightList1 flightListCommon">
+      <div class="flightListCommonLeft">
+       <div class="nth-child1">
+        <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/travelTimeLogo.png" /> 
+        <span>Lanmei Airlines</span>
+       </div>
+       <div class="nth-child2">
+        <h2>金边(14:55)</h2>
+        <p class="p1">2019年6月11日 星期二</p>
+        <p class="p2">(PNH) 金边国际机场 </p> 
+        <span style="display: none" id="DepartureTime">1560236100000<span></span></span>
+       </div>
+       <div class="nth-child3">
+        <p class="p1">航班 :<span>LQ 671</span></p>
+        <p class="p2">机型 :<span>Airbus&nbsp;320</span></p>
+       </div>
+       <div class="nth-child4">
+        <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/flightArrow.png" alt="" /> 
+        <p>50m</p> 
+       </div>
+      </div>
+      <div class="flightListCommonRight"> 
+       <div class="nth-child1">
+        <span></span>
+       </div> 
+       <div class="nth-child2"> 
+        <h2>暹粒(15:45)</h2>
+        <p class="p1">2019年6月11日 星期二</p>
+        <p class="p2">(REP) 吴哥国际机场 </p> 
+       </div>
+       <div class="nth-child3">
+        <p class="p1"><span><font color="red">2</font></span>: 剩余座位</p> 
+        <p class="p2"><span>V</span>: 预定舱位</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> 
+  <!-- 票价详情 return --> 
+  <div class="flightReturn flightPriceDetailWrapper" id="backflightContent">
+   <div class="flightPriceTitle"> 
+    <h2> <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/leftTitleLine.png" /> <span>回程&nbsp;&nbsp;&nbsp;&nbsp;-</span> <p class="flightFrom">暹粒，柬埔寨(REP)</p>&nbsp; to &nbsp; <p class="flightTo"> 金边，柬埔寨(PNH)</p> </h2>
+   </div>
+   <div class="flightPriceMain flightPriceMainReturn">
+    <div name="fltrdo1" val="1_0" fltno="LQ670" class="fltcss flightSelect1 flightSelectCommon flightActive"> 
+     <div class="flightBg"> 
+      <div class="flightSelectTitle">
+       飞行时间：
+       <span>45m</span>
+      </div>
+     </div>
+     <div class="flightList1 flightListCommon">
+      <div class="flightListCommonLeft">
+       <div class="nth-child1">
+        <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/travelTimeLogo.png" /> 
+        <span>Lanmei Airlines</span>
+       </div>
+       <div class="nth-child2">
+        <h2>暹粒(08:15)</h2>
+        <p class="p1">2019年6月12日 星期三</p>
+        <p class="p2">(REP) 吴哥国际机场 </p> 
+        <span style="display: none" id="DepartureTime">1560298500000<span></span></span>
+       </div>
+       <div class="nth-child3">
+        <p class="p1">航班 :<span>LQ 670</span></p>
+        <p class="p2">机型 :<span>Airbus&nbsp;320</span></p>
+       </div>
+       <div class="nth-child4">
+        <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/flightArrow.png" alt="" /> 
+        <p>45m</p> 
+       </div>
+      </div>
+      <div class="flightListCommonRight"> 
+       <div class="nth-child1">
+        <span></span>
+       </div> 
+       <div class="nth-child2"> 
+        <h2>金边 ( 09:00)</h2>
+        <p class="p1">2019年6月12日 星期三</p>
+        <p class="p2">(PNH) 金边国际机场 </p> 
+       </div>
+       <div class="nth-child3">
+        <p class="p1"><span>&gt;9</span>: 剩余座位</p> 
+        <p class="p2"><span>Q</span>: 预定舱位</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> 
+  <!-- 票价规则详情 --> 
+  <div class="flightRuleDetail"> 
+   <p class="p2">运价规则: <a href="https://lanmeiairlines.com/lanmeiairlines2.0/default/tpls/CN/LMFareRule-cn.html" target="_blank">[退改签]一览表</a></p> 
+   <h2>规则详情:</h2> 
+   <div class="ruleContent">
+    <div class="ruleContent1">
+     <h3>[ 改期规定]</h3>
+     <p>每张客票每次收取60美金改期费。A) 低票价变更至高票价：收取相应票价的差额。B) 高票价变更至低票价：票价差额不予退还。* 旅客必须于航班起飞前24小时取消原有航班，否则将收取误机费。</p>
+     <h3>[ 退票规定]</h3>
+     <p>每张客票每次收取60美金退票费。 旅客必须于航班起飞前24小时取消原有航班，否则将收取误机费。客票全部未使用：允许退票；客票已部分使用：不允许退票。燃油附加费不予退还。</p>
+     <h3>[误机规定]</h3>
+     <p>误机费30美元</p>
+    </div>
+    <div class="ruleContent2">
+     <h3>[ 转签及更改行程]</h3>
+     <p>不允许。</p>
+     <h3>[ 运价条款]</h3>
+     <p>1,票价不含税及其他附加费. <br />2,票价和航班时刻可能变动,请留意最新发布票价及GDS系统中航班时刻. <br />3,去程第一段航程的始发日期决定了整个行程的票价. <br />4,婴儿免改期费和退票费.改期,误机,退票,行政费和其它收费项目没有儿童折扣. <br />5,所有客票必须按顺序使用. <br />6,升舱,改期必须在客票有效期内进行. <br />7,若此规则和GDS不一致时,则以GDS为准. </p>
+    </div>
+   </div> 
+   <!-- NEXT --> 
+   <div class="nextBtn"> 
+    <!-- <a href="LanmeiAirlinesPassengerInfo.html">NEXT <img src="../../images/CN/schedulesArrow.png"></a> --> 
+   </div> 
+  </div> 
+  <!-- 价格计算结果 --> 
+  <div class="flightPriceTotleWrapper" style="bottom: 0px;"> 
+   <div class="flightPriceTotle"> 
+    <ul class="priceTitle"> 
+     <li>类型</li> 
+     <li>每人票价</li> 
+     <li>数量</li> 
+     <li>基本票价</li> 
+     <li>票面价</li> 
+     <li>税费</li> 
+    </ul> 
+    <ul class="priceContent1 priceContent"> 
+     <li>成人</li> 
+     <li>70</li> 
+     <li>1</li> 
+     <li>V14SE+Q14SE</li> 
+     <li>CNY￥70</li> 
+     <li>CNY￥411</li> 
+    </ul> 
+    <ul class="priceContent2 priceContent"></ul> 
+    <div class="priceTotleBox"> 
+     <div class="priceTotle">
+      总价:
+      <h2><span>CNY￥481</span></h2>
+     </div> 
+     <p class="p1"></p> 
+     <div class="priceNext"> 
+      <a href="javascript:void(0);" id="ACONTINUE">下一步 <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/schedulesArrow.png" /></a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- 页脚 --> 
+  <!-- 页脚CN --> 
+  <footer class="lm-footer"> 
+   <p class="lm-logo"></p> 
+   <p class="facebook"> <a href="https://www.facebook.com/lanmeiairlines/" class="a1 icon-facebook"></a> <a href="http://weibo.com/lanmeiair" class="icon-weibo"></a> </p> 
+   <p class="f-email"><img src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/common/images/CN/icon-email.png" class="icon-email" /><span>lm-ec@lanmeiairlines.com</span></p> 
+   <p class="f-local"> <img src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/common/images/CN/icon-location.png" class="icon-location" /> <a href="https://goo.gl/maps/7pyBze8BFe52" target="_Blank">柬埔寨金边市俄罗斯大道575号</a> </p> 
+   <p class="copyright">&copy; Copyright 2017 澜湄航空 粤 <a href="http://www.miitbeian.gov.cn" target="_Blank" rel="nofollow">ICP-17005494-1</a></p> 
+  </footer> 
+  <!-- 回到顶部 --> 
+  <div class="BackToTop" style="bottom: 70px;"> 
+   <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/ToTop-icon.png" /> 
+   <p>UP</p> 
+  </div> 
+  <input type="hidden" id="hidpaycur" value="481.0" /> 
+  <input type="hidden" id="ajaxflag" value="0" /> 
+  <input type="hidden" name="adultNameCN" value="成人" /> 
+  <input type="hidden" name="adultNameTW" value="" /> 
+  <input type="hidden" name="adultNameUS" value="Adult" /> 
+  <input type="hidden" name="adultNameKR" value="" /> 
+  <input type="hidden" name="childNameCN" value="儿童" /> 
+  <input type="hidden" name="childNameTW" value="" /> 
+  <input type="hidden" name="childNameUS" value="Child" /> 
+  <input type="hidden" name="childNameKR" value="" /> 
+  <input type="hidden" name="countryHidden" id="countryHidden" value="CN" /> 
+  <script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/dataRange/lanmei-calendar-zh.js"></script> 
+  <script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/lanmei-date-select.js"></script> 
+  <script type="text/javascript">
+var loen="CN";
+$(document).ready(function(){	
+	$('#timeFrom').dateSelect({
+			'timeFrom': 'timeFrom',
+			'timeTo': 'timeTo',
+		});
+   	$.brandchoice_param({
+   		triptype:'RT',
+		currency:[{id:'CNY',name:'CNY',querystr:'CNY'},{id:'JPY',name:'JPY',querystr:'JPY'},{id:'SGD',name:'SGD',querystr:'SGD'},{id:'HKD',name:'HKD',querystr:'HKD'},{id:'MOP',name:'MOP',querystr:'MOP'},{id:'VND',name:'VND',querystr:'VND'},{id:'CAD',name:'CAD',querystr:'CAD'},{id:'AUD',name:'AUD',querystr:'AUD'},{id:'NZD',name:'NZD',querystr:'NZD'},{id:'GBP',name:'GBP',querystr:'GBP'},{id:'PHP',name:'PHP',querystr:'PHP'},{id:'USD',name:'USD',querystr:'USD'},{id:'THB',name:'THB',querystr:'THB'},{id:'KRW',name:'KRW',querystr:'KRW'},{id:'TWD',name:'TWD',querystr:'TWD'},{id:'IDR',name:'IDR',querystr:'IDR'}],
+		path:'http://b2c.lanmeiairlines.com:80/lqWeb/',
+		isNeedSift:'true'
+   	});
+	book_workjob.doWork();
+});
+
+</script> 
+  <form id="nextform" action="http://b2c.lanmeiairlines.com:80/lqWeb/reservation/forPassengerInput.do" method="post"> 
+   <input type="hidden" id="fltkey" name="fltkey" value="1_0" /> 
+   <input type="hidden" name="from" value="brand" /> 
+   <input type="hidden" id="brandName" name="brandName" value="LQB2C201903011539454023" /> 
+   <input type="hidden" id="brandNameBack" name="brandNameBack" value="" /> 
+   <input type="hidden" id="promotioncodeflag" name="promotioncode" value="" /> 
+   <input type="hidden" id="random" name="random" value="2951" /> 
+   <input type="hidden" id="fareRulesCN" name="fareRulesCN" value="&lt;div class='ruleContent1'&gt;&lt;h3&gt;[ 改期规定]&lt;/h3&gt;&lt;p&gt;每张客票每次收取60美金改期费。A) 低票价变更至高票价：收取相应票价的差额。B) 高票价变更至低票价：票价差额不予退还。* 旅客必须于航班起飞前24小时取消原有航班，否则将收取误机费。&lt;/p&gt;&lt;h3&gt;[ 退票规定]&lt;/h3&gt;&lt;p&gt;每张客票每次收取60美金退票费。 旅客必须于航班起飞前24小时取消原有航班，否则将收取误机费。客票全部未使用：允许退票；客票已部分使用：不允许退票。燃油附加费不予退还。&lt;/p&gt;&lt;h3&gt;[误机规定]&lt;/h3&gt;&lt;p&gt;误机费30美元&lt;/p&gt;&lt;/div&gt;&lt;div class='ruleContent2'&gt;&lt;h3&gt;[ 转签及更改行程]&lt;/h3&gt;&lt;p&gt;不允许。&lt;/p&gt;&lt;h3&gt;[ 运价条款]&lt;/h3&gt;&lt;p&gt;1,票价不含税及其他附加费.                                                       &lt;br/&gt;2,票价和航班时刻可能变动,请留意最新发布票价及GDS系统中航班时刻.                 &lt;br/&gt;3,去程第一段航程的始发日期决定了整个行程的票价.                                 &lt;br/&gt;4,婴儿免改期费和退票费.改期,误机,退票,行政费和其它收费项目没有儿童折扣.         &lt;br/&gt;5,所有客票必须按顺序使用.                                                       &lt;br/&gt;6,升舱,改期必须在客票有效期内进行.                                              &lt;br/&gt;7,若此规则和GDS不一致时,则以GDS为准.   &lt;/p&gt;&lt;/div&gt;" /> 
+   <input type="hidden" id="fareRulesTW" name="fareRulesTW" value="&lt;div class='ruleContent1'&gt;&lt;h3&gt;[ ]&lt;/h3&gt;&lt;p&gt;&lt;/p&gt;&lt;h3&gt;[ ]&lt;/h3&gt;&lt;p&gt;&lt;/p&gt;&lt;h3&gt;[]&lt;/h3&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class='ruleContent2'&gt;&lt;h3&gt;[ ]&lt;/h3&gt;&lt;p&gt;&lt;/p&gt;&lt;h3&gt;[ ]&lt;/h3&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;" /> 
+   <input type="hidden" id="fareRulesUS" name="fareRulesUS" value="&lt;div class='ruleContent1'&gt;&lt;h3&gt;[ Rebook Rule]&lt;/h3&gt;&lt;p&gt;Rebooking fee USD 60 A) Rebooked to higher class (fare): fare difference would be charged.B) Rebooked to lower class (fare): residual fare value is non-refundable. The original sector(s) must be cancelled 24 hours before departure; otherwise, no-show&lt;/p&gt;&lt;h3&gt;[ Refund Rule]&lt;/h3&gt;&lt;p&gt;USD 60 per ticket. The original sector(s) must be cancelled 24 hours before departure; otherwise, no-show fee will be charged. Fuel surcharges/For partially used ticket: are non-refundable.&lt;/p&gt;&lt;h3&gt;[No-show Rule]&lt;/h3&gt;&lt;p&gt;USD 30 per ticket.&lt;/p&gt;&lt;/div&gt;&lt;div class='ruleContent2'&gt;&lt;h3&gt;[ Endorse/Reroute]&lt;/h3&gt;&lt;p&gt;Not permitted.&lt;/p&gt;&lt;h3&gt;[ Fare Clause]&lt;/h3&gt;&lt;p&gt;1. Fares are exclusive of taxes and other surcharges.                           &lt;br/&gt;2. Please refer to GDS display for latest update on flight schedule, fares and taxes.                                                                           &lt;br/&gt;3. Departure date of the first outbound sector determines the fare for the entire journey.                                                                      &lt;br/&gt;4. No child discount is applied to Rebooking no-show/Refund/Handling Fee and other charges.                                                                     &lt;br/&gt;5. All sectors must be used in sequence.                                        &lt;br/&gt;6. Should there be any discrepancy between this rule and what shown in GDS, the latter prevail.    &lt;/p&gt;&lt;/div&gt;" /> 
+   <input type="hidden" id="fareRulesKR" name="fareRulesKR" value="&lt;div class='ruleContent1'&gt;&lt;h3&gt;[ ]&lt;/h3&gt;&lt;p&gt;&lt;/p&gt;&lt;h3&gt;[ ]&lt;/h3&gt;&lt;p&gt;&lt;/p&gt;&lt;h3&gt;[]&lt;/h3&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class='ruleContent2'&gt;&lt;h3&gt;[ ]&lt;/h3&gt;&lt;p&gt;&lt;/p&gt;&lt;h3&gt;[ ]&lt;/h3&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;" /> 
+   <input type="hidden" name="rad" id="rad" value="15699" /> 
+   <input type="hidden" name="userIp" id="userIp" value="58.249.3.180" /> 
+   <input type="hidden" name="fromPage" id="fromPage" value="" /> 
+   <input type="hidden" name="sign" id="sign" value="E3022A712A3884DBA78A9C05DF2E1102" /> 
+  </form> 
+  <form id="getRuleform" action="http://b2c.lanmeiairlines.com:80/lqWeb/reservation/getFareRule.do" target="Fare_rule" method="post"> 
+   <input type="hidden" name="fltkey" value="" /> 
+   <input type="hidden" name="brandName" value="" /> 
+   <input type="hidden" name="brandNameBack" value="" /> 
+   <input type="hidden" name="promotioncode" value="" /> 
+   <input type="hidden" name="random" value="2951" /> 
+  </form> 
+  <!-- 引入wait页面 --> 
+  <link rel="stylesheet" type="text/css" href="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/common/CN/css/Lanmei-wait.css" /> 
+  <div id="LanmeiOver" class="LanmeiOver" style="background: url(&quot;http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/gif-bg.jpg&quot;) center no-repeat;"></div> 
+  <div id="LanmeiLayout" class="LanmeiLayout"> 
+   <!--  	
+<img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/LanmeLoading.gif" />
+<p>加载中......</p>
+--> 
+  </div> 
+  <script type="text/javascript">
+
+	function wait_show(){
+	    var img_src='http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/LanmeLoading.gif';
+	    var load_str = '加载中......';
+	    $('#LanmeiOver').show();
+        $('#LanmeiLayout').show();
+        var child = "<img src='" + img_src + "'/>"+ "<p>"+load_str+"</p>";
+        $('#LanmeiLayout').append(child);
+    }
+</script> 
+  <script type="text/javascript">
+
+	var lgne="CN"; 
+	$(function(){
+		$("#search").attr("onclick","doCheckTwo();");
+	});
+	
+	//--------------验证码 start---------------------
+	function doCheckTwo() {
+		$.ajax({
+			type:"POST",
+			url:"/lqWeb/servlet/GetVertifyCode",
+			data:{'option':'isNeed','btnVal':'search'},
+			dataType:"text",
+			success:function(data) {
+				if ("false" == data) {
+					doSearch();
+				} else if ("true" == data) {
+					var timestamp = (new Date()).valueOf();
+					var notice = "请输入验证码";
+					var btnN = "确定";
+					var errortips = "验证码错误,请重新输入";
+					/* if(lgne=="EN"){
+						  tips ="Enter Verify Code"; 
+						  btnN = "Confirm";
+						  errortips = "Verification code error, please re-enter"
+					  }else if(lgne=="CN"){
+						  tips = "请输入验证码";  
+						  btnN = "确定";
+						  errortips = "验证码错误,请重新输入";
+					  } */
+					layer.open({
+						type:1,
+						area:['300px','210px'],
+						title:[notice,'height:35px;'],
+						shadeClose: true, //点击遮罩关闭
+					 	shade: 0.6, //遮罩透明度
+					 	maxmin: false, //允许全屏最小化
+					 	anim: -1, //0-6的动画形式，-1不开启
+					 	content:"<div style='text-align:center;height:75px;'><img id='vertifyCodePic' onclick='refreshAll()' src='/lqWeb/servlet/GetVertifyCode?option=getVertifyCode&timestamp="
+							 			+timestamp+"'/>" + "</div></br>"
+							 			+"<div style='text-align:center'><input style='height:25px;border:1px solid #c8cccf;' type='text' id='vertifyCodeTemp' name='vertfyCodeTemp' required  lay-verify='required' placeholder='输入验证码' autocomplete='off' class='layui-input'></div>",
+						btn: [btnN],
+						btnAlign: 'c', //按钮居中
+						yes: function(index, layero){
+							 	    //按钮的回调
+					 		$.ajax({
+					 			type:"POST",
+					 			url:"/lqWeb/servlet/GetVertifyCode",
+					 			data:{'option':'checkCode','vertifyCode':$("#vertifyCodeTemp").val()},
+					 			dataType:"text",
+					 			success:function(data) {
+					 				if ("success" == data) {
+								 	    $("#vertifyCode2").val($("#vertifyCodeTemp").val());
+								 	    $("#btnVal2").val("search");
+								 	    doSearch();
+								 	    layer.close(index);
+					 				} else {
+					 					$(".layui-layer-title").text("").append("<font id='vertifytip' style='color:#FF0000;'>"+errortips+"</font>");
+					 					refresh();
+					 				}
+					 			}
+					 		});
+					 	  },
+						success: function(layero, index){
+							//弹窗成功后的回调,按回车提交验证码
+							$("#vertifyCodeTemp").focus();
+							$("#vertifyCodeTemp").keydown(function(event){
+								if (event.keyCode == 13) {
+									$(".layui-layer-btn0").click();
+								}
+							});
+						 },
+						end: function(layero, index) {
+							$("#search").attr("class","btn");
+						}
+					});
+				}
+			}
+		});
+	}
+
+	function refreshAll() {
+		$("#vertifytip").remove();
+		$(".layui-layer-title").text("请输入验证码");
+		refresh();
+	}
+	function refresh() {
+		$("#vertifyCodeTemp").val("");
+		$("#vertifyCodeTemp").focus();
+		var timestamp = (new Date()).valueOf(); 
+		$("#vertifyCodePic").attr("src","/lqWeb/servlet/GetVertifyCode?option=getVertifyCode&timestamp="+timestamp);
+	}
+	//--------------验证码 end---------------------
+</script> 
+  <div id="C_1560144384775" style="display: none; position: absolute;">
+   <div class="cal-msg" style="display: none;"></div>
+   <div class="calendar">
+    <span class="cal-prev" style="display: none;">prev</span>
+    <span class="cal-next">next</span>
+    <span class="cal-close">close</span>
+    <div class="cal-container">
+     <dl>
+      <dt class="date">
+       2019年6月
+      </dt>
+      <dt>
+       <strong>日</strong>
+      </dt>
+      <dt>
+       一
+      </dt>
+      <dt>
+       二
+      </dt>
+      <dt>
+       三
+      </dt>
+      <dt>
+       四
+      </dt>
+      <dt>
+       五
+      </dt>
+      <dt>
+       <strong>六</strong>
+      </dt>
+      <dd>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a href="javascript:;" class="disabled">1</a>
+       <a href="javascript:;" class="disabled">2</a>
+       <a href="javascript:;" class="disabled">3</a>
+       <a href="javascript:;" class="disabled">4</a>
+       <a href="javascript:;" class="disabled">5</a>
+       <a href="javascript:;" class="disabled">6</a>
+       <a href="javascript:;" class="disabled">7</a>
+       <a href="javascript:;" class="disabled">8</a>
+       <a href="javascript:;" class="disabled">9</a>
+       <a href="javascript:;">10</a>
+       <a href="javascript:;" class="start-date">11</a>
+       <a href="javascript:;">12</a>
+       <a href="javascript:;">13</a>
+       <a href="javascript:;">14</a>
+       <a href="javascript:;">15</a>
+       <a href="javascript:;">16</a>
+       <a href="javascript:;">17</a>
+       <a href="javascript:;">18</a>
+       <a href="javascript:;">19</a>
+       <a href="javascript:;">20</a>
+       <a href="javascript:;">21</a>
+       <a href="javascript:;">22</a>
+       <a href="javascript:;">23</a>
+       <a href="javascript:;">24</a>
+       <a href="javascript:;">25</a>
+       <a href="javascript:;">26</a>
+       <a href="javascript:;">27</a>
+       <a href="javascript:;">28</a>
+       <a href="javascript:;">29</a>
+       <a href="javascript:;">30</a>
+      </dd>
+     </dl>
+    </div>
+    <div class="cal-container">
+     <dl>
+      <dt class="date">
+       2019年7月
+      </dt>
+      <dt>
+       <strong><strong>日</strong></strong>
+      </dt>
+      <dt>
+       <strong>一</strong>
+      </dt>
+      <dt>
+       <strong>二</strong>
+      </dt>
+      <dt>
+       <strong>三</strong>
+      </dt>
+      <dt>
+       <strong>四</strong>
+      </dt>
+      <dt>
+       <strong>五</strong>
+      </dt>
+      <dt>
+       <strong><strong>六</strong></strong>
+      </dt>
+      <dd>
+       <a class="disabled">&nbsp;</a>
+       <a href="javascript:;">1</a>
+       <a href="javascript:;">2</a>
+       <a href="javascript:;">3</a>
+       <a href="javascript:;">4</a>
+       <a href="javascript:;">5</a>
+       <a href="javascript:;">6</a>
+       <a href="javascript:;">7</a>
+       <a href="javascript:;">8</a>
+       <a href="javascript:;">9</a>
+       <a href="javascript:;">10</a>
+       <a href="javascript:;">11</a>
+       <a href="javascript:;">12</a>
+       <a href="javascript:;">13</a>
+       <a href="javascript:;">14</a>
+       <a href="javascript:;">15</a>
+       <a href="javascript:;">16</a>
+       <a href="javascript:;">17</a>
+       <a href="javascript:;">18</a>
+       <a href="javascript:;">19</a>
+       <a href="javascript:;">20</a>
+       <a href="javascript:;">21</a>
+       <a href="javascript:;">22</a>
+       <a href="javascript:;">23</a>
+       <a href="javascript:;">24</a>
+       <a href="javascript:;">25</a>
+       <a href="javascript:;">26</a>
+       <a href="javascript:;">27</a>
+       <a href="javascript:;">28</a>
+       <a href="javascript:;">29</a>
+       <a href="javascript:;">30</a>
+       <a href="javascript:;">31</a>
+      </dd>
+     </dl>
+    </div>
+   </div>
+  </div>
+  <div id="C_1560144384787" style="display: none; position: absolute;" class="cal-end">
+   <div class="cal-msg" style="display: none;"></div>
+   <div class="calendar">
+    <span class="cal-prev" style="display: none;">prev</span>
+    <span class="cal-next">next</span>
+    <span class="cal-close">close</span>
+    <div class="cal-container">
+     <dl>
+      <dt class="date">
+       2019年6月
+      </dt>
+      <dt>
+       <strong>日</strong>
+      </dt>
+      <dt>
+       一
+      </dt>
+      <dt>
+       二
+      </dt>
+      <dt>
+       三
+      </dt>
+      <dt>
+       四
+      </dt>
+      <dt>
+       五
+      </dt>
+      <dt>
+       <strong>六</strong>
+      </dt>
+      <dd>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a href="javascript:;" class="disabled">1</a>
+       <a href="javascript:;" class="disabled">2</a>
+       <a href="javascript:;" class="disabled">3</a>
+       <a href="javascript:;" class="disabled">4</a>
+       <a href="javascript:;" class="disabled">5</a>
+       <a href="javascript:;" class="disabled">6</a>
+       <a href="javascript:;" class="disabled">7</a>
+       <a href="javascript:;" class="disabled">8</a>
+       <a href="javascript:;" class="disabled">9</a>
+       <a href="javascript:;" class="disabled">10</a>
+       <a href="javascript:;">11</a>
+       <a href="javascript:;">12</a>
+       <a href="javascript:;">13</a>
+       <a href="javascript:;">14</a>
+       <a href="javascript:;">15</a>
+       <a href="javascript:;">16</a>
+       <a href="javascript:;">17</a>
+       <a href="javascript:;">18</a>
+       <a href="javascript:;">19</a>
+       <a href="javascript:;">20</a>
+       <a href="javascript:;">21</a>
+       <a href="javascript:;">22</a>
+       <a href="javascript:;">23</a>
+       <a href="javascript:;">24</a>
+       <a href="javascript:;">25</a>
+       <a href="javascript:;">26</a>
+       <a href="javascript:;">27</a>
+       <a href="javascript:;">28</a>
+       <a href="javascript:;">29</a>
+       <a href="javascript:;">30</a>
+      </dd>
+     </dl>
+    </div>
+    <div class="cal-container">
+     <dl>
+      <dt class="date">
+       2019年7月
+      </dt>
+      <dt>
+       <strong><strong>日</strong></strong>
+      </dt>
+      <dt>
+       <strong>一</strong>
+      </dt>
+      <dt>
+       <strong>二</strong>
+      </dt>
+      <dt>
+       <strong>三</strong>
+      </dt>
+      <dt>
+       <strong>四</strong>
+      </dt>
+      <dt>
+       <strong>五</strong>
+      </dt>
+      <dt>
+       <strong><strong>六</strong></strong>
+      </dt>
+      <dd>
+       <a class="disabled">&nbsp;</a>
+       <a href="javascript:;">1</a>
+       <a href="javascript:;">2</a>
+       <a href="javascript:;">3</a>
+       <a href="javascript:;">4</a>
+       <a href="javascript:;">5</a>
+       <a href="javascript:;">6</a>
+       <a href="javascript:;">7</a>
+       <a href="javascript:;">8</a>
+       <a href="javascript:;">9</a>
+       <a href="javascript:;">10</a>
+       <a href="javascript:;">11</a>
+       <a href="javascript:;">12</a>
+       <a href="javascript:;">13</a>
+       <a href="javascript:;">14</a>
+       <a href="javascript:;">15</a>
+       <a href="javascript:;">16</a>
+       <a href="javascript:;">17</a>
+       <a href="javascript:;">18</a>
+       <a href="javascript:;">19</a>
+       <a href="javascript:;">20</a>
+       <a href="javascript:;">21</a>
+       <a href="javascript:;">22</a>
+       <a href="javascript:;">23</a>
+       <a href="javascript:;">24</a>
+       <a href="javascript:;">25</a>
+       <a href="javascript:;">26</a>
+       <a href="javascript:;">27</a>
+       <a href="javascript:;">28</a>
+       <a href="javascript:;">29</a>
+       <a href="javascript:;">30</a>
+       <a href="javascript:;">31</a>
+      </dd>
+     </dl>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

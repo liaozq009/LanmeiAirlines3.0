@@ -1,0 +1,269 @@
+/* 鏉╂劗鏁ょ悰銊︾壐闁瀚ㄩ弮鍫曟？ */
+.timeTableSelectWrapper {
+  width: 960px;
+  height: 964px;
+  overflow: hidden;
+  padding: 0 10px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.timeTableSelectWrapper .timeTableSelect {
+  width: 940px;
+  height: 700px;
+  padding-top: 10px;
+  padding-left: 10px;
+  background: #1f2c5c;
+}
+.timeTableSelectWrapper .timeTableSelect table {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-color: #ccc;
+  border-left: none;
+  border-top: none;
+}
+.timeTableSelectWrapper .timeTableSelect table tbody tr td {
+  width: 12.5%;
+  height: 12.5%;
+  color: #999;
+  border-color: #ddd;
+  text-align: left;
+  padding-left: 16px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.timeTableSelectWrapper .timeTableSelect table tbody tr td span {
+	opacity: 0.49;
+	color:#333;
+  /*font-size:14px;  
+    font-weight: bold; 
+    color: #1f2c5c;   */ 
+}
+.timeTableSelectWrapper .timeTableSelect table tbody tr td h2,
+.timeTableSelectWrapper .timeTableSelect table tbody tr td p {
+  font-weight: bold;
+  font-size: 17px;
+  color: #1f2c5c;
+}
+.timeTableSelectWrapper .timeTableSelect table tbody tr [data-num='td-nth-child1'] {
+  border-right: 1px solid;
+}
+.timeTableSelectWrapper .timeTableSelect table tbody tr .tableLogo {
+  background: #1f2c5c !important;
+  border-left-color: #1f2c5c !important;
+  border-top-color: #1f2c5c !important;
+}
+.timeTableSelectWrapper .timeTableSelect table tbody tr .saleOver {
+  /* background: #ddd; */
+  background:rgba(221, 221, 221, 0.22);
+  cursor: not-allowed;
+}
+.timeTableSelectWrapper .timeTableSelect table tbody tr .tableTitle {
+  background: #fff;
+  cursor: default;
+}
+.timeTableSelectWrapper .timeTableSelect table tbody tr .bgHover {
+  background: #DDECCF;
+}
+/* .timeTableSelectWrapper .timeTableSelect table tbody tr .bgHover .bold{
+   opacity: 1.49;
+} */
+
+.timeTableSelectWrapper .timeTableSelect table tbody tr .bold{
+	font-size: 17px;
+	font-weight: bold;
+	opacity: 1.49;
+	color: #1f2c5c;
+}
+ 
+.timeTableSelectWrapper .timeTableSelect table tbody tr .bold2{
+	opacity: 0.49;
+	color: #333;
+}
+
+.timeTableSelectWrapper .timeTableSelect table tbody tr .clickbold2{
+	opacity: 1;
+	color: #fff;
+}
+ 
+.timeTableSelectWrapper .timeTableSelect table tbody tr .clickHover {
+  background: #8EC060;
+  color:#ddd;
+}
+.timeTableSelectWrapper .timeTableSelect table tbody tr .LowHover {
+/*   background:#00908c;
+ */
+  
+}
+
+.timeTableSelectWrapper .timeTableSelect table tbody tr .LowHover p {
+ color: #00908c;
+}
+
+.timeTableSelectWrapper .timeTableSelect table tbody tr .clickHover span,
+.timeTableSelectWrapper .timeTableSelect table tbody tr .clickHover p,
+.timeTableSelectWrapper .timeTableSelect table tbody tr .clickHover h2 {
+  color: #fff;
+}
+
+ 
+ 
+ 
+.timeTableSelectWrapper .timeTableSelect table tbody [data-num='tr-nth-child4'] [data-num='td-nth-child3'] p {
+/*   #color: #00908c; */
+}
+.timeTableSelectWrapper .timeTableSelect table tbody [data-num='tr-nth-child1'] {
+  border: 1px solid;
+}
+.timeTableSelectWrapper .timeTableSelect .colorInstructions {
+  width: 960px;
+  padding: 20px;
+  padding-left: 10px;
+  overflow: hidden;
+}
+.timeTableSelectWrapper .timeTableSelect .colorInstructions h2 {
+  float: left;
+  font-weight: bold;
+  font-size: 18px;
+  color: #1f2c5c;
+  margin-right: 20px;
+}
+.timeTableSelectWrapper .timeTableSelect .colorInstructions p {
+  float: left;
+}
+.timeTableSelectWrapper .timeTableSelect .colorInstructions p i {
+  display: inline-block;
+  background: #8ec060;
+  border-radius: 2px;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: top;
+}
+.timeTableSelectWrapper .timeTableSelect .colorInstructions p span {
+  font-size: 14px;
+  color: #1f2c5c;
+}
+.timeTableSelectWrapper .timeTableSelect .colorInstructions .nth-child2 {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.timeTableSelectWrapper .timeTableSelect .colorInstructions .nth-child2 i {
+  background: #00908c;
+}
+.timeTableSelectWrapper .timeTableSelect .PayAttention {
+  width: 960px;
+  padding: 0 20px;
+  padding-left: 10px;
+  overflow: hidden;
+}
+.timeTableSelectWrapper .timeTableSelect .PayAttention h2 {
+  font-weight: bold;
+  font-size: 18px;
+  color: #1f2c5c;
+}
+.timeTableSelectWrapper .timeTableSelect .PayAttention p {
+  color: #808080;
+  margin-top: 8px;
+}
+.timeTableSelectWrapper .timeTableSelect .nextBtn {
+  overflow: hidden;
+  margin-bottom: 70px;
+  margin-top: 50px;
+}
+.timeTableSelectWrapper .timeTableSelect .nextBtn a {
+  position: relative;
+  float: right;
+  display: inline-block;
+  background: #1f2c5c;
+  border-radius: 2px;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #ffffff;
+  padding-left: 55px;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+}
+.timeTableSelectWrapper .timeTableSelect .nextBtn a img {
+  position: absolute;
+  right: 59px;
+  top: 10px;
+}
+.no-flight-info {
+  position: relative;
+  width: 960px;
+  margin: 30px auto 70px;
+  text-align: center;
+}
+.no-flight-info p {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  margin-left: -325px;
+  width: 650px;
+  height: 60px;
+  font-size: 18px;
+  color: #ccc;
+}
+/* 娣囶喗鏁奸崗顒�彙閺嶅嘲绱�*/
+.selectAirCommon span {
+  font-size: 14px !important;
+}
+.local_timeSelect > div p img {
+  margin-right: 10px !important;
+  vertical-align: bottom !important;
+}
+.CabinSelect p img {
+  margin-right: 10px !important;
+  vertical-align: bottom !important;
+}
+.bottomLine {
+  top: 70px !important;
+}
+.selectAir .fromcityMenu,
+.selectAir .tocityMenu,
+.selectAir .CabinMenu {
+  top: 70px !important;
+}
+.calendar {
+  position: relative;
+}
+/* 闁板秶鐤嗙仦蹇撶 闁藉牆顕亸蹇撶潌楠烇拷/
+html {
+  font-size: 100px;
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 64px;
+  }
+}
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 82px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 100px;
+  }
+}
+@media (max-width: 980px), (max-device-width: 980px) {
+  .s-type {
+    display: inline-block;
+    width: 2.5rem;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    color: black;
+  }
+}
+
+
+ 
