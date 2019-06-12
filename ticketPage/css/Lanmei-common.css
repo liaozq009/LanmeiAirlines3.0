@@ -12,20 +12,29 @@
 body {
   font-family: NotoSans;
 }
-/*rewrite browser scrollbar stylesheet*/
-::-webkit-scrollbar-track-piece {
-  -webkit-border-radius: 0;
-}
+/*滚动条整体部分,必须要设置*/
 ::-webkit-scrollbar {
   width: 8px;
+  background-color: #B0AEDA;
 }
+/*滚动条的轨道*/
+::-webkit-scrollbar-track {
+  width: 8px;
+  background-color: #fff;
+}
+/*滚动条的滑块按钮*/
 ::-webkit-scrollbar-thumb {
-  background-color: #8ec060;
-  border: solid 1px #8ec060;
+  background-color: #1f2c5c;
+  border: solid 1px #1f2c5c;
   border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #8ec060;
+  background-color: #1f2c5c;
+}
+/*滚动条的上下两端的按钮*/
+::-webkit-scrollbar-button {
+  height: 0px;
+  background-color: #1f2c5c;
 }
 /* reset.css */
 body,
@@ -835,7 +844,6 @@ body {
   position: absolute;
   top: 75px;
   left: 0;
-  width: 218px;
   background: #fff;
   border: 2px solid #8ec060;
   z-index: 999;
@@ -871,7 +879,7 @@ body {
   color: #fff;
 }
 .selectAir .CabinMenu {
-  height: 40px;
+  height: 80px;
 }
 /* 选择航班路线 */
 .flightSelectWrapper {
@@ -1332,13 +1340,14 @@ body {
   font-weight: normal;
 }
 .selectAir .fromcityMenu,
+.selectAir .tocityMenu {
+  width: 267px;
+}
+.selectAir .fromcityMenu,
 .selectAir .tocityMenu,
 .selectAir .CabinMenu {
-  position: static;
-  top: 0 !important;
-  width: 227px;
+  top: 50px !important;
   border: none;
-  display: block;
 }
 .selectAir .fromcityMenu > li a,
 .selectAir .tocityMenu > li a,
@@ -1401,37 +1410,16 @@ body {
   margin-right: 0;
 }
 .downMenu-com {
-  display: none;
   position: absolute;
-  top: 70px;
   z-index: 9;
+  display: none;
   width: 267px;
-  height: auto;
   padding: 20px;
   background: #fff;
   box-shadow: 0 0 50px 0 rgba(31, 44, 92, 0.1);
 }
-.downMenu-com::before {
-  position: absolute;
-  top: -14px;
-  left: 109px;
-  z-index: 9;
-  filter: alpha(opacity=0);
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  border-left: 14px solid transparent;
-  border-right: 14px solid transparent;
-  border-bottom: 14px solid #fff;
-  transition: opacity 0.2s ease-out;
-  -webkit-transition: opacity 0.2s ease-out;
-}
-.Cabin-downMenu {
+.CabinMenu {
   width: 180px;
-}
-.Cabin-downMenu::before {
-  left: 76px;
 }
 .select-people-container {
   width: 340px;

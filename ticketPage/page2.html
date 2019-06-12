@@ -1,8 +1,8 @@
 <html lang="en">
  <head> 
   <!--[if lt IE 9]>
-<script type="text/javascript" src="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/respond.min.js"></script>
-<script type="text/javascript" src="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/respond.min.js"></script>
+<script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/html5shiv.min.js"></script>
 <![endif]--> 
   <meta charset="UTF-8" /> 
   <!-- 让 Bootstrap 兼容 IE 兼容模型 --> 
@@ -38,10 +38,10 @@
   <script type="text/javascript" src="http://b2c.lanmeiairlines.com:80/lqWeb/js/front/frontinfo.js"></script> 
   <script type="text/javascript" src="http://b2c.lanmeiairlines.com:80/lqWeb/js/front/reservation.js"></script> 
   <script type="text/javascript" src="http://b2c.lanmeiairlines.com:80/lqWeb/js/citychoose.js"></script> 
-  <script src="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/cityselect/jquery-migrate-1.2.1.js"></script> 
-  <script type="text/javascript" src="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/layer/layer.js"></script>
-  <link rel="stylesheet" href="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/layer/skin/default/layer.css?v=3.0.3303" id="layuicss-skinlayercss" /> 
-  <script type="text/javascript" src="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/bootstrap.min.js"></script> 
+  <script src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/cityselect/jquery-migrate-1.2.1.js"></script> 
+  <script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/layer/layer.js"></script>
+  <link rel="stylesheet" href="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/layer/skin/default/layer.css?v=3.0.3303" id="layuicss-skinlayercss" /> 
+  <script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/bootstrap.min.js"></script> 
   <!-- 公共JS --> 
   <script type="text/javascript" src="js/Lanmei-comon1.js"></script> 
  </head> 
@@ -51,8 +51,8 @@
   <!-- 页面顶部CN --> 
   <header class="lm-header lm-sub-header"></header>
   <!-- 订票步骤列表 --> 
-  <!--<script type="text/javascript" src="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/jQuery/jquery-1.11.3.js"></script>
-<script type="text/javascript" src="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/layer/layer.js"></script>--> 
+  <!--<script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/jQuery/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/layer/layer.js"></script>--> 
   <div class="buyTicketList"> 
    <dl class="SelectDate"> 
     <dt>
@@ -117,8 +117,8 @@
   </div> 
   <!-- 搜索框 --> 
   <!--[if lt IE 9]>
-<script type="text/javascript" src="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/respond.min.js"></script>
-<script type="text/javascript" src="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/respond.min.js"></script>
+<script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/html5shiv.min.js"></script>
 <![endif]--> 
   <form id="searchform" action="http://b2c.lanmeiairlines.com:80/lqWeb/reservation/AVQuery.do" method="post"> 
    <input name="tripType" type="hidden" value="RT" id="tripTypehidden" /> 
@@ -192,8 +192,7 @@
       <div class="localSelectStart"> 
        <input type="text" autocomplete="off" class="fromcityinput inputDown Autocomplete" id="fromcity" value="" placeholder="出发地" /> 
        <i class="img01" id="localChangeImg"></i> 
-       <div class="downMenu-com">
-       <ul class="fromcityMenu"> 
+       <ul class="fromcityMenu downMenu-com"> 
         <li><a href="#" title="曼谷" id="BKK">曼谷(mangu)/BKK/泰国</a></li> 
         <li><a href="#" title="广州" id="CAN">广州(Guangzhou)/CAN/中国</a></li> 
         <li><a href="#" title="郑州" id="CGO">郑州(Zhengzhou)/CGO/中国</a></li> 
@@ -229,12 +228,10 @@
         <li><a href="#" title="Phnom Penh, Cambodia (Pochentong - PNH)">Phnom Penh, Cambodia (Pochentong - PNH)</a></li>
         <li><a href="#" title="Siem Reap, Cambodia (Siem Reap - REP)">Siem Reap, Cambodia (Siem Reap - REP)</a></li>
        </ul> 
-	     </div>
       </div> 
       <div class="localSelectEnd"> 
        <input type="text" autocomplete="off" class="tocityinput inputDown Autocomplete" id="tocity" value="" placeholder="目的地" /> 
-       <div class="downMenu-com">
-       <ul class="tocityMenu">
+       <ul class="tocityMenu downMenu-com">
         <!-- <li><a href="#" title="曼谷" id="BKK">曼谷</a></li> --> 
         <li><a href="#" title="曼谷" id="BKK">曼谷(mangu)/BKK/泰国</a></li> 
         <!-- <li><a href="#" title="广州" id="CAN">广州</a></li> --> 
@@ -302,7 +299,6 @@
         <li><a href="#" title="Phnom Penh, Cambodia (Pochentong - PNH)">Phnom Penh, Cambodia (Pochentong - PNH)</a></li>
         <li><a href="#" title="Siem Reap, Cambodia (Siem Reap - REP)">Siem Reap, Cambodia (Siem Reap - REP)</a></li>
        </ul> 
-	     </div>
       </div> 
       <div class="timeSelectStart"> 
        <div style="position: relative; display: inline-block; width: 220px; height: 38px;">
@@ -362,11 +358,9 @@
       </div>
       <div class="CabinSelect"> 
        <input type="text" class="cityinput inputDown" id="Cabin" value="" placeholder="" readonly="" /> 
-       <div class="downMenu-com Cabin-downMenu">
-         <ul class="dropdownMenu CabinMenu"> 
-          <li><a href="#" id="ECONOMY">经济舱</a></li> 
-         </ul> 
-       </div>
+       <ul class="dropdownMenu CabinMenu downMenu-com"> 
+        <li><a href="#" id="ECONOMY">经济舱</a></li> 
+       </ul> 
       </div>
       <div class="searchAir"> 
        <a href="#" class="btn" id="search" onclick="doCheckTwo();">搜索</a> 
@@ -501,7 +495,7 @@
 		$(".selectAirCommon>div>div ul a").click(function(e){
 				e.preventDefault();e.stopPropagation();
 				var val = $(this).html();
-				$(this).parents('.downMenu-com').hide().siblings('input').val(val);
+				$(this).parent().parent().hide().siblings(".bottomLine").hide().siblings("input").val(val);
 				$(".selectAirCommon>div>div .inputDown").removeClass("active");
 				// 自动获取焦点
 				var inputId = $(this).parent().parent().siblings("input").attr("id"); 
@@ -582,20 +576,24 @@
 	  
  /* 舱位选择 */
 		var CabinSelect = function(){
-			$('#Cabin').val('经济舱');//设置默认值
-			$('#Cabin').click(function(e){
-				e.stopPropagation();
-        $(this).siblings('.downMenu-com').show();
-			});
-			$('.dropdownMenu a').click(function(e){
-				e.preventDefault();
-				e.stopPropagation();
-        $(this).parents('.downMenu-com').hide();
-				var val = $(this).html();
-				$('#Cabin').val(val);
-			});
-		};
-		CabinSelect();
+	    $('#Cabin').val('经济舱');//设置默认值
+	    $('.dropdownMenu').hide();
+	    $('#Cabin').click(function(e){
+	      e.stopPropagation();
+	      $('.dropdownMenu').show();
+	    });
+	    $('.dropdownMenu a').click(function(e){
+	      e.preventDefault();
+	      e.stopPropagation();
+	      $('.dropdownMenu').hide();
+	      var val = $(this).html();
+	      $('#Cabin').val(val);
+	    });
+	    $('html').click(function(){
+	      $('.dropdownMenu').hide();
+	    });
+	  };
+	  CabinSelect();
  });
 				function doSearch() { 
 				if(""==$("#fromcity").val()){
@@ -1348,8 +1346,8 @@
   <input type="hidden" name="childNameUS" value="Child" /> 
   <input type="hidden" name="childNameKR" value="" /> 
   <input type="hidden" name="countryHidden" id="countryHidden" value="CN" /> 
-  <script type="text/javascript" src="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/dataRange/lanmei-calendar-zh.js"></script> 
-  <script type="text/javascript" src="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/lanmei-date-select.js"></script> 
+  <script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/dataRange/lanmei-calendar-zh.js"></script> 
+  <script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/lanmei-date-select.js"></script> 
   <script type="text/javascript">
 var loen="CN";
 $(document).ready(function(){	
@@ -1391,7 +1389,7 @@ $(document).ready(function(){
    <input type="hidden" name="random" value="2951" /> 
   </form> 
   <!-- 引入wait页面 --> 
-  <link rel="stylesheet" type="text/css" href="https://b2c.lanmeiairlines.com:80/lqWeb/lqweb/common/CN/css/Lanmei-wait.css" /> 
+  <link rel="stylesheet" type="text/css" href="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/common/CN/css/Lanmei-wait.css" /> 
   <div id="LanmeiOver" class="LanmeiOver" style="background: url(&quot;http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/gif-bg.jpg&quot;) center no-repeat;"></div> 
   <div id="LanmeiLayout" class="LanmeiLayout"> 
    <!--  	

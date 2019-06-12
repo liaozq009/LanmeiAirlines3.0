@@ -226,7 +226,7 @@
 .selectAir .fromcityMenu,
 .selectAir .tocityMenu,
 .selectAir .CabinMenu {
-  top: 70px !important;
+  top: 50px !important;
 }
 .calendar {
   position: relative;

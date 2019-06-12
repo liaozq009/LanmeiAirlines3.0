@@ -16,16 +16,16 @@
   <link rel="icon" href="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/lanmeiLogo.ico" /> 
   <link rel="stylesheet" type="text/css" href="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/libs/cityselect/cityquery.css" /> 
   <link rel="stylesheet" type="text/css" href="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/libs/jQueryUI/jquery-ui.css" /> 
-  <link rel="stylesheet" type="text/css" href="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/css/CN/LanmeiAirlinesPassengerInfo.css" /> 
+  <link rel="stylesheet" type="text/css" href="css/LanmeiAirlinesPassengerInfo.css" /> 
   <link rel="stylesheet" type="text/css" href="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/libsEdit/css/lanmeiLibsEdit.css" /> 
   <link rel="icon" href="http://b2c.lanmeiairlines.com:80/lqWeb/lqMember/images/CN/lanmeiLogo.ico" /> 
   <link rel="stylesheet" type="text/css" href="http://b2c.lanmeiairlines.com:80/lqWeb/lqMember/libs/bootstrap/css/bootstrap.min.css" /> 
-  <link rel="stylesheet" type="text/css" href="css/Lanmei-common.css" />
   <link rel="stylesheet" type="text/css" href="http://b2c.lanmeiairlines.com:80/lqWeb/lqMember/common/CN/fonts/lm-iconfont.css" /> 
+  <link rel="stylesheet" type="text/css" href="css/Lanmei-common.css" />
   <link rel="stylesheet" type="text/css" href="http://b2c.lanmeiairlines.com:80/lqWeb/lqMember/libsEdit/css/lanmeiLibsEdit.css" /> 
   <!--[if lt IE 9]>
-	<script type="text/javascript" src="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/respond.min.js"></script>
-	<script type="text/javascript" src="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/html5shiv.min.js"></script>
+	<script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/respond.min.js"></script>
+	<script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/html5shiv.min.js"></script>
 	<![endif]--> 
   <style>
 		input:-webkit-autofill {
@@ -37,7 +37,7 @@
     		font-weight: bold;
 		}
 	</style> 
-  <link rel="stylesheet" href="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/layer/skin/default/layer.css?v=3.0.3303" id="layuicss-skinlayercss" />
+  <link rel="stylesheet" href="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/layer/skin/default/layer.css?v=3.0.3303" id="layuicss-skinlayercss" />
  </head> 
  <body> 
   <input type="hidden" id="totalPeopleNum" value="8" /> 
@@ -755,8 +755,8 @@ var countryContrlObj =[{id:'CN', name:countryInfo.CN, querystr:'CN'},
   <!-- 页面顶部CN --> 
   <header class="lm-header lm-sub-header"></header>
   <!-- 订票步骤列表 --> 
-  <!--<script type="text/javascript" src="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/jQuery/jquery-1.11.3.js"></script>
-<script type="text/javascript" src="https://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/layer/layer.js"></script>--> 
+  <!--<script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/jQuery/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/layer/layer.js"></script>--> 
   <div class="buyTicketList"> 
    <dl class="SelectDate"> 
     <dt>
@@ -1033,7 +1033,7 @@ var countryContrlObj =[{id:'CN', name:countryInfo.CN, querystr:'CN'},
            2019-06-11 / 2019-06-11 
          </nobr> </li> 
         <li class="nth-child3"> 25K </li> 
-        <li class="nth-child4"> 
+        <li class="nth-child4" title="Q/NON-RER/END/REB USD60+REF USD60/NOSH USD30"> 
          <nobr>
            Q/NON-RER/END/REB USD60+REF USD60/NOSH USD30 
          </nobr> </li> 
@@ -1045,7 +1045,7 @@ var countryContrlObj =[{id:'CN', name:countryInfo.CN, querystr:'CN'},
            2019-06-12 / 2019-06-12 
          </nobr> </li> 
         <li class="nth-child3"> 25K </li> 
-        <li class="nth-child4"> 
+        <li class="nth-child4" title="Q/NON-RER/END/REB USD60+REF USD60/NOSH USD30"> 
          <nobr>
            Q/NON-RER/END/REB USD60+REF USD60/NOSH USD30 
          </nobr> </li> 
@@ -1124,9 +1124,9 @@ var countryContrlObj =[{id:'CN', name:countryInfo.CN, querystr:'CN'},
    <h6 type="text" class="promptmessageinput" id="phoneNumber_msg" name="titlephoneNumber"></h6> 
    <!-- 票价规则详情 --> 
    <div class="flightRuleDetail"> 
-    <h2>运价规则: </h2> 
-    <h2><a href="https://lanmeiairlines.com/lanmeiairlines2.0/default/tpls/CN/LMFareRule-cn.html" target="_blank">[退改签]一览表</a></h2> 
+    <h2>运价规则: <a href="https://lanmeiairlines.com/lanmeiairlines2.0/default/tpls/CN/LMFareRule-cn.html" target="_blank">[退改签]一览表</a></h2> 
     <div class="ruleContent"> 
+    	<h2>规则详情:</h2>
      <div class="ruleContent1">
       <h3>[ 改期规定]</h3>
       <p>每张客票每次收取60美金改期费。A) 低票价变更至高票价：收取相应票价的差额。B) 高票价变更至低票价：票价差额不予退还。* 旅客必须于航班起飞前24小时取消原有航班，否则将收取误机费。</p>
@@ -1161,543 +1161,62 @@ var countryContrlObj =[{id:'CN', name:countryInfo.CN, querystr:'CN'},
        由于出入境和安全原因，旅客所输入之姓名必须与于您的护照所示者完全相同（请输入英文或拼音，不包含标点符号，如 -.’），否则可能延误您办理登机手续及产生收费或有时可令您无法成行。
       </div> 
       <br /> 
-      <div class="nameSelect"> 
-       <p> 称谓<b>*</b> </p> 
+      <div class="nameSelect text-field-content"> 
+       <p class="text-field-label float"> 称谓<b>*</b> </p> 
        <input type="hidden" id="title1_hidden" name="title1" value="" /> 
-       <input id="title1_select" type="text" class="nameSelectInput dropDownInput" value="" placeholder="请选择" autocomplete="off" readonly="" /> 
+       <input id="title1_select" type="text" class="nameSelectInput dropDownInput text-field-input" value="" placeholder="" autocomplete="off" readonly="" /> 
        <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/downArrow.png" /> 
        <b class="bottomLine bottomLine300"></b> 
        <ul class="nameSelectMenu select" id="title1">
-        <li onclick="addclick(this)" class="select" id="0"><a href="javascript:void(0)">先生</a></li>
-        <li onclick="addclick(this)" class="select" id="1"><a href="javascript:void(0)">女士</a></li>
-        <li onclick="addclick(this)" class="select" id="2"><a href="javascript:void(0)">小姐</a></li>
+        
        </ul> 
        <h6 type="text" class="promptmessageinput" id="title1_msg" name="title1"></h6> 
       </div> 
-      <div class="LastName"> 
-       <p> 姓氏<b>*</b> </p> 
-       <input type="text" id="familyName1" class="LastNameInput importInput" value="" name="familyName1" placeholder="姓氏" /> 
+      <div class="LastName text-field-content"> 
+       <p class="text-field-label float"> 姓氏<b>*</b> </p> 
+       <input type="text" id="familyName1" class="LastNameInput importInput text-field-input" value="" name="familyName1" placeholder="" /> 
        <h6 type="text" class="promptmessageinput" id="familyName1_msg" name="title1"></h6> 
       </div> 
-      <div class="FirstName"> 
-       <p> 名字<b>*</b> </p> 
-       <input type="text" id="firstName1" class="FirstNameInput importInput" value="" name="firstName1" placeholder="名字" /> 
+      <div class="FirstName text-field-content"> 
+       <p class="text-field-label float"> 名字<b>*</b> </p> 
+       <input type="text" id="firstName1" class="FirstNameInput importInput text-field-input" value="" name="firstName1" placeholder="" /> 
        <h6 type="text" class="promptmessageinput" id="firstName1_msg" name="title1"></h6> 
       </div> 
-      <div class="DocumentType"> 
-       <p> 证件类型<b>*</b> </p> 
+      <div class="DocumentType text-field-content"> 
+       <p class="text-field-label float"> 证件类型<b>*</b> </p> 
        <input type="hidden" id="idType1_hidden" name="idType1" /> 
-       <input id="idType1_select" type="text" class="DocumentTypeInput dropDownInput" value="" placeholder="请选择" autocomplete="off" readonly="" /> 
+       <input id="idType1_select" type="text" class="DocumentTypeInput dropDownInput text-field-input" value="" placeholder="" autocomplete="off" readonly="" /> 
        <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/downArrow.png" /> 
        <b class="bottomLine bottomLine460"></b> 
        <ul class="DocumentTypeMenu select" id="idType1">
-        <li onclick="addclick(this)" class="select" id="0"><a href="javascript:void(0)">护照</a></li>
-        <li onclick="addclick(this)" class="select" id="7"><a href="javascript:void(0)">柬埔寨身份证</a></li>
-        <li onclick="addclick(this)" class="select" id="1"><a href="javascript:void(0)">台胞证</a></li>
-        <li onclick="addclick(this)" class="select" id="2"><a href="javascript:void(0)">港澳通行证</a></li>
-        <li onclick="addclick(this)" class="select" id="3"><a href="javascript:void(0)">回乡证</a></li>
-        <li onclick="addclick(this)" class="select" id="4"><a href="javascript:void(0)">赴台通行证</a></li>
-        <li onclick="addclick(this)" class="select" id="5"><a href="javascript:void(0)">因公港澳通行证</a></li>
-        <li onclick="addclick(this)" class="select" id="6"><a href="javascript:void(0)">澳门特别行政区旅行证</a></li>
+        
        </ul> 
        <h6 type="text" class="promptmessageinput" id="idType1_msg" name="title1"></h6> 
       </div> 
-      <div class="IDNo"> 
-       <p> 证件号<b>*</b> </p> 
-       <input type="text" id="idNo1" class="IDNoInput importInput" value="" name="idNo1" placeholder="证件号" /> 
+      <div class="IDNo text-field-content"> 
+       <p class="text-field-label float"> 证件号<b>*</b> </p> 
+       <input type="text" id="idNo1" class="IDNoInput importInput text-field-input" value="" name="idNo1" placeholder="" /> 
        <h6 type="text" class="promptmessageinput" id="idNo1_msg" name="title1"></h6> 
       </div> 
-      <div class="IssueAt"> 
-       <p> 签发地<b>*</b> </p> 
+      <div class="IssueAt text-field-content"> 
+       <p class="text-field-label float"> 签发地<b>*</b> </p> 
        <input type="hidden" id="issueCountry1_hidden" name="issueCountry1" /> 
-       <input id="issueCountry1_select" type="text" class="IssueAtInput dropDownInput" value="" placeholder="请选择" autocomplete="off" readonly="" /> 
+       <input id="issueCountry1_select" type="text" class="IssueAtInput dropDownInput text-field-input" value="" placeholder="" autocomplete="off" readonly="" /> 
        <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/downArrow.png" /> 
        <b class="bottomLine bottomLine460"></b> 
        <ul class="IssueAtMenu select" id="issueCountry1">
-        <li onclick="addclick(this)" class="select" id="CN"><a href="javascript:void(0)">中国</a></li>
-        <li onclick="addclick(this)" class="select" id="KH"><a href="javascript:void(0)">柬埔寨</a></li>
-        <li onclick="addclick(this)" class="select" id="GB"><a href="javascript:void(0)">英国</a></li>
-        <li onclick="addclick(this)" class="select" id="US"><a href="javascript:void(0)">美国</a></li>
-        <li onclick="addclick(this)" class="select" id="FR"><a href="javascript:void(0)">法国</a></li>
-        <li onclick="addclick(this)" class="select" id="DE"><a href="javascript:void(0)">德国</a></li>
-        <li onclick="addclick(this)" class="select" id="AU"><a href="javascript:void(0)">澳大利亚</a></li>
-        <li onclick="addclick(this)" class="select" id="JP"><a href="javascript:void(0)">日本</a></li>
-        <li onclick="addclick(this)" class="select" id="CA"><a href="javascript:void(0)">加拿大</a></li>
-        <li onclick="addclick(this)" class="select" id="KR"><a href="javascript:void(0)">韩国</a></li>
-        <li onclick="addclick(this)" class="select" id="HK"><a href="javascript:void(0)">中国香港</a></li>
-        <li onclick="addclick(this)" class="select" id="ES"><a href="javascript:void(0)">西班牙</a></li>
-        <li onclick="addclick(this)" class="select" id="IT"><a href="javascript:void(0)">意大利</a></li>
-        <li onclick="addclick(this)" class="select" id="TW"><a href="javascript:void(0)">中国台湾</a></li>
-        <li onclick="addclick(this)" class="select" id="MO"><a href="javascript:void(0)">中国澳门</a></li>
-        <li onclick="addclick(this)" class="select" id="VN"><a href="javascript:void(0)">越南</a></li>
-        <li onclick="addclick(this)" class="select" id="NL"><a href="javascript:void(0)">荷兰</a></li>
-        <li onclick="addclick(this)" class="select" id="IN"><a href="javascript:void(0)">印度</a></li>
-        <li onclick="addclick(this)" class="select" id="TH"><a href="javascript:void(0)">泰国</a></li>
-        <li onclick="addclick(this)" class="select" id="RU"><a href="javascript:void(0)">俄罗斯</a></li>
-        <li onclick="addclick(this)" class="select" id="IE"><a href="javascript:void(0)">爱尔兰</a></li>
-        <li onclick="addclick(this)" class="select" id="MY"><a href="javascript:void(0)">马来西亚</a></li>
-        <li onclick="addclick(this)" class="select" id="PH"><a href="javascript:void(0)">菲律宾</a></li>
-        <li onclick="addclick(this)" class="select" id="PL"><a href="javascript:void(0)">波兰</a></li>
-        <li onclick="addclick(this)" class="select" id="CH"><a href="javascript:void(0)">瑞士</a></li>
-        <li onclick="addclick(this)" class="select" id="NZ"><a href="javascript:void(0)">新西兰</a></li>
-        <li onclick="addclick(this)" class="select" id="BE"><a href="javascript:void(0)">比利时</a></li>
-        <li onclick="addclick(this)" class="select" id="IL"><a href="javascript:void(0)">以色列</a></li>
-        <li onclick="addclick(this)" class="select" id="SE"><a href="javascript:void(0)">瑞典</a></li>
-        <li onclick="addclick(this)" class="select" id="CZ"><a href="javascript:void(0)">捷克共和国</a></li>
-        <li onclick="addclick(this)" class="select" id="PT"><a href="javascript:void(0)">葡萄牙</a></li>
-        <li onclick="addclick(this)" class="select" id="FI"><a href="javascript:void(0)">芬兰</a></li>
-        <li onclick="addclick(this)" class="select" id="BR"><a href="javascript:void(0)">巴西</a></li>
-        <li onclick="addclick(this)" class="select" id="UA"><a href="javascript:void(0)">乌克兰</a></li>
-        <li onclick="addclick(this)" class="select" id="AT"><a href="javascript:void(0)">奥地利</a></li>
-        <li onclick="addclick(this)" class="select" id="CO"><a href="javascript:void(0)">哥伦比亚</a></li>
-        <li onclick="addclick(this)" class="select" id="CL"><a href="javascript:void(0)">智利</a></li>
-        <li onclick="addclick(this)" class="select" id="SK"><a href="javascript:void(0)">斯洛伐克共和国</a></li>
-        <li onclick="addclick(this)" class="select" id="DK"><a href="javascript:void(0)">丹麦</a></li>
-        <li onclick="addclick(this)" class="select" id="AR"><a href="javascript:void(0)">阿根廷</a></li>
-        <li onclick="addclick(this)" class="select" id="MX"><a href="javascript:void(0)">墨西哥</a></li>
-        <li onclick="addclick(this)" class="select" id="ZA"><a href="javascript:void(0)">南非</a></li>
-        <li onclick="addclick(this)" class="select" id="NO"><a href="javascript:void(0)">挪威</a></li>
-        <li onclick="addclick(this)" class="select" id="HU"><a href="javascript:void(0)">匈牙利</a></li>
-        <li onclick="addclick(this)" class="select" id="RO"><a href="javascript:void(0)">罗马尼亚</a></li>
-        <li onclick="addclick(this)" class="select" id="LT"><a href="javascript:void(0)">立陶宛</a></li>
-        <li onclick="addclick(this)" class="select" id="MM"><a href="javascript:void(0)">缅甸</a></li>
-        <li onclick="addclick(this)" class="select" id="EE"><a href="javascript:void(0)">爱沙尼亚</a></li>
-        <li onclick="addclick(this)" class="select" id="AF"><a href="javascript:void(0)">阿富汗</a></li>
-        <li onclick="addclick(this)" class="select" id="AL"><a href="javascript:void(0)">阿尔巴尼亚</a></li>
-        <li onclick="addclick(this)" class="select" id="DZ"><a href="javascript:void(0)">阿尔及利亚</a></li>
-        <li onclick="addclick(this)" class="select" id="AS"><a href="javascript:void(0)">美属萨摩亚</a></li>
-        <li onclick="addclick(this)" class="select" id="AD"><a href="javascript:void(0)">安道尔</a></li>
-        <li onclick="addclick(this)" class="select" id="AO"><a href="javascript:void(0)">安哥拉</a></li>
-        <li onclick="addclick(this)" class="select" id="AI"><a href="javascript:void(0)">安圭拉岛</a></li>
-        <li onclick="addclick(this)" class="select" id="AQ"><a href="javascript:void(0)">南极</a></li>
-        <li onclick="addclick(this)" class="select" id="AG"><a href="javascript:void(0)">安堤瓜及巴尔布达</a></li>
-        <li onclick="addclick(this)" class="select" id="AE"><a href="javascript:void(0)">阿联酋</a></li>
-        <li onclick="addclick(this)" class="select" id="AM"><a href="javascript:void(0)">亚美尼亚</a></li>
-        <li onclick="addclick(this)" class="select" id="AW"><a href="javascript:void(0)">阿鲁巴</a></li>
-        <li onclick="addclick(this)" class="select" id="AZ"><a href="javascript:void(0)">阿塞拜疆共和国</a></li>
-        <li onclick="addclick(this)" class="select" id="BS"><a href="javascript:void(0)">巴哈马</a></li>
-        <li onclick="addclick(this)" class="select" id="BH"><a href="javascript:void(0)">巴林</a></li>
-        <li onclick="addclick(this)" class="select" id="BD"><a href="javascript:void(0)">孟加拉</a></li>
-        <li onclick="addclick(this)" class="select" id="BB"><a href="javascript:void(0)">巴巴多斯</a></li>
-        <li onclick="addclick(this)" class="select" id="BY"><a href="javascript:void(0)">白俄罗斯</a></li>
-        <li onclick="addclick(this)" class="select" id="BZ"><a href="javascript:void(0)">伯利兹</a></li>
-        <li onclick="addclick(this)" class="select" id="BJ"><a href="javascript:void(0)">贝宁</a></li>
-        <li onclick="addclick(this)" class="select" id="BM"><a href="javascript:void(0)">百慕达</a></li>
-        <li onclick="addclick(this)" class="select" id="BT"><a href="javascript:void(0)">不丹</a></li>
-        <li onclick="addclick(this)" class="select" id="BO"><a href="javascript:void(0)">玻利维亚</a></li>
-        <li onclick="addclick(this)" class="select" id="BA"><a href="javascript:void(0)">波士尼亚和黑塞哥维那</a></li>
-        <li onclick="addclick(this)" class="select" id="BW"><a href="javascript:void(0)">博茨瓦纳</a></li>
-        <li onclick="addclick(this)" class="select" id="BN"><a href="javascript:void(0)">文莱</a></li>
-        <li onclick="addclick(this)" class="select" id="BG"><a href="javascript:void(0)">保加利亚</a></li>
-        <li onclick="addclick(this)" class="select" id="BF"><a href="javascript:void(0)">布基纳法索</a></li>
-        <li onclick="addclick(this)" class="select" id="BI"><a href="javascript:void(0)">布隆迪</a></li>
-        <li onclick="addclick(this)" class="select" id="CM"><a href="javascript:void(0)">喀麦隆</a></li>
-        <li onclick="addclick(this)" class="select" id="CV"><a href="javascript:void(0)">佛得角</a></li>
-        <li onclick="addclick(this)" class="select" id="KY"><a href="javascript:void(0)">开曼群岛</a></li>
-        <li onclick="addclick(this)" class="select" id="CF"><a href="javascript:void(0)">中非共和国</a></li>
-        <li onclick="addclick(this)" class="select" id="TD"><a href="javascript:void(0)">乍得</a></li>
-        <li onclick="addclick(this)" class="select" id="CX"><a href="javascript:void(0)">圣诞岛</a></li>
-        <li onclick="addclick(this)" class="select" id="CC"><a href="javascript:void(0)">科科斯（基林）群岛</a></li>
-        <li onclick="addclick(this)" class="select" id="KM"><a href="javascript:void(0)">科摩罗</a></li>
-        <li onclick="addclick(this)" class="select" id="CD"><a href="javascript:void(0)">刚果民主共和国（金沙萨）</a></li>
-        <li onclick="addclick(this)" class="select" id="CG"><a href="javascript:void(0)">刚果共和国（布拉柴维尔）</a></li>
-        <li onclick="addclick(this)" class="select" id="CK"><a href="javascript:void(0)">库克群岛</a></li>
-        <li onclick="addclick(this)" class="select" id="CR"><a href="javascript:void(0)">哥斯大黎加</a></li>
-        <li onclick="addclick(this)" class="select" id="CI"><a href="javascript:void(0)">象牙海岸</a></li>
-        <li onclick="addclick(this)" class="select" id="HR"><a href="javascript:void(0)">克罗地亚</a></li>
-        <li onclick="addclick(this)" class="select" id="CU"><a href="javascript:void(0)">古巴</a></li>
-        <li onclick="addclick(this)" class="select" id="CY"><a href="javascript:void(0)">塞浦路斯</a></li>
-        <li onclick="addclick(this)" class="select" id="DJ"><a href="javascript:void(0)">吉布提</a></li>
-        <li onclick="addclick(this)" class="select" id="DM"><a href="javascript:void(0)">多米尼克</a></li>
-        <li onclick="addclick(this)" class="select" id="DO"><a href="javascript:void(0)">多米尼加共和国</a></li>
-        <li onclick="addclick(this)" class="select" id="EC"><a href="javascript:void(0)">厄瓜多尔</a></li>
-        <li onclick="addclick(this)" class="select" id="EG"><a href="javascript:void(0)">埃及</a></li>
-        <li onclick="addclick(this)" class="select" id="SV"><a href="javascript:void(0)">萨尔瓦多</a></li>
-        <li onclick="addclick(this)" class="select" id="GQ"><a href="javascript:void(0)">赤道几内亚</a></li>
-        <li onclick="addclick(this)" class="select" id="ER"><a href="javascript:void(0)">厄立特里亚</a></li>
-        <li onclick="addclick(this)" class="select" id="ET"><a href="javascript:void(0)">埃塞俄比亚</a></li>
-        <li onclick="addclick(this)" class="select" id="FK"><a href="javascript:void(0)">福克兰群岛</a></li>
-        <li onclick="addclick(this)" class="select" id="FO"><a href="javascript:void(0)">法罗群岛</a></li>
-        <li onclick="addclick(this)" class="select" id="FJ"><a href="javascript:void(0)">斐济</a></li>
-        <li onclick="addclick(this)" class="select" id="GF"><a href="javascript:void(0)">法属圭亚那</a></li>
-        <li onclick="addclick(this)" class="select" id="PF"><a href="javascript:void(0)">法属波利尼西亚</a></li>
-        <li onclick="addclick(this)" class="select" id="GA"><a href="javascript:void(0)">加蓬</a></li>
-        <li onclick="addclick(this)" class="select" id="GM"><a href="javascript:void(0)">冈比亚</a></li>
-        <li onclick="addclick(this)" class="select" id="GE"><a href="javascript:void(0)">格鲁吉亚</a></li>
-        <li onclick="addclick(this)" class="select" id="GH"><a href="javascript:void(0)">加纳</a></li>
-        <li onclick="addclick(this)" class="select" id="GI"><a href="javascript:void(0)">直布罗陀</a></li>
-        <li onclick="addclick(this)" class="select" id="GL"><a href="javascript:void(0)">格陵兰岛</a></li>
-        <li onclick="addclick(this)" class="select" id="GR"><a href="javascript:void(0)">希腊</a></li>
-        <li onclick="addclick(this)" class="select" id="GD"><a href="javascript:void(0)">格林纳达</a></li>
-        <li onclick="addclick(this)" class="select" id="GP"><a href="javascript:void(0)">瓜德罗普岛</a></li>
-        <li onclick="addclick(this)" class="select" id="GU"><a href="javascript:void(0)">关岛</a></li>
-        <li onclick="addclick(this)" class="select" id="GT"><a href="javascript:void(0)">危地马拉</a></li>
-        <li onclick="addclick(this)" class="select" id="GW"><a href="javascript:void(0)">几内亚比绍</a></li>
-        <li onclick="addclick(this)" class="select" id="GN"><a href="javascript:void(0)">几内亚</a></li>
-        <li onclick="addclick(this)" class="select" id="GY"><a href="javascript:void(0)">圭亚那</a></li>
-        <li onclick="addclick(this)" class="select" id="HT"><a href="javascript:void(0)">海地</a></li>
-        <li onclick="addclick(this)" class="select" id="HN"><a href="javascript:void(0)">洪都拉斯</a></li>
-        <li onclick="addclick(this)" class="select" id="IS"><a href="javascript:void(0)">冰岛</a></li>
-        <li onclick="addclick(this)" class="select" id="ID"><a href="javascript:void(0)">印度尼西亚</a></li>
-        <li onclick="addclick(this)" class="select" id="IR"><a href="javascript:void(0)">伊朗</a></li>
-        <li onclick="addclick(this)" class="select" id="IQ"><a href="javascript:void(0)">伊拉克</a></li>
-        <li onclick="addclick(this)" class="select" id="JM"><a href="javascript:void(0)">牙买加</a></li>
-        <li onclick="addclick(this)" class="select" id="JO"><a href="javascript:void(0)">约旦</a></li>
-        <li onclick="addclick(this)" class="select" id="KZ"><a href="javascript:void(0)">哈萨克斯坦</a></li>
-        <li onclick="addclick(this)" class="select" id="KE"><a href="javascript:void(0)">肯尼亚</a></li>
-        <li onclick="addclick(this)" class="select" id="KI"><a href="javascript:void(0)">基里巴斯共和国</a></li>
-        <li onclick="addclick(this)" class="select" id="KP"><a href="javascript:void(0)">朝鲜</a></li>
-        <li onclick="addclick(this)" class="select" id="KW"><a href="javascript:void(0)">科威特</a></li>
-        <li onclick="addclick(this)" class="select" id="KG"><a href="javascript:void(0)">吉尔吉斯斯坦</a></li>
-        <li onclick="addclick(this)" class="select" id="LA"><a href="javascript:void(0)">老挝</a></li>
-        <li onclick="addclick(this)" class="select" id="LV"><a href="javascript:void(0)">拉脱维亚</a></li>
-        <li onclick="addclick(this)" class="select" id="LB"><a href="javascript:void(0)">黎巴嫩</a></li>
-        <li onclick="addclick(this)" class="select" id="LS"><a href="javascript:void(0)">莱索托</a></li>
-        <li onclick="addclick(this)" class="select" id="LR"><a href="javascript:void(0)">利比里亚</a></li>
-        <li onclick="addclick(this)" class="select" id="LY"><a href="javascript:void(0)">利比亚</a></li>
-        <li onclick="addclick(this)" class="select" id="LI"><a href="javascript:void(0)">列支敦士登</a></li>
-        <li onclick="addclick(this)" class="select" id="LU"><a href="javascript:void(0)">卢森堡</a></li>
-        <li onclick="addclick(this)" class="select" id="MG"><a href="javascript:void(0)">马达加斯加</a></li>
-        <li onclick="addclick(this)" class="select" id="MW"><a href="javascript:void(0)">马拉维</a></li>
-        <li onclick="addclick(this)" class="select" id="MV"><a href="javascript:void(0)">马尔代夫</a></li>
-        <li onclick="addclick(this)" class="select" id="ML"><a href="javascript:void(0)">马里</a></li>
-        <li onclick="addclick(this)" class="select" id="MT"><a href="javascript:void(0)">马耳他</a></li>
-        <li onclick="addclick(this)" class="select" id="MH"><a href="javascript:void(0)">马绍尔群岛</a></li>
-        <li onclick="addclick(this)" class="select" id="MQ"><a href="javascript:void(0)">马提尼克</a></li>
-        <li onclick="addclick(this)" class="select" id="MR"><a href="javascript:void(0)">毛里塔尼亚</a></li>
-        <li onclick="addclick(this)" class="select" id="MU"><a href="javascript:void(0)">毛里求斯</a></li>
-        <li onclick="addclick(this)" class="select" id="YT"><a href="javascript:void(0)">马约特</a></li>
-        <li onclick="addclick(this)" class="select" id="FM"><a href="javascript:void(0)">密克罗尼西亚联邦</a></li>
-        <li onclick="addclick(this)" class="select" id="MD"><a href="javascript:void(0)">摩尔多瓦</a></li>
-        <li onclick="addclick(this)" class="select" id="MC"><a href="javascript:void(0)">摩纳哥</a></li>
-        <li onclick="addclick(this)" class="select" id="MN"><a href="javascript:void(0)">蒙古</a></li>
-        <li onclick="addclick(this)" class="select" id="ME"><a href="javascript:void(0)">黑山共和国</a></li>
-        <li onclick="addclick(this)" class="select" id="MS"><a href="javascript:void(0)">蒙特塞拉特</a></li>
-        <li onclick="addclick(this)" class="select" id="MA"><a href="javascript:void(0)">摩洛哥</a></li>
-        <li onclick="addclick(this)" class="select" id="MZ"><a href="javascript:void(0)">莫桑比克</a></li>
-        <li onclick="addclick(this)" class="select" id="NA"><a href="javascript:void(0)">纳米比亚</a></li>
-        <li onclick="addclick(this)" class="select" id="NR"><a href="javascript:void(0)">瑙鲁</a></li>
-        <li onclick="addclick(this)" class="select" id="NP"><a href="javascript:void(0)">尼泊尔</a></li>
-        <li onclick="addclick(this)" class="select" id="AN"><a href="javascript:void(0)">荷属安的列斯</a></li>
-        <li onclick="addclick(this)" class="select" id="NC"><a href="javascript:void(0)">新喀里多尼亚</a></li>
-        <li onclick="addclick(this)" class="select" id="NI"><a href="javascript:void(0)">尼加拉瓜</a></li>
-        <li onclick="addclick(this)" class="select" id="NE"><a href="javascript:void(0)">尼日尔</a></li>
-        <li onclick="addclick(this)" class="select" id="NG"><a href="javascript:void(0)">尼日利亚</a></li>
-        <li onclick="addclick(this)" class="select" id="NU"><a href="javascript:void(0)">纽埃</a></li>
-        <li onclick="addclick(this)" class="select" id="NF"><a href="javascript:void(0)">诺福克岛</a></li>
-        <li onclick="addclick(this)" class="select" id="MP"><a href="javascript:void(0)">北马里亚纳群岛</a></li>
-        <li onclick="addclick(this)" class="select" id="OM"><a href="javascript:void(0)">阿曼</a></li>
-        <li onclick="addclick(this)" class="select" id="PK"><a href="javascript:void(0)">巴基斯坦</a></li>
-        <li onclick="addclick(this)" class="select" id="PW"><a href="javascript:void(0)">帕劳</a></li>
-        <li onclick="addclick(this)" class="select" id="PS"><a href="javascript:void(0)">巴勒斯坦</a></li>
-        <li onclick="addclick(this)" class="select" id="PA"><a href="javascript:void(0)">巴拿马</a></li>
-        <li onclick="addclick(this)" class="select" id="PG"><a href="javascript:void(0)">巴布亚新几内亚</a></li>
-        <li onclick="addclick(this)" class="select" id="PY"><a href="javascript:void(0)">巴拉圭</a></li>
-        <li onclick="addclick(this)" class="select" id="PE"><a href="javascript:void(0)">秘鲁</a></li>
-        <li onclick="addclick(this)" class="select" id="PR"><a href="javascript:void(0)">波多黎各</a></li>
-        <li onclick="addclick(this)" class="select" id="QA"><a href="javascript:void(0)">卡塔尔</a></li>
-        <li onclick="addclick(this)" class="select" id="RE"><a href="javascript:void(0)">留尼汪岛</a></li>
-        <li onclick="addclick(this)" class="select" id="RW"><a href="javascript:void(0)">卢旺达</a></li>
-        <li onclick="addclick(this)" class="select" id="LC"><a href="javascript:void(0)">圣卢西亚岛</a></li>
-        <li onclick="addclick(this)" class="select" id="WS"><a href="javascript:void(0)">萨摩亚群岛</a></li>
-        <li onclick="addclick(this)" class="select" id="SM"><a href="javascript:void(0)">圣马力诺</a></li>
-        <li onclick="addclick(this)" class="select" id="ST"><a href="javascript:void(0)">圣多美及普林西比群岛</a></li>
-        <li onclick="addclick(this)" class="select" id="SA"><a href="javascript:void(0)">沙特阿拉伯</a></li>
-        <li onclick="addclick(this)" class="select" id="SN"><a href="javascript:void(0)">塞内加尔</a></li>
-        <li onclick="addclick(this)" class="select" id="RS"><a href="javascript:void(0)">塞尔维亚</a></li>
-        <li onclick="addclick(this)" class="select" id="SC"><a href="javascript:void(0)">塞舌尔</a></li>
-        <li onclick="addclick(this)" class="select" id="SL"><a href="javascript:void(0)">塞拉里昂</a></li>
-        <li onclick="addclick(this)" class="select" id="SG"><a href="javascript:void(0)">新加坡</a></li>
-        <li onclick="addclick(this)" class="select" id="SI"><a href="javascript:void(0)">斯洛文尼亚</a></li>
-        <li onclick="addclick(this)" class="select" id="SB"><a href="javascript:void(0)">所罗门群岛</a></li>
-        <li onclick="addclick(this)" class="select" id="SO"><a href="javascript:void(0)">索马里</a></li>
-        <li onclick="addclick(this)" class="select" id="LK"><a href="javascript:void(0)">斯里兰卡</a></li>
-        <li onclick="addclick(this)" class="select" id="KN"><a href="javascript:void(0)">圣基茨和尼维斯联邦</a></li>
-        <li onclick="addclick(this)" class="select" id="VC"><a href="javascript:void(0)">圣文森特和格林纳丁斯</a></li>
-        <li onclick="addclick(this)" class="select" id="SH"><a href="javascript:void(0)">圣赫勒拿岛</a></li>
-        <li onclick="addclick(this)" class="select" id="PM"><a href="javascript:void(0)">圣皮埃尔和密克隆</a></li>
-        <li onclick="addclick(this)" class="select" id="LC"><a href="javascript:void(0)">圣卢西亚岛</a></li>
-        <li onclick="addclick(this)" class="select" id="SD"><a href="javascript:void(0)">苏丹</a></li>
-        <li onclick="addclick(this)" class="select" id="SR"><a href="javascript:void(0)">苏里南</a></li>
-        <li onclick="addclick(this)" class="select" id="SZ"><a href="javascript:void(0)">斯威士兰</a></li>
-        <li onclick="addclick(this)" class="select" id="SY"><a href="javascript:void(0)">叙利亚</a></li>
-        <li onclick="addclick(this)" class="select" id="TJ"><a href="javascript:void(0)">塔吉克斯坦</a></li>
-        <li onclick="addclick(this)" class="select" id="TZ"><a href="javascript:void(0)">坦桑尼亚</a></li>
-        <li onclick="addclick(this)" class="select" id="TL"><a href="javascript:void(0)">东帝汶</a></li>
-        <li onclick="addclick(this)" class="select" id="TG"><a href="javascript:void(0)">多哥</a></li>
-        <li onclick="addclick(this)" class="select" id="TK"><a href="javascript:void(0)">托克劳</a></li>
-        <li onclick="addclick(this)" class="select" id="TO"><a href="javascript:void(0)">汤加</a></li>
-        <li onclick="addclick(this)" class="select" id="TT"><a href="javascript:void(0)">特立尼达和多巴哥</a></li>
-        <li onclick="addclick(this)" class="select" id="TN"><a href="javascript:void(0)">突尼斯</a></li>
-        <li onclick="addclick(this)" class="select" id="TR"><a href="javascript:void(0)">土耳其</a></li>
-        <li onclick="addclick(this)" class="select" id="TM"><a href="javascript:void(0)">土库曼斯坦</a></li>
-        <li onclick="addclick(this)" class="select" id="TC"><a href="javascript:void(0)">特克斯和凯科斯群岛</a></li>
-        <li onclick="addclick(this)" class="select" id="TV"><a href="javascript:void(0)">图瓦卢</a></li>
-        <li onclick="addclick(this)" class="select" id="UM"><a href="javascript:void(0)">美国本土外小岛屿</a></li>
-        <li onclick="addclick(this)" class="select" id="UG"><a href="javascript:void(0)">乌干达</a></li>
-        <li onclick="addclick(this)" class="select" id="AE"><a href="javascript:void(0)">阿联酋</a></li>
-        <li onclick="addclick(this)" class="select" id="UY"><a href="javascript:void(0)">乌拉圭</a></li>
-        <li onclick="addclick(this)" class="select" id="UZ"><a href="javascript:void(0)">乌兹别克斯坦</a></li>
-        <li onclick="addclick(this)" class="select" id="VU"><a href="javascript:void(0)">瓦努阿图</a></li>
-        <li onclick="addclick(this)" class="select" id="VA"><a href="javascript:void(0)">梵蒂冈</a></li>
-        <li onclick="addclick(this)" class="select" id="VE"><a href="javascript:void(0)">委内瑞拉</a></li>
-        <li onclick="addclick(this)" class="select" id="VG"><a href="javascript:void(0)">维尔京群岛(英国)</a></li>
-        <li onclick="addclick(this)" class="select" id="VI"><a href="javascript:void(0)">美属维尔京群岛</a></li>
-        <li onclick="addclick(this)" class="select" id="WF"><a href="javascript:void(0)">瓦利斯和富图纳群岛</a></li>
-        <li onclick="addclick(this)" class="select" id="EH"><a href="javascript:void(0)">西撒哈拉</a></li>
-        <li onclick="addclick(this)" class="select" id="YE"><a href="javascript:void(0)">也门</a></li>
-        <li onclick="addclick(this)" class="select" id="ZR"><a href="javascript:void(0)">萨伊</a></li>
-        <li onclick="addclick(this)" class="select" id="ZM"><a href="javascript:void(0)">赞比亚</a></li>
-        <li onclick="addclick(this)" class="select" id="ZW"><a href="javascript:void(0)">津巴布韦</a></li>
-        <li onclick="addclick(this)" class="select" id="MK"><a href="javascript:void(0)">马其顿</a></li>
-        <li onclick="addclick(this)" class="select" id="YK"><a href="javascript:void(0)">科索沃</a></li>
+        
        </ul> 
        <h6 type="text" class="promptmessageinput" id="issueCountry1_msg" name="title1"></h6> 
       </div> 
-      <div class="Nationality"> 
-       <p> 国籍 <b>*</b> </p> 
+      <div class="Nationality text-field-content"> 
+       <p class="text-field-label float"> 国籍 <b>*</b> </p> 
        <input type="hidden" id="nationality1_hidden" name="nationality1" /> 
-       <input id="nationality1_select" type="text" class="NationalityInput dropDownInput" value="" placeholder="请选择" autocomplete="off" readonly="" /> 
+       <input id="nationality1_select" type="text" class="NationalityInput dropDownInput text-field-input" value="" placeholder="" autocomplete="off" readonly="" /> 
        <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/downArrow.png" /> 
        <b class="bottomLine bottomLine460"></b> 
        <ul class="NationalityMenu select" id="nationality1">
-        <li onclick="addclick(this)" class="select" id="CN"><a href="javascript:void(0)">中国</a></li>
-        <li onclick="addclick(this)" class="select" id="KH"><a href="javascript:void(0)">柬埔寨</a></li>
-        <li onclick="addclick(this)" class="select" id="GB"><a href="javascript:void(0)">英国</a></li>
-        <li onclick="addclick(this)" class="select" id="US"><a href="javascript:void(0)">美国</a></li>
-        <li onclick="addclick(this)" class="select" id="FR"><a href="javascript:void(0)">法国</a></li>
-        <li onclick="addclick(this)" class="select" id="DE"><a href="javascript:void(0)">德国</a></li>
-        <li onclick="addclick(this)" class="select" id="AU"><a href="javascript:void(0)">澳大利亚</a></li>
-        <li onclick="addclick(this)" class="select" id="JP"><a href="javascript:void(0)">日本</a></li>
-        <li onclick="addclick(this)" class="select" id="CA"><a href="javascript:void(0)">加拿大</a></li>
-        <li onclick="addclick(this)" class="select" id="KR"><a href="javascript:void(0)">韩国</a></li>
-        <li onclick="addclick(this)" class="select" id="HK"><a href="javascript:void(0)">中国香港</a></li>
-        <li onclick="addclick(this)" class="select" id="ES"><a href="javascript:void(0)">西班牙</a></li>
-        <li onclick="addclick(this)" class="select" id="IT"><a href="javascript:void(0)">意大利</a></li>
-        <li onclick="addclick(this)" class="select" id="TW"><a href="javascript:void(0)">中国台湾</a></li>
-        <li onclick="addclick(this)" class="select" id="MO"><a href="javascript:void(0)">中国澳门</a></li>
-        <li onclick="addclick(this)" class="select" id="VN"><a href="javascript:void(0)">越南</a></li>
-        <li onclick="addclick(this)" class="select" id="NL"><a href="javascript:void(0)">荷兰</a></li>
-        <li onclick="addclick(this)" class="select" id="IN"><a href="javascript:void(0)">印度</a></li>
-        <li onclick="addclick(this)" class="select" id="TH"><a href="javascript:void(0)">泰国</a></li>
-        <li onclick="addclick(this)" class="select" id="RU"><a href="javascript:void(0)">俄罗斯</a></li>
-        <li onclick="addclick(this)" class="select" id="IE"><a href="javascript:void(0)">爱尔兰</a></li>
-        <li onclick="addclick(this)" class="select" id="MY"><a href="javascript:void(0)">马来西亚</a></li>
-        <li onclick="addclick(this)" class="select" id="PH"><a href="javascript:void(0)">菲律宾</a></li>
-        <li onclick="addclick(this)" class="select" id="PL"><a href="javascript:void(0)">波兰</a></li>
-        <li onclick="addclick(this)" class="select" id="CH"><a href="javascript:void(0)">瑞士</a></li>
-        <li onclick="addclick(this)" class="select" id="NZ"><a href="javascript:void(0)">新西兰</a></li>
-        <li onclick="addclick(this)" class="select" id="BE"><a href="javascript:void(0)">比利时</a></li>
-        <li onclick="addclick(this)" class="select" id="IL"><a href="javascript:void(0)">以色列</a></li>
-        <li onclick="addclick(this)" class="select" id="SE"><a href="javascript:void(0)">瑞典</a></li>
-        <li onclick="addclick(this)" class="select" id="CZ"><a href="javascript:void(0)">捷克共和国</a></li>
-        <li onclick="addclick(this)" class="select" id="PT"><a href="javascript:void(0)">葡萄牙</a></li>
-        <li onclick="addclick(this)" class="select" id="FI"><a href="javascript:void(0)">芬兰</a></li>
-        <li onclick="addclick(this)" class="select" id="BR"><a href="javascript:void(0)">巴西</a></li>
-        <li onclick="addclick(this)" class="select" id="UA"><a href="javascript:void(0)">乌克兰</a></li>
-        <li onclick="addclick(this)" class="select" id="AT"><a href="javascript:void(0)">奥地利</a></li>
-        <li onclick="addclick(this)" class="select" id="CO"><a href="javascript:void(0)">哥伦比亚</a></li>
-        <li onclick="addclick(this)" class="select" id="CL"><a href="javascript:void(0)">智利</a></li>
-        <li onclick="addclick(this)" class="select" id="SK"><a href="javascript:void(0)">斯洛伐克共和国</a></li>
-        <li onclick="addclick(this)" class="select" id="DK"><a href="javascript:void(0)">丹麦</a></li>
-        <li onclick="addclick(this)" class="select" id="AR"><a href="javascript:void(0)">阿根廷</a></li>
-        <li onclick="addclick(this)" class="select" id="MX"><a href="javascript:void(0)">墨西哥</a></li>
-        <li onclick="addclick(this)" class="select" id="ZA"><a href="javascript:void(0)">南非</a></li>
-        <li onclick="addclick(this)" class="select" id="NO"><a href="javascript:void(0)">挪威</a></li>
-        <li onclick="addclick(this)" class="select" id="HU"><a href="javascript:void(0)">匈牙利</a></li>
-        <li onclick="addclick(this)" class="select" id="RO"><a href="javascript:void(0)">罗马尼亚</a></li>
-        <li onclick="addclick(this)" class="select" id="LT"><a href="javascript:void(0)">立陶宛</a></li>
-        <li onclick="addclick(this)" class="select" id="MM"><a href="javascript:void(0)">缅甸</a></li>
-        <li onclick="addclick(this)" class="select" id="EE"><a href="javascript:void(0)">爱沙尼亚</a></li>
-        <li onclick="addclick(this)" class="select" id="AF"><a href="javascript:void(0)">阿富汗</a></li>
-        <li onclick="addclick(this)" class="select" id="AL"><a href="javascript:void(0)">阿尔巴尼亚</a></li>
-        <li onclick="addclick(this)" class="select" id="DZ"><a href="javascript:void(0)">阿尔及利亚</a></li>
-        <li onclick="addclick(this)" class="select" id="AS"><a href="javascript:void(0)">美属萨摩亚</a></li>
-        <li onclick="addclick(this)" class="select" id="AD"><a href="javascript:void(0)">安道尔</a></li>
-        <li onclick="addclick(this)" class="select" id="AO"><a href="javascript:void(0)">安哥拉</a></li>
-        <li onclick="addclick(this)" class="select" id="AI"><a href="javascript:void(0)">安圭拉岛</a></li>
-        <li onclick="addclick(this)" class="select" id="AQ"><a href="javascript:void(0)">南极</a></li>
-        <li onclick="addclick(this)" class="select" id="AG"><a href="javascript:void(0)">安堤瓜及巴尔布达</a></li>
-        <li onclick="addclick(this)" class="select" id="AE"><a href="javascript:void(0)">阿联酋</a></li>
-        <li onclick="addclick(this)" class="select" id="AM"><a href="javascript:void(0)">亚美尼亚</a></li>
-        <li onclick="addclick(this)" class="select" id="AW"><a href="javascript:void(0)">阿鲁巴</a></li>
-        <li onclick="addclick(this)" class="select" id="AZ"><a href="javascript:void(0)">阿塞拜疆共和国</a></li>
-        <li onclick="addclick(this)" class="select" id="BS"><a href="javascript:void(0)">巴哈马</a></li>
-        <li onclick="addclick(this)" class="select" id="BH"><a href="javascript:void(0)">巴林</a></li>
-        <li onclick="addclick(this)" class="select" id="BD"><a href="javascript:void(0)">孟加拉</a></li>
-        <li onclick="addclick(this)" class="select" id="BB"><a href="javascript:void(0)">巴巴多斯</a></li>
-        <li onclick="addclick(this)" class="select" id="BY"><a href="javascript:void(0)">白俄罗斯</a></li>
-        <li onclick="addclick(this)" class="select" id="BZ"><a href="javascript:void(0)">伯利兹</a></li>
-        <li onclick="addclick(this)" class="select" id="BJ"><a href="javascript:void(0)">贝宁</a></li>
-        <li onclick="addclick(this)" class="select" id="BM"><a href="javascript:void(0)">百慕达</a></li>
-        <li onclick="addclick(this)" class="select" id="BT"><a href="javascript:void(0)">不丹</a></li>
-        <li onclick="addclick(this)" class="select" id="BO"><a href="javascript:void(0)">玻利维亚</a></li>
-        <li onclick="addclick(this)" class="select" id="BA"><a href="javascript:void(0)">波士尼亚和黑塞哥维那</a></li>
-        <li onclick="addclick(this)" class="select" id="BW"><a href="javascript:void(0)">博茨瓦纳</a></li>
-        <li onclick="addclick(this)" class="select" id="BN"><a href="javascript:void(0)">文莱</a></li>
-        <li onclick="addclick(this)" class="select" id="BG"><a href="javascript:void(0)">保加利亚</a></li>
-        <li onclick="addclick(this)" class="select" id="BF"><a href="javascript:void(0)">布基纳法索</a></li>
-        <li onclick="addclick(this)" class="select" id="BI"><a href="javascript:void(0)">布隆迪</a></li>
-        <li onclick="addclick(this)" class="select" id="CM"><a href="javascript:void(0)">喀麦隆</a></li>
-        <li onclick="addclick(this)" class="select" id="CV"><a href="javascript:void(0)">佛得角</a></li>
-        <li onclick="addclick(this)" class="select" id="KY"><a href="javascript:void(0)">开曼群岛</a></li>
-        <li onclick="addclick(this)" class="select" id="CF"><a href="javascript:void(0)">中非共和国</a></li>
-        <li onclick="addclick(this)" class="select" id="TD"><a href="javascript:void(0)">乍得</a></li>
-        <li onclick="addclick(this)" class="select" id="CX"><a href="javascript:void(0)">圣诞岛</a></li>
-        <li onclick="addclick(this)" class="select" id="CC"><a href="javascript:void(0)">科科斯（基林）群岛</a></li>
-        <li onclick="addclick(this)" class="select" id="KM"><a href="javascript:void(0)">科摩罗</a></li>
-        <li onclick="addclick(this)" class="select" id="CD"><a href="javascript:void(0)">刚果民主共和国（金沙萨）</a></li>
-        <li onclick="addclick(this)" class="select" id="CG"><a href="javascript:void(0)">刚果共和国（布拉柴维尔）</a></li>
-        <li onclick="addclick(this)" class="select" id="CK"><a href="javascript:void(0)">库克群岛</a></li>
-        <li onclick="addclick(this)" class="select" id="CR"><a href="javascript:void(0)">哥斯大黎加</a></li>
-        <li onclick="addclick(this)" class="select" id="CI"><a href="javascript:void(0)">象牙海岸</a></li>
-        <li onclick="addclick(this)" class="select" id="HR"><a href="javascript:void(0)">克罗地亚</a></li>
-        <li onclick="addclick(this)" class="select" id="CU"><a href="javascript:void(0)">古巴</a></li>
-        <li onclick="addclick(this)" class="select" id="CY"><a href="javascript:void(0)">塞浦路斯</a></li>
-        <li onclick="addclick(this)" class="select" id="DJ"><a href="javascript:void(0)">吉布提</a></li>
-        <li onclick="addclick(this)" class="select" id="DM"><a href="javascript:void(0)">多米尼克</a></li>
-        <li onclick="addclick(this)" class="select" id="DO"><a href="javascript:void(0)">多米尼加共和国</a></li>
-        <li onclick="addclick(this)" class="select" id="EC"><a href="javascript:void(0)">厄瓜多尔</a></li>
-        <li onclick="addclick(this)" class="select" id="EG"><a href="javascript:void(0)">埃及</a></li>
-        <li onclick="addclick(this)" class="select" id="SV"><a href="javascript:void(0)">萨尔瓦多</a></li>
-        <li onclick="addclick(this)" class="select" id="GQ"><a href="javascript:void(0)">赤道几内亚</a></li>
-        <li onclick="addclick(this)" class="select" id="ER"><a href="javascript:void(0)">厄立特里亚</a></li>
-        <li onclick="addclick(this)" class="select" id="ET"><a href="javascript:void(0)">埃塞俄比亚</a></li>
-        <li onclick="addclick(this)" class="select" id="FK"><a href="javascript:void(0)">福克兰群岛</a></li>
-        <li onclick="addclick(this)" class="select" id="FO"><a href="javascript:void(0)">法罗群岛</a></li>
-        <li onclick="addclick(this)" class="select" id="FJ"><a href="javascript:void(0)">斐济</a></li>
-        <li onclick="addclick(this)" class="select" id="GF"><a href="javascript:void(0)">法属圭亚那</a></li>
-        <li onclick="addclick(this)" class="select" id="PF"><a href="javascript:void(0)">法属波利尼西亚</a></li>
-        <li onclick="addclick(this)" class="select" id="GA"><a href="javascript:void(0)">加蓬</a></li>
-        <li onclick="addclick(this)" class="select" id="GM"><a href="javascript:void(0)">冈比亚</a></li>
-        <li onclick="addclick(this)" class="select" id="GE"><a href="javascript:void(0)">格鲁吉亚</a></li>
-        <li onclick="addclick(this)" class="select" id="GH"><a href="javascript:void(0)">加纳</a></li>
-        <li onclick="addclick(this)" class="select" id="GI"><a href="javascript:void(0)">直布罗陀</a></li>
-        <li onclick="addclick(this)" class="select" id="GL"><a href="javascript:void(0)">格陵兰岛</a></li>
-        <li onclick="addclick(this)" class="select" id="GR"><a href="javascript:void(0)">希腊</a></li>
-        <li onclick="addclick(this)" class="select" id="GD"><a href="javascript:void(0)">格林纳达</a></li>
-        <li onclick="addclick(this)" class="select" id="GP"><a href="javascript:void(0)">瓜德罗普岛</a></li>
-        <li onclick="addclick(this)" class="select" id="GU"><a href="javascript:void(0)">关岛</a></li>
-        <li onclick="addclick(this)" class="select" id="GT"><a href="javascript:void(0)">危地马拉</a></li>
-        <li onclick="addclick(this)" class="select" id="GW"><a href="javascript:void(0)">几内亚比绍</a></li>
-        <li onclick="addclick(this)" class="select" id="GN"><a href="javascript:void(0)">几内亚</a></li>
-        <li onclick="addclick(this)" class="select" id="GY"><a href="javascript:void(0)">圭亚那</a></li>
-        <li onclick="addclick(this)" class="select" id="HT"><a href="javascript:void(0)">海地</a></li>
-        <li onclick="addclick(this)" class="select" id="HN"><a href="javascript:void(0)">洪都拉斯</a></li>
-        <li onclick="addclick(this)" class="select" id="IS"><a href="javascript:void(0)">冰岛</a></li>
-        <li onclick="addclick(this)" class="select" id="ID"><a href="javascript:void(0)">印度尼西亚</a></li>
-        <li onclick="addclick(this)" class="select" id="IR"><a href="javascript:void(0)">伊朗</a></li>
-        <li onclick="addclick(this)" class="select" id="IQ"><a href="javascript:void(0)">伊拉克</a></li>
-        <li onclick="addclick(this)" class="select" id="JM"><a href="javascript:void(0)">牙买加</a></li>
-        <li onclick="addclick(this)" class="select" id="JO"><a href="javascript:void(0)">约旦</a></li>
-        <li onclick="addclick(this)" class="select" id="KZ"><a href="javascript:void(0)">哈萨克斯坦</a></li>
-        <li onclick="addclick(this)" class="select" id="KE"><a href="javascript:void(0)">肯尼亚</a></li>
-        <li onclick="addclick(this)" class="select" id="KI"><a href="javascript:void(0)">基里巴斯共和国</a></li>
-        <li onclick="addclick(this)" class="select" id="KP"><a href="javascript:void(0)">朝鲜</a></li>
-        <li onclick="addclick(this)" class="select" id="KW"><a href="javascript:void(0)">科威特</a></li>
-        <li onclick="addclick(this)" class="select" id="KG"><a href="javascript:void(0)">吉尔吉斯斯坦</a></li>
-        <li onclick="addclick(this)" class="select" id="LA"><a href="javascript:void(0)">老挝</a></li>
-        <li onclick="addclick(this)" class="select" id="LV"><a href="javascript:void(0)">拉脱维亚</a></li>
-        <li onclick="addclick(this)" class="select" id="LB"><a href="javascript:void(0)">黎巴嫩</a></li>
-        <li onclick="addclick(this)" class="select" id="LS"><a href="javascript:void(0)">莱索托</a></li>
-        <li onclick="addclick(this)" class="select" id="LR"><a href="javascript:void(0)">利比里亚</a></li>
-        <li onclick="addclick(this)" class="select" id="LY"><a href="javascript:void(0)">利比亚</a></li>
-        <li onclick="addclick(this)" class="select" id="LI"><a href="javascript:void(0)">列支敦士登</a></li>
-        <li onclick="addclick(this)" class="select" id="LU"><a href="javascript:void(0)">卢森堡</a></li>
-        <li onclick="addclick(this)" class="select" id="MG"><a href="javascript:void(0)">马达加斯加</a></li>
-        <li onclick="addclick(this)" class="select" id="MW"><a href="javascript:void(0)">马拉维</a></li>
-        <li onclick="addclick(this)" class="select" id="MV"><a href="javascript:void(0)">马尔代夫</a></li>
-        <li onclick="addclick(this)" class="select" id="ML"><a href="javascript:void(0)">马里</a></li>
-        <li onclick="addclick(this)" class="select" id="MT"><a href="javascript:void(0)">马耳他</a></li>
-        <li onclick="addclick(this)" class="select" id="MH"><a href="javascript:void(0)">马绍尔群岛</a></li>
-        <li onclick="addclick(this)" class="select" id="MQ"><a href="javascript:void(0)">马提尼克</a></li>
-        <li onclick="addclick(this)" class="select" id="MR"><a href="javascript:void(0)">毛里塔尼亚</a></li>
-        <li onclick="addclick(this)" class="select" id="MU"><a href="javascript:void(0)">毛里求斯</a></li>
-        <li onclick="addclick(this)" class="select" id="YT"><a href="javascript:void(0)">马约特</a></li>
-        <li onclick="addclick(this)" class="select" id="FM"><a href="javascript:void(0)">密克罗尼西亚联邦</a></li>
-        <li onclick="addclick(this)" class="select" id="MD"><a href="javascript:void(0)">摩尔多瓦</a></li>
-        <li onclick="addclick(this)" class="select" id="MC"><a href="javascript:void(0)">摩纳哥</a></li>
-        <li onclick="addclick(this)" class="select" id="MN"><a href="javascript:void(0)">蒙古</a></li>
-        <li onclick="addclick(this)" class="select" id="ME"><a href="javascript:void(0)">黑山共和国</a></li>
-        <li onclick="addclick(this)" class="select" id="MS"><a href="javascript:void(0)">蒙特塞拉特</a></li>
-        <li onclick="addclick(this)" class="select" id="MA"><a href="javascript:void(0)">摩洛哥</a></li>
-        <li onclick="addclick(this)" class="select" id="MZ"><a href="javascript:void(0)">莫桑比克</a></li>
-        <li onclick="addclick(this)" class="select" id="NA"><a href="javascript:void(0)">纳米比亚</a></li>
-        <li onclick="addclick(this)" class="select" id="NR"><a href="javascript:void(0)">瑙鲁</a></li>
-        <li onclick="addclick(this)" class="select" id="NP"><a href="javascript:void(0)">尼泊尔</a></li>
-        <li onclick="addclick(this)" class="select" id="AN"><a href="javascript:void(0)">荷属安的列斯</a></li>
-        <li onclick="addclick(this)" class="select" id="NC"><a href="javascript:void(0)">新喀里多尼亚</a></li>
-        <li onclick="addclick(this)" class="select" id="NI"><a href="javascript:void(0)">尼加拉瓜</a></li>
-        <li onclick="addclick(this)" class="select" id="NE"><a href="javascript:void(0)">尼日尔</a></li>
-        <li onclick="addclick(this)" class="select" id="NG"><a href="javascript:void(0)">尼日利亚</a></li>
-        <li onclick="addclick(this)" class="select" id="NU"><a href="javascript:void(0)">纽埃</a></li>
-        <li onclick="addclick(this)" class="select" id="NF"><a href="javascript:void(0)">诺福克岛</a></li>
-        <li onclick="addclick(this)" class="select" id="MP"><a href="javascript:void(0)">北马里亚纳群岛</a></li>
-        <li onclick="addclick(this)" class="select" id="OM"><a href="javascript:void(0)">阿曼</a></li>
-        <li onclick="addclick(this)" class="select" id="PK"><a href="javascript:void(0)">巴基斯坦</a></li>
-        <li onclick="addclick(this)" class="select" id="PW"><a href="javascript:void(0)">帕劳</a></li>
-        <li onclick="addclick(this)" class="select" id="PS"><a href="javascript:void(0)">巴勒斯坦</a></li>
-        <li onclick="addclick(this)" class="select" id="PA"><a href="javascript:void(0)">巴拿马</a></li>
-        <li onclick="addclick(this)" class="select" id="PG"><a href="javascript:void(0)">巴布亚新几内亚</a></li>
-        <li onclick="addclick(this)" class="select" id="PY"><a href="javascript:void(0)">巴拉圭</a></li>
-        <li onclick="addclick(this)" class="select" id="PE"><a href="javascript:void(0)">秘鲁</a></li>
-        <li onclick="addclick(this)" class="select" id="PR"><a href="javascript:void(0)">波多黎各</a></li>
-        <li onclick="addclick(this)" class="select" id="QA"><a href="javascript:void(0)">卡塔尔</a></li>
-        <li onclick="addclick(this)" class="select" id="RE"><a href="javascript:void(0)">留尼汪岛</a></li>
-        <li onclick="addclick(this)" class="select" id="RW"><a href="javascript:void(0)">卢旺达</a></li>
-        <li onclick="addclick(this)" class="select" id="LC"><a href="javascript:void(0)">圣卢西亚岛</a></li>
-        <li onclick="addclick(this)" class="select" id="WS"><a href="javascript:void(0)">萨摩亚群岛</a></li>
-        <li onclick="addclick(this)" class="select" id="SM"><a href="javascript:void(0)">圣马力诺</a></li>
-        <li onclick="addclick(this)" class="select" id="ST"><a href="javascript:void(0)">圣多美及普林西比群岛</a></li>
-        <li onclick="addclick(this)" class="select" id="SA"><a href="javascript:void(0)">沙特阿拉伯</a></li>
-        <li onclick="addclick(this)" class="select" id="SN"><a href="javascript:void(0)">塞内加尔</a></li>
-        <li onclick="addclick(this)" class="select" id="RS"><a href="javascript:void(0)">塞尔维亚</a></li>
-        <li onclick="addclick(this)" class="select" id="SC"><a href="javascript:void(0)">塞舌尔</a></li>
-        <li onclick="addclick(this)" class="select" id="SL"><a href="javascript:void(0)">塞拉里昂</a></li>
-        <li onclick="addclick(this)" class="select" id="SG"><a href="javascript:void(0)">新加坡</a></li>
-        <li onclick="addclick(this)" class="select" id="SI"><a href="javascript:void(0)">斯洛文尼亚</a></li>
-        <li onclick="addclick(this)" class="select" id="SB"><a href="javascript:void(0)">所罗门群岛</a></li>
-        <li onclick="addclick(this)" class="select" id="SO"><a href="javascript:void(0)">索马里</a></li>
-        <li onclick="addclick(this)" class="select" id="LK"><a href="javascript:void(0)">斯里兰卡</a></li>
-        <li onclick="addclick(this)" class="select" id="KN"><a href="javascript:void(0)">圣基茨和尼维斯联邦</a></li>
-        <li onclick="addclick(this)" class="select" id="VC"><a href="javascript:void(0)">圣文森特和格林纳丁斯</a></li>
-        <li onclick="addclick(this)" class="select" id="SH"><a href="javascript:void(0)">圣赫勒拿岛</a></li>
-        <li onclick="addclick(this)" class="select" id="PM"><a href="javascript:void(0)">圣皮埃尔和密克隆</a></li>
-        <li onclick="addclick(this)" class="select" id="LC"><a href="javascript:void(0)">圣卢西亚岛</a></li>
-        <li onclick="addclick(this)" class="select" id="SD"><a href="javascript:void(0)">苏丹</a></li>
-        <li onclick="addclick(this)" class="select" id="SR"><a href="javascript:void(0)">苏里南</a></li>
-        <li onclick="addclick(this)" class="select" id="SZ"><a href="javascript:void(0)">斯威士兰</a></li>
-        <li onclick="addclick(this)" class="select" id="SY"><a href="javascript:void(0)">叙利亚</a></li>
-        <li onclick="addclick(this)" class="select" id="TJ"><a href="javascript:void(0)">塔吉克斯坦</a></li>
-        <li onclick="addclick(this)" class="select" id="TZ"><a href="javascript:void(0)">坦桑尼亚</a></li>
-        <li onclick="addclick(this)" class="select" id="TL"><a href="javascript:void(0)">东帝汶</a></li>
-        <li onclick="addclick(this)" class="select" id="TG"><a href="javascript:void(0)">多哥</a></li>
-        <li onclick="addclick(this)" class="select" id="TK"><a href="javascript:void(0)">托克劳</a></li>
-        <li onclick="addclick(this)" class="select" id="TO"><a href="javascript:void(0)">汤加</a></li>
-        <li onclick="addclick(this)" class="select" id="TT"><a href="javascript:void(0)">特立尼达和多巴哥</a></li>
-        <li onclick="addclick(this)" class="select" id="TN"><a href="javascript:void(0)">突尼斯</a></li>
-        <li onclick="addclick(this)" class="select" id="TR"><a href="javascript:void(0)">土耳其</a></li>
-        <li onclick="addclick(this)" class="select" id="TM"><a href="javascript:void(0)">土库曼斯坦</a></li>
-        <li onclick="addclick(this)" class="select" id="TC"><a href="javascript:void(0)">特克斯和凯科斯群岛</a></li>
-        <li onclick="addclick(this)" class="select" id="TV"><a href="javascript:void(0)">图瓦卢</a></li>
-        <li onclick="addclick(this)" class="select" id="UM"><a href="javascript:void(0)">美国本土外小岛屿</a></li>
-        <li onclick="addclick(this)" class="select" id="UG"><a href="javascript:void(0)">乌干达</a></li>
-        <li onclick="addclick(this)" class="select" id="AE"><a href="javascript:void(0)">阿联酋</a></li>
-        <li onclick="addclick(this)" class="select" id="UY"><a href="javascript:void(0)">乌拉圭</a></li>
-        <li onclick="addclick(this)" class="select" id="UZ"><a href="javascript:void(0)">乌兹别克斯坦</a></li>
-        <li onclick="addclick(this)" class="select" id="VU"><a href="javascript:void(0)">瓦努阿图</a></li>
-        <li onclick="addclick(this)" class="select" id="VA"><a href="javascript:void(0)">梵蒂冈</a></li>
-        <li onclick="addclick(this)" class="select" id="VE"><a href="javascript:void(0)">委内瑞拉</a></li>
-        <li onclick="addclick(this)" class="select" id="VG"><a href="javascript:void(0)">维尔京群岛(英国)</a></li>
-        <li onclick="addclick(this)" class="select" id="VI"><a href="javascript:void(0)">美属维尔京群岛</a></li>
-        <li onclick="addclick(this)" class="select" id="WF"><a href="javascript:void(0)">瓦利斯和富图纳群岛</a></li>
-        <li onclick="addclick(this)" class="select" id="EH"><a href="javascript:void(0)">西撒哈拉</a></li>
-        <li onclick="addclick(this)" class="select" id="YE"><a href="javascript:void(0)">也门</a></li>
-        <li onclick="addclick(this)" class="select" id="ZR"><a href="javascript:void(0)">萨伊</a></li>
-        <li onclick="addclick(this)" class="select" id="ZM"><a href="javascript:void(0)">赞比亚</a></li>
-        <li onclick="addclick(this)" class="select" id="ZW"><a href="javascript:void(0)">津巴布韦</a></li>
-        <li onclick="addclick(this)" class="select" id="MK"><a href="javascript:void(0)">马其顿</a></li>
-        <li onclick="addclick(this)" class="select" id="YK"><a href="javascript:void(0)">科索沃</a></li>
+        
        </ul> 
        <h6 type="text" class="promptmessageinput" id="nationality1_msg" name="title1"></h6> 
       </div> 
@@ -1708,37 +1227,7 @@ var countryContrlObj =[{id:'CN', name:countryInfo.CN, querystr:'CN'},
        <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/downArrow.png" /> 
        <b class="bottomLine bottomLine140"></b> 
        <ul class="PeriodValidityDayMenu select" id="expiryDay1">
-        <li onclick="addclick(this)" class="select" id="01"><a href="javascript:void(0)">01</a></li>
-        <li onclick="addclick(this)" class="select" id="02"><a href="javascript:void(0)">02</a></li>
-        <li onclick="addclick(this)" class="select" id="03"><a href="javascript:void(0)">03</a></li>
-        <li onclick="addclick(this)" class="select" id="04"><a href="javascript:void(0)">04</a></li>
-        <li onclick="addclick(this)" class="select" id="05"><a href="javascript:void(0)">05</a></li>
-        <li onclick="addclick(this)" class="select" id="06"><a href="javascript:void(0)">06</a></li>
-        <li onclick="addclick(this)" class="select" id="07"><a href="javascript:void(0)">07</a></li>
-        <li onclick="addclick(this)" class="select" id="08"><a href="javascript:void(0)">08</a></li>
-        <li onclick="addclick(this)" class="select" id="09"><a href="javascript:void(0)">09</a></li>
-        <li onclick="addclick(this)" class="select" id="10"><a href="javascript:void(0)">10</a></li>
-        <li onclick="addclick(this)" class="select" id="11"><a href="javascript:void(0)">11</a></li>
-        <li onclick="addclick(this)" class="select" id="12"><a href="javascript:void(0)">12</a></li>
-        <li onclick="addclick(this)" class="select" id="13"><a href="javascript:void(0)">13</a></li>
-        <li onclick="addclick(this)" class="select" id="14"><a href="javascript:void(0)">14</a></li>
-        <li onclick="addclick(this)" class="select" id="15"><a href="javascript:void(0)">15</a></li>
-        <li onclick="addclick(this)" class="select" id="16"><a href="javascript:void(0)">16</a></li>
-        <li onclick="addclick(this)" class="select" id="17"><a href="javascript:void(0)">17</a></li>
-        <li onclick="addclick(this)" class="select" id="18"><a href="javascript:void(0)">18</a></li>
-        <li onclick="addclick(this)" class="select" id="19"><a href="javascript:void(0)">19</a></li>
-        <li onclick="addclick(this)" class="select" id="20"><a href="javascript:void(0)">20</a></li>
-        <li onclick="addclick(this)" class="select" id="21"><a href="javascript:void(0)">21</a></li>
-        <li onclick="addclick(this)" class="select" id="22"><a href="javascript:void(0)">22</a></li>
-        <li onclick="addclick(this)" class="select" id="23"><a href="javascript:void(0)">23</a></li>
-        <li onclick="addclick(this)" class="select" id="24"><a href="javascript:void(0)">24</a></li>
-        <li onclick="addclick(this)" class="select" id="25"><a href="javascript:void(0)">25</a></li>
-        <li onclick="addclick(this)" class="select" id="26"><a href="javascript:void(0)">26</a></li>
-        <li onclick="addclick(this)" class="select" id="27"><a href="javascript:void(0)">27</a></li>
-        <li onclick="addclick(this)" class="select" id="28"><a href="javascript:void(0)">28</a></li>
-        <li onclick="addclick(this)" class="select" id="29"><a href="javascript:void(0)">29</a></li>
-        <li onclick="addclick(this)" class="select" id="30"><a href="javascript:void(0)">30</a></li>
-        <li onclick="addclick(this)" class="select" id="31"><a href="javascript:void(0)">31</a></li>
+        
        </ul> 
       </div> 
       <div class="PeriodValidityMon"> 
@@ -1748,18 +1237,7 @@ var countryContrlObj =[{id:'CN', name:countryInfo.CN, querystr:'CN'},
        <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/downArrow.png" /> 
        <b class="bottomLine bottomLine140"></b> 
        <ul class="PeriodValidityMonMenu select" id="expiryMonth1">
-        <li onclick="addclick(this)" monthted="true" discern="expiry" class="select" id="01"><a href="javascript:void(0)">1月</a></li>
-        <li onclick="addclick(this)" monthted="true" discern="expiry" class="select" id="02"><a href="javascript:void(0)">2月</a></li>
-        <li onclick="addclick(this)" monthted="true" discern="expiry" class="select" id="03"><a href="javascript:void(0)">3月</a></li>
-        <li onclick="addclick(this)" monthted="true" discern="expiry" class="select" id="04"><a href="javascript:void(0)">4月</a></li>
-        <li onclick="addclick(this)" monthted="true" discern="expiry" class="select" id="05"><a href="javascript:void(0)">5月</a></li>
-        <li onclick="addclick(this)" monthted="true" discern="expiry" class="select" id="06"><a href="javascript:void(0)">6月</a></li>
-        <li onclick="addclick(this)" monthted="true" discern="expiry" class="select" id="07"><a href="javascript:void(0)">7月</a></li>
-        <li onclick="addclick(this)" monthted="true" discern="expiry" class="select" id="08"><a href="javascript:void(0)">8月</a></li>
-        <li onclick="addclick(this)" monthted="true" discern="expiry" class="select" id="09"><a href="javascript:void(0)">9月</a></li>
-        <li onclick="addclick(this)" monthted="true" discern="expiry" class="select" id="10"><a href="javascript:void(0)">10月</a></li>
-        <li onclick="addclick(this)" monthted="true" discern="expiry" class="select" id="11"><a href="javascript:void(0)">11月</a></li>
-        <li onclick="addclick(this)" monthted="true" discern="expiry" class="select" id="12"><a href="javascript:void(0)">12月</a></li>
+        
        </ul> 
       </div> 
       <div class="PeriodValidityYear"> 
@@ -1774,37 +1252,7 @@ var countryContrlObj =[{id:'CN', name:countryInfo.CN, querystr:'CN'},
        <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/downArrow.png" /> 
        <b class="bottomLine bottomLine140"></b> 
        <ul class="DateBirthDayMenu select" id="birthDay1">
-        <li onclick="addclick(this)" class="select" id="01"><a href="javascript:void(0)">01</a></li>
-        <li onclick="addclick(this)" class="select" id="02"><a href="javascript:void(0)">02</a></li>
-        <li onclick="addclick(this)" class="select" id="03"><a href="javascript:void(0)">03</a></li>
-        <li onclick="addclick(this)" class="select" id="04"><a href="javascript:void(0)">04</a></li>
-        <li onclick="addclick(this)" class="select" id="05"><a href="javascript:void(0)">05</a></li>
-        <li onclick="addclick(this)" class="select" id="06"><a href="javascript:void(0)">06</a></li>
-        <li onclick="addclick(this)" class="select" id="07"><a href="javascript:void(0)">07</a></li>
-        <li onclick="addclick(this)" class="select" id="08"><a href="javascript:void(0)">08</a></li>
-        <li onclick="addclick(this)" class="select" id="09"><a href="javascript:void(0)">09</a></li>
-        <li onclick="addclick(this)" class="select" id="10"><a href="javascript:void(0)">10</a></li>
-        <li onclick="addclick(this)" class="select" id="11"><a href="javascript:void(0)">11</a></li>
-        <li onclick="addclick(this)" class="select" id="12"><a href="javascript:void(0)">12</a></li>
-        <li onclick="addclick(this)" class="select" id="13"><a href="javascript:void(0)">13</a></li>
-        <li onclick="addclick(this)" class="select" id="14"><a href="javascript:void(0)">14</a></li>
-        <li onclick="addclick(this)" class="select" id="15"><a href="javascript:void(0)">15</a></li>
-        <li onclick="addclick(this)" class="select" id="16"><a href="javascript:void(0)">16</a></li>
-        <li onclick="addclick(this)" class="select" id="17"><a href="javascript:void(0)">17</a></li>
-        <li onclick="addclick(this)" class="select" id="18"><a href="javascript:void(0)">18</a></li>
-        <li onclick="addclick(this)" class="select" id="19"><a href="javascript:void(0)">19</a></li>
-        <li onclick="addclick(this)" class="select" id="20"><a href="javascript:void(0)">20</a></li>
-        <li onclick="addclick(this)" class="select" id="21"><a href="javascript:void(0)">21</a></li>
-        <li onclick="addclick(this)" class="select" id="22"><a href="javascript:void(0)">22</a></li>
-        <li onclick="addclick(this)" class="select" id="23"><a href="javascript:void(0)">23</a></li>
-        <li onclick="addclick(this)" class="select" id="24"><a href="javascript:void(0)">24</a></li>
-        <li onclick="addclick(this)" class="select" id="25"><a href="javascript:void(0)">25</a></li>
-        <li onclick="addclick(this)" class="select" id="26"><a href="javascript:void(0)">26</a></li>
-        <li onclick="addclick(this)" class="select" id="27"><a href="javascript:void(0)">27</a></li>
-        <li onclick="addclick(this)" class="select" id="28"><a href="javascript:void(0)">28</a></li>
-        <li onclick="addclick(this)" class="select" id="29"><a href="javascript:void(0)">29</a></li>
-        <li onclick="addclick(this)" class="select" id="30"><a href="javascript:void(0)">30</a></li>
-        <li onclick="addclick(this)" class="select" id="31"><a href="javascript:void(0)">31</a></li>
+        
        </ul> 
       </div> 
       <div class="DateBirthMon"> 
@@ -1814,18 +1262,7 @@ var countryContrlObj =[{id:'CN', name:countryInfo.CN, querystr:'CN'},
        <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/downArrow.png" /> 
        <b class="bottomLine bottomLine140"></b> 
        <ul class="DateBirthMonMenu select" id="birthMonth1">
-        <li onclick="addclick(this)" monthted="true" class="select" discern="birth" id="01"><a href="javascript:void(0)">1月</a></li>
-        <li onclick="addclick(this)" monthted="true" class="select" discern="birth" id="02"><a href="javascript:void(0)">2月</a></li>
-        <li onclick="addclick(this)" monthted="true" class="select" discern="birth" id="03"><a href="javascript:void(0)">3月</a></li>
-        <li onclick="addclick(this)" monthted="true" class="select" discern="birth" id="04"><a href="javascript:void(0)">4月</a></li>
-        <li onclick="addclick(this)" monthted="true" class="select" discern="birth" id="05"><a href="javascript:void(0)">5月</a></li>
-        <li onclick="addclick(this)" monthted="true" class="select" discern="birth" id="06"><a href="javascript:void(0)">6月</a></li>
-        <li onclick="addclick(this)" monthted="true" class="select" discern="birth" id="07"><a href="javascript:void(0)">7月</a></li>
-        <li onclick="addclick(this)" monthted="true" class="select" discern="birth" id="08"><a href="javascript:void(0)">8月</a></li>
-        <li onclick="addclick(this)" monthted="true" class="select" discern="birth" id="09"><a href="javascript:void(0)">9月</a></li>
-        <li onclick="addclick(this)" monthted="true" class="select" discern="birth" id="10"><a href="javascript:void(0)">10月</a></li>
-        <li onclick="addclick(this)" monthted="true" class="select" discern="birth" id="11"><a href="javascript:void(0)">11月</a></li>
-        <li onclick="addclick(this)" monthted="true" class="select" discern="birth" id="12"><a href="javascript:void(0)">12月</a></li>
+        
        </ul> 
       </div> 
       <div class="DateBirthYear"> 
@@ -1850,256 +1287,28 @@ var countryContrlObj =[{id:'CN', name:countryInfo.CN, querystr:'CN'},
      <h2> <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/leftTitleLine.png" /> 联系人 </h2> 
     </div> 
     <div class="contactUsContent"> 
-     <div class="countryMobileSelect"> 
-      <p> 国家或地区区号<b>*</b> </p> 
+     <div class="countryMobileSelect text-field-content"> 
+      <p class="text-field-label float"> 国家或地区区号<b>*</b> </p> 
       <input type="hidden" id="contactCountry_hidden" name="contactCountry" /> 
-      <input id="contactCountry_select" type="text" class="nameSelectInput dropDownInput" value="" placeholder="请选择" autocomplete="off" readonly="" /> 
+      <input id="contactCountry_select" type="text" class="nameSelectInput dropDownInput text-field-input" value="" placeholder="" autocomplete="off" readonly="" /> 
       <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/downArrow.png" /> 
       <b class="bottomLine bottomLine300"></b> 
       <ul class="nameSelectMenu dropDownUL select" id="contactCountry">
-       <li onclick="addclick(this)" class="select" id="China(CN)(+86)"><a href="javascript:void(0)">中国 (+86)</a></li>
-       <li onclick="addclick(this)" class="select" id="Cambodia(KH)(+855)"><a href="javascript:void(0)">柬埔寨 (+855)</a></li>
-       <li onclick="addclick(this)" class="select" id="United Kingdom(UK)(+44)"><a href="javascript:void(0)">英国 (+44)</a></li>
-       <li onclick="addclick(this)" class="select" id="United States(US)(+1)"><a href="javascript:void(0)">美国 (+1)</a></li>
-       <li onclick="addclick(this)" class="select" id="France(FR)(+33)"><a href="javascript:void(0)">法国 (+33)</a></li>
-       <li onclick="addclick(this)" class="select" id="Germany(DE)(+49)"><a href="javascript:void(0)">德国 (+49)</a></li>
-       <li onclick="addclick(this)" class="select" id="Australia(AU)(+61)"><a href="javascript:void(0)">澳大利亚 (+61)</a></li>
-       <li onclick="addclick(this)" class="select" id="Japan(JP)(+81)"><a href="javascript:void(0)">日本 (+81)</a></li>
-       <li onclick="addclick(this)" class="select" id="Canada(CA)(+1)"><a href="javascript:void(0)">加拿大 (+1)</a></li>
-       <li onclick="addclick(this)" class="select" id="Korea, Republic Of(KR)(+82)"><a href="javascript:void(0)">韩国 (+82)</a></li>
-       <li onclick="addclick(this)" class="select" id="Hong Kong(HK)(+852)"><a href="javascript:void(0)">中国香港 (+852)</a></li>
-       <li onclick="addclick(this)" class="select" id="Spain(ES)(+34)"><a href="javascript:void(0)">西班牙 (+34)</a></li>
-       <li onclick="addclick(this)" class="select" id="Italy(IT)(+39)"><a href="javascript:void(0)">意大利 (+39)</a></li>
-       <li onclick="addclick(this)" class="select" id="Taiwan(TW)(+886)"><a href="javascript:void(0)">中国台湾 (+886)</a></li>
-       <li onclick="addclick(this)" class="select" id="MaCau(MO)(+853)"><a href="javascript:void(0)">中国澳门 (+853)</a></li>
-       <li onclick="addclick(this)" class="select" id="Vietnam(VN)(+84)"><a href="javascript:void(0)">越南 (+84)</a></li>
-       <li onclick="addclick(this)" class="select" id="Netherlands(NL)(+31)"><a href="javascript:void(0)">荷兰 (+31)</a></li>
-       <li onclick="addclick(this)" class="select" id="India(IN)(+91)"><a href="javascript:void(0)">印度 (+91)</a></li>
-       <li onclick="addclick(this)" class="select" id="Thailand(TH)(+66)"><a href="javascript:void(0)">泰国 (+66)</a></li>
-       <li onclick="addclick(this)" class="select" id="Russia(RU)(+7)"><a href="javascript:void(0)">俄罗斯 (+7)</a></li>
-       <li onclick="addclick(this)" class="select" id="Singapore(SG)(+65)"><a href="javascript:void(0)">新加坡 (+65)</a></li>
-       <li onclick="addclick(this)" class="select" id="Ireland(IE)(+353)"><a href="javascript:void(0)">爱尔兰 (+353)</a></li>
-       <li onclick="addclick(this)" class="select" id="Malaysia(MY)(+60)"><a href="javascript:void(0)">马来西亚 (+60)</a></li>
-       <li onclick="addclick(this)" class="select" id="Philippines(PH)(+63)"><a href="javascript:void(0)">菲律宾 (+63)</a></li>
-       <li onclick="addclick(this)" class="select" id="Poland(PL)(+48)"><a href="javascript:void(0)">波兰 (+48)</a></li>
-       <li onclick="addclick(this)" class="select" id="Switzerland(CH)(+41)"><a href="javascript:void(0)">瑞士 (+41)</a></li>
-       <li onclick="addclick(this)" class="select" id="New Zealand(NZ)(+64)"><a href="javascript:void(0)">新西兰 (+64)</a></li>
-       <li onclick="addclick(this)" class="select" id="Belgium(BE)(+32)"><a href="javascript:void(0)">比利时 (+32)</a></li>
-       <li onclick="addclick(this)" class="select" id="The State of Israel(IL)(+972)"><a href="javascript:void(0)">以色列 (+972)</a></li>
-       <li onclick="addclick(this)" class="select" id="Sweden(SE)(+46)"><a href="javascript:void(0)">瑞典 (+46)</a></li>
-       <li onclick="addclick(this)" class="select" id="Czech Republic(CZ)(+420)"><a href="javascript:void(0)">捷克 (+420)</a></li>
-       <li onclick="addclick(this)" class="select" id="Portugal(PT)(+351)"><a href="javascript:void(0)">葡萄牙 (+351)</a></li>
-       <li onclick="addclick(this)" class="select" id="Finland(FI)(+358)"><a href="javascript:void(0)">芬兰 (+358)</a></li>
-       <li onclick="addclick(this)" class="select" id="Brazil(BR)(+55)"><a href="javascript:void(0)">巴西 (+55)</a></li>
-       <li onclick="addclick(this)" class="select" id="Ukraine(UA)(+380)"><a href="javascript:void(0)">乌克兰 (+380)</a></li>
-       <li onclick="addclick(this)" class="select" id="Indonesia(IN)(+62)"><a href="javascript:void(0)">印度尼西亚 (+62)</a></li>
-       <li onclick="addclick(this)" class="select" id="Austria(AT)(+43)"><a href="javascript:void(0)">奥地利 (+43)</a></li>
-       <li onclick="addclick(this)" class="select" id="Colombia(CO)(+57)"><a href="javascript:void(0)">哥伦比亚 (+57)</a></li>
-       <li onclick="addclick(this)" class="select" id="Chile(CL)(+56)"><a href="javascript:void(0)">智利 (+56)</a></li>
-       <li onclick="addclick(this)" class="select" id="Slovakia(SK)(+421)"><a href="javascript:void(0)">斯洛伐克 (+421)</a></li>
-       <li onclick="addclick(this)" class="select" id="Denmark(DK)(+45)"><a href="javascript:void(0)">丹麦 (+45)</a></li>
-       <li onclick="addclick(this)" class="select" id="Argentina(AR)(+54)"><a href="javascript:void(0)">阿根廷 (+54)</a></li>
-       <li onclick="addclick(this)" class="select" id="Mexico(MX)(+52)"><a href="javascript:void(0)">墨西哥 (+52)</a></li>
-       <li onclick="addclick(this)" class="select" id="South Africa(ZA)(+27)"><a href="javascript:void(0)">南非 (+27)</a></li>
-       <li onclick="addclick(this)" class="select" id="Norway(NO)(+47)"><a href="javascript:void(0)">挪威 (+47)</a></li>
-       <li onclick="addclick(this)" class="select" id="Hungary(HU)(+36)"><a href="javascript:void(0)">匈牙利 (+36)</a></li>
-       <li onclick="addclick(this)" class="select" id="Romania(RO)(+40)"><a href="javascript:void(0)">罗马尼亚 (+40)</a></li>
-       <li onclick="addclick(this)" class="select" id="Lithuania(LT)(+370)"><a href="javascript:void(0)">立陶宛 (+370)</a></li>
-       <li onclick="addclick(this)" class="select" id="Myanmar(MM)(+95)"><a href="javascript:void(0)">缅甸 (+95)</a></li>
-       <li onclick="addclick(this)" class="select" id="Estonia(EE)(+372)"><a href="javascript:void(0)">爱沙尼亚 (+372)</a></li>
-       <li onclick="addclick(this)" class="select" id="Afghanistan(AF)(+93)"><a href="javascript:void(0)">阿富汗 (+93)</a></li>
-       <li onclick="addclick(this)" class="select" id="Albania(AL)(+355)"><a href="javascript:void(0)">阿尔巴尼亚 (+355)</a></li>
-       <li onclick="addclick(this)" class="select" id="Algeria(DZ)(+213)"><a href="javascript:void(0)">阿尔及利亚 (+213)</a></li>
-       <li onclick="addclick(this)" class="select" id="American Samoa(AS)(+1684)"><a href="javascript:void(0)">美属萨摩亚 (+1684)</a></li>
-       <li onclick="addclick(this)" class="select" id="Andorra(AD)(+376)"><a href="javascript:void(0)">安道尔 (+376)</a></li>
-       <li onclick="addclick(this)" class="select" id="Angola(AO)(+244)"><a href="javascript:void(0)">安哥拉 (+244)</a></li>
-       <li onclick="addclick(this)" class="select" id="Anguilla(AI)(+1264)"><a href="javascript:void(0)">安圭拉 (+1264)</a></li>
-       <li onclick="addclick(this)" class="select" id="Antarctica(AQ)(+672)"><a href="javascript:void(0)">南极洲 (+672)</a></li>
-       <li onclick="addclick(this)" class="select" id="Antigua and Barbuda(AG)(+1268)"><a href="javascript:void(0)">安提瓜和巴布达 (+1268)</a></li>
-       <li onclick="addclick(this)" class="select" id="Armenia(AM)(+374)"><a href="javascript:void(0)">亚美尼亚 (+374)</a></li>
-       <li onclick="addclick(this)" class="select" id="Aruba(AW)(+297)"><a href="javascript:void(0)">阿鲁巴岛 (+297)</a></li>
-       <li onclick="addclick(this)" class="select" id="Azerbaijan(AZ)(+994)"><a href="javascript:void(0)">阿塞拜疆 (+994)</a></li>
-       <li onclick="addclick(this)" class="select" id="Bahamas(BS)(+1242)"><a href="javascript:void(0)">巴哈马 (+1242)</a></li>
-       <li onclick="addclick(this)" class="select" id="Bahrain(BH)(+973)"><a href="javascript:void(0)">巴林 (+973)</a></li>
-       <li onclick="addclick(this)" class="select" id="Bangladesh(BD)(+880)"><a href="javascript:void(0)">孟加拉 (+880)</a></li>
-       <li onclick="addclick(this)" class="select" id="Barbados(BB)(+1246)"><a href="javascript:void(0)">巴巴多斯 (+1246)</a></li>
-       <li onclick="addclick(this)" class="select" id="Belarus(BY)(+375)"><a href="javascript:void(0)">白俄罗斯 (+375)</a></li>
-       <li onclick="addclick(this)" class="select" id="Belize(BZ)(+501)"><a href="javascript:void(0)">伯利兹 (+501)</a></li>
-       <li onclick="addclick(this)" class="select" id="Benin(BJ)(+229)"><a href="javascript:void(0)">贝宁 (+229)</a></li>
-       <li onclick="addclick(this)" class="select" id="Bermuda(BM)(+1441)"><a href="javascript:void(0)">百慕达 (+1441)</a></li>
-       <li onclick="addclick(this)" class="select" id="Bhutan(BT)(+975)"><a href="javascript:void(0)">不丹 (+975)</a></li>
-       <li onclick="addclick(this)" class="select" id="Bolivia(BO)(+591)"><a href="javascript:void(0)">玻利维亚 (+591)</a></li>
-       <li onclick="addclick(this)" class="select" id="Bosnia and Herzegovina(BA)(+387)"><a href="javascript:void(0)">波斯尼亚和黑塞哥维亚 (+387)</a></li>
-       <li onclick="addclick(this)" class="select" id="Botswana(BW)(+267)"><a href="javascript:void(0)">博茨瓦纳 (+267)</a></li>
-       <li onclick="addclick(this)" class="select" id="Brunei Darussalam(BN)(+673)"><a href="javascript:void(0)">文莱 (+673)</a></li>
-       <li onclick="addclick(this)" class="select" id="Bulgaria(BG)(+359)"><a href="javascript:void(0)">保加利亚 (+359)</a></li>
-       <li onclick="addclick(this)" class="select" id="Burkina Faso(BF)(+226)"><a href="javascript:void(0)">布基纳法索 (+226)</a></li>
-       <li onclick="addclick(this)" class="select" id="Burundi(BI)(+257)"><a href="javascript:void(0)">布隆迪 (+257)</a></li>
-       <li onclick="addclick(this)" class="select" id="Cameroon(CM)(+237)"><a href="javascript:void(0)">喀麦隆 (+237)</a></li>
-       <li onclick="addclick(this)" class="select" id="Cape Verde(CV)(+238)"><a href="javascript:void(0)">佛得角 (+238)</a></li>
-       <li onclick="addclick(this)" class="select" id="Cayman Islands(KY)(+1345)"><a href="javascript:void(0)">开曼群岛 (+1345)</a></li>
-       <li onclick="addclick(this)" class="select" id="Central African Republic(CF)(+236)"><a href="javascript:void(0)">中非共和国 (+236)</a></li>
-       <li onclick="addclick(this)" class="select" id="Chad(TD)(+235)"><a href="javascript:void(0)">乍得 (+235)</a></li>
-       <li onclick="addclick(this)" class="select" id="Christmas Island(CX)(+61)"><a href="javascript:void(0)">圣诞岛 (+61)</a></li>
-       <li onclick="addclick(this)" class="select" id="Cocos(-)(+61)"><a href="javascript:void(0)">科科斯岛 (+61)</a></li>
-       <li onclick="addclick(this)" class="select" id="Comoros(KM)(+269)"><a href="javascript:void(0)">科摩罗 (+269)</a></li>
-       <li onclick="addclick(this)" class="select" id="Congo(CG)(+242)"><a href="javascript:void(0)">刚果 (+242)</a></li>
-       <li onclick="addclick(this)" class="select" id="Cook Islands(CK)(+682)"><a href="javascript:void(0)">库克群岛 (+682)</a></li>
-       <li onclick="addclick(this)" class="select" id="Costa Rica(CR)(+506)"><a href="javascript:void(0)">哥斯达黎加 (+506)</a></li>
-       <li onclick="addclick(this)" class="select" id="Cote d'Ivoire(CI)(+225)"><a href="javascript:void(0)">科特迪瓦 (+225)</a></li>
-       <li onclick="addclick(this)" class="select" id="Croatia(HR)(+385)"><a href="javascript:void(0)">克罗地亚 (+385)</a></li>
-       <li onclick="addclick(this)" class="select" id="Cuba(CU)(+53)"><a href="javascript:void(0)">古巴 (+53)</a></li>
-       <li onclick="addclick(this)" class="select" id="Cyprus(CY)(+357)"><a href="javascript:void(0)">塞浦路斯 (+357)</a></li>
-       <li onclick="addclick(this)" class="select" id="Djibouti(DJ)(+253)"><a href="javascript:void(0)">吉布提 (+253)</a></li>
-       <li onclick="addclick(this)" class="select" id="Dominica(-)(+1767)"><a href="javascript:void(0)">多米尼克国 (+1767)</a></li>
-       <li onclick="addclick(this)" class="select" id="Dominican Republic(DM)(+1809)"><a href="javascript:void(0)">多米尼加共和国 (+1809)</a></li>
-       <li onclick="addclick(this)" class="select" id="East Timor(TP)(+670)"><a href="javascript:void(0)">东帝汶 (+670)</a></li>
-       <li onclick="addclick(this)" class="select" id="Ecuador(EC)(+593)"><a href="javascript:void(0)">厄瓜多尔 (+593)</a></li>
-       <li onclick="addclick(this)" class="select" id="Egypt(EG)(+20)"><a href="javascript:void(0)">埃及 (+20)</a></li>
-       <li onclick="addclick(this)" class="select" id="El Salvador(SV)(+503)"><a href="javascript:void(0)">萨尔瓦多 (+503)</a></li>
-       <li onclick="addclick(this)" class="select" id="Equatorial Guinea(GQ)(+240)"><a href="javascript:void(0)">赤道几内亚 (+240)</a></li>
-       <li onclick="addclick(this)" class="select" id="Eritrea(ER)(+291)"><a href="javascript:void(0)">厄立特里亚 (+291)</a></li>
-       <li onclick="addclick(this)" class="select" id="Ethiopia(ET)(+251)"><a href="javascript:void(0)">埃塞俄比亚 (+251)</a></li>
-       <li onclick="addclick(this)" class="select" id="Falkland Islands(FK)(+500)"><a href="javascript:void(0)">福克兰群岛 (+500)</a></li>
-       <li onclick="addclick(this)" class="select" id="Faroe Islands(FO)(+298)"><a href="javascript:void(0)">法罗群岛 (+298)</a></li>
-       <li onclick="addclick(this)" class="select" id="Fiji(FJ)(+679)"><a href="javascript:void(0)">斐济 (+679)</a></li>
-       <li onclick="addclick(this)" class="select" id="French Guiana(GF)(+594)"><a href="javascript:void(0)">法属圭亚那 (+594)</a></li>
-       <li onclick="addclick(this)" class="select" id="French Polynesia(PF)(+689)"><a href="javascript:void(0)">法属波利尼西亚 (+689)</a></li>
-       <li onclick="addclick(this)" class="select" id="Gabon(GA)(+241)"><a href="javascript:void(0)">加蓬 (+241)</a></li>
-       <li onclick="addclick(this)" class="select" id="Gambia(GM)(+220)"><a href="javascript:void(0)">冈比亚 (+220)</a></li>
-       <li onclick="addclick(this)" class="select" id="Georgia(GE)(+995)"><a href="javascript:void(0)">格鲁吉亚 (+995)</a></li>
-       <li onclick="addclick(this)" class="select" id="Ghana(GH)(+233)"><a href="javascript:void(0)">加纳 (+233)</a></li>
-       <li onclick="addclick(this)" class="select" id="Gibraltar(GI)(+350)"><a href="javascript:void(0)">直布罗陀 (+350)</a></li>
-       <li onclick="addclick(this)" class="select" id="Greece(GR)(+30)"><a href="javascript:void(0)">希腊 (+30)</a></li>
-       <li onclick="addclick(this)" class="select" id="Greenland(GL)(+299)"><a href="javascript:void(0)">格陵兰 (+299)</a></li>
-       <li onclick="addclick(this)" class="select" id="Grenada(GD)(+1473)"><a href="javascript:void(0)">格林纳达 (+1473)</a></li>
-       <li onclick="addclick(this)" class="select" id="Guadeloupe(GP)(+590)"><a href="javascript:void(0)">瓜德罗普岛 (+590)</a></li>
-       <li onclick="addclick(this)" class="select" id="Guam(GU)(+1671)"><a href="javascript:void(0)">关岛 (+1671)</a></li>
-       <li onclick="addclick(this)" class="select" id="Guatemala(GT)(+502)"><a href="javascript:void(0)">危地马拉 (+502)</a></li>
-       <li onclick="addclick(this)" class="select" id="Guinea(GN)(+224)"><a href="javascript:void(0)">几内亚 (+224)</a></li>
-       <li onclick="addclick(this)" class="select" id="Guinea-Bissau(GN)(+245)"><a href="javascript:void(0)">几内亚比绍 (+245)</a></li>
-       <li onclick="addclick(this)" class="select" id="Guyana(GY)(+592)"><a href="javascript:void(0)">圭亚那 (+592)</a></li>
-       <li onclick="addclick(this)" class="select" id="Haiti(HT)(+509)"><a href="javascript:void(0)">海地 (+509)</a></li>
-       <li onclick="addclick(this)" class="select" id="Honduras(HN)(+504)"><a href="javascript:void(0)">洪都拉斯 (+504)</a></li>
-       <li onclick="addclick(this)" class="select" id="Iceland(IS)(+354)"><a href="javascript:void(0)">冰岛 (+354)</a></li>
-       <li onclick="addclick(this)" class="select" id="Iran(IR)(+98)"><a href="javascript:void(0)">伊朗 (+98)</a></li>
-       <li onclick="addclick(this)" class="select" id="Iraq(IQ)(+964)"><a href="javascript:void(0)">伊拉克 (+964)</a></li>
-       <li onclick="addclick(this)" class="select" id="Jamaica(JM)(+1876)"><a href="javascript:void(0)">牙买加 (+1876)</a></li>
-       <li onclick="addclick(this)" class="select" id="Jordan(JO)(+962)"><a href="javascript:void(0)">约旦 (+962)</a></li>
-       <li onclick="addclick(this)" class="select" id="Kazakhstan(KZ)(+7)"><a href="javascript:void(0)">哈萨克斯坦 (+7)</a></li>
-       <li onclick="addclick(this)" class="select" id="Kenya(KE)(+254)"><a href="javascript:void(0)">肯尼亚 (+254)</a></li>
-       <li onclick="addclick(this)" class="select" id="Kiribati(KI)(+686)"><a href="javascript:void(0)">基里巴斯 (+686)</a></li>
-       <li onclick="addclick(this)" class="select" id="Korea, Democratic People's Republic(KP)(+850)"><a href="javascript:void(0)">朝鲜 (+850)</a></li>
-       <li onclick="addclick(this)" class="select" id="Kuwait(KW)(+965)"><a href="javascript:void(0)">科威特 (+965)</a></li>
-       <li onclick="addclick(this)" class="select" id="Kyrgyzstan(KG)(+996)"><a href="javascript:void(0)">吉尔吉斯 (+996)</a></li>
-       <li onclick="addclick(this)" class="select" id="Lao People's Democratic Republic(LA)(+856)"><a href="javascript:void(0)">老挝 (+856)</a></li>
-       <li onclick="addclick(this)" class="select" id="Latvia(LV)(+371)"><a href="javascript:void(0)">拉脱维亚 (+371)</a></li>
-       <li onclick="addclick(this)" class="select" id="Lebanon(LB)(+961)"><a href="javascript:void(0)">黎巴嫩 (+961)</a></li>
-       <li onclick="addclick(this)" class="select" id="Lesotho(LS)(+266)"><a href="javascript:void(0)">莱索托 (+266)</a></li>
-       <li onclick="addclick(this)" class="select" id="Liberia(LR)(+231)"><a href="javascript:void(0)">利比里亚 (+231)</a></li>
-       <li onclick="addclick(this)" class="select" id="Libyan Arab Jamahiriya(LY)(+218)"><a href="javascript:void(0)">利比亚 (+218)</a></li>
-       <li onclick="addclick(this)" class="select" id="Liechtenstein(LI)(+423)"><a href="javascript:void(0)">列支敦士登 (+423)</a></li>
-       <li onclick="addclick(this)" class="select" id="Luxembourg(LU)(+352)"><a href="javascript:void(0)">卢森堡 (+352)</a></li>
-       <li onclick="addclick(this)" class="select" id="Macau(MO)(+853)"><a href="javascript:void(0)">澳门 (+853)</a></li>
-       <li onclick="addclick(this)" class="select" id="Madagascar(MG)(+261)"><a href="javascript:void(0)">马达加斯加 (+261)</a></li>
-       <li onclick="addclick(this)" class="select" id="Malawi(MW)(+265)"><a href="javascript:void(0)">马拉维 (+265)</a></li>
-       <li onclick="addclick(this)" class="select" id="Maldives(MV)(+960)"><a href="javascript:void(0)">马尔代夫 (+960)</a></li>
-       <li onclick="addclick(this)" class="select" id="Mali(ML)(+223)"><a href="javascript:void(0)">马里 (+223)</a></li>
-       <li onclick="addclick(this)" class="select" id="Malta(MT)(+356)"><a href="javascript:void(0)">马尔他 (+356)</a></li>
-       <li onclick="addclick(this)" class="select" id="Marshall Islands(MH)(+692)"><a href="javascript:void(0)">马绍尔群岛 (+692)</a></li>
-       <li onclick="addclick(this)" class="select" id="Martinique(MQ)(+596)"><a href="javascript:void(0)">马提尼克 (+596)</a></li>
-       <li onclick="addclick(this)" class="select" id="Mauritania(MR)(+222)"><a href="javascript:void(0)">毛里塔尼亚 (+222)</a></li>
-       <li onclick="addclick(this)" class="select" id="Mauritius(MU)(+230)"><a href="javascript:void(0)">毛里裘斯 (+230)</a></li>
-       <li onclick="addclick(this)" class="select" id="Mayotte(YT)(+269)"><a href="javascript:void(0)">马约特岛 (+269)</a></li>
-       <li onclick="addclick(this)" class="select" id="Micronesia(FM)(+691)"><a href="javascript:void(0)">密克罗尼西亚 (+691)</a></li>
-       <li onclick="addclick(this)" class="select" id="Moldova, Republic Of(MD)(+373)"><a href="javascript:void(0)">摩尔多瓦 (+373)</a></li>
-       <li onclick="addclick(this)" class="select" id="Monaco(MC)(+377)"><a href="javascript:void(0)">摩纳哥 (+377)</a></li>
-       <li onclick="addclick(this)" class="select" id="Mongolia(MN)(+976)"><a href="javascript:void(0)">蒙古 (+976)</a></li>
-       <li onclick="addclick(this)" class="select" id="Montserrat(-)(+1664)"><a href="javascript:void(0)">蒙特塞拉特 (+1664)</a></li>
-       <li onclick="addclick(this)" class="select" id="Morocco(MA)(+212)"><a href="javascript:void(0)">摩洛哥 (+212)</a></li>
-       <li onclick="addclick(this)" class="select" id="Mozambique(MZ)(+258)"><a href="javascript:void(0)">莫桑比克 (+258)</a></li>
-       <li onclick="addclick(this)" class="select" id="Namibia(NA)(+264)"><a href="javascript:void(0)">纳米比亚 (+264)</a></li>
-       <li onclick="addclick(this)" class="select" id="Nauru(NR)(+674)"><a href="javascript:void(0)">瑙鲁 (+674)</a></li>
-       <li onclick="addclick(this)" class="select" id="Nepal(NP)(+977)"><a href="javascript:void(0)">尼泊尔 (+977)</a></li>
-       <li onclick="addclick(this)" class="select" id="Netherlands Antilles(-)(+599)"><a href="javascript:void(0)">荷属安的列斯群岛 (+599)</a></li>
-       <li onclick="addclick(this)" class="select" id="New Caledonia(NC)(+687)"><a href="javascript:void(0)">新喀里多尼亚 (+687)</a></li>
-       <li onclick="addclick(this)" class="select" id="Nicaragua(NI)(+505)"><a href="javascript:void(0)">尼加拉瓜 (+505)</a></li>
-       <li onclick="addclick(this)" class="select" id="Niger(NE)(+227)"><a href="javascript:void(0)">尼日尔 (+227)</a></li>
-       <li onclick="addclick(this)" class="select" id="Nigeria(NG)(+234)"><a href="javascript:void(0)">尼日利亚 (+234)</a></li>
-       <li onclick="addclick(this)" class="select" id="Niue(-)(+683)"><a href="javascript:void(0)">纽埃 (+683)</a></li>
-       <li onclick="addclick(this)" class="select" id="Norfolk Island(NF)(+672)"><a href="javascript:void(0)">诺福克岛 (+672)</a></li>
-       <li onclick="addclick(this)" class="select" id="Northern Mariana Islands(MP)(+1670)"><a href="javascript:void(0)">北马里亚纳群岛（美） (+1670)</a></li>
-       <li onclick="addclick(this)" class="select" id="Oman(OM)(+968)"><a href="javascript:void(0)">阿曼 (+968)</a></li>
-       <li onclick="addclick(this)" class="select" id="Pakistan(PK)(+92)"><a href="javascript:void(0)">巴基斯坦 (+92)</a></li>
-       <li onclick="addclick(this)" class="select" id="Palau(PW)(+680)"><a href="javascript:void(0)">帕劳 (+680)</a></li>
-       <li onclick="addclick(this)" class="select" id="Panama(PA)(+507)"><a href="javascript:void(0)">巴拿马 (+507)</a></li>
-       <li onclick="addclick(this)" class="select" id="Papua New Guinea(PG)(+675)"><a href="javascript:void(0)">巴布亚新几内亚 (+675)</a></li>
-       <li onclick="addclick(this)" class="select" id="Paraguay(PY)(+595)"><a href="javascript:void(0)">巴拉圭 (+595)</a></li>
-       <li onclick="addclick(this)" class="select" id="Peru(PE)(+51)"><a href="javascript:void(0)">秘鲁 (+51)</a></li>
-       <li onclick="addclick(this)" class="select" id="Pitcairn(-)(+64)"><a href="javascript:void(0)">皮特凯恩群岛（英） (+64)</a></li>
-       <li onclick="addclick(this)" class="select" id="Puerto Rico(PR)(+1)"><a href="javascript:void(0)">波多黎各 (+1)</a></li>
-       <li onclick="addclick(this)" class="select" id="Qatar(QA)(+974)"><a href="javascript:void(0)">卡塔尔 (+974)</a></li>
-       <li onclick="addclick(this)" class="select" id="Reunion(-)(+262)"><a href="javascript:void(0)">留尼旺 (+262)</a></li>
-       <li onclick="addclick(this)" class="select" id="Rwanda(RW)(+250)"><a href="javascript:void(0)">卢旺达 (+250)</a></li>
-       <li onclick="addclick(this)" class="select" id="Saint Kitts and Nevis(KN)(+1869)"><a href="javascript:void(0)">圣基茨和尼维斯联邦 (+1869)</a></li>
-       <li onclick="addclick(this)" class="select" id="Saint Lucia(LC)(+1758)"><a href="javascript:void(0)">圣卢西亚 (+1758)</a></li>
-       <li onclick="addclick(this)" class="select" id="Saint Vincent and The Grenadines(VC)(+1784)"><a href="javascript:void(0)">圣文森特和格林纳丁斯 (+1784)</a></li>
-       <li onclick="addclick(this)" class="select" id="Samoa(WS)(+685)"><a href="javascript:void(0)">西萨摩亚 (+685)</a></li>
-       <li onclick="addclick(this)" class="select" id="San Marino(SM)(+378)"><a href="javascript:void(0)">圣马力诺 (+378)</a></li>
-       <li onclick="addclick(this)" class="select" id="Sao Tome and Principe(ST)(+239)"><a href="javascript:void(0)">圣多美和普林西比 (+239)</a></li>
-       <li onclick="addclick(this)" class="select" id="Saudi Arabia(SA)(+966)"><a href="javascript:void(0)">沙特阿拉伯 (+966)</a></li>
-       <li onclick="addclick(this)" class="select" id="Senegal(SN)(+221)"><a href="javascript:void(0)">塞内加尔 (+221)</a></li>
-       <li onclick="addclick(this)" class="select" id="Seychelles(SC)(+248)"><a href="javascript:void(0)">塞舌尔 (+248)</a></li>
-       <li onclick="addclick(this)" class="select" id="Sierra Leone(SL)(+232)"><a href="javascript:void(0)">塞拉利昂 (+232)</a></li>
-       <li onclick="addclick(this)" class="select" id="Slovenia(SI)(+386)"><a href="javascript:void(0)">斯洛文尼亚 (+386)</a></li>
-       <li onclick="addclick(this)" class="select" id="Solomon Islands(SB)(+677)"><a href="javascript:void(0)">所罗门群岛 (+677)</a></li>
-       <li onclick="addclick(this)" class="select" id="Somalia(SO)(+252)"><a href="javascript:void(0)">索马里 (+252)</a></li>
-       <li onclick="addclick(this)" class="select" id="Sri Lanka(LK)(+94)"><a href="javascript:void(0)">斯里兰卡 (+94)</a></li>
-       <li onclick="addclick(this)" class="select" id="St. Helena(-)(+290)"><a href="javascript:void(0)">海伦娜 (+290)</a></li>
-       <li onclick="addclick(this)" class="select" id="St. Pierre and Miquelon(PM)(+508)"><a href="javascript:void(0)">圣皮埃尔和密克隆岛 (+508)</a></li>
-       <li onclick="addclick(this)" class="select" id="Sudan(SD)(+249)"><a href="javascript:void(0)">苏丹 (+249)</a></li>
-       <li onclick="addclick(this)" class="select" id="Suriname(SR)(+597)"><a href="javascript:void(0)">苏利南 (+597)</a></li>
-       <li onclick="addclick(this)" class="select" id="Swaziland(SZ)(+268)"><a href="javascript:void(0)">斯威士兰 (+268)</a></li>
-       <li onclick="addclick(this)" class="select" id="Syrian Arab Republic(SY)(+963)"><a href="javascript:void(0)">叙利亚 (+963)</a></li>
-       <li onclick="addclick(this)" class="select" id="Tadjikistan(TJ)(+992)"><a href="javascript:void(0)">塔吉克斯坦 (+992)</a></li>
-       <li onclick="addclick(this)" class="select" id="Tanzania(TZ)(+255)"><a href="javascript:void(0)">坦桑尼亚 (+255)</a></li>
-       <li onclick="addclick(this)" class="select" id="Togo(TG)(+228)"><a href="javascript:void(0)">多哥 (+228)</a></li>
-       <li onclick="addclick(this)" class="select" id="Tokelau(TK)(+690)"><a href="javascript:void(0)">托克劳群岛 (+690)</a></li>
-       <li onclick="addclick(this)" class="select" id="Tonga(TO)(+676)"><a href="javascript:void(0)">汤加 (+676)</a></li>
-       <li onclick="addclick(this)" class="select" id="Trinidad and Tobago(TT)(+1868)"><a href="javascript:void(0)">特立尼达和多巴哥 (+1868)</a></li>
-       <li onclick="addclick(this)" class="select" id="Tunisia(TN)(+216)"><a href="javascript:void(0)">突尼斯 (+216)</a></li>
-       <li onclick="addclick(this)" class="select" id="Turkey(TR)(+90)"><a href="javascript:void(0)">土耳其 (+90)</a></li>
-       <li onclick="addclick(this)" class="select" id="Turkmenistan(TM)(+993)"><a href="javascript:void(0)">土库曼斯坦 (+993)</a></li>
-       <li onclick="addclick(this)" class="select" id="Turks and Caicos Islands(TC)(+1649)"><a href="javascript:void(0)">特克斯和凯科斯群岛 (+1649)</a></li>
-       <li onclick="addclick(this)" class="select" id="Tuvalu(TV)(+688)"><a href="javascript:void(0)">图瓦卢 (+688)</a></li>
-       <li onclick="addclick(this)" class="select" id="Uganda(UG)(+256)"><a href="javascript:void(0)">乌干达 (+256)</a></li>
-       <li onclick="addclick(this)" class="select" id="United Arab Emirates(AE)(+971)"><a href="javascript:void(0)">阿拉伯联合酋长国 (+971)</a></li>
-       <li onclick="addclick(this)" class="select" id="United States Minor Outlying Island(-)(+1)"><a href="javascript:void(0)">美属群岛 (+1)</a></li>
-       <li onclick="addclick(this)" class="select" id="Uruguay(UY)(+598)"><a href="javascript:void(0)">乌拉圭 (+598)</a></li>
-       <li onclick="addclick(this)" class="select" id="Uzbekistan(UZ)(+998)"><a href="javascript:void(0)">乌兹别克斯坦 (+998)</a></li>
-       <li onclick="addclick(this)" class="select" id="Vanuatu(VU)(+678)"><a href="javascript:void(0)">瓦努阿图 (+678)</a></li>
-       <li onclick="addclick(this)" class="select" id="Vatican City State(-)(+39)"><a href="javascript:void(0)">梵地冈 (+39)</a></li>
-       <li onclick="addclick(this)" class="select" id="Venezuela(VE)(+58)"><a href="javascript:void(0)">委内瑞拉 (+58)</a></li>
-       <li onclick="addclick(this)" class="select" id="Virgin Islands(VG)(+1284)"><a href="javascript:void(0)">英属维尔京群岛 (+1284)</a></li>
-       <li onclick="addclick(this)" class="select" id="Virgin Islands(VI)(+1340)"><a href="javascript:void(0)">美属维尔京群岛 (+1340)</a></li>
-       <li onclick="addclick(this)" class="select" id="Wallis and Futuna Islands(-)(+681)"><a href="javascript:void(0)">瓦利斯群岛和富图纳群岛（法） (+681)</a></li>
-       <li onclick="addclick(this)" class="select" id="Yemen, Republic Of(YE)(+967)"><a href="javascript:void(0)">也门 (+967)</a></li>
-       <li onclick="addclick(this)" class="select" id="Zambia(ZM)(+260)"><a href="javascript:void(0)">赞比亚 (+260)</a></li>
-       <li onclick="addclick(this)" class="select" id="Zimbabwe(ZW)(+263)"><a href="javascript:void(0)">津巴布韦 (+263)</a></li>
+       
       </ul> 
       <h6 type="text" class="promptmessageinput" id="contactCountry_msg" name="titlcontactCountry"></h6> 
      </div> 
-     <div class="contactMobile"> 
-      <p> 手机号码<b>*</b> </p> 
-      <input type="text" class="nameSelectInput" value="" name="mobileNumber" id="mobileNumber" placeholder="手机号码" /> 
+     <div class="contactMobile text-field-content"> 
+      <p class="text-field-label float"> 手机号码<b>*</b> </p> 
+      <input type="text" class="nameSelectInput text-field-input" value="" name="mobileNumber" id="mobileNumber" placeholder="" /> 
       <h6 type="text" class="promptmessageinput" id="mobileNumber_msg" name="titlemobileNumber"></h6> 
      </div> 
      <div class="exampleTip mobileExampleTip"> 
       <span>(例如2126541234只有数字，没有空格或其他字符)</span> 
      </div> 
-     <div class="contactEmail"> 
-      <p> Email<b>*</b> </p> 
-      <input type="text" class="nameSelectInput" value="" name="contactEmail" id="contactEmail" placeholder="联络电邮" /> 
+     <div class="contactEmail text-field-content"> 
+      <p class="text-field-label float"> Email<b>*</b> </p> 
+      <input type="text" class="nameSelectInput text-field-input" value="" name="contactEmail" id="contactEmail" placeholder="" /> 
       <h6 type="text" class="promptmessageinput" id="contactEmail_msg" name="titlemobileNumber"></h6> 
      </div> 
      <div class="exampleTip emailExampleTip"> 
@@ -2110,9 +1319,9 @@ var countryContrlObj =[{id:'CN', name:countryInfo.CN, querystr:'CN'},
       <label class="nth-child1" data-info="yes"> <i class="active"></i> <b style="display: inline;"></b> <span>是</span> </label> 
       <label class="nth-child2" data-info="no"><i></i><b></b><span>否</span></label> 
      </div> 
-     <div class="contactPasMobile" style="display: none;"> 
-      <p>手机号码 <b>*</b></p> 
-      <input type="text" id="codephoneNumber" name="phoneNumber" class="nameSelectInput" value="" autocomplete="" placeholder="手机号码" /> 
+     <div class="contactPasMobile text-field-content" style="display: none;"> 
+      <p class="text-field-label float">手机号码 <b>*</b></p> 
+      <input type="text" id="codephoneNumber" name="phoneNumber" class="nameSelectInput text-field-input" value="" autocomplete="" placeholder="" /> 
       <h6 type="text" class="promptmessageinput" id="codephoneNumber_msg" name="titlemobileNumber"></h6> 
      </div> 
      <div class="exampleTip mobilePasTip" style="display: none;">
@@ -2132,7 +1341,7 @@ var countryContrlObj =[{id:'CN', name:countryInfo.CN, querystr:'CN'},
      <input type="checkbox" id="newsChoice" name="newsChoice" value="1" />
      <span>我确认我已阅读，理解并同意以下内容:</span> 
     </div> 
-    <p class="p1"> <a href="javascript:void(0)">运输条件和其他通知</a></p> 
+    <p class="p1"> <a href="https://lanmeiairlines.com/lanmeiairlines2.0/default/menus/CN/experience/LMTransport.html" target="_blank">运输条件和其他通知</a></p> 
     <p class="p2">以上票价仅适用于通过澜湄航空网站进行的在线销售。所显示的税金包括机场税，燃油和保险附加费。</p> 
     <p class="p3" style="color: #8ec060">为保护持卡人的权利，防止滥用网上付款，澜湄航空可能会要求乘客在机场办理登机手续期间或之后提供在线购买的原始信用卡。如果乘客没有这样做，澜湄航空保留在同一预订中拒绝所有乘客的运输权。 </p> 
     <!-- NEXT --> 
@@ -2160,7 +1369,7 @@ var countryContrlObj =[{id:'CN', name:countryInfo.CN, querystr:'CN'},
   <!-- 公共JS --> 
   <script type="text/javascript" src="js/Lanmei-comon1.js"></script>
   <!-- 业务代码 --> 
-  <script type="text/javascript" src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/js/CN/LanmeiAirlinesPassengerInfo.js"></script> 
+  <script type="text/javascript" src="js/LanmeiAirlinesPassengerInfo.js"></script> 
   <script src="http://b2c.lanmeiairlines.com:80/lqWeb/js/webtrends.js" type="text/javascript"></script> 
   <script type="text/javascript" src="http://b2c.lanmeiairlines.com:80/lqWeb/js/jquery.qtip.min.js"></script> 
   <script type="text/javascript" src="http://b2c.lanmeiairlines.com:80/lqWeb/js/jqueryUI/jquery.flexbox.min.js"></script> 
@@ -2415,6 +1624,9 @@ var countryContrlObj =[{id:'CN', name:countryInfo.CN, querystr:'CN'},
 			    	$("#issueCountry"+passIndex+"_select").addClass("isCard");   
 			   	 	chooseClick($("#nationality"+passIndex+" li:eq(1)"));
 			    	$("#nationality"+passIndex+"_select").addClass("isCard");
+			    	// 签发地和国籍提示文字上移
+			    	$('#issueCountry1_select').click();
+			    	$('#nationality1_select').click();
 				}else{
 			    	$("#issueCountry"+passIndex+"_select").val("");
 			    	$("#issueCountry"+passIndex+"_hidden").val("");
@@ -2531,7 +1743,7 @@ var countryContrlObj =[{id:'CN', name:countryInfo.CN, querystr:'CN'},
 	
 </script> 
   <!-- 引入wait页面 --> 
-  <link rel="stylesheet" type="text/css" href="https://b2c.lanmeiairlines.com:80/lqWeb/lqweb/common/CN/css/Lanmei-wait.css" /> 
+  <link rel="stylesheet" type="text/css" href="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/common/CN/css/Lanmei-wait.css" /> 
   <div id="LanmeiOver" class="LanmeiOver" style="background: url(&quot;http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/CN/gif-bg.jpg&quot;) center no-repeat;"></div> 
   <div id="LanmeiLayout" class="LanmeiLayout"> 
    <!--  	

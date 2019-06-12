@@ -59,6 +59,10 @@ var LanmeiAirlinesCommon = {
 		$('.downMenu-com').click(function(e) {
 			e.stopPropagation();
 		});
+		// 点击空白隐藏
+		$('html').click(function(){
+			$('.downMenu-com').hide();
+		});
 
 		// 成人
 		var adult = function(){
@@ -208,7 +212,7 @@ var LanmeiAirlinesCommon = {
 	citiesSelect1:function(){
 		// 点击空白隐藏
 		$('html').click(function(){
-			$('.selectAirCommon>div .downMenu-com').hide();
+			$('.selectAirCommon>div ul').hide();
 			$('.selectAirCommon>div .inputDown').removeClass('active').siblings('.bottomLine').hide();
 			$('.clear').hide(); //隐藏清楚按钮
 		});
@@ -239,15 +243,14 @@ var LanmeiAirlinesCommon = {
 			
 			$('.selectAirCommon>div>div .inputDown').removeClass('active').siblings('.bottomLine').hide();
 			$(this).addClass('active').siblings('.bottomLine').show();
-			$('.selectAirCommon>div>div .downMenu-com').hide();
-			$(this).siblings('.downMenu-com').show();
+			$('.selectAirCommon>div>div ul').hide();
+			$(this).siblings('ul').show();
 		});
 
 		$('.selectAirCommon>div>div ul').on('click','li a',function(e){
 			e.preventDefault();e.stopPropagation();
 			var val = $(this).html();
-			// $(this).parent().parent().hide().siblings('.bottomLine').hide().siblings('input').val(val);
-			$(this).parents('.downMenu-com').hide().siblings('input').val(val);
+			$(this).parent().parent().hide().siblings('.bottomLine').hide().siblings('input').val(val);
 			$('.selectAirCommon>div>div .inputDown').removeClass('active');
 				// 自动获取焦点
 				var inputId = $(this).parent().parent().siblings('input').attr('id'); 
