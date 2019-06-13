@@ -1,0 +1,632 @@
+<html lang="en">
+ <head> 
+  <meta charset="UTF-8" /> 
+  <!-- 让 Bootstrap 兼容 IE 兼容模型 --> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+  <!-- 让 Bootstrap 兼容 国产浏览器的高速模型 --> 
+  <meta name="renderer" content="webkit" /> 
+  <!-- 实现响应式的设置 --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <!-- 禁用缓存 --> 
+  <meta http-equiv="pragma" content="no-cache" /> 
+  <meta http-equiv="cache-control" content="no-cache" /> 
+  <meta http-equiv="expires" content="0" /> 
+  <title>LanmeiAirlines</title> 
+  <!-- 引入图标 --> 
+  <link rel="icon" href="http://b2c.lanmeiairlines.com/lqWeb/lqweb/Lanmei_project/images/CN/lanmeiLogo.ico" /> 
+  <link rel="stylesheet" type="text/css" href="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/css/bootstrap.min.css" /> 
+  <link rel="stylesheet" type="text/css" href="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/cityselect/cityquery.css" /> 
+  <link rel="stylesheet" type="text/css" href="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/jQueryUI/jquery-ui.css" /> 
+  <link rel="stylesheet" type="text/css" href="http://b2c.lanmeiairlines.com/lqWeb/lqweb/common/EN/css/Lanmei-common.css" /> 
+  <link rel="stylesheet" type="text/css" href="http://b2c.lanmeiairlines.com/lqWeb/lqweb/Lanmei_project/css/EN/LanmeiAirlinesPay.css" /> 
+  <link rel="stylesheet" type="text/css" href="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libsEdit/css/lanmeiLibsEdit.css" /> 
+  <!--[if lt IE 9]>
+<script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/respond.min.js"></script>
+<script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/html5shiv.min.js"></script>
+<![endif]--> 
+  <link rel="stylesheet" href="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/layer/skin/default/layer.css?v=3.0.3303" id="layuicss-skinlayercss" />
+ </head> 
+ <body> 
+  <input type="hidden" id="language" value="EN" /> 
+  <!-- 页面顶部 --> 
+  <style type="text/css">
+  /* reset.css */
+  body,h1,h2,h3,h4,h5,h6,p,ul,li,input {
+    margin: 0;
+    padding: 0;
+  }
+  ul,li {
+    list-style: none;
+  }
+  *{
+    box-sizing: border-box;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  /* 页面顶部 */
+  .lm-header {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    min-width:960px;
+    height: 60px;
+    max-width: 1920px;
+    padding: 0 20px;
+    text-align: center;
+    background: -webkit-linear-gradient(left, #42958a 0%, #1f2c5c 100%);
+    background: -o-linear-gradient(right, #42958a 0%, #1f2c5c 100%);
+    background: -moz-linear-gradient(right, #42958a 0%, #1f2c5c 100%);
+    background: linear-gradient(to right, #42958a 0%, #1f2c5c 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#42958a', endColorstr='#1f2c5c', GradientType=1);
+  }
+  .lm-header .h-logo-wrap {
+    width: 262px;
+    height: 60px;
+    margin: 0 auto;
+    background: url('/lqWeb/lqweb/common/images/EN/logo.png') center no-repeat;
+  }
+  .lm-header .h-right {
+    position: absolute;
+    right: 20px;
+    top: 0;
+  }
+  .lm-header .h-phone {
+    position: absolute;
+    left: -50px;
+    width: 80px;
+    height: 80px;
+    background: url('/lqWeb/lqweb/common/images/EN/phone.png') center 20px no-repeat;
+  }
+  .lm-header .h-phone .phone-menu {
+    display: none;
+    position: absolute;
+    top: 76px;
+    left: -66px;
+    width: 230px;
+    
+    border-radius: 2px;
+    background: #fff;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 0 50px 0 rgba(31, 44, 92, 0.2);
+  }
+  .lm-header .h-phone .phone-menu > h2 {
+    color: rgba(31, 44, 92, 0.8);
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .lm-header .h-phone .phone-menu > p {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.7);
+    height: 25px;
+    line-height: 32px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-left: 40px;
+    background: url('/lqWeb/lqweb/common/images/EN/phone-bg.png') left center no-repeat;
+  }
+  .lm-header .h-phone .phone-menu .p1 {
+    margin-top: 20px;
+  }
+  .lm-header .h-phone .phone-menu::before {
+    position: absolute;
+    top: -14px;
+    left: 96px;
+    z-index: 9;
+    filter: alpha(opacity=0);
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-bottom: 14px solid #fff;
+  }
+  .lm-header .h-phone:hover .phone-menu {
+    display: block;
+  }
+  .lm-header .h-lang {
+    position: absolute;
+    right: -20px;
+    width: 70px;
+    height: 80px;
+  }
+  .lm-header .h-lang > p {
+    width: 70px;
+    height: 80px;
+    background: url('/lqWeb/lqweb/common/images/EN/lang.png') center 15px no-repeat;
+    }
+  .lm-header .h-lang .lang-menu {
+    display: none;
+    position: absolute;
+    top: 76px;
+    left: -216px;
+    width: 278px;
+    height: 160px;
+    border-radius: 2px;
+    background: #fff;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 0 50px 0 rgba(31, 44, 92, 0.2);
+  }
+  .lm-header .h-lang .lang-menu > h2 {
+    color: rgba(31, 44, 92, 0.8);
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .lm-header .h-lang .lang-menu > a {
+    display: block;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.7);
+    height: 34px;
+    line-height: 40px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-left: 40px;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+  }
+  .lm-header .h-lang .lang-menu > a:hover {
+    color: #8ec060;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+  }
+  .lm-header .h-lang .lang-menu .lang-en {
+    margin-top: 20px;
+    background: url('/lqWeb/lqweb/common/images/EN/lang-en.png') left center no-repeat;
+  }
+  .lm-header .h-lang .lang-menu .lang-zh {
+    background: url('/lqWeb/lqweb/common/images/EN/lang-zh.png') left center no-repeat;
+  }
+  .lm-header .h-lang .lang-menu::before {
+    position: absolute;
+    top: -14px;
+    right: 12px;
+    z-index: 9;
+    filter: alpha(opacity=0);
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-bottom: 14px solid #fff;
+  }
+  .lm-header .h-lang:hover .lang-menu {
+    display: block;
+  }
+  .lm-sub-header {
+    position: relative;
+    top: 0;
+  }
+  .lm-sub-header .h-logo-wrap {
+    margin: 0;
+    display: block;
+    cursor: pointer;
+  }
+  .lm-sub-header .h-right .h-phone {
+    left: -150px;
+  }
+
+  .lm-footer {
+    width: 100%;
+    min-width:960px;
+    height: 250px;
+    padding-top: 24px;
+    text-align: center;
+    background: #1f2c5c;
+  }
+  .lm-footer .lm-logo {
+    width: 140px;
+    height: 58px;
+    margin: 0 auto;
+    background: url('/lqWeb/lqweb/common/images/EN/lanmeiFooterLogo.png') center no-repeat;
+  }
+  .lm-footer .facebook {
+    margin-top: 16px;
+  }
+  .lm-footer .facebook > .a1 {
+    margin-right: 40px;
+  }
+  .lm-footer .facebook a {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+  }
+  .lm-footer .facebook .icon-facebook {
+    background: url('/lqWeb/lqweb/common/images/EN/icon-facebook.png') center no-repeat;
+  }
+  .lm-footer .facebook .icon-facebook:hover{
+    background: url('/lqWeb/lqweb/common/images/EN/icon-facebook-active.png') center no-repeat;
+  }
+  .lm-footer .facebook .icon-weibo {
+    background: url('/lqWeb/lqweb/common/images/EN/icon-weibo.png') center no-repeat;
+  }
+  .lm-footer .facebook .icon-weibo:hover{
+    background: url('/lqWeb/lqweb/common/images/EN/icon-weibo-active.png') center no-repeat;
+  }
+  .lm-footer .facebook a img {
+    width: 26px;
+    height: 26px;
+  }
+  .lm-footer .f-email {
+    color: #fff;
+    margin-top: 18px;
+  }
+  .lm-footer .f-email > img {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    vertical-align: middle;
+  }
+  .lm-footer .f-local {
+    margin-top: 14px;
+  }
+  .lm-footer .f-local > img {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    vertical-align: middle;
+  }
+  .lm-footer .f-local > i::before {
+    color: #fff;
+  }
+  .lm-footer .f-local a {
+    color: #fff;
+  }
+  .lm-footer .copyright {
+    margin-top: 14px;
+    color: rgba(255, 255, 255, 0.4);
+  }
+  .lm-footer .copyright a {
+    color: rgba(255, 255, 255, 0.4);
+    transition: all .3s;
+    -webkit-transition: all .3s;
+  }
+  .lm-footer .copyright a:hover {
+    color: #8ec060;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+  }
+</style> 
+  <!-- 页面顶部EN --> 
+  <header class="lm-header lm-sub-header"> 
+   <a href="http://lanmeiairlines.com?lang=en" class="h-logo-wrap"></a> 
+   <div class="h-right"> 
+    <div class="h-phone js-h-phone"> 
+     <div class="phone-menu js-phone-menu"> 
+      <h2>24 online:</h2> 
+      <p class="p1">+855 0023981800</p> 
+     </div> 
+    </div> 
+    <div class="h-lang js-h-lang"> 
+     <p class="js-choose-lang"></p> 
+     <div class="lang-menu js-lang-menu"> 
+      <h2>Choose a language:</h2> 
+      <a href="http://lanmeiairlines.com?lang=en" class="lang-en" data="en">English</a> 
+      <a href="http://lanmeiairlines.com?lang=cn" class="lang-zh" data="zh">简体中文</a> 
+     </div> 
+    </div> 
+   </div> 
+  </header> 
+  <!-- 订票步骤列表 --> 
+  <!--<script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/jQuery/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/layer/layer.js"></script>--> 
+  <div class="buyTicketList"> 
+   <dl class="SelectDate"> 
+    <dt>
+     <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/date-icon-active.png" />
+    </dt> 
+    <dd>
+     Select Dates
+    </dd> 
+   </dl> 
+   <dl class="circleArrow"> 
+    <dt>
+     <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/circleArrowGray-active.png" />
+    </dt> 
+   </dl> 
+   <dl class="SelectFlight"> 
+    <dt>
+     <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/Select-the-flight-icon-active.png" />
+    </dt> 
+    <dd>
+     Select Flight
+    </dd> 
+   </dl> 
+   <dl class="circleArrow"> 
+    <dt>
+     <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/circleArrowGray-active.png" />
+    </dt> 
+   </dl> 
+   <dl class="PassengerInformation"> 
+    <dt>
+     <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/Passenger-informatio-icon-active.png" />
+    </dt> 
+    <dd>
+     Passenger Info 
+    </dd> 
+   </dl> 
+   <dl class="circleArrow"> 
+    <dt>
+     <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/circleArrowGray-active.png" />
+    </dt> 
+   </dl> 
+   <dl class="LanmeiPay"> 
+    <dt>
+     <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/pay-icon-active.png" />
+    </dt> 
+    <dd>
+     Payment
+    </dd> 
+   </dl> 
+   <dl class="circleArrow"> 
+    <dt>
+     <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/circleArrowGray-active.png" />
+    </dt> 
+   </dl> 
+   <dl class="Complete"> 
+    <dt>
+     <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/Complete-icon.png" />
+    </dt> 
+    <dd>
+     Confirmation
+    </dd> 
+   </dl> 
+  </div> 
+  <!-- 航班信息 --> 
+  <div class="passengerInfoDetail"> 
+   <div class="passengerInfoDetailTitle"> 
+    <h2> <img src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/Lanmei_project/images/EN/leftTitleLine.png" /> Passenger Information &amp; Itinerary Details </h2> 
+   </div> 
+   <div class="passengerInfoDetailContent"> 
+    <div class="passenger1"> 
+     <!-- 中英文称谓,en:Mr xx,cn: xxx 先生 --> 
+     <h2>Mr&nbsp; Liao &nbsp; Zhangquan</h2> 
+    </div> 
+    <!-- <div class="passenger1"><h2>Mr Cheung Yeoman</h2></div>
+      <div class="passenger2"><h2>Mr Cheung Yeoman</h2></div>
+      <div class="passenger3"><h2>Mr Cheung Yeoman</h2></div>
+      <div class="passenger4"><h2>Mr Cheung Yeoman</h2></div>
+      <div class="passenger5"><h2>Mr Cheung Yeoman</h2></div> --> 
+   </div> 
+   <div class="contactInformation"> 
+    <h2>Contact Information</h2> 
+    <p>Email：<span>245654556@qq.com</span></p> 
+    <p>Mobile Phone：<span>17302045678</span></p> 
+   </div> 
+  </div> 
+  <!-- 虚线分割线 --> 
+  <div class="dashedLine960">
+   <img src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/Lanmei_project/images/EN/dashedLine960.png" />
+  </div> 
+  <!-- 已选择的航班 --> 
+  <div class="flightSelectWrapper"> 
+   <div class="flightSelect1 flightSelectCommon" style="padding-bottom: 10px;"> 
+    <div class="flightSelectTitle"> 
+     <h2>Itinerary 1</h2> 
+     <div> 
+      <span>Phnom Penh(PNH)</span> to 
+      <span>Siem Reap(REP)</span> 
+     </div> 
+     <p>2019-06-14 07:15</p> 
+    </div> 
+    <div class="flightList1 flightListCommon"> 
+     <div class="flightListCommonLeft"> 
+      <div class="nth-child1">
+       <img src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/Lanmei_project/images/EN/travelTimeLogo.png" /> 
+       <span>Lanmei Airlines</span>&nbsp;&nbsp;LQ317
+      </div> 
+      <div class="nth-child2"> 
+       <h2 style="width: 439px;text-align: center;">Phnom Penh (07:15)</h2> 
+       <p class="p1" style="width: 439px;text-align: center;">Friday, JUNE 14,2019</p> 
+       <p class="p2" style="width: 439px;text-align: center;"> (PNH)Phnom Penh International Airport </p> 
+      </div> 
+      <div class="nth-child3"> 
+       <p class="p1" style="margin-top: 15px;">Aircraft : Airbus&nbsp;321</p> 
+       <p class="p2">Free Baggage Allowance : 25&nbsp;KG&nbsp;per traveller</p> 
+      </div> 
+      <div class="nth-child4"> 
+       <img src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/Lanmei_project/images/EN/flightArrow.png" style="margin: 10px;" alt="" /> 
+       <p>50m</p> 
+      </div> 
+     </div> 
+     <div class="flightListCommonRight"> 
+      <div class="nth-child1">
+       <span></span>
+      </div> 
+      <div class="nth-child2" style="margin-top: -2px;"> 
+       <h2 style="width: 439px;text-align: center;">Siem Reap(08:05)</h2> 
+       <p class="p1" style="width: 439px;text-align: center;">Friday, JUNE 14,2019</p> 
+       <p class="p2" style="width: 439px;text-align: center;"> (REP)Angkor International Airport </p> 
+      </div> 
+      <div class="nth-child3"> 
+       <p class="p1" style="margin-top: 15px;"><span>Economy</span>: Cabin</p> 
+       <p class="p2"><span>N</span>: Booking Cabin</p> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="flightSelect2 flightSelectCommon" style="padding-bottom: 10px;"> 
+    <div class="flightSelectTitle1"> 
+     <h2>Itinerary 2</h2> 
+     <div> 
+      <span>Siem Reap(REP)</span> to 
+      <span>Phnom Penh(PNH)</span> 
+     </div> 
+     <p>2019-06-17 08:15</p> 
+    </div> 
+    <div class="flightList1 flightListCommon"> 
+     <div class="flightListCommonLeft"> 
+      <div class="nth-child1">
+       <img src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/Lanmei_project/images/EN/travelTimeLogo.png" /> 
+       <span>Lanmei Airlines</span>&nbsp;&nbsp;LQ670
+      </div> 
+      <div class="nth-child2"> 
+       <h2 style="width: 439px;text-align: center;">Siem Reap (08:15)</h2> 
+       <p class="p1" style="width: 439px;text-align: center;">Monday, JUNE 17,2019</p> 
+       <p class="p2" style="width: 439px;text-align: center;"> (REP)Angkor International Airport </p> 
+      </div> 
+      <div class="nth-child3"> 
+       <p class="p1" style="margin-top: 15px;">Aircraft : Airbus&nbsp;320</p> 
+       <p class="p2">Free Baggage Allowance : 25&nbsp;KG&nbsp;per traveller</p> 
+      </div> 
+      <div class="nth-child4"> 
+       <img src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/Lanmei_project/images/EN/flightArrow.png" style="margin: 10px;" alt="" /> 
+       <p>45m</p> 
+      </div> 
+     </div> 
+     <div class="flightListCommonRight"> 
+      <div class="nth-child1">
+       <span></span>
+      </div> 
+      <div class="nth-child2" style="margin-top: -2px;"> 
+       <h2 style="width: 439px;text-align: center;">Phnom Penh(09:00)</h2> 
+       <p class="p1" style="width: 439px;text-align: center;">Monday, JUNE 17,2019</p> 
+       <p class="p2" style="width: 439px;text-align: center;"> (PNH)Phnom Penh International Airport </p> 
+      </div> 
+      <div class="nth-child3"> 
+       <p class="p1" style="margin-top: 15px;"><span>Economy</span>: Cabin</p> 
+       <p class="p2"><span>T</span>: Booking Cabin</p> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- 虚线分割线 --> 
+  <div class="dashedLine960">
+   <img src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/Lanmei_project/images/EN/dashedLine960.png" />
+  </div> 
+  <!-- 票价规则详情 --> 
+  <div class="flightRuleDetail"> 
+   <h2>Fare Rules: </h2> 
+   <h2>Fare Information   <a href="https://lanmeiairlines.com/lanmeiairlines2.0/default/tpls/EN/LMFareRule-en.html" target="_blank">Changes and Refund</a></h2> 
+   <div class="ruleContent"> 
+    <div class="ruleContent1">
+     <h3>[ Rebook Rule]</h3>
+     <p>Rebooking fee USD 60 A) Rebooked to higher class (fare): fare difference would be charged.B) Rebooked to lower class (fare): residual fare value is non-refundable. The original sector(s) must be cancelled 24 hours before departure; otherwise, no-show</p>
+     <h3>[ Refund Rule]</h3>
+     <p>USD 60 per ticket. The original sector(s) must be cancelled 24 hours before departure; otherwise, no-show fee will be charged. Fuel surcharges/For partially used ticket: are non-refundable.</p>
+     <h3>[No-show Rule]</h3>
+     <p>USD 30 per ticket.</p>
+    </div>
+    <div class="ruleContent2">
+     <h3>[ Endorse/Reroute]</h3>
+     <p>Not permitted.</p>
+     <h3>[ Fare Clause]</h3>
+     <p>1. Fares are exclusive of taxes and other surcharges. <br />2. Please refer to GDS display for latest update on flight schedule, fares and taxes. <br />3. Departure date of the first outbound sector determines the fare for the entire journey. <br />4. No child discount is applied to Rebooking no-show/Refund/Handling Fee and other charges. <br />5. All sectors must be used in sequence. <br />6. Should there be any discrepancy between this rule and what shown in GDS, the latter prevail. </p>
+    </div> 
+   </div> 
+  </div> 
+  <!-- 分割线 --> 
+  <div class="ticketLine"></div> 
+  <!-- 票价计算结果 --> 
+  <div class="ticketFareWrapper"> 
+   <div class="ticketFareContent"> 
+    <div class="ticketFare"> 
+     <ul class="priceTitle priceTitleComment"> 
+      <li class="nth-child1">Total</li> 
+      <li class="nth-child2">USD$85.50</li> 
+     </ul> 
+     <!-- 虚线分割线 --> 
+     <div class="dashedLine940">
+      <img src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/Lanmei_project/images/EN/dashedLine960.png" />
+     </div> 
+     <div class="priceContent priceContentComment"> 
+      <ul class="priceContent1"> 
+       <li class="nth-child1">Total Amount Payable : </li> 
+       <li class="nth-child2">USD$85.5</li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- 分割线 --> 
+  <div class="ticketLine"></div> 
+  <!-- 声明 --> 
+  <div class="statementWrapper"> 
+   <div class="agree"> 
+    <b>*</b>
+    <input type="checkbox" name="" /> 
+   </div> 
+   <p>I have read the relevant Terms and Conditions about online booking carefully and agree with it. I voluntarily buy tickets via Lanmei Airlines’ website and accept the ticket fare and rules for refund and changing.</p> 
+  </div> 
+  <!-- 选择支付方式 --> 
+  <div class="payMethod"> 
+   <div class="payMethodTitle"> 
+    <h2> <img src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/Lanmei_project/images/EN/leftTitleLine.png" /> Please Select the Payment Method </h2> 
+   </div> 
+   <div class="payMethodContent"> 
+    <ul class="selectMethod"> 
+     <!-- 人民币不支持PayPal支付,美元支持--> 
+     <li class="nth-child3" pay-status="0" pay-code="ALIPAYOVERSEA"> <img pay-status="1" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/Lanmei_project/images/EN/alipay-no.png" class="img01" /> <img pay-status="0" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/Lanmei_project/images/EN/alipay.png" class="img02" /> </li> 
+     <li class="nth-child2" pay-status="0" pay-code="CHINAPAYUPOP"> <img pay-status="1" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/Lanmei_project/images/EN/unionpay-no.png" class="img01" /> <img pay-status="0" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/Lanmei_project/images/EN/unionpay.png" class="img02" /> </li> 
+     <li class="nth-child1" pay-status="0" pay-code="PAYPAL"> <img pay-status="1" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/Lanmei_project/images/EN/payPal-no.png" class="img01" /> <img pay-status="0" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/Lanmei_project/images/EN/payPal.png" class="img02" /> </li> 
+    </ul> 
+   </div> 
+   <!-- 虚线分割线 --> 
+   <div class="dashedLine940MB10">
+    <img src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/Lanmei_project/images/EN/dashedLine960.png" />
+   </div> 
+   <div class="payMethodDetail"> 
+    <p>- Payment must be processed<span>within 30 minutes</span>. Otherwise, Lanmei Airlines will&nbsp; <span>cancel </span>the booking and <span>release</span> relative seats.- Card issuing banks may charge additional fees from cardholders, such as international transaction fee or remittance charges. It may depend on the departure country and the original currency of your financial card. Please contact the card-issuing bank for details.</p>
+    <p class="p2">- During payment process, please be patient. Please do NOT click the submit button more than once. Please do NOT close browser window at will. After payment, you will be redirected to Lanmei Airlines website automatically. If browser window locked or problems occur during payment process, please check your bank account to avoid mischarge.</p>
+    <p>- Some bank-end payment web pages use particular socket port. In case of “page cannot be shown”， please check network setting first (such as firewall or proxy setting).</p>
+    <p>- You will also need to make your arrangements to obtain visas and/or other travel documents after purchasing air tickets online.</p> 
+   </div> 
+   <form id="payment" action="/lqWeb/servlet/NetPayPreServlet" method="post"> 
+    <input type="hidden" id="orderbankid" name="bankinfo" value="" /> 
+    <input type="hidden" id="eamount" name="ecashpayamount" value="" /> 
+    <input type="hidden" id="OrderNO" name="OrderNO" value="NC3HYK-8YB5RY3H94" /> 
+    <input type="hidden" id="random" name="random" value="" /> 
+    <input type="hidden" id="totalPrice" name="totalPrice" value="85.5" /> 
+    <input type="hidden" id="currency" name="currency" value="USD" /> 
+   </form> 
+   <!-- <input type="hidden" name="bankIdInput" id="fragBankId"> --> 
+   <input type="hidden" id="EcashSaveAmount" value="" /> 
+   <input type="hidden" id="PayUpLimit" value="" /> 
+   <!-- NEXT --> 
+   <div class="payBtn"> 
+    <a href="javascript:void(0)">PAY <img src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/Lanmei_project/images/EN/schedulesArrow.png" /></a> 
+   </div> 
+  </div> 
+  <!-- 页脚 --> 
+  <!-- 页脚EN --> 
+  <footer class="lm-footer"> 
+   <p class="lm-logo"></p> 
+   <p class="facebook"> <a href="https://www.facebook.com/lanmeiairlines/" class="a1 icon-facebook"></a> <a href="http://weibo.com/lanmeiair" class="icon-weibo"></a> </p> 
+   <p class="f-email"><img src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/common/images/EN/icon-email.png" class="icon-email" /><span>lm-ec@lanmeiairlines.com</span></p> 
+   <p class="f-local"> <img src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/common/images/EN/icon-location.png" class="icon-location" /> <a href="https://goo.gl/maps/7pyBze8BFe52" target="_Blank">No.575 D&amp;E, Russian Federation Boulevard, Phnom Penh, Cambodia</a> </p> 
+   <p class="copyright">&copy; Copyright 2017 Lanmei Airlines. All Rights Reserved. ICP:Guangdong Province <a href="http://www.miitbeian.gov.cn" target="_Blank" rel="nofollow">ICP-17005494-1</a></p> 
+  </footer> 
+  <!-- 回到顶部 --> 
+  <div class="BackToTop" style="bottom: 70px;"> 
+   <img src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/Lanmei_project/images/EN/ToTop-icon.png" /> 
+   <p>UP</p> 
+  </div> 
+  <!-- 第三方库--> 
+  <script type="text/javascript" src="/lqWeb/js/layercommon.js"></script> 
+  <script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/jQuery/jquery-1.11.3.js"></script> 
+  <script src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/cityselect/jquery-migrate-1.2.1.js"></script> 
+  <script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/cityselect/citylist.js"></script> 
+  <script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/cityselect/querycity.js"></script> 
+  <script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/jQueryUI/jquery-ui.js"></script> 
+  <script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/layer/layer.js"></script> 
+  <script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/bootstrap/js/bootstrap.min.js"></script> 
+  <!-- 公共JS --> 
+  <script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/common/EN/js/Lanmei-common.js"></script> 
+  <!-- 业务代码 --> 
+  <script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/Lanmei_project/js/EN/LanmeiAirlinesPay.js"></script> 
+  <script type="text/javascript">
+    //获取当前选择语言
+    var lgne="EN"; 
+    $(document).ready(function(){
+    /* $(".payBtn a").live("click",function(){
+      
+    }); */
+  });
+</script> 
+ </body>
+</html>

@@ -1,0 +1,1356 @@
+<html>
+ <head> 
+  <meta charset="UTF-8" /> 
+  <!-- 让 Bootstrap 兼容 IE 兼容模型 --> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+  <!-- 让 Bootstrap 兼容 国产浏览器的高速模型 --> 
+  <meta name="renderer" content="webkit" /> 
+  <!-- 实现响应式的设置 --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <!-- 禁用缓存 --> 
+  <meta http-equiv="pragma" content="no-cache" /> 
+  <meta http-equiv="cache-control" content="no-cache" /> 
+  <meta http-equiv="expires" content="0" /> 
+  <title>LanmeiAirlines</title> 
+  <!-- 引入图标 --> 
+  <link rel="icon" href="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/lanmeiLogo.ico" /> 
+  <link rel="stylesheet" type="text/css" href="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/libs/bootstrap/css/bootstrap.min.css" /> 
+  <link rel="stylesheet" type="text/css" href="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/libs/dataRange/lanmei-calendar.css" /> 
+  <link rel="stylesheet" type="text/css" href="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/libsEdit/css/lanmeiLibsEdit.css" /> 
+  <link rel="stylesheet" type="text/css" href="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/common/EN/css/Lanmei-common.css" /> 
+  <link rel="stylesheet" type="text/css" href="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/css/EN/LanmeiAirlinesMultiCities.css" /> 
+  <!--[if lt IE 9]>
+  <script src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/libs/bootstrap/js/html5shiv.min.js"></script>
+  <script src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/libs/bootstrap/js/respond.min.js"></script>
+  <![endif]--> 
+  <link rel="stylesheet" href="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/layer/skin/default/layer.css?v=3.0.3303" id="layuicss-skinlayercss" />
+ </head> 
+ <body> 
+  <script type="text/javascript">
+    function defalt_value(){
+    
+      var defaut_adultCount ="1";
+      var defaut_childCount ="0";
+      $("#Adult").val(defaut_adultCount);
+      $("#Child").val(defaut_childCount);
+      
+      var orgcity_name = "Phnom Penh/PNH/Cambodia";
+      var dstcity_name = "Siem Reap/REP/Cambodia";
+      var orgcity = "PNH";
+      var dstcity = "REP";
+      var takeoffDate = "2019-06-14";
+      var CURRENCY = "USD";
+      var cabinType ="Economy";
+      $("#fromcity").val(orgcity_name);
+      $("#orgcity").val(orgcity);
+      $("#tocity").val(dstcity_name);
+      $("#dstcity").val(dstcity);     
+      $("#timeFrom").val(takeoffDate);  
+      $("#Currency").val(CURRENCY);
+      $("#currencyCode").val(CURRENCY);
+      $("#Cabin").val(cabinType);
+      
+      if(cabinType =="Economy" ){
+        $("#cabinType").val("ECONOMY");
+      }else{
+        $("#cabinType").val("BUSINESS");
+      }
+    }
+  </script> 
+  <!-- 页面顶部 --> 
+  <style type="text/css">
+  /* reset.css */
+  body,h1,h2,h3,h4,h5,h6,p,ul,li,input {
+    margin: 0;
+    padding: 0;
+  }
+  ul,li {
+    list-style: none;
+  }
+  *{
+    box-sizing: border-box;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  /* 页面顶部 */
+  .lm-header {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    min-width:960px;
+    height: 60px;
+    max-width: 1920px;
+    padding: 0 20px;
+    text-align: center;
+    background: -webkit-linear-gradient(left, #42958a 0%, #1f2c5c 100%);
+    background: -o-linear-gradient(right, #42958a 0%, #1f2c5c 100%);
+    background: -moz-linear-gradient(right, #42958a 0%, #1f2c5c 100%);
+    background: linear-gradient(to right, #42958a 0%, #1f2c5c 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#42958a', endColorstr='#1f2c5c', GradientType=1);
+  }
+  .lm-header .h-logo-wrap {
+    width: 262px;
+    height: 60px;
+    margin: 0 auto;
+    background: url('/lqWeb/lqweb/common/images/EN/logo.png') center no-repeat;
+  }
+  .lm-header .h-right {
+    position: absolute;
+    right: 20px;
+    top: 0;
+  }
+  .lm-header .h-phone {
+    position: absolute;
+    left: -50px;
+    width: 80px;
+    height: 80px;
+    background: url('/lqWeb/lqweb/common/images/EN/phone.png') center 20px no-repeat;
+  }
+  .lm-header .h-phone .phone-menu {
+    display: none;
+    position: absolute;
+    top: 76px;
+    left: -66px;
+    width: 230px;
+    
+    border-radius: 2px;
+    background: #fff;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 0 50px 0 rgba(31, 44, 92, 0.2);
+  }
+  .lm-header .h-phone .phone-menu > h2 {
+    color: rgba(31, 44, 92, 0.8);
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .lm-header .h-phone .phone-menu > p {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.7);
+    height: 25px;
+    line-height: 32px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-left: 40px;
+    background: url('/lqWeb/lqweb/common/images/EN/phone-bg.png') left center no-repeat;
+  }
+  .lm-header .h-phone .phone-menu .p1 {
+    margin-top: 20px;
+  }
+  .lm-header .h-phone .phone-menu::before {
+    position: absolute;
+    top: -14px;
+    left: 96px;
+    z-index: 9;
+    filter: alpha(opacity=0);
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-bottom: 14px solid #fff;
+  }
+  .lm-header .h-phone:hover .phone-menu {
+    display: block;
+  }
+  .lm-header .h-lang {
+    position: absolute;
+    right: -20px;
+    width: 70px;
+    height: 80px;
+  }
+  .lm-header .h-lang > p {
+    width: 70px;
+    height: 80px;
+    background: url('/lqWeb/lqweb/common/images/EN/lang.png') center 15px no-repeat;
+    }
+  .lm-header .h-lang .lang-menu {
+    display: none;
+    position: absolute;
+    top: 76px;
+    left: -216px;
+    width: 278px;
+    height: 160px;
+    border-radius: 2px;
+    background: #fff;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 0 50px 0 rgba(31, 44, 92, 0.2);
+  }
+  .lm-header .h-lang .lang-menu > h2 {
+    color: rgba(31, 44, 92, 0.8);
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .lm-header .h-lang .lang-menu > a {
+    display: block;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.7);
+    height: 34px;
+    line-height: 40px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-left: 40px;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+  }
+  .lm-header .h-lang .lang-menu > a:hover {
+    color: #8ec060;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+  }
+  .lm-header .h-lang .lang-menu .lang-en {
+    margin-top: 20px;
+    background: url('/lqWeb/lqweb/common/images/EN/lang-en.png') left center no-repeat;
+  }
+  .lm-header .h-lang .lang-menu .lang-zh {
+    background: url('/lqWeb/lqweb/common/images/EN/lang-zh.png') left center no-repeat;
+  }
+  .lm-header .h-lang .lang-menu::before {
+    position: absolute;
+    top: -14px;
+    right: 12px;
+    z-index: 9;
+    filter: alpha(opacity=0);
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-bottom: 14px solid #fff;
+  }
+  .lm-header .h-lang:hover .lang-menu {
+    display: block;
+  }
+  .lm-sub-header {
+    position: relative;
+    top: 0;
+  }
+  .lm-sub-header .h-logo-wrap {
+    margin: 0;
+    display: block;
+    cursor: pointer;
+  }
+  .lm-sub-header .h-right .h-phone {
+    left: -150px;
+  }
+
+  .lm-footer {
+    width: 100%;
+    min-width:960px;
+    height: 250px;
+    padding-top: 24px;
+    text-align: center;
+    background: #1f2c5c;
+  }
+  .lm-footer .lm-logo {
+    width: 140px;
+    height: 58px;
+    margin: 0 auto;
+    background: url('/lqWeb/lqweb/common/images/EN/lanmeiFooterLogo.png') center no-repeat;
+  }
+  .lm-footer .facebook {
+    margin-top: 16px;
+  }
+  .lm-footer .facebook > .a1 {
+    margin-right: 40px;
+  }
+  .lm-footer .facebook a {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+  }
+  .lm-footer .facebook .icon-facebook {
+    background: url('/lqWeb/lqweb/common/images/EN/icon-facebook.png') center no-repeat;
+  }
+  .lm-footer .facebook .icon-facebook:hover{
+    background: url('/lqWeb/lqweb/common/images/EN/icon-facebook-active.png') center no-repeat;
+  }
+  .lm-footer .facebook .icon-weibo {
+    background: url('/lqWeb/lqweb/common/images/EN/icon-weibo.png') center no-repeat;
+  }
+  .lm-footer .facebook .icon-weibo:hover{
+    background: url('/lqWeb/lqweb/common/images/EN/icon-weibo-active.png') center no-repeat;
+  }
+  .lm-footer .facebook a img {
+    width: 26px;
+    height: 26px;
+  }
+  .lm-footer .f-email {
+    color: #fff;
+    margin-top: 18px;
+  }
+  .lm-footer .f-email > img {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    vertical-align: middle;
+  }
+  .lm-footer .f-local {
+    margin-top: 14px;
+  }
+  .lm-footer .f-local > img {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    vertical-align: middle;
+  }
+  .lm-footer .f-local > i::before {
+    color: #fff;
+  }
+  .lm-footer .f-local a {
+    color: #fff;
+  }
+  .lm-footer .copyright {
+    margin-top: 14px;
+    color: rgba(255, 255, 255, 0.4);
+  }
+  .lm-footer .copyright a {
+    color: rgba(255, 255, 255, 0.4);
+    transition: all .3s;
+    -webkit-transition: all .3s;
+  }
+  .lm-footer .copyright a:hover {
+    color: #8ec060;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+  }
+</style> 
+  <!-- 页面顶部EN --> 
+  <header class="lm-header lm-sub-header"> 
+   <a href="http://lanmeiairlines.com?lang=en" class="h-logo-wrap"></a> 
+   <div class="h-right"> 
+    <div class="h-phone js-h-phone"> 
+     <div class="phone-menu js-phone-menu"> 
+      <h2>24 online:</h2> 
+      <p class="p1">+855 0023981800</p> 
+     </div> 
+    </div> 
+    <div class="h-lang js-h-lang"> 
+     <p class="js-choose-lang"></p> 
+     <div class="lang-menu js-lang-menu"> 
+      <h2>Choose a language:</h2> 
+      <a href="http://lanmeiairlines.com?lang=en" class="lang-en" data="en">English</a> 
+      <a href="http://lanmeiairlines.com?lang=cn" class="lang-zh" data="zh">简体中文</a> 
+     </div> 
+    </div> 
+   </div> 
+  </header> 
+  <!-- 订票步骤列表 --> 
+  <!--<script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/jQuery/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/libs/layer/layer.js"></script>--> 
+  <div class="buyTicketList"> 
+   <dl class="SelectDate"> 
+    <dt>
+     <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/date-icon-active.png" />
+    </dt> 
+    <dd>
+     Select Dates
+    </dd> 
+   </dl> 
+   <dl class="circleArrow"> 
+    <dt>
+     <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/circleArrowGray-active.png" />
+    </dt> 
+   </dl> 
+   <dl class="SelectFlight"> 
+    <dt>
+     <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/Select-the-flight-icon.png" />
+    </dt> 
+    <dd>
+     Select Flight
+    </dd> 
+   </dl> 
+   <dl class="circleArrow"> 
+    <dt>
+     <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/circleArrowGray.png" />
+    </dt> 
+   </dl> 
+   <dl class="PassengerInformation"> 
+    <dt>
+     <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/Passenger-informatio-icon.png" />
+    </dt> 
+    <dd>
+     Passenger Info 
+    </dd> 
+   </dl> 
+   <dl class="circleArrow"> 
+    <dt>
+     <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/circleArrowGray.png" />
+    </dt> 
+   </dl> 
+   <dl class="LanmeiPay"> 
+    <dt>
+     <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/pay-icon.png" />
+    </dt> 
+    <dd>
+     Payment
+    </dd> 
+   </dl> 
+   <dl class="circleArrow"> 
+    <dt>
+     <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/circleArrowGray.png" />
+    </dt> 
+   </dl> 
+   <dl class="Complete"> 
+    <dt>
+     <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/Complete-icon.png" />
+    </dt> 
+    <dd>
+     Confirmation
+    </dd> 
+   </dl> 
+  </div> 
+  <input type="hidden" id="totalPeopleNum" value="8" /> 
+  <input type="hidden" value="EN" id="language" /> 
+  <input type="hidden" class="citysHidden" id="BKK" value="Bangkok/BKK/Thailand" /> 
+  <input type="hidden" class="citysHidden" id="CAN" value="Guangzhou/CAN/China" /> 
+  <input type="hidden" class="citysHidden" id="CGO" value="Zhengzhou/CGO/China" /> 
+  <input type="hidden" class="citysHidden" id="CKG" value="Chongqing/CKG/China" /> 
+  <input type="hidden" class="citysHidden" id="CSX" value="Changsha/CSX/China" /> 
+  <input type="hidden" class="citysHidden" id="CTU" value="Chengdu/CTU/China" /> 
+  <input type="hidden" class="citysHidden" id="DSN" value="Ordos/DSN/China" /> 
+  <input type="hidden" class="citysHidden" id="HET" value="Hohhot/HET/China" /> 
+  <input type="hidden" class="citysHidden" id="HKG" value="HongKong/HKG/Hong Kong China" /> 
+  <input type="hidden" class="citysHidden" id="KHN" value="Nanchang/KHN/China" /> 
+  <input type="hidden" class="citysHidden" id="KMG" value="Kunming/KMG/China" /> 
+  <input type="hidden" class="citysHidden" id="KOS" value="Sihanoukville/KOS/Cambodia" /> 
+  <input type="hidden" class="citysHidden" id="KWE" value="Guiyang/KWE/China" /> 
+  <input type="hidden" class="citysHidden" id="LYI" value="Linyi/LYI/China" /> 
+  <input type="hidden" class="citysHidden" id="MFM" value="Macao/MFM/Macao China" /> 
+  <input type="hidden" class="citysHidden" id="NGB" value="Ningbo/NGB/China" /> 
+  <input type="hidden" class="citysHidden" id="NKG" value="Nanjing/NKG/China" /> 
+  <input type="hidden" class="citysHidden" id="NNG" value="Nanning/NNG/China" /> 
+  <input type="hidden" class="citysHidden" id="PNH" value="Phnom Penh/PNH/Cambodia" /> 
+  <input type="hidden" class="citysHidden" id="REP" value="Siem Reap/REP/Cambodia" /> 
+  <input type="hidden" class="citysHidden" id="SHE" value="Shenyang/SHE/China" /> 
+  <input type="hidden" class="citysHidden" id="SJW" value="Shijiazhuang/SJW/China" /> 
+  <input type="hidden" class="citysHidden" id="SWA" value="Jieyang/SWA/China" /> 
+  <input type="hidden" class="citysHidden" id="TNA" value="Jinan/TNA/China" /> 
+  <input type="hidden" class="citysHidden" id="TSN" value="Tianjin/TSN/China" /> 
+  <input type="hidden" class="citysHidden" id="TYN" value="Taiyuan/TYN/China" /> 
+  <input type="hidden" class="citysHidden" id="WUH" value="Wuhan/WUH/China" /> 
+  <input type="hidden" class="citysHidden" id="XIY" value="Xi'an/XIY/China" /> 
+  <input type="hidden" class="citysHidden" id="XNN" value="Xining/XNN/China" /> 
+  <input type="hidden" class="citysHidden" id="YIH" value="Yichang/YIH/China" /> 
+  <input type="hidden" class="citysHidden" id="YTY" value="Yangzhou/YTY/China" /> 
+  <input type="hidden" class="citysHidden" id="ZYI" value="Zunyi/ZYI/China" /> 
+  <!-- 选择机票信息 --> 
+  <form id="searchform" action="http://b2c.lanmeiairlines.com:80/lqWeb/reservation/AVQuery.do" method="post"> 
+   <input name="tripType" type="hidden" value="MT" id="tripTypehidden" /> 
+   <input name="sureDate" type="hidden" value="" id="sureDate" /> 
+   <input name="language" type="hidden" value="US" id="languagehidden" /> 
+   <input type="hidden" id="sslBaseUrl" value="http://b2c.lanmeiairlines.com:80/lqWeb/" /> 
+   <input type="hidden" id="takeoffDate" name="takeoffDate" value="2019-06-14" /> 
+   <input type="hidden" id="returnDate" name="returnDate" value="2019-06-17" /> 
+   <input type="hidden" name="cabinType" id="cabinType" value="ECONOMY" /> 
+   <input type="hidden" name="CURRENCY" id="Currency" value="USD" placeholder="" readonly="" /> 
+   <input type="hidden" name="currencyCode" id="currencyCode" value="USD" placeholder="" readonly="" /> 
+   <input type="hidden" name="vertifyCode" id="vertifyCode" value="" /> 
+   <input type="hidden" name="pageConstant" id="pageConstant" value="1" /> 
+   <input name="userIp" type="hidden" value="58.249.3.180" /> 
+   <input type="hidden" name="fromPage" id="fromPage" value="" /> 
+   <input name="sign" type="hidden" value="0308519F52DC03F910DE2E7264F1312D" /> 
+   <input type="hidden" name="rad" id="rad" value="39557" /> 
+   <div class="changeSearch" style="margin-top:0;"> 
+    <div class="changeSearchTitle"> 
+     <h2> <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/leftTitleLine.png" /> Multi-Cities Booking </h2> 
+    </div> 
+    <div class="selectWay"> 
+     <a href="#" class="OneWay nth-child1" data-way="One - way" id="OW" data-multi="true">One-way</a> 
+     <a href="#" class="RoundTrip" data-way="Round Trip" id="RT" data-multi="true">Round trip</a> 
+     <a href="#" class="Stopover active" data-way="Stopover / Multi - city" id="MT" data-multi="true">Stopover/Multi-city</a> 
+    </div> 
+    <div class="selectAirMulti selectAirCommon"> 
+     <div class="local_timeSelect"> 
+     </div> 
+     <div class="addLocaSelect">
+      <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/slideUp-icon.png" />
+     </div> 
+     <div class="subLocaSelect">
+      <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/slideDown-icon.png" />
+     </div> 
+     <div class="passenger_Select"> 
+      <div class="CabinSelect"> 
+       <p><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/cabin-icon2.png" /><span>Class</span></p> 
+       <input type="text" class="cityinput inputDown" id="Cabin" value="" placeholder="" readonly="" /> 
+       <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/downArrow.png" /> 
+       <b class="bottomLine" style="display: none;"></b> 
+       <ul class="CabinMenu" id="CabinMenu" style="display: none;"> 
+        <li><a href="#" id="ECONOMY">Economy</a></li> 
+       </ul> 
+      </div> 
+      <div class="AdultSelect"> 
+       <p><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/adult-icon2.png" /><span>Adult</span></p> 
+       <div> 
+        <input type="text" name="adultCount" id="Adult" readonly="" /> 
+        <i class="addArrow"><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/addArrow.png" /></i> 
+        <i class="downArrow"><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/downArrow.png" /></i> 
+       </div> 
+      </div> 
+      <div class="ChildSelect"> 
+       <p><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/child-icon2.png" /><span>Child</span></p> 
+       <div> 
+        <input type="text" readonly="readonly" name="childCount" id="Child" class="" /> 
+        <i class="addArrow"><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/addArrow.png" /></i> 
+        <i class="downArrow"><img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/downArrow.png" /></i> 
+        <span class="ageTip">2-11 years</span> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="searchAir"> 
+      <a href="LanmeiAirlinesSelectFlight2.html" class="btn">Search</a> 
+     </div> 
+    </div> 
+   </div> 
+  </form> 
+  <!-- 页脚 --> 
+  <!-- 页脚EN --> 
+  <footer class="lm-footer"> 
+   <p class="lm-logo"></p> 
+   <p class="facebook"> <a href="https://www.facebook.com/lanmeiairlines/" class="a1 icon-facebook"></a> <a href="http://weibo.com/lanmeiair" class="icon-weibo"></a> </p> 
+   <p class="f-email"><img src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/common/images/EN/icon-email.png" class="icon-email" /><span>lm-ec@lanmeiairlines.com</span></p> 
+   <p class="f-local"> <img src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/common/images/EN/icon-location.png" class="icon-location" /> <a href="https://goo.gl/maps/7pyBze8BFe52" target="_Blank">No.575 D&amp;E, Russian Federation Boulevard, Phnom Penh, Cambodia</a> </p> 
+   <p class="copyright">&copy; Copyright 2017 Lanmei Airlines. All Rights Reserved. ICP:Guangdong Province <a href="http://www.miitbeian.gov.cn" target="_Blank" rel="nofollow">ICP-17005494-1</a></p> 
+  </footer> 
+  <!-- 回到顶部 --> 
+  <div class="BackToTop"> 
+   <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/ToTop-icon.png" class="img01" /> 
+   <img src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/images/EN/ToTop-icon-active.png" class="img02" /> 
+   <p>UP</p> 
+  </div> 
+  <input type="hidden" id="localurl" value="/lqWeb" /> 
+  <!-- 第三方库--> 
+  <script type="text/javascript" src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/libs/jQuery/jquery-1.11.3.js"></script> 
+  <script type="text/javascript" src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/libs/jQueryUI/jquery-ui.js"></script> 
+  <script type="text/javascript" src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/libs/layer/layer.js"></script> 
+  <script type="text/javascript" src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/libs/dataRange/lanmei-calendar-zh.js"></script> 
+  <script type="text/javascript" src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/libs/lanmei-date-select.js"></script> 
+  <script type="text/javascript" src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/libs/bootstrap/js/bootstrap.min.js"></script> 
+  <script type="text/javascript" src="http://b2c.lanmeiairlines.com:80/lqWeb/js/layercommon.js"></script> 
+  <!-- 公共JS --> 
+  <script type="text/javascript" src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/common/EN/js/Lanmei-common2.js"></script> 
+  <!-- 业务代码 --> 
+  <script type="text/javascript" src="http://b2c.lanmeiairlines.com:80/lqWeb/lqweb/Lanmei_project/js/EN/LanmeiAirlinesMultiCities.js"></script> 
+  <div id="C_1560417481640" style="display: none; position: absolute;">
+   <div class="cal-msg" style="display: none;"></div>
+   <div class="calendar">
+    <span class="cal-prev" style="display: none;">prev</span>
+    <span class="cal-next">next</span>
+    <span class="cal-close">close</span>
+    <div class="cal-container">
+     <dl>
+      <dt class="date">
+       2019年6月
+      </dt>
+      <dt>
+       <strong>日</strong>
+      </dt>
+      <dt>
+       一
+      </dt>
+      <dt>
+       二
+      </dt>
+      <dt>
+       三
+      </dt>
+      <dt>
+       四
+      </dt>
+      <dt>
+       五
+      </dt>
+      <dt>
+       <strong>六</strong>
+      </dt>
+      <dd>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a href="javascript:;" class="disabled">1</a>
+       <a href="javascript:;" class="disabled">2</a>
+       <a href="javascript:;" class="disabled">3</a>
+       <a href="javascript:;" class="disabled">4</a>
+       <a href="javascript:;" class="disabled">5</a>
+       <a href="javascript:;" class="disabled">6</a>
+       <a href="javascript:;" class="disabled">7</a>
+       <a href="javascript:;" class="disabled">8</a>
+       <a href="javascript:;" class="disabled">9</a>
+       <a href="javascript:;" class="disabled">10</a>
+       <a href="javascript:;" class="disabled">11</a>
+       <a href="javascript:;" class="disabled">12</a>
+       <a href="javascript:;">13</a>
+       <a href="javascript:;">14</a>
+       <a href="javascript:;">15</a>
+       <a href="javascript:;">16</a>
+       <a href="javascript:;">17</a>
+       <a href="javascript:;">18</a>
+       <a href="javascript:;">19</a>
+       <a href="javascript:;">20</a>
+       <a href="javascript:;">21</a>
+       <a href="javascript:;">22</a>
+       <a href="javascript:;">23</a>
+       <a href="javascript:;">24</a>
+       <a href="javascript:;">25</a>
+       <a href="javascript:;">26</a>
+       <a href="javascript:;">27</a>
+       <a href="javascript:;">28</a>
+       <a href="javascript:;">29</a>
+       <a href="javascript:;">30</a>
+      </dd>
+     </dl>
+    </div>
+    <div class="cal-container">
+     <dl>
+      <dt class="date">
+       2019年7月
+      </dt>
+      <dt>
+       <strong><strong>日</strong></strong>
+      </dt>
+      <dt>
+       <strong>一</strong>
+      </dt>
+      <dt>
+       <strong>二</strong>
+      </dt>
+      <dt>
+       <strong>三</strong>
+      </dt>
+      <dt>
+       <strong>四</strong>
+      </dt>
+      <dt>
+       <strong>五</strong>
+      </dt>
+      <dt>
+       <strong><strong>六</strong></strong>
+      </dt>
+      <dd>
+       <a class="disabled">&nbsp;</a>
+       <a href="javascript:;">1</a>
+       <a href="javascript:;">2</a>
+       <a href="javascript:;">3</a>
+       <a href="javascript:;">4</a>
+       <a href="javascript:;">5</a>
+       <a href="javascript:;">6</a>
+       <a href="javascript:;">7</a>
+       <a href="javascript:;">8</a>
+       <a href="javascript:;">9</a>
+       <a href="javascript:;">10</a>
+       <a href="javascript:;">11</a>
+       <a href="javascript:;">12</a>
+       <a href="javascript:;">13</a>
+       <a href="javascript:;">14</a>
+       <a href="javascript:;">15</a>
+       <a href="javascript:;">16</a>
+       <a href="javascript:;">17</a>
+       <a href="javascript:;">18</a>
+       <a href="javascript:;">19</a>
+       <a href="javascript:;">20</a>
+       <a href="javascript:;">21</a>
+       <a href="javascript:;">22</a>
+       <a href="javascript:;">23</a>
+       <a href="javascript:;">24</a>
+       <a href="javascript:;">25</a>
+       <a href="javascript:;">26</a>
+       <a href="javascript:;">27</a>
+       <a href="javascript:;">28</a>
+       <a href="javascript:;">29</a>
+       <a href="javascript:;">30</a>
+       <a href="javascript:;">31</a>
+      </dd>
+     </dl>
+    </div>
+   </div>
+  </div>
+  <div id="C_1560417481644" style="display: none; position: absolute;" class="cal-end">
+   <div class="cal-msg" style="display: none;"></div>
+   <div class="calendar">
+    <span class="cal-prev" style="display: none;">prev</span>
+    <span class="cal-next">next</span>
+    <span class="cal-close">close</span>
+    <div class="cal-container">
+     <dl>
+      <dt class="date">
+       2019年6月
+      </dt>
+      <dt>
+       <strong>日</strong>
+      </dt>
+      <dt>
+       一
+      </dt>
+      <dt>
+       二
+      </dt>
+      <dt>
+       三
+      </dt>
+      <dt>
+       四
+      </dt>
+      <dt>
+       五
+      </dt>
+      <dt>
+       <strong>六</strong>
+      </dt>
+      <dd>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a href="javascript:;">1</a>
+       <a href="javascript:;">2</a>
+       <a href="javascript:;">3</a>
+       <a href="javascript:;">4</a>
+       <a href="javascript:;">5</a>
+       <a href="javascript:;">6</a>
+       <a href="javascript:;">7</a>
+       <a href="javascript:;">8</a>
+       <a href="javascript:;">9</a>
+       <a href="javascript:;">10</a>
+       <a href="javascript:;">11</a>
+       <a href="javascript:;">12</a>
+       <a href="javascript:;">13</a>
+       <a href="javascript:;">14</a>
+       <a href="javascript:;">15</a>
+       <a href="javascript:;">16</a>
+       <a href="javascript:;">17</a>
+       <a href="javascript:;">18</a>
+       <a href="javascript:;">19</a>
+       <a href="javascript:;">20</a>
+       <a href="javascript:;">21</a>
+       <a href="javascript:;">22</a>
+       <a href="javascript:;">23</a>
+       <a href="javascript:;">24</a>
+       <a href="javascript:;">25</a>
+       <a href="javascript:;">26</a>
+       <a href="javascript:;">27</a>
+       <a href="javascript:;">28</a>
+       <a href="javascript:;">29</a>
+       <a href="javascript:;">30</a>
+      </dd>
+     </dl>
+    </div>
+    <div class="cal-container">
+     <dl>
+      <dt class="date">
+       2019年7月
+      </dt>
+      <dt>
+       <strong><strong>日</strong></strong>
+      </dt>
+      <dt>
+       <strong>一</strong>
+      </dt>
+      <dt>
+       <strong>二</strong>
+      </dt>
+      <dt>
+       <strong>三</strong>
+      </dt>
+      <dt>
+       <strong>四</strong>
+      </dt>
+      <dt>
+       <strong>五</strong>
+      </dt>
+      <dt>
+       <strong><strong>六</strong></strong>
+      </dt>
+      <dd>
+       <a class="disabled">&nbsp;</a>
+       <a href="javascript:;">1</a>
+       <a href="javascript:;">2</a>
+       <a href="javascript:;">3</a>
+       <a href="javascript:;">4</a>
+       <a href="javascript:;">5</a>
+       <a href="javascript:;">6</a>
+       <a href="javascript:;">7</a>
+       <a href="javascript:;">8</a>
+       <a href="javascript:;">9</a>
+       <a href="javascript:;">10</a>
+       <a href="javascript:;">11</a>
+       <a href="javascript:;">12</a>
+       <a href="javascript:;">13</a>
+       <a href="javascript:;">14</a>
+       <a href="javascript:;">15</a>
+       <a href="javascript:;">16</a>
+       <a href="javascript:;">17</a>
+       <a href="javascript:;">18</a>
+       <a href="javascript:;">19</a>
+       <a href="javascript:;">20</a>
+       <a href="javascript:;">21</a>
+       <a href="javascript:;">22</a>
+       <a href="javascript:;">23</a>
+       <a href="javascript:;">24</a>
+       <a href="javascript:;">25</a>
+       <a href="javascript:;">26</a>
+       <a href="javascript:;">27</a>
+       <a href="javascript:;">28</a>
+       <a href="javascript:;">29</a>
+       <a href="javascript:;">30</a>
+       <a href="javascript:;">31</a>
+      </dd>
+     </dl>
+    </div>
+   </div>
+  </div>
+  <div id="C_1560417481658" style="display: none; position: absolute;">
+   <div class="cal-msg" style="display: none;"></div>
+   <div class="calendar">
+    <span class="cal-prev" style="display: none;">prev</span>
+    <span class="cal-next">next</span>
+    <span class="cal-close">close</span>
+    <div class="cal-container">
+     <dl>
+      <dt class="date">
+       2019年6月
+      </dt>
+      <dt>
+       <strong>日</strong>
+      </dt>
+      <dt>
+       一
+      </dt>
+      <dt>
+       二
+      </dt>
+      <dt>
+       三
+      </dt>
+      <dt>
+       四
+      </dt>
+      <dt>
+       五
+      </dt>
+      <dt>
+       <strong>六</strong>
+      </dt>
+      <dd>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a href="javascript:;" class="disabled">1</a>
+       <a href="javascript:;" class="disabled">2</a>
+       <a href="javascript:;" class="disabled">3</a>
+       <a href="javascript:;" class="disabled">4</a>
+       <a href="javascript:;" class="disabled">5</a>
+       <a href="javascript:;" class="disabled">6</a>
+       <a href="javascript:;" class="disabled">7</a>
+       <a href="javascript:;" class="disabled">8</a>
+       <a href="javascript:;" class="disabled">9</a>
+       <a href="javascript:;" class="disabled">10</a>
+       <a href="javascript:;" class="disabled">11</a>
+       <a href="javascript:;" class="disabled">12</a>
+       <a href="javascript:;">13</a>
+       <a href="javascript:;">14</a>
+       <a href="javascript:;">15</a>
+       <a href="javascript:;">16</a>
+       <a href="javascript:;">17</a>
+       <a href="javascript:;">18</a>
+       <a href="javascript:;">19</a>
+       <a href="javascript:;">20</a>
+       <a href="javascript:;">21</a>
+       <a href="javascript:;">22</a>
+       <a href="javascript:;">23</a>
+       <a href="javascript:;">24</a>
+       <a href="javascript:;">25</a>
+       <a href="javascript:;">26</a>
+       <a href="javascript:;">27</a>
+       <a href="javascript:;">28</a>
+       <a href="javascript:;">29</a>
+       <a href="javascript:;">30</a>
+      </dd>
+     </dl>
+    </div>
+    <div class="cal-container">
+     <dl>
+      <dt class="date">
+       2019年7月
+      </dt>
+      <dt>
+       <strong><strong>日</strong></strong>
+      </dt>
+      <dt>
+       <strong>一</strong>
+      </dt>
+      <dt>
+       <strong>二</strong>
+      </dt>
+      <dt>
+       <strong>三</strong>
+      </dt>
+      <dt>
+       <strong>四</strong>
+      </dt>
+      <dt>
+       <strong>五</strong>
+      </dt>
+      <dt>
+       <strong><strong>六</strong></strong>
+      </dt>
+      <dd>
+       <a class="disabled">&nbsp;</a>
+       <a href="javascript:;">1</a>
+       <a href="javascript:;">2</a>
+       <a href="javascript:;">3</a>
+       <a href="javascript:;">4</a>
+       <a href="javascript:;">5</a>
+       <a href="javascript:;">6</a>
+       <a href="javascript:;">7</a>
+       <a href="javascript:;">8</a>
+       <a href="javascript:;">9</a>
+       <a href="javascript:;">10</a>
+       <a href="javascript:;">11</a>
+       <a href="javascript:;">12</a>
+       <a href="javascript:;">13</a>
+       <a href="javascript:;">14</a>
+       <a href="javascript:;">15</a>
+       <a href="javascript:;">16</a>
+       <a href="javascript:;">17</a>
+       <a href="javascript:;">18</a>
+       <a href="javascript:;">19</a>
+       <a href="javascript:;">20</a>
+       <a href="javascript:;">21</a>
+       <a href="javascript:;">22</a>
+       <a href="javascript:;">23</a>
+       <a href="javascript:;">24</a>
+       <a href="javascript:;">25</a>
+       <a href="javascript:;">26</a>
+       <a href="javascript:;">27</a>
+       <a href="javascript:;">28</a>
+       <a href="javascript:;">29</a>
+       <a href="javascript:;">30</a>
+       <a href="javascript:;">31</a>
+      </dd>
+     </dl>
+    </div>
+   </div>
+  </div>
+  <div id="C_1560417481662" style="display: none; position: absolute;" class="cal-end">
+   <div class="cal-msg" style="display: none;"></div>
+   <div class="calendar">
+    <span class="cal-prev" style="display: none;">prev</span>
+    <span class="cal-next">next</span>
+    <span class="cal-close">close</span>
+    <div class="cal-container">
+     <dl>
+      <dt class="date">
+       2019年6月
+      </dt>
+      <dt>
+       <strong>日</strong>
+      </dt>
+      <dt>
+       一
+      </dt>
+      <dt>
+       二
+      </dt>
+      <dt>
+       三
+      </dt>
+      <dt>
+       四
+      </dt>
+      <dt>
+       五
+      </dt>
+      <dt>
+       <strong>六</strong>
+      </dt>
+      <dd>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a href="javascript:;">1</a>
+       <a href="javascript:;">2</a>
+       <a href="javascript:;">3</a>
+       <a href="javascript:;">4</a>
+       <a href="javascript:;">5</a>
+       <a href="javascript:;">6</a>
+       <a href="javascript:;">7</a>
+       <a href="javascript:;">8</a>
+       <a href="javascript:;">9</a>
+       <a href="javascript:;">10</a>
+       <a href="javascript:;">11</a>
+       <a href="javascript:;">12</a>
+       <a href="javascript:;">13</a>
+       <a href="javascript:;">14</a>
+       <a href="javascript:;">15</a>
+       <a href="javascript:;">16</a>
+       <a href="javascript:;">17</a>
+       <a href="javascript:;">18</a>
+       <a href="javascript:;">19</a>
+       <a href="javascript:;">20</a>
+       <a href="javascript:;">21</a>
+       <a href="javascript:;">22</a>
+       <a href="javascript:;">23</a>
+       <a href="javascript:;">24</a>
+       <a href="javascript:;">25</a>
+       <a href="javascript:;">26</a>
+       <a href="javascript:;">27</a>
+       <a href="javascript:;">28</a>
+       <a href="javascript:;">29</a>
+       <a href="javascript:;">30</a>
+      </dd>
+     </dl>
+    </div>
+    <div class="cal-container">
+     <dl>
+      <dt class="date">
+       2019年7月
+      </dt>
+      <dt>
+       <strong><strong>日</strong></strong>
+      </dt>
+      <dt>
+       <strong>一</strong>
+      </dt>
+      <dt>
+       <strong>二</strong>
+      </dt>
+      <dt>
+       <strong>三</strong>
+      </dt>
+      <dt>
+       <strong>四</strong>
+      </dt>
+      <dt>
+       <strong>五</strong>
+      </dt>
+      <dt>
+       <strong><strong>六</strong></strong>
+      </dt>
+      <dd>
+       <a class="disabled">&nbsp;</a>
+       <a href="javascript:;">1</a>
+       <a href="javascript:;">2</a>
+       <a href="javascript:;">3</a>
+       <a href="javascript:;">4</a>
+       <a href="javascript:;">5</a>
+       <a href="javascript:;">6</a>
+       <a href="javascript:;">7</a>
+       <a href="javascript:;">8</a>
+       <a href="javascript:;">9</a>
+       <a href="javascript:;">10</a>
+       <a href="javascript:;">11</a>
+       <a href="javascript:;">12</a>
+       <a href="javascript:;">13</a>
+       <a href="javascript:;">14</a>
+       <a href="javascript:;">15</a>
+       <a href="javascript:;">16</a>
+       <a href="javascript:;">17</a>
+       <a href="javascript:;">18</a>
+       <a href="javascript:;">19</a>
+       <a href="javascript:;">20</a>
+       <a href="javascript:;">21</a>
+       <a href="javascript:;">22</a>
+       <a href="javascript:;">23</a>
+       <a href="javascript:;">24</a>
+       <a href="javascript:;">25</a>
+       <a href="javascript:;">26</a>
+       <a href="javascript:;">27</a>
+       <a href="javascript:;">28</a>
+       <a href="javascript:;">29</a>
+       <a href="javascript:;">30</a>
+       <a href="javascript:;">31</a>
+      </dd>
+     </dl>
+    </div>
+   </div>
+  </div>
+  <div id="C_1560417481679" style="display: none; position: absolute;">
+   <div class="cal-msg" style="display: none;"></div>
+   <div class="calendar">
+    <span class="cal-prev" style="display: none;">prev</span>
+    <span class="cal-next">next</span>
+    <span class="cal-close">close</span>
+    <div class="cal-container">
+     <dl>
+      <dt class="date">
+       2019年6月
+      </dt>
+      <dt>
+       <strong>日</strong>
+      </dt>
+      <dt>
+       一
+      </dt>
+      <dt>
+       二
+      </dt>
+      <dt>
+       三
+      </dt>
+      <dt>
+       四
+      </dt>
+      <dt>
+       五
+      </dt>
+      <dt>
+       <strong>六</strong>
+      </dt>
+      <dd>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a href="javascript:;" class="disabled">1</a>
+       <a href="javascript:;" class="disabled">2</a>
+       <a href="javascript:;" class="disabled">3</a>
+       <a href="javascript:;" class="disabled">4</a>
+       <a href="javascript:;" class="disabled">5</a>
+       <a href="javascript:;" class="disabled">6</a>
+       <a href="javascript:;" class="disabled">7</a>
+       <a href="javascript:;" class="disabled">8</a>
+       <a href="javascript:;" class="disabled">9</a>
+       <a href="javascript:;" class="disabled">10</a>
+       <a href="javascript:;" class="disabled">11</a>
+       <a href="javascript:;" class="disabled">12</a>
+       <a href="javascript:;">13</a>
+       <a href="javascript:;">14</a>
+       <a href="javascript:;">15</a>
+       <a href="javascript:;">16</a>
+       <a href="javascript:;">17</a>
+       <a href="javascript:;">18</a>
+       <a href="javascript:;">19</a>
+       <a href="javascript:;">20</a>
+       <a href="javascript:;">21</a>
+       <a href="javascript:;">22</a>
+       <a href="javascript:;">23</a>
+       <a href="javascript:;">24</a>
+       <a href="javascript:;">25</a>
+       <a href="javascript:;">26</a>
+       <a href="javascript:;">27</a>
+       <a href="javascript:;">28</a>
+       <a href="javascript:;">29</a>
+       <a href="javascript:;">30</a>
+      </dd>
+     </dl>
+    </div>
+    <div class="cal-container">
+     <dl>
+      <dt class="date">
+       2019年7月
+      </dt>
+      <dt>
+       <strong><strong>日</strong></strong>
+      </dt>
+      <dt>
+       <strong>一</strong>
+      </dt>
+      <dt>
+       <strong>二</strong>
+      </dt>
+      <dt>
+       <strong>三</strong>
+      </dt>
+      <dt>
+       <strong>四</strong>
+      </dt>
+      <dt>
+       <strong>五</strong>
+      </dt>
+      <dt>
+       <strong><strong>六</strong></strong>
+      </dt>
+      <dd>
+       <a class="disabled">&nbsp;</a>
+       <a href="javascript:;">1</a>
+       <a href="javascript:;">2</a>
+       <a href="javascript:;">3</a>
+       <a href="javascript:;">4</a>
+       <a href="javascript:;">5</a>
+       <a href="javascript:;">6</a>
+       <a href="javascript:;">7</a>
+       <a href="javascript:;">8</a>
+       <a href="javascript:;">9</a>
+       <a href="javascript:;">10</a>
+       <a href="javascript:;">11</a>
+       <a href="javascript:;">12</a>
+       <a href="javascript:;">13</a>
+       <a href="javascript:;">14</a>
+       <a href="javascript:;">15</a>
+       <a href="javascript:;">16</a>
+       <a href="javascript:;">17</a>
+       <a href="javascript:;">18</a>
+       <a href="javascript:;">19</a>
+       <a href="javascript:;">20</a>
+       <a href="javascript:;">21</a>
+       <a href="javascript:;">22</a>
+       <a href="javascript:;">23</a>
+       <a href="javascript:;">24</a>
+       <a href="javascript:;">25</a>
+       <a href="javascript:;">26</a>
+       <a href="javascript:;">27</a>
+       <a href="javascript:;">28</a>
+       <a href="javascript:;">29</a>
+       <a href="javascript:;">30</a>
+       <a href="javascript:;">31</a>
+      </dd>
+     </dl>
+    </div>
+   </div>
+  </div>
+  <div id="C_1560417481684" style="display: none; position: absolute;" class="cal-end">
+   <div class="cal-msg" style="display: none;"></div>
+   <div class="calendar">
+    <span class="cal-prev" style="display: none;">prev</span>
+    <span class="cal-next">next</span>
+    <span class="cal-close">close</span>
+    <div class="cal-container">
+     <dl>
+      <dt class="date">
+       2019年6月
+      </dt>
+      <dt>
+       <strong>日</strong>
+      </dt>
+      <dt>
+       一
+      </dt>
+      <dt>
+       二
+      </dt>
+      <dt>
+       三
+      </dt>
+      <dt>
+       四
+      </dt>
+      <dt>
+       五
+      </dt>
+      <dt>
+       <strong>六</strong>
+      </dt>
+      <dd>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a class="disabled">&nbsp;</a>
+       <a href="javascript:;">1</a>
+       <a href="javascript:;">2</a>
+       <a href="javascript:;">3</a>
+       <a href="javascript:;">4</a>
+       <a href="javascript:;">5</a>
+       <a href="javascript:;">6</a>
+       <a href="javascript:;">7</a>
+       <a href="javascript:;">8</a>
+       <a href="javascript:;">9</a>
+       <a href="javascript:;">10</a>
+       <a href="javascript:;">11</a>
+       <a href="javascript:;">12</a>
+       <a href="javascript:;">13</a>
+       <a href="javascript:;">14</a>
+       <a href="javascript:;">15</a>
+       <a href="javascript:;">16</a>
+       <a href="javascript:;">17</a>
+       <a href="javascript:;">18</a>
+       <a href="javascript:;">19</a>
+       <a href="javascript:;">20</a>
+       <a href="javascript:;">21</a>
+       <a href="javascript:;">22</a>
+       <a href="javascript:;">23</a>
+       <a href="javascript:;">24</a>
+       <a href="javascript:;">25</a>
+       <a href="javascript:;">26</a>
+       <a href="javascript:;">27</a>
+       <a href="javascript:;">28</a>
+       <a href="javascript:;">29</a>
+       <a href="javascript:;">30</a>
+      </dd>
+     </dl>
+    </div>
+    <div class="cal-container">
+     <dl>
+      <dt class="date">
+       2019年7月
+      </dt>
+      <dt>
+       <strong><strong>日</strong></strong>
+      </dt>
+      <dt>
+       <strong>一</strong>
+      </dt>
+      <dt>
+       <strong>二</strong>
+      </dt>
+      <dt>
+       <strong>三</strong>
+      </dt>
+      <dt>
+       <strong>四</strong>
+      </dt>
+      <dt>
+       <strong>五</strong>
+      </dt>
+      <dt>
+       <strong><strong>六</strong></strong>
+      </dt>
+      <dd>
+       <a class="disabled">&nbsp;</a>
+       <a href="javascript:;">1</a>
+       <a href="javascript:;">2</a>
+       <a href="javascript:;">3</a>
+       <a href="javascript:;">4</a>
+       <a href="javascript:;">5</a>
+       <a href="javascript:;">6</a>
+       <a href="javascript:;">7</a>
+       <a href="javascript:;">8</a>
+       <a href="javascript:;">9</a>
+       <a href="javascript:;">10</a>
+       <a href="javascript:;">11</a>
+       <a href="javascript:;">12</a>
+       <a href="javascript:;">13</a>
+       <a href="javascript:;">14</a>
+       <a href="javascript:;">15</a>
+       <a href="javascript:;">16</a>
+       <a href="javascript:;">17</a>
+       <a href="javascript:;">18</a>
+       <a href="javascript:;">19</a>
+       <a href="javascript:;">20</a>
+       <a href="javascript:;">21</a>
+       <a href="javascript:;">22</a>
+       <a href="javascript:;">23</a>
+       <a href="javascript:;">24</a>
+       <a href="javascript:;">25</a>
+       <a href="javascript:;">26</a>
+       <a href="javascript:;">27</a>
+       <a href="javascript:;">28</a>
+       <a href="javascript:;">29</a>
+       <a href="javascript:;">30</a>
+       <a href="javascript:;">31</a>
+      </dd>
+     </dl>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

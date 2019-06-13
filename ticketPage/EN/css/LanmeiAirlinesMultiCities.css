@@ -1,0 +1,428 @@
+.changeSearch {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 50px;
+}
+.changeSearch .changeSearchTitle {
+  height: 36px;
+  line-height: 36px;
+}
+.changeSearch .changeSearchTitle > h2 {
+  float: left;
+  font-weight: bold;
+  font-size: 20px;
+  color: #121c3e;
+  text-align: left;
+}
+.changeSearch .changeSearchTitle > h2 img {
+  margin-right: 20px;
+}
+.changeSearch .selectWay {
+  height: 84px;
+  padding: 30px 20px;
+}
+.changeSearch .selectWay > a {
+  display: inline-block;
+  border-radius: 2px;
+  width: 100px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 14px;
+  color: #1f2c5c;
+  text-align: center;
+  margin-right: 20px;
+}
+.changeSearch .selectWay > a.active {
+  background: #8ec060;
+  color: #ffffff;
+}
+.changeSearch .selectWay .Stopover {
+  width: 170px;
+}
+.changeSearch .selectAirMulti .local_timeSelect,
+.changeSearch .selectAirMulti .passenger_Select {
+  width: 100%;
+}
+.changeSearch .selectAirMulti .local_timeSelect .local_timeSelectList,
+.changeSearch .selectAirMulti .passenger_Select .local_timeSelectList {
+  height: 50px;
+  margin-bottom: 20px;
+}
+.changeSearch .selectAirMulti .local_timeSelect .local_timeSelectList > div,
+.changeSearch .selectAirMulti .passenger_Select .local_timeSelectList > div {
+  width: 270px;
+  height: 50px;
+  float: left;
+  position: relative;
+}
+.changeSearch .selectAirMulti .local_timeSelect .local_timeSelectList > .multi-delete {
+  width: 36px;
+  background: url('../imgs/multi-delete.png') right center no-repeat;
+  cursor: pointer;
+}
+.changeSearch .selectAirMulti .local_timeSelect .local_timeSelectList > div p span,
+.changeSearch .selectAirMulti .passenger_Select .local_timeSelectList > div p span {
+  font-weight: bold;
+  font-size: 20px;
+  color: #1f2c5c;
+  text-align: left;
+}
+.changeSearch .selectAirMulti .local_timeSelect .local_timeSelectList > div p img,
+.changeSearch .selectAirMulti .passenger_Select .local_timeSelectList > div p img {
+  margin-right: 30px;
+  vertical-align: top;
+}
+.changeSearch .selectAirMulti .local_timeSelect .local_timeSelectList > div input,
+.changeSearch .selectAirMulti .passenger_Select .local_timeSelectList > div input {
+  font-size: 16px;
+  color: #1f2c5c;
+  padding: 0 20px 0 70px;
+  background: rgba(31, 44, 92, 0.04);
+  border-radius: 2px;
+  border: none;
+  width: 270px;
+  height: 50px;
+  line-height: 50px;
+  text-overflow: ellipsis;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+color: rgba(31,44,92,.3);font-size: 16px; 
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: rgba(31,44,92,.3);font-size: 16px;
+}
+
+input:-ms-input-placeholder{
+  color: rgba(31,44,92,.3);font-size: 16px;
+}
+
+input::-webkit-input-placeholder{
+  color: rgba(31,44,92,.3);font-size: 16px;
+}
+.changeSearch .selectAirMulti .local_timeSelect .local_timeSelectList .fromcityinput {
+  background: url('../imgs/originStart3.png') 20px no-repeat rgba(31, 44, 92, 0.04);
+}
+.changeSearch .selectAirMulti .local_timeSelect .local_timeSelectList .tocityinput {
+  background: url('../imgs/originEnd3.png') 20px no-repeat rgba(31, 44, 92, 0.04);
+}
+.changeSearch .selectAirMulti .local_timeSelect .local_timeSelectList .timeFrom {
+  background: url('../imgs/departureDate3.png') 20px no-repeat rgba(31, 44, 92, 0.04);
+}
+.changeSearch .selectAirMulti .local_timeSelect .local_timeSelectList > div > img,
+.changeSearch .selectAirMulti .passenger_Select .local_timeSelectList > div > img {
+  position: absolute;
+  right: 18px;
+  top: 51px;
+}
+.changeSearch .selectAirMulti .local_timeSelect .local_timeSelectList > div .clear,
+.changeSearch .selectAirMulti .passenger_Select .local_timeSelectList > div .clear {
+  display: none;
+  position: absolute;
+  right: 32px;
+  top: 42px;
+  cursor: pointer;
+}
+.changeSearch .selectAirMulti .local_timeSelect .local_timeSelectList > div .localChangeImg,
+.changeSearch .selectAirMulti .passenger_Select .local_timeSelectList > div .localChangeImg {
+  position: absolute;
+  right: -56px;
+  top: 50px;
+  display: inline-block;
+  width: 20px;
+  height: 18px;
+  cursor: pointer;
+}
+.changeSearch .selectAirMulti .local_timeSelect .local_timeSelectList > div .img01,
+.changeSearch .selectAirMulti .passenger_Select .local_timeSelectList > div .img01 {
+  background: url(../../images/CN/localChange2-active.png) no-repeat;
+}
+.changeSearch .selectAirMulti .local_timeSelect .local_timeSelectList > div .img02,
+.changeSearch .selectAirMulti .passenger_Select .local_timeSelectList > div .img02 {
+  background: url(../../images/CN/localChange-active.png) no-repeat;
+}
+.changeSearch .selectAirMulti .local_timeSelect .local_timeSelectList .serialNum,
+.changeSearch .selectAirMulti .passenger_Select .local_timeSelectList .serialNum {
+  background: -webkit-linear-gradient(left, #42958a 0%, #1f2c5c 100%);
+background: -o-linear-gradient(right, #42958a 0%, #1f2c5c 100%);
+background: -moz-linear-gradient(right, #42958a 0%, #1f2c5c 100%);
+background: linear-gradient(to right, #42958a 0%, #1f2c5c 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#42958a', endColorstr='#1f2c5c', GradientType=1);
+
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 100%;
+  font-weight: bold;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+.changeSearch .selectAirMulti .local_timeSelect .local_timeSelectList .localSelectEnd,
+.changeSearch .selectAirMulti .passenger_Select .local_timeSelectList .localSelectEnd {
+  margin-left: 44px;
+  margin-right: 20px;
+}
+.changeSearch .selectAirMulti .addLocaSelect,
+.changeSearch .selectAirMulti .subLocaSelect {
+  background: #1f2c5c;
+  border-radius: 2px;
+  width: 960px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+.changeSearch .selectAirMulti .addLocaSelect:hover,
+.changeSearch .selectAirMulti .subLocaSelect:hover {
+  background: #8ec060;
+}
+.changeSearch .selectAirMulti .subLocaSelect {
+  margin-top: 10px;
+}
+.changeSearch .selectAirMulti .passenger_Select {
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: 200px;
+}
+.changeSearch .selectAirMulti .passenger_Select > div {
+  height: 50px;
+  float: left;
+  position: relative;
+  margin-bottom: 20px;
+}
+.changeSearch .selectAirMulti .passenger_Select .multi-people-com {
+  width: 264px !important;
+  margin-left: 20px;
+}
+.changeSearch .selectAirMulti .passenger_Select > div p span {
+  font-weight: bold;
+  font-size: 20px;
+  color: #1f2c5c;
+  text-align: left;
+}
+.changeSearch .selectAirMulti .passenger_Select > div p img {
+  margin-right: 30px;
+  vertical-align: top;
+}
+.changeSearch .selectAirMulti .passenger_Select > div input {
+  font-size: 16px;
+  color: #1f2c5c;
+  padding: 0 20px 0 70px;
+  background: rgba(31, 44, 92, 0.04);
+  padding-right: 26px;
+  border: none;
+  border-radius: 2px;
+  height: 50px;
+  line-height:50px;
+}
+.changeSearch .selectAirMulti .passenger_Select > div .cityinput {
+  background: url('../imgs/cabin-icon3.png') 20px no-repeat rgba(31, 44, 92, 0.04);
+}
+.changeSearch .selectAirMulti .passenger_Select > div > img {
+  position: absolute;
+  right: 55px;
+  top: 56px;
+}
+.changeSearch .selectAirMulti .passenger_Select .AdultSelect,
+.changeSearch .selectAirMulti .passenger_Select .ChildSelect,
+.changeSearch .selectAirMulti .passenger_Select .InfantSelect {
+  width: 150px;
+}
+.changeSearch .selectAirMulti .passenger_Select .AdultSelect input,
+.changeSearch .selectAirMulti .passenger_Select .ChildSelect input,
+.changeSearch .selectAirMulti .passenger_Select .InfantSelect input {
+  width: 110px;
+}
+.changeSearch .selectAirMulti .passenger_Select .AdultSelect > div,
+.changeSearch .selectAirMulti .passenger_Select .ChildSelect > div,
+.changeSearch .selectAirMulti .passenger_Select .InfantSelect > div {
+  position: relative;
+  width: 150px;
+  height: 40px;
+}
+.changeSearch .selectAirMulti .passenger_Select .AdultSelect > div .addArrow,
+.changeSearch .selectAirMulti .passenger_Select .ChildSelect > div .addArrow,
+.changeSearch .selectAirMulti .passenger_Select .InfantSelect > div .addArrow,
+.changeSearch .selectAirMulti .passenger_Select .AdultSelect > div .downArrow,
+.changeSearch .selectAirMulti .passenger_Select .ChildSelect > div .downArrow,
+.changeSearch .selectAirMulti .passenger_Select .InfantSelect > div .downArrow {
+  position: absolute;
+  top: 10px;
+  right: 46px;
+  display: inline-block;
+  width: 16px;
+  height: 20px;
+  line-height: 30px;
+  cursor: pointer;
+  z-index: 99;
+}
+.changeSearch .selectAirMulti .passenger_Select .AdultSelect > div .downArrow,
+.changeSearch .selectAirMulti .passenger_Select .ChildSelect > div .downArrow,
+.changeSearch .selectAirMulti .passenger_Select .InfantSelect > div .downArrow {
+  top: 30px;
+  line-height: 10px;
+}
+.changeSearch .selectAirMulti .passenger_Select .AdultSelect p img,
+.changeSearch .selectAirMulti .passenger_Select .ChildSelect p img,
+.changeSearch .selectAirMulti .passenger_Select .InfantSelect p img {
+  margin-right: 10px;
+}
+.changeSearch .selectAirMulti .passenger_Select .ChildSelect .ageTip,
+.changeSearch .selectAirMulti .passenger_Select .InfantSelect .ageTip {
+  position: absolute;
+  bottom: -30px;
+  left: 26px;
+  color: #ccc;
+}
+.changeSearch .selectAirMulti .passenger_Select .CabinSelect,
+.changeSearch .selectAirMulti .passenger_Select .CurrencySelect {
+  width: 218px;
+}
+.changeSearch .selectAirMulti .passenger_Select .CabinSelect input,
+.changeSearch .selectAirMulti .passenger_Select .CurrencySelect input {
+  width: 218px;
+}
+.changeSearch .selectAirMulti .passenger_Select .CabinSelect .bottomLine,
+.changeSearch .selectAirMulti .passenger_Select .CurrencySelect .bottomLine {
+  width: 200px;
+}
+.changeSearch .selectAirMulti .passenger_Select .CurrencySelect {
+  width: 220px;
+}
+.changeSearch .selectAirMulti .passenger_Select .CurrencySelect input {
+  width: 220px;
+}
+.changeSearch .selectAirMulti .passenger_Select .CurrencySelect > img {
+  right: 16px;
+}
+.changeSearch .selectAirMulti .searchAir {
+  margin-bottom: 70px;
+}
+.changeSearch .selectAirMulti .searchAir a {
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0;
+  color: #fff;
+  font-size: 16px;
+  margin-left: 20px;
+  border: none;
+  border-radius: 2px;
+  background: #42958a;
+  background: -webkit-linear-gradient(left, #B4EC80 0%, #00908C 100%);
+  background: -o-linear-gradient(right, #B4EC80 0%, #00908C 100%);
+  background: -moz-linear-gradient(right, #B4EC80 0%, #00908C 100%);
+  background: linear-gradient(to right, #B4EC80 0%, #00908C 100%);
+  filter: alpha progid:DXImageTransform.Microsoft.gradient(startcolorstr=#B4EC80, endcolorstr=#00908C, gradientType=1);
+}
+.changeSearch .selectAirMulti .bottomLine {
+  width: 230px;
+  top: 66px;
+}
+.changeSearch .selectAirMulti .fromcityMenu,
+.changeSearch .selectAirMulti .tocityMenu,
+.changeSearch .selectAirMulti .CabinMenu {
+  display: none;
+  position: absolute;
+  top: 75px;
+  left: 0;
+  width: 270px;
+  background: #fff;
+  z-index: 999;
+  border-top: none;
+  height: 220px;
+  padding: 20px;
+  box-shadow: 0 0 50px 0 rgba(31, 44, 92, 0.1);
+  overflow-y: scroll;
+}
+.changeSearch .selectAirMulti .fromcityMenu > li,
+.changeSearch .selectAirMulti .tocityMenu > li,
+.changeSearch .selectAirMulti .CabinMenu > li {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  overflow: hidden;
+}
+.changeSearch .selectAirMulti .fromcityMenu > li a,
+.changeSearch .selectAirMulti .tocityMenu > li a,
+.changeSearch .selectAirMulti .CabinMenu > li a {
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  color: rgba(31, 44, 92, 0.5);
+  transition: all .3s;
+  -webkit-transition: all .3s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.changeSearch .selectAirMulti .fromcityMenu > li a:hover,
+.changeSearch .selectAirMulti .tocityMenu > li a:hover,
+.changeSearch .selectAirMulti .CabinMenu > li a:hover {
+  color: #8ec060;
+  transition: all .3s;
+  -webkit-transition: all .3s;
+}
+.changeSearch .selectAirMulti .CabinMenu {
+  width: 218px;
+  height: 80px;
+}
+/* 修改公共样式 */
+.selectAirMulti span {
+  font-size: 14px !important;
+}
+.local_timeSelect > div p img {
+  margin-right: 10px !important;
+  vertical-align: bottom !important;
+}
+.CabinSelect p img {
+  margin-right: 10px !important;
+  vertical-align: bottom !important;
+}
+.changeSearch .selectAirMulti .fromcityMenu,
+.changeSearch .selectAirMulti .tocityMenu,
+.changeSearch .selectAirMulti .CabinMenu {
+  top: 50px !important;
+}
+.changeSearch .selectAirMulti .local_timeSelect .local_timeSelectList > div > img,
+.changeSearch .selectAirMulti .passenger_Select .local_timeSelectList > div > img {
+  top: 50px !important;
+}
+/* 配置屏幕 针对小屏幕*/
+html {
+  font-size: 100px;
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 64px;
+  }
+}
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 82px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 100px;
+  }
+}
+@media (max-width: 980px), (max-device-width: 980px) {
+  .s-type {
+    display: inline-block;
+    width: 2.5rem;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    color: black;
+  }
+}
