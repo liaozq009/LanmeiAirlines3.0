@@ -1,19 +1,17 @@
-
 /* 引入字体 */
 @font-face {
-	font-family: NotoSans;
-	src: url(../../CN/fonts/NotoSans/SourceHanSansCN-Regular.otf);
+  font-family: CamptonBook;
+  src: url(../../EN/fonts/Campton/Rene.Bieder_Campton.Book.otf);
 }
 @font-face {
-	font-family: NotoSansBold;
-	src: url(../../CN/fonts/NotoSans/SourceHanSansCN-Bold.otf);
-	font-weight:bold;
+  font-family: CamptonBookBold;
+  src: url(../../EN/fonts/Campton/Rene.Bieder_Campton.Bold.otf);
+  font-weight: bold;
 }
 /* 引入字体 */
 body {
-  font-family:NotoSans;
+  font-family: CamptonBook;
 }
-
 /*rewrite browser scrollbar stylesheet*/
 ::-webkit-scrollbar-track-piece {
   -webkit-border-radius: 0;
@@ -72,7 +70,7 @@ input::-ms-clear {
 /* project mcins style sheet*/
 body {
   font-size: 12px;
-  /*   font-family: "微软雅黑","Arial", sans-serif; */
+  /*  font-family: "微软雅黑","Arial", sans-serif; */
 }
 input.active {
   border: 2px solid #8EC060 !important;
@@ -143,6 +141,7 @@ input.active {
   background: #8ec060 !important;
 }
 /* 定义变量 */
+/* 定义颜色变量 */
 /* 头部样式 */
 .lanmeiHeader {
   height: 210px;
@@ -208,7 +207,7 @@ input.active {
 }
 .lanmeiHeader .lanmeiNav .lanmeiHeadInfo > ul > li .REGISTEREDBtn {
   display: inline-block;
-  width: 72px;
+  width: 114px;
   text-align: center;
   height: 20px;
   line-height: 20px;
@@ -239,7 +238,6 @@ input.active {
   height: 50px;
   border: 1px solid transparent;
   border-bottom: none;
-  /*   background: url("../../../images/EN/selectChina.png") no-repeat 80px; */
 }
 .lanmeiHeader .lanmeiNav .lanmeiHeadInfo > ul .nth-child4 .languageBox .languageSelect span {
   position: absolute;
@@ -440,7 +438,7 @@ input.active {
   width: 100%;
   height: 300px;
   background: rgba(31, 44, 92, 0.7);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B21F2C5C, 5C, endColorstr=#B21F2C5C, 5C);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B21F2C5C, 5C, 5C, endColorstr=#B21F2C5C, 5C, 5C);
 }
 .footerInfo .footerBg > div {
   width: 960px;
@@ -472,16 +470,11 @@ input.active {
   height: 50px;
 }
 .footerInfo .HelpfulInformation .languageSelectBox .languageBox .languageSelect {
-  position: absolute;
-  right: -10px;
-  top: 14px;
   display: inline-block;
   width: 130px;
   height: 50px;
-  margin-top: 12px;
   border: 1px solid transparent;
   border-bottom: none;
-  /* background: url("../../../Lanmei_project/images/EN/selectUSA.png") no-repeat 48px; */
 }
 .footerInfo .HelpfulInformation .languageSelectBox .languageBox .languageSelect .lanBg {
   width: 100%;
@@ -581,29 +574,28 @@ input.active {
   font-size: 14px;
   color: #ffffff;
 }
-.footerInfo .LanmeiAirlinesBerhad .nth-child1 {
+.footerInfo .LanmeiAirlinesBerhad > a {
   float: left;
 }
-.footerInfo .LanmeiAirlinesBerhad .nth-child1 span {
-  font-size: 14px;
-  color: #ffffff;
-  margin-left: 20px;
-}
-.footerInfo .LanmeiAirlinesBerhad .nth-child1 span a {
-  color: #8ec060;
-}
-.footerInfo .LanmeiAirlinesBerhad .nth-child1 img {
+.footerInfo .LanmeiAirlinesBerhad > a img {
   vertical-align: text-bottom;
 }
-.footerInfo .LanmeiAirlinesBerhad .nth-child2 {
-  float: right;
-  padding-top: 25px;
+.footerInfo .LanmeiAirlinesBerhad > div {
+  float: left;
+  margin-left: 20px;
 }
-.footerInfo .LanmeiAirlinesBerhad .nth-child2 span {
+.footerInfo .LanmeiAirlinesBerhad > div .p1 {
   font-size: 14px;
   color: #ffffff;
   display: inline-block;
   padding-top: 12px;
+}
+.footerInfo .LanmeiAirlinesBerhad > div .p2 {
+  font-size: 14px;
+  color: #ffffff;
+}
+.footerInfo .LanmeiAirlinesBerhad > div .p2 a {
+  color: #8ec060;
 }
 /* 返回页面顶部 */
 .BackToTop {
@@ -658,7 +650,7 @@ input.active {
 .selectAir .local_timeSelect > div p span,
 .selectAir .passenger_Select > div p span {
   font-weight: bold;
-  font-size: 15px;
+  font-size: 14px;
   color: #1f2c5c;
   text-align: left;
 }
@@ -682,6 +674,10 @@ input.active {
   height: 38px;
   line-height: 38px;
   text-overflow: ellipsis;
+}
+.selectAir .local_timeSelect > div input :focus,
+.selectAir .passenger_Select > div input :focus {
+  border-color: #8ec060;
 }
 .selectAir .local_timeSelect > div #timeFrom,
 .selectAir .passenger_Select > div #timeFrom,
@@ -793,16 +789,14 @@ input.active {
   left: 26px;
   color: #ccc;
 }
-
 .selectAir .passenger_Select .ChildSelect .ageTipsChilds,
-.selectAir .passenger_Select .InfantSelect .ageTipsChilds{
- position: absolute;
- bottom: -30px;
- left: 26px;
- opacity:0.0;
- filter:alpha(opacity=0);
+.selectAir .passenger_Select .InfantSelect .ageTipsChilds {
+  position: absolute;
+  bottom: -30px;
+  left: 26px;
+  opacity: 0.0;
+  filter: alpha(opacity=0);
 }
-
 .selectAir .passenger_Select .ChildSelect {
   margin-left: 40px;
 }
@@ -869,9 +863,9 @@ input.active {
   height: 40px;
   font-size: 14px;
   padding: 0px 20px;
-  overflow:hidden;
-  text-overflow:ellipsis;
-  white-space:nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .selectAir .fromcityMenu > li a:hover,
 .selectAir .tocityMenu > li a:hover,
@@ -920,8 +914,7 @@ input.active {
 }
 .flightSelectWrapper .flightSelectCommon .flightSelectTitle1 > div {
   float: left;
-  width:428px;
-  margin-left: 255px;
+  margin-left: 180px;
   font-size: 18px;
   font-weight: bold;
   color: #fff;
@@ -936,7 +929,6 @@ input.active {
   font-size: 14px;
   color: #ffffff;
 }
-
 .flightSelectWrapper .flightSelectCommon .flightSelectTitle > h2 {
   float: left;
   height: 40px;
@@ -947,8 +939,7 @@ input.active {
 }
 .flightSelectWrapper .flightSelectCommon .flightSelectTitle > div {
   float: left;
-  width: 428px;
-  margin-left: 255px;
+  margin-left: 180px;
   font-size: 18px;
   font-weight: bold;
   color: #fff;
@@ -1280,63 +1271,8 @@ input.active {
   font-size: 18px;
   color: #ccc;
 }
-
-
-.g-tips{
-  display: inline-block;
-  cursor: pointer;
-}
-.g-tips:hover .m-tips{
-  display: block;
-}
-.g-tips>p{
-  color:#00908c;
-  font-size: 14px;
-}
-.g-tips .m-tips{
-  position: relative;
-  width: 0; 
-  height: 0; 
-  display: none;
-}
-.g-tips .m-tips .b-tips{
-  position: absolute;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 8px 10px 6px;
-  box-shadow: 0 2px 4px rgba(0,0,0,.05);
-  background: #fff;
-  color: #333;
-  line-height: 22px;
-  width: 200px;
-  font-size: 12px;
-  margin: 6px 0 0 -10px;
-  text-align: left;
-  word-break: break-all;
-  z-index: 100;
-}
-.g-tips .m-tips .b-tips .e-triggle{
-  width: 0;
-  height: 0;
-  position: relative;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-bottom: 7px solid #cfcfcf;
-  margin: -16px 0 8px;
-}
-.g-tips .m-tips .b-tips .e-triggle p{
-  width: 0;
-  height: 0;
-  position: absolute;
-  top: 1px;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-bottom: 7px solid #fff;
-  display: inline-block;
-  vertical-align: middle;
-  left: -7px;
-}
-
-@media screen and (max-width: 992px){
-	.BackToTop{display: none;}
+@media screen and (max-width: 992px) {
+  .BackToTop {
+    display: none;
+  }
 }

@@ -125,11 +125,11 @@
 }
 .changeSearch .selectAirMulti .local_timeSelect .local_timeSelectList .serialNum,
 .changeSearch .selectAirMulti .passenger_Select .local_timeSelectList .serialNum {
-  background: -webkit-linear-gradient(left, #42958a 0%, #1f2c5c 100%);
-background: -o-linear-gradient(right, #42958a 0%, #1f2c5c 100%);
-background: -moz-linear-gradient(right, #42958a 0%, #1f2c5c 100%);
-background: linear-gradient(to right, #42958a 0%, #1f2c5c 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#42958a', endColorstr='#1f2c5c', GradientType=1);
+    background: -webkit-linear-gradient(left, #42958a 0%, #1f2c5c 100%);
+  background: -o-linear-gradient(right, #42958a 0%, #1f2c5c 100%);
+  background: -moz-linear-gradient(right, #42958a 0%, #1f2c5c 100%);
+  background: linear-gradient(to right, #42958a 0%, #1f2c5c 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#42958a', endColorstr='#1f2c5c', GradientType=1);
 
   width: 40px;
   height: 40px;

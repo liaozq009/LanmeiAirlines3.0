@@ -24,15 +24,15 @@ var LanmeiAirlinesMultiCities = {
 			// 获取多段个数
 			var curNum = $('.local_timeSelect>div').length+1;
 			if(curNum > 6 ){
-				tipContext("最多只能添加6个航段");
+				tipContext("You can only add up to 6 flights");
 				return false;
 			}
 			//lqweb/Lanmei_project/images/CN/slideUp-icon.png
 			var addSelectChild = '<div class="local_timeSelectList1 local_timeSelectList">'+
 					'<div class="serialNum">'+curNum+'</div>'+
 					'<div class="localSelectStart">'+
-						'<p><img src="'+sslBaseUrl+'lqweb/Lanmei_project/images/EN/originStart2.png"><span>出发地</span></p>'+
-						'<input type="text" autocomplete="off" class="fromcityinput inputDown Autocomplete" id="fromcity'+curNum+'" value="" placeholder="-请选择-" title="1">'+
+						'<p><img src="'+sslBaseUrl+'lqweb/Lanmei_project/images/EN/originStart2.png"><span>From</span></p>'+
+						'<input type="text"  autocomplete="off" class="fromcityinput inputDown Autocomplete" id="fromcity'+curNum+'" placeholder="-Choose-" title="1">'+
 						'<img src="'+sslBaseUrl+'lqweb/Lanmei_project/images/EN/downArrow.png">'+
 						'<span class="clear">X</span>'+
 						'<i class="img01 localChangeImg"></i>'+
@@ -42,8 +42,8 @@ var LanmeiAirlinesMultiCities = {
 						'</ul>'+
 					'</div>'+
 					'<div class="localSelectEnd">'+
-						'<p><img src="'+sslBaseUrl+'lqweb/Lanmei_project/images/EN/originEnd2.png"><span>目的地</span></p>'+
-						'<input type="text" autocomplete="off" class="tocityinput inputDown Autocomplete" id="tocity'+curNum+'" value="" placeholder="-请选择-" title="1">'+
+						'<p><img src="'+sslBaseUrl+'lqweb/Lanmei_project/images/EN/originEnd2.png"><span>To</span></p>'+
+						'<input type="text" class="tocityinput inputDown Autocomplete" id="tocity'+curNum+'" placeholder="-Choose-" title="1" autocomplete="off">'+
 						'<img src="'+sslBaseUrl+'lqweb/Lanmei_project/images/EN/downArrow.png">'+
 						'<span class="clear">X</span>'+
 						'<b class="bottomLine"></b>'+
@@ -52,12 +52,12 @@ var LanmeiAirlinesMultiCities = {
 						'</ul>'+
 					'</div>'+
 					'<div class="timeSelectStart">'+
-						'<p><img src="'+sslBaseUrl+'lqweb/Lanmei_project/images/EN/departureDate2.png"><span>出发日期</span></p>'+
-						'<input type="text" id="timeFrom'+curNum+'" class="timeFrom" name="departureDate'+curNum+'" placeholder="-请选择-" readonly>'+
+						'<p><img src="'+sslBaseUrl+'lqweb/Lanmei_project/images/EN/departureDate2.png"><span>Departure Date</span></p>'+
+						'<input type="text" id="timeFrom'+curNum+'" class="timeFrom" name="departureDate'+curNum+'" placeholder="-Choose-" readonly>'+
 						'<img src="'+sslBaseUrl+'lqweb/Lanmei_project/images/EN/downArrow.png">'+
 					'</div>'+
 						'<div class="timeSelectEnd" style="display: none;">'+
-						'<p><img src="'+sslBaseUrl+'lqweb/Lanmei_project/images/EN/departureDate2.png"><span>到达日期</span></p>'+
+						'<p><img src="'+sslBaseUrl+'lqweb/Lanmei_project/images/EN/departureDate2.png"><span></span></p>'+
 						'<input type="text" id="timeTo'+curNum+'" class="timeTo" name="from" readonly>'+
 						'<img src="'+sslBaseUrl+'lqweb/Lanmei_project/images/EN/downArrow.png">'+
 					'</div>'+
@@ -97,21 +97,21 @@ var LanmeiAirlinesMultiCities = {
 			var timeFrom = $("#timeFrom").val();
 			
 			if(orgcity.length==0){
-				tipContext("请选择出发地");
+				tipContext("Please choose the departure city!");
 				$("#fromcity").focus();
 				$(this).removeClass('active');
 				return false;
 			}
 			if(dstcity.length==0){
-				tipContext("请选择目的地");
+				tipContext("Please choose the destination city!");
 				$("#tocity").focus();
 				$(this).removeClass('active');
 				return false;
 			}
+			
 			var date = new Date().format("yyyy-MM-dd");
 			if( timeFrom < date ){
-				tipContext("不能查询该天航班");
-				$("#timeFrom").focus();
+				tipContext("Ticket of thisDay is not available");
 				$(this).removeClass('active');
 				return false;
 			}
@@ -128,8 +128,8 @@ var LanmeiAirlinesMultiCities = {
 					var prev_departureDate = $(".timeFrom").eq(index-1).val();
 					
 					if( curr_departureDate !="" && curr_departureDate < prev_departureDate){//时间字符串可以直接比较大小
-						tipContext("前一航段出发时间不能晚于后一航段");
-						$(".timeFrom").eq(index).focus();
+						tipContext("The previous flight period can not be later than the later flight ");
+						//$(".timeFrom").eq(index).focus();
 						$("div.searchAir a").removeClass('active');
 						check = false;
 						return false;
@@ -137,21 +137,21 @@ var LanmeiAirlinesMultiCities = {
 					
 					if(curr_fromcity !="" || curr_city!="" || curr_departureDate != "" ){
 						if(prev_fromcity =="" || prev_city =="" || prev_departureDate == "" ){
-							tipContext("前一航段输入不能存在空值");
+							tipContext("the previous flight  can not  empty");
 							$("div.local_timeSelectList").eq(index-1).children("div.localSelectStart").children("input.fromcityinput").focus();
 							$("div.searchAir a").removeClass('active');
 							check = false;
 							return false;
 						}
 						if(curr_fromcity =="" ){
-							tipContext("出发地不能为空");
+							tipContext("Origin cannot be empty");
 							$(this).children("div.localSelectStart").children("input.fromcityinput").focus();
 							$("div.searchAir a").removeClass('active');
 							check = false;
 							return false;
 						}
 						if(curr_city =="" ){
-							tipContext("目的地不能为空");
+							tipContext("Destination cannot be empty");
 							$(this).children("div.localSelectEnd").children("input.tocityinput").focus();
 							$("div.searchAir a").removeClass('active');
 							check = false;
@@ -159,7 +159,7 @@ var LanmeiAirlinesMultiCities = {
 						}
 						
 						if(curr_departureDate =="" ){
-							tipContext("出发日期不能为空");
+							tipContext("Departure date cannot be empty");
 							$("div.searchAir a").removeClass('active');
 							check = false;
 							return false;
@@ -213,31 +213,18 @@ var LanmeiAirlinesMultiCities = {
 		});*/
 		
 		$(".selectWay a").click(function(e){
-		    var type=$(this).attr("id"); 
-		   // var cls = $(this).attr("class");
+		    var type=$(this).attr("id");
 		    $("#sureDate").val("");
-		    $("#tripTypehidden").val(type);
-	        $("#takeoffDate").val($("#timeFrom").val());
-	        var returndate=$("#returnDate").val();
-	    	var reg=new RegExp("null",""); 
-	   		returndate=returndate.replace(reg,$("#timeFrom").val()); 
-	   		$("#returnDate").val(returndate);
+	        $("#tripTypehidden").val(type);
 	        if("RT" === type)
-	        {   
+	        {
 	        	doCheck(type);
-	        	/* window.onbeforeunload = function() {
-	        		//alert(1111111111);
-	        		return 123;
-	        	} */
-	        	//--------------验证码 end---------------------
-	        	//alert(11111111111111);
 	        	//$("#searchform").submit();
 	        }else if("OW" === type){
-	        	//alert(11111111111111);
-	       		//$("#searchform").submit();
 	        	doCheck(type);
+	       		//$("#searchform").submit();
 	        }else {
-	        	 
+	 
 	        }    
 		 });
 
@@ -320,6 +307,7 @@ $(document).ready(function($) {
 	defalt_value();
 	
 });
+
 Date.prototype.format = function(fmt) { 
     var o = { 
        "M+" : this.getMonth()+1,                 //月份 
@@ -342,6 +330,7 @@ Date.prototype.format = function(fmt) {
 };
 
 function doCheck(type) {
+	
 	var btnVal = "search";
 	$.ajax({
 		type:"POST",
@@ -354,9 +343,9 @@ function doCheck(type) {
 				$("#searchform").submit();
 			} else if ("true" == data) {
 				var timestamp = (new Date()).valueOf();
-				var notice = "请输入验证码";
-				var btnN = "确定";
-				var errortips = "验证码错误,请重新输入";
+				var notice = "Enter the verification code";
+				var btnN = "Confirm";
+				var errortips = "Code error, please re-enter";
 				layer.open({
 					type:1,
 					area:['300px','210px'],
@@ -367,7 +356,7 @@ function doCheck(type) {
 				 	anim: -1, //0-6的动画形式，-1不开启
 				 	content:"<div style='text-align:center;height:75px;'><img id='vertifyCodePic' onclick='refreshAll()' src='"+url+"/servlet/GetVertifyCode?option=getVertifyCode&timestamp="
 				 			+timestamp+"'/>" + "</div></br>"
-				 			+"<div style='text-align:center'><input style='height:25px;border:1px solid #c8cccf;' type='text' id='vertifyCodeTemp' name='vertfyCodeTemp' required  lay-verify='required' placeholder='输入验证码' autocomplete='off' class='layui-input'><font id='appendFont' style='color:#FF0000;'></font></div>",
+				 			+"<div style='text-align:center'><input style='height:25px;border:1px solid #c8cccf;' type='text' id='vertifyCodeTemp' name='vertfyCodeTemp' required  lay-verify='required' placeholder='Enter here' autocomplete='off' class='layui-input'><font id='appendFont' style='color:#FF0000;'></font></div>",
 				 	btn: [btnN],
 				 	btnAlign: 'c', //按钮居中
 				 	yes: function(index, layero){
@@ -401,16 +390,16 @@ function doCheck(type) {
 								}
 							});
 						 },
-					end: function(layer,index) {
-						if("RT" == type) {
-							$("#RT").attr("class","RoundTrip");
-							$("#MT").attr("class","Stopover active");
+					 end: function(layer,index) {
+							if("RT" == type) {
+								$("#RT").attr("class","RoundTrip");
+								$("#MT").attr("class","Stopover active");
+							}
+							if("OW" == type) {
+								$("#OW").attr("class","OneWay nth-child1");
+								$("#MT").attr("class","Stopover active");
+							}
 						}
-						if("OW" == type) {
-							$("#OW").attr("class","OneWay nth-child1");
-							$("#MT").attr("class","Stopover active");
-						}
-					}
 				});
 			}
 		}
@@ -418,7 +407,7 @@ function doCheck(type) {
 }
 function refreshAll() {
 	$("#vertifytip").remove();
-    $(".layui-layer-title").text("请输入验证码");
+    $(".layui-layer-title").text("Enter the verification code");
 	refresh();
 }
 function refresh() {
@@ -427,3 +416,4 @@ function refresh() {
 	var timestamp = (new Date()).valueOf(); 
 	$("#vertifyCodePic").attr("src",url+"/servlet/GetVertifyCode?option=getVertifyCode&timestamp="+timestamp);
 }
+

@@ -142,9 +142,9 @@ var LanmeiAirlinesCommon = {
 				layer.close(showTip);
 			});
 		};
-		tipFn('.adult-tip', '成人', showAdultTip);
-    tipFn('.child-tip', '截止至上一次飞行日期，未满12岁的乘客被视为儿童。7岁以上的儿童在父母同意的情况下可独自搭乘飞机。', showChildTip);
-    tipFn('.infant-tip', '出生满7天以及未满2岁的乘客被视为婴儿', showInfantTip);
+		tipFn('.adult-tip', 'Adult', showAdultTip);
+		tipFn('.child-tip', 'Passengers who have not reached their 12th birthday by the date of the last flight are considered child passengers Children 7 years old and older can travel alone with the consent of their parents.', showChildTip);
+		tipFn('.infant-tip', 'Passengers 7 days old up to those who have not reached their 2nd birthday travel with infant status.', showInfantTip);
 	},
 
 	/* 导航菜单切换 */
@@ -307,7 +307,7 @@ var LanmeiAirlinesCommon = {
 
 
 		/* 单程或双程选择 选择日期 */
-		var selectDateWay = function(){ 
+		var selectDateWay = function(){
 			// $('.selectWay a.nth-child1').addClass('active');
 			// $('.timeSelectEnd').hide();
 			$('.selectWay a').click(function(e){
@@ -356,15 +356,16 @@ var LanmeiAirlinesCommon = {
 			$('#fromcity').val(tocity);
 			$('#tocity').val(fromcity);
 		});
+
+
 		/* 乘客人数选择 */
 		var AdultNum = 1;
 		var ChildNum = 0;
 		var InfantNum = 0;
 		var layer_index=-1; 
-		 
 		var totalPeopleNum= $("#totalPeopleNum").val();
 		var AdultSelect = function(){
-			$('.AdultSelect .addArrow').click(function(){ 
+			$('.AdultSelect .addArrow').click(function(){
 //				var ChildNum = $('#Child').val();//获取小孩人数
 				var AdultNum = parseInt($('#Adult').val());
 				var ChildNum = parseInt($('#Child').val());
@@ -376,7 +377,7 @@ var LanmeiAirlinesCommon = {
 					AdultNum++;
 					$('#Adult').val(AdultNum);
 				}else{
-					layer_index=layer.tips('成人与儿童总计不超'+totalPeopleNum+'个!', '#Adult',{
+					layer_index=layer.tips('There are no more than '+totalPeopleNum+' adults and children!', '#Adult',{
 						tips: [2, '#8ec060'],
 						time: 3000
 					});
@@ -386,7 +387,7 @@ var LanmeiAirlinesCommon = {
 //				$('#Adult').val()>=2 && AdultNum--;
 //				$('#Adult').val(AdultNum);
 				var AdultNum = parseInt($('#Adult').val());
-				var ChildNum = parseInt($('#Child').val()); 
+				var ChildNum = parseInt($('#Child').val());
 				if(AdultNum>1){
 					if(layer_index!= undefined && layer_index!=-1){
 						layer.close(layer_index);
@@ -395,7 +396,7 @@ var LanmeiAirlinesCommon = {
 					AdultNum--;
 					$('#Adult').val(AdultNum);
 				}else{
-					layer_index=layer.tips('成人数量不合法!', '#Adult',{
+					layer_index=layer.tips('The number of adult is illegal!', '#Adult',{
 						tips: [2, '#8ec060'],
 						time: 3000
 					});
@@ -404,10 +405,19 @@ var LanmeiAirlinesCommon = {
 		};
 
 		var ChildSelect = function(){
-			$('.ChildSelect .addArrow').click(function(){ 
+			$('.ChildSelect .addArrow').click(function(){
 //				var AdultNum = $('#Adult').val();//获取成人人数
 				var AdultNum = parseInt($('#Adult').val());
 				var ChildNum = parseInt($('#Child').val());
+//				if(AdultNum>1){
+//					AdultNum--;
+//					$('#Adult').val(AdultNum);
+//				}else{
+//					layer.tips('成人数量不合法!', '#Adult',{
+//						tips: [2, '#8ec060'],
+//						time: 3000
+//					});
+//				}
 				if(AdultNum+ChildNum<totalPeopleNum){
 					if(layer_index!= undefined && layer_index!=-1){
 						layer.close(layer_index);
@@ -416,13 +426,13 @@ var LanmeiAirlinesCommon = {
 					ChildNum++;
 					$('#Child').val(ChildNum);
 				}else{
-					layer_index=layer.tips('成人与儿童总计不超'+totalPeopleNum+'个!', '#Child',{
+					layer_index=layer.tips('There are no more than '+totalPeopleNum+' adults and children!', '#Child',{
 						tips: [2, '#8ec060'],
 						time: 3000
 					});
 				}
 			});
-			$('.ChildSelect .downArrow').click(function(){ 
+			$('.ChildSelect .downArrow').click(function(){
 //				$('#Child').val()>=1 && ChildNum--;
 //				$('#Child').val(ChildNum);
 				var AdultNum = parseInt($('#Adult').val());
@@ -435,7 +445,7 @@ var LanmeiAirlinesCommon = {
 					ChildNum--;
 					$('#Child').val(ChildNum);
 				}else{
-					layer_index=layer.tips('儿童数量不合法!', '#Child',{
+					layer_index=layer.tips('The number of children is illegal!', '#Child',{
 						tips: [2, '#8ec060'],
 						time: 3000
 					});
@@ -457,8 +467,9 @@ var LanmeiAirlinesCommon = {
 		AdultSelect();
 		ChildSelect();
 		InfantSelect();
+
 		// 重置输入框内容
-		$('.resetBtn').click(function(){ 
+		$('.resetBtn').click(function(){
 			AdultNum = 1;
 			ChildNum = 0;
 			InfantNum = 0;

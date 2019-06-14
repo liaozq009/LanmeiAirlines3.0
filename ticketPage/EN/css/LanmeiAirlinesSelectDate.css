@@ -25,7 +25,7 @@
 .timeTableSelectWrapper .timeTableSelect table tbody tr td {
   width: 12.5%;
   height: 12.5%;
-  color: #999;
+  color:#999;
   border-color: #ddd;
   text-align: left;
   padding-left: 16px;
@@ -33,8 +33,8 @@
   font-size: 14px;
 }
 .timeTableSelectWrapper .timeTableSelect table tbody tr td span {
-	opacity: 0.49;
-	color:#333;
+  opacity: 0.49;
+  color:#333;
   /*font-size:14px;  
     font-weight: bold; 
     color: #1f2c5c;   */ 
@@ -65,52 +65,42 @@
 .timeTableSelectWrapper .timeTableSelect table tbody tr .bgHover {
   background: #DDECCF;
 }
-/* .timeTableSelectWrapper .timeTableSelect table tbody tr .bgHover .bold{
-   opacity: 1.49;
-} */
-
-.timeTableSelectWrapper .timeTableSelect table tbody tr .bold{
-	font-size: 17px;
-	font-weight: bold;
-	opacity: 1.49;
-	color: #1f2c5c;
-}
- 
-.timeTableSelectWrapper .timeTableSelect table tbody tr .bold2{
-	opacity: 0.49;
-	color: #333;
-}
-
-.timeTableSelectWrapper .timeTableSelect table tbody tr .clickbold2{
-	opacity: 1;
-	color: #fff;
-}
- 
 .timeTableSelectWrapper .timeTableSelect table tbody tr .clickHover {
   background: #8EC060;
   color:#ddd;
 }
 .timeTableSelectWrapper .timeTableSelect table tbody tr .LowHover {
-/*   background:#00908c;
- */
-  
+  /* background: #00908c; */
 }
-
-.timeTableSelectWrapper .timeTableSelect table tbody tr .LowHover p {
- color: #00908c;
-}
-
 .timeTableSelectWrapper .timeTableSelect table tbody tr .clickHover span,
 .timeTableSelectWrapper .timeTableSelect table tbody tr .clickHover p,
 .timeTableSelectWrapper .timeTableSelect table tbody tr .clickHover h2 {
   color: #fff;
 }
 
+.timeTableSelectWrapper .timeTableSelect table tbody tr .bold{
+  font-size: 17px;
+  font-weight: bold;
+  opacity: 1.49;
+  color: #1f2c5c;
+}
  
+.timeTableSelectWrapper .timeTableSelect table tbody tr .bold2{
+  opacity: 0.49;
+  color: #333;
+}
+
+.timeTableSelectWrapper .timeTableSelect table tbody tr .clickbold2{
+  opacity: 1;
+  color: #fff;
+}
+
  
- 
+.timeTableSelectWrapper .timeTableSelect table tbody tr .borderHover {
+  border: 1px solid #8EC060;
+}
 .timeTableSelectWrapper .timeTableSelect table tbody [data-num='tr-nth-child4'] [data-num='td-nth-child3'] p {
-/*   #color: #00908c; */
+/*   color: #00908c; */
 }
 .timeTableSelectWrapper .timeTableSelect table tbody [data-num='tr-nth-child1'] {
   border: 1px solid;
@@ -183,31 +173,33 @@
   font-weight: bold;
   font-size: 20px;
   color: #ffffff;
-  padding-left: 55px;
+  padding-left: 59px;
   -webkit-transition-duration: 1s;
   transition-duration: 1s;
 }
 .timeTableSelectWrapper .timeTableSelect .nextBtn a img {
   position: absolute;
-  right: 59px;
+  right: 63px;
   top: 10px;
 }
-.no-flight-info {
-  position: relative;
-  width: 960px;
-  margin: 30px auto 70px;
-  text-align: center;
+
+
+/* .timeTableSelectWrapper .timeTableSelect table tbody tr .bgHover .bold{
+   opacity: 1.49;
 }
-.no-flight-info p {
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
-  margin-left: -325px;
-  width: 650px;
-  height: 60px;
-  font-size: 18px;
-  color: #ccc;
+ */
+.timeTableSelectWrapper .timeTableSelect table tbody tr  .bold{
+  font-size: 17px;
+  font-weight: bold;
+  opacity: 1.49;
+  color: #1f2c5c;
 }
+
+.timeTableSelectWrapper .timeTableSelect table tbody tr .LowHover p {
+ color: #00908c;
+}
+
+
 /* 娣囶喗鏁奸崗顒�彙閺嶅嘲绱�*/
 .selectAirCommon span {
   font-size: 14px !important;
@@ -264,6 +256,3 @@ html {
     color: black;
   }
 }
-
-
- 

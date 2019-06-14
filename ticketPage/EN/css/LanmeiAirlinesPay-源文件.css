@@ -3,7 +3,7 @@
 .buyTicketList .LanmeiPay {
   color: #1f2c5c;
 }
-/* 乘客信息 */
+/* 濞戞梹锚椤撹绌遍埄鍐х礀 */
 .passengerInfoDetail {
   width: 960px;
   margin: 0 auto;
@@ -94,7 +94,7 @@
   color: #808080;
   margin-top: 10px;
 }
-/* 航班规则 */
+/* 闁煎壊浜炶ぐ顔炬喆閸曨偄鐏�*/
 .flightRuleDetail {
   width: 940px;
   margin: 0 auto;
@@ -127,7 +127,7 @@
   font-size: 14px;
   font-family: Comfortaa;
 }
-/* 票价计算 */
+/* 缂佷降鍔嬮悳顖滄媼閿涘嫮鏆�*/
 .ticketFareWrapper {
   width: 960px;
   margin: 0 auto;
@@ -303,7 +303,7 @@
   display: inline-block;
   font-size: 36px;
 }
-/* 鏄惁鍚屾剰瑙勫垯 */
+/* 闁哄嫷鍨伴幆渚�触鐏炴儳澹堥悷娆忓閸拷*/
 .statementWrapper {
   width: 940px;
   margin: 0 auto;
@@ -331,9 +331,9 @@
   width: 860px;
   font-size: 14px;
   color: #d0011b;
-  line-height: 38px;
+  line-height: 20px;
 }
-/* 鏀粯鏂瑰紡 */
+/* 闁猴拷鍨划顖炲棘閻熸壆纭�*/
 .payMethod {
   width: 960px;
   margin: 0 auto;
@@ -360,7 +360,7 @@
 }
 .payMethod .payMethodContent .selectMethod li {
   float: left;
-/*  background: #d8d8d8;*/
+  /* background: #d8d8d8; */
   border-radius: 2px;
   width: 220px;
   height: 100px;
@@ -407,7 +407,7 @@
   font-weight: bold;
   font-size: 20px;
   color: #ffffff;
-  padding-left:45px;
+  padding-left: 67px;
   transition-duration: 1s;
 }
 .payMethod .payBtn a:hover {
@@ -415,13 +415,13 @@
 }
 .payMethod .payBtn a img {
   position: absolute;
-  right: 49px;
+  right: 71px;
   top: 10px;
 }
 .flightSelectWrapper .flightSelectCommon {
   cursor: default;
 }
-/* 閰嶇疆灞忓箷 閽堝灏忓睆骞�/
+/* 闂佹澘绉堕悿鍡欎沪韫囨挾顔�闂佽棄鐗嗛顔句焊韫囨挾娼屾鐑囨嫹/
 html {
   font-size: 100px;
 }

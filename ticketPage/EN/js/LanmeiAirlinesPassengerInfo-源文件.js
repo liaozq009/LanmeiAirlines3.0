@@ -69,6 +69,7 @@ var LanmeiAirlinesPassengerInfo = {
 			});
 		};
 		contactPassengers();*/
+		
 		//更改的begin
 		var contactPassengers = function(){
 			$('.contactPassengers .nth-child1 b').show();

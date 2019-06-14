@@ -89,7 +89,7 @@
 .flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent1 .flightInfo2 img,
 .flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent2 .flightInfo2 img {
   position: absolute;
-  top: 42%;
+  top: 35%;
   left: 46%;
 }
 .flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent1 .flightInfo3 .p1,
@@ -134,6 +134,7 @@
 }
 .passengerInfoWrite .PassengersCommon .PassengersTitleCommon {
   position: relative;
+ /*  background: #8ec060; */
   border-radius: 2px;
   width: 940px;
   height: 30px;
@@ -271,7 +272,7 @@
   border: 2px solid #8ec060;
   z-index: 999;
   border-top: none;
-/*  //height: 130px; */
+  /*  //height: 130px; */
   min-height:130px;
   max-height:150px;
   overflow-y: scroll;
@@ -441,7 +442,7 @@
 .passengerInfoWrite .PassengersCommon .PassengersContentCommon .IDNo,
 .passengerInfoWrite .PassengersCommon .PassengersContentCommon .FlyerCardNum {
   width: 300px;
-  height: 97px; 
+  height: 97px;
   float: left;
   position: relative;
   margin-bottom: 20px;
@@ -569,8 +570,10 @@
   color: #00908c;
 }
 .passengerInfoWrite .Passengers2 .PassengersTitleCommon {
+/*   background: #4aa374; */
 }
 .passengerInfoWrite .Passengers3 .PassengersTitleCommon {
+ /*  background: #00908c; */
 }
 /* 閼辨梻閮�*/
 .contactUsWrapper {
@@ -642,8 +645,7 @@
   border: 2px solid #8ec060;
   z-index: 999;
   border-top: none;
- /*  height: 130px; */
- /*  //height: 130px; */
+  /*  //height: 130px; */
   min-height:130px;
   max-height:150px;
   overflow-y: scroll;
@@ -1061,12 +1063,12 @@
   font-weight: bold;
   font-size: 20px;
   color: #ffffff;
-  padding-left: 55px;
+  padding-left: 59px;
   transition-duration: 1s;
 }
 .statementWrapper .nextBtn a img {
   position: absolute;
-  right: 59px;
+  right: 63px;
   top: 10px;
 }
 /* 娣囶喗鏁奸崗顒�彙閺嶅嘲绱�*/
@@ -1084,6 +1086,7 @@
   margin-top: 5px
 }
 
+
 .passcolor0{background: #8EC060;}
 .passcolor1{background: #4AA374;}
 .passcolor2{background: #00908C;}
@@ -1093,7 +1096,6 @@
 .passcolor6{background: #1f2c5c;}
 .passcolor7{background: #1f2c5c;}
 .passcolor8{background: #1f2c5c;}
- 
 
 /* 闁板秶鐤嗙仦蹇撶 闁藉牆顕亸蹇撶潌楠烇拷/
 html {
