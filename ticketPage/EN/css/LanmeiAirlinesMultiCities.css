@@ -127,8 +127,8 @@ input::-webkit-input-placeholder{
 .changeSearch .selectAirMulti .local_timeSelect .local_timeSelectList > div .localChangeImg,
 .changeSearch .selectAirMulti .passenger_Select .local_timeSelectList > div .localChangeImg {
   position: absolute;
-  right: -56px;
-  top: 50px;
+  right: -32px;
+  top: 16px;
   display: inline-block;
   width: 20px;
   height: 18px;
@@ -136,11 +136,11 @@ input::-webkit-input-placeholder{
 }
 .changeSearch .selectAirMulti .local_timeSelect .local_timeSelectList > div .img01,
 .changeSearch .selectAirMulti .passenger_Select .local_timeSelectList > div .img01 {
-  background: url(../../images/CN/localChange2-active.png) no-repeat;
+  background: url(../imgs/localChange3-active.png) no-repeat;
 }
 .changeSearch .selectAirMulti .local_timeSelect .local_timeSelectList > div .img02,
 .changeSearch .selectAirMulti .passenger_Select .local_timeSelectList > div .img02 {
-  background: url(../../images/CN/localChange-active.png) no-repeat;
+  background: url(../imgs/localChange-active.png) no-repeat;
 }
 .changeSearch .selectAirMulti .local_timeSelect .local_timeSelectList .serialNum,
 .changeSearch .selectAirMulti .passenger_Select .local_timeSelectList .serialNum {

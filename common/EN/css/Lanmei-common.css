@@ -116,7 +116,6 @@ body {
   max-width: 1920px;
   font-family: CamptonBook;
   font-size: 14px;
-  background: #FAFBFF;
 }
 /* 页面顶部 */
 .lm-header {
@@ -174,9 +173,17 @@ body {
   transition: all .3s;
   -webkit-transition: all .3s;
 }
+.lm-header .h-right .h-registered a {
+  display: inline-block;
+  padding-left: 20px;
+  background: url('../../../images/EN/registered.png') left center no-repeat;
+}
 .lm-header .h-right .v-line {
   margin-left: 20px;
   margin-right: 20px;
+  width: 2px;
+  height: 60px;
+  background: url('../../../images/EN/v-line.png') left center no-repeat;
 }
 .lm-header .h-right .v-line-2 {
   margin-right: 46px;
@@ -184,6 +191,9 @@ body {
 .lm-header .h-right .dot-login {
   margin-left: 10px;
   margin-right: 10px;
+  width: 6px;
+  height: 60px;
+  background: url('../../../images/EN/dot-login.png') left center no-repeat;
 }
 .lm-header .h-right .h-login > img,
 .lm-header .h-right .h-registered > img {
@@ -417,6 +427,7 @@ body {
 .lm-sub-header {
   position: relative;
   top: 0;
+  border-bottom: 1px solid #ccc;
 }
 .lm-sub-header .h-menu {
   display: none;
@@ -720,6 +731,12 @@ body {
   .lm-header .h-right > div > .REGISTEREDBtn > span {
     margin-left: 8px;
   }
+  .lm-header .h-right .dot-login {
+    height: 50px;
+  }
+  .lm-header .h-right .v-line {
+    height: 50px;
+  }
   .pc-nav-container .m-nav-1 {
     height: 50px;
     line-height: 50px;
@@ -989,6 +1006,7 @@ body {
   }
   .lm-sub-header {
     position: relative;
+    border: none;
   }
   .lm-sub-header .h-right > div {
     height: 60px;
@@ -1040,6 +1058,15 @@ body {
   }
   .lm-sub-header .h-lang .lang-menu .lang-en {
     margin-top: 12px;
+  }
+  .lm-sub-header .h-logo-wrap {
+    margin: 0;
+  }
+  .lm-sub-header .h-menu {
+    display: none;
+  }
+  .lm-sub-header .h-right .h-login {
+    display: none;
   }
   .lm-subLogin-header .h-right .h-phone {
     left: -50px;

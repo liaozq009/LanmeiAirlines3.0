@@ -44,6 +44,15 @@
 	filter: alpha progid:DXImageTransform.Microsoft.gradient(startcolorstr=#B4EC80, endcolorstr=#00908C, gradientType=1); /*ie8*/
 	:root .gradient{filter:none;} ; /*ie9*/
 }
+.linearBg2Hover {
+	background: #42958a;
+	background: -webkit-linear-gradient(left, #8EC060 0%, #00908C 100%);
+	background: -o-linear-gradient(right, #8EC060 0%, #00908C 100%);
+	background: -moz-linear-gradient(right, #8EC060 0%, #00908C 100%);
+	background: linear-gradient(to right, #8EC060 0%, #00908C 100%);
+	filter: alpha progid:DXImageTransform.Microsoft.gradient(startcolorstr=#8EC060, endcolorstr=#00908C, gradientType=1); /*ie8*/
+	:root .gradient{filter:none;} ; /*ie9*/
+}
 
 .transition3 {
 	transition: all .3s;
@@ -455,7 +464,7 @@ body{
 		cursor: pointer;
 		display: none;
 		&:hover{
-			background: url('@{url}ticket-change2.png') center no-repeat;
+			background: url('@{url}ticket-change-active.png') center no-repeat;
 		}
 	}
 	.date-result {
@@ -767,6 +776,7 @@ body{
 					width: 100%;
 				}
 				h2 {
+					padding: 0 10px;
 					font-size: 24px;
 					font-weight: 300;
 					font-family: @FBold;
@@ -1679,7 +1689,7 @@ body{
 						span {
 							display: inline-block;
 							height: 100%;
-							line-height: 60px;
+							line-height: 50px;
 						}
 					}
 				}
@@ -1771,7 +1781,14 @@ body{
 		}
 		.search-flight-wrap {
 			overflow: hidden;
-			.flight-search {.linearBg2;}
+			.flight-search {
+				.linearBg2;
+				.transition3;
+				&:hover {
+					.linearBg2Hover;
+					.transition3;
+				}
+			}
 			.multi {
 				color: #00908C;
 				text-decoration: underline;
@@ -1782,7 +1799,7 @@ body{
 		}
 		.date-select-way{
 			position: absolute;
-			right: 0;
+			right: 20px;
 			top: 20px;
 			z-index: 3302;
 			label{
@@ -1874,6 +1891,11 @@ body{
 				img {.transition3;}
 			}
 		}
+	}
+
+	/* 日期样式 */
+	.daterangepicker.ltr {
+		width: 588px;
 	}
 }
 

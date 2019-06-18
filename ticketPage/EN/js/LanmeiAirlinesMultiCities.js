@@ -158,8 +158,13 @@ var LanmeiAirlinesMultiCities = {
 			$.each($('.local_timeSelect>div'),function(idx,val){
 				$(val).children('.serialNum').html(idx+1);
 			});
+			if($('.local_timeSelect>div').length<=1) {
+				$('.js-multi-delete').hide();
+			}
 		});
 		$('.addLocaSelect').click(function(){
+			// 显示删除按钮
+			$('.js-multi-delete').show();
 			// 获取多段个数
 			var curNum = $('.local_timeSelect>div').length+1;
 			if(curNum > 6 ){

@@ -175,7 +175,11 @@ var LanmeiAirlines = {
 		});
 
 		// 导航栏hover
-		$(".js-nav-first li").hover(function(){ 
+		$(".js-nav-first li").hover(function(e){ 
+			if($(this).children('a').attr('data-href')) {
+				$(this).addClass('active').siblings('li').removeClass('active');
+				return;
+			}
 			var navId = $(this).children('a').attr('href');
 			$('.js-nav-second>ul').hide();
 			$('.js-nav-three>ul').hide();
@@ -202,6 +206,11 @@ var LanmeiAirlines = {
 		},function(){
 			$(this).removeClass('active');
 			hideSub();
+		});
+
+		// 一级和二级导航栏点击的时候
+		$(".js-nav-first li a,.js-nav-second li a").click(function(e){
+			!$(this).attr('data-href') && e.preventDefault();
 		});
 	},
 
@@ -3585,7 +3594,7 @@ var LanmeiAirlines = {
 			var docthis = $(".js-important-line");
 			//默认参数
 			value=$.extend({
-				"li_h":"40",
+				"li_h":"26",
 				"time":3000,
 				"movetime":1000
 			});

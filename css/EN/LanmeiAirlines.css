@@ -34,6 +34,19 @@
 .linearBg2 :root .gradient {
   filter: none;
 }
+.linearBg2Hover {
+  background: #42958a;
+  background: -webkit-linear-gradient(left, #8EC060 0%, #00908C 100%);
+  background: -o-linear-gradient(right, #8EC060 0%, #00908C 100%);
+  background: -moz-linear-gradient(right, #8EC060 0%, #00908C 100%);
+  background: linear-gradient(to right, #8EC060 0%, #00908C 100%);
+  filter: alpha progid:DXImageTransform.Microsoft.gradient(startcolorstr=#8EC060, endcolorstr=#00908C, gradientType=1);
+  /*ie8*/
+  /*ie9*/
+}
+.linearBg2Hover :root .gradient {
+  filter: none;
+}
 .transition3 {
   transition: all .3s;
   -webkit-transition: all .3s;
@@ -444,7 +457,7 @@ body {
   display: none;
 }
 .select-air-com .local-change:hover {
-  background: url('../../images/EN/ticket-change2.png') center no-repeat;
+  background: url('../../images/EN/ticket-change-active.png') center no-repeat;
 }
 .select-air-com .date-result {
   display: block;
@@ -776,6 +789,7 @@ body {
   width: 100%;
 }
 .lm-section-hotel .hotel-content > li a h2 {
+  padding: 0 10px;
   font-size: 24px;
   font-weight: 300;
   font-family: CamptonBookBold;
@@ -1714,7 +1728,7 @@ body {
   .pc-section-main .lm-aside-flight > ul > li a span {
     display: inline-block;
     height: 100%;
-    line-height: 60px;
+    line-height: 50px;
   }
   .pc-section-main .lm-aside-flight > ul li.active {
     background: #fff;
@@ -1827,8 +1841,25 @@ body {
     filter: alpha progid:DXImageTransform.Microsoft.gradient(startcolorstr=#B4EC80, endcolorstr=#00908C, gradientType=1);
     /*ie8*/
     /*ie9*/
+    transition: all .3s;
+    -webkit-transition: all .3s;
   }
   .pc-section-main .search-flight-wrap .flight-search :root .gradient {
+    filter: none;
+  }
+  .pc-section-main .search-flight-wrap .flight-search:hover {
+    background: #42958a;
+    background: -webkit-linear-gradient(left, #8EC060 0%, #00908C 100%);
+    background: -o-linear-gradient(right, #8EC060 0%, #00908C 100%);
+    background: -moz-linear-gradient(right, #8EC060 0%, #00908C 100%);
+    background: linear-gradient(to right, #8EC060 0%, #00908C 100%);
+    filter: alpha progid:DXImageTransform.Microsoft.gradient(startcolorstr=#8EC060, endcolorstr=#00908C, gradientType=1);
+    /*ie8*/
+    /*ie9*/
+    transition: all .3s;
+    -webkit-transition: all .3s;
+  }
+  .pc-section-main .search-flight-wrap .flight-search:hover :root .gradient {
     filter: none;
   }
   .pc-section-main .search-flight-wrap .multi {
@@ -1840,7 +1871,7 @@ body {
   }
   .pc-section-main .date-select-way {
     position: absolute;
-    right: 0;
+    right: 20px;
     top: 20px;
     z-index: 3302;
   }
@@ -1920,6 +1951,10 @@ body {
   .lm-section-banner .banner a img {
     transition: all .3s;
     -webkit-transition: all .3s;
+  }
+  /* 日期样式 */
+  .daterangepicker.ltr {
+    width: 588px;
   }
 }
 /* 适配PC小屏幕 */

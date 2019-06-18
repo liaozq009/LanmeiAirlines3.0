@@ -1,6 +1,6 @@
 var LanmeiAirlinesCommon = {
 	init:function(){
-		// this.getTop();
+		this.getTop();
 		this.otherEvent();
 
 		// ie兼容性判断
