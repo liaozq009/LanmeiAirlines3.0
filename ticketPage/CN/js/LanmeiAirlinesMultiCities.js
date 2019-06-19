@@ -34,6 +34,15 @@ var LanmeiAirlinesMultiCities = {
 			$('.downMenu-com').hide();
 		});
 
+		// 设置默认值
+		var adultDefault = 2;
+		var childDefault = 3;
+		$('.js-p-adult span').html(adultDefault);
+		$('.js-s-adult').find('.adult-num').html(adultDefault);
+
+		$('.js-p-child span').html(childDefault);
+		$('.js-s-child').find('.child-num').html(childDefault);
+
 		// 成人
 		var adult = function(){
 			$('.js-adult-add').click(function(){

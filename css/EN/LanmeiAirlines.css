@@ -835,27 +835,19 @@ body {
   margin-right: 24px;
 }
 /* ie兼容 */
-.ie11 .rooms-content-com {
-  margin-left: 18px !important;
+.ie11 body .popup-content .hotel-popus-people .hotel-age-wrap .age-menu-box {
+  height: 480px;
 }
-.ie11 .lm-section-travel .travel-item .travel-inner .price,
-.ie11 .lm-section-hotel .hotel-com .hotel-detail .price-wrap .price {
-  color: #00928d;
+.ie11 body .popup-content .hotel-popus-people .hotel-age-wrap .age-menu-box .hotel-age-menu {
+  height: 100%;
+  overflow: hidden;
 }
-.lte_ie9 .popup-content .popup-people .people-number {
-  background: #42958a;
+.ie10 body .popup-content .hotel-popus-people .hotel-age-wrap .age-menu-box {
+  height: 480px;
 }
-.lte_ie9 .popup-content .popup-people .disable {
-  background: url('../../images/EN/add-people.png') center no-repeat #F6F7F9;
-}
-.lte_ie9 .popup-content .hotel-popus-people .hotel-age-wrap {
-  background: #F6F7F9;
-}
-.lte_ie9 .popup-content {
-  color: #8F95AD;
-}
-.lte_ie9 .lm-section-hotel .hotel-com .hotel-img .save-percent {
-  background: #FC4A1A;
+.ie10 body .popup-content .hotel-popus-people .hotel-age-wrap .age-menu-box .hotel-age-menu {
+  height: 100%;
+  overflow: hidden;
 }
 .ie8 .section-content-title {
   color: #E4E5EE;
@@ -952,31 +944,11 @@ body {
 .ie8 .modal-dialog {
   margin: 30px auto;
 }
-.ie8 .popup-box {
-  left: 0 !important;
-  top: 0 !important;
-}
 .ie8 .search-flight-wrap {
   padding-left: 0;
 }
-.ie8 .lm-section-main {
-  height: 958px !important;
-}
-.ie8 .flight-com {
-  width: 900px;
-  top: 100px;
-  left: 200px;
-}
 .ie8 .content-com-wrap {
   display: none;
-}
-.ie8 .hotel-popup-content,
-.ie8 .hotel-content .popup-box {
-  left: 0 !important;
-}
-.ie8 .hotel-popup-content,
-.ie8 .hotel-content .popup-box {
-  left: 0 !important;
 }
 .ie8 .popup-content .hotel-popus-people {
   width: 750px !important;
@@ -1433,7 +1405,7 @@ body {
     display: none;
     position: absolute;
     top: 42px;
-    left: 20px;
+    left: 0;
     width: 78px;
     height: 182px;
     overflow: hidden;
@@ -1444,7 +1416,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 86px;
+    width: 78px;
     height: 182px;
     overflow-y: scroll;
   }

@@ -826,30 +826,25 @@ body{
 
 /* ie兼容 */
 .ie11 {
-	.rooms-content-com{
-		margin-left: 18px !important;
+	body .popup-content .hotel-popus-people .hotel-age-wrap .age-menu-box{
+		height: 480px;
+		.hotel-age-menu {
+			height: 100%;
+			overflow: hidden;
+		}
 	}
-	.lm-section-travel .travel-item .travel-inner .price,
-	.lm-section-hotel .hotel-com .hotel-detail .price-wrap .price{
-		color: #00928d;
+}
+.ie10 {
+	body .popup-content .hotel-popus-people .hotel-age-wrap .age-menu-box{
+		height: 480px;
+		.hotel-age-menu {
+			height: 100%;
+			overflow: hidden;
+		}
 	}
 }
 .lte_ie9{
-	.popup-content .popup-people .people-number{
-		background: #42958a;
-	}
-	.popup-content .popup-people .disable{
-		background: url('@{url}add-people.png') center no-repeat #F6F7F9;
-	}
-	.popup-content .hotel-popus-people .hotel-age-wrap{
-		background: #F6F7F9;
-	}
-	.popup-content{
-		color: #8F95AD;
-	}
-	.lm-section-hotel .hotel-com .hotel-img .save-percent{
-		background: #FC4A1A;
-	}
+	
 }
 .ie8{
 	.section-content-title{
@@ -939,28 +934,10 @@ body{
 	.modal-dialog{
 		margin:30px auto;
 	}
-	.popup-box{
-		left: 0 !important;
-		top: 0 !important;
-	}
 	.search-flight-wrap{
 		padding-left: 0;
 	}
-	.lm-section-main{
-		height: 958px !important;
-	}
-	.flight-com{
-		width: 900px;
-		top: 100px;
-		left:200px;
-	}
 	.content-com-wrap{display: none;}
-	.hotel-popup-content,.hotel-content .popup-box{
-		left: 0 !important;
-	}
-	.hotel-popup-content,.hotel-content .popup-box{
-		left: 0 !important;
-	}
 	.popup-content .hotel-popus-people{width: 750px !important;}
 	.popup-content .hotel-popus-people .age-rooms-com{
 		margin-top: 10px;
@@ -1411,7 +1388,7 @@ body{
 					display: none;
 					position: absolute;
 					top: 42px;
-					left: 20px;
+					left: 0;
 					width: 78px;
 					height: 182px;
 					overflow: hidden;
@@ -1422,7 +1399,7 @@ body{
 					position: absolute;
 					top: 0;
 					left: 0;
-					width: 86px;
+					width: 78px;
 					height: 182px;
 					overflow-y: scroll;
 					>li{

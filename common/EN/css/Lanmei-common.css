@@ -1009,12 +1009,12 @@ body {
     border: none;
   }
   .lm-sub-header .h-right > div {
-    height: 60px;
+    height: 50px;
     display: block;
   }
   .lm-sub-header .h-phone {
     left: -110px;
-    background: url('../../../images/EN/svg/phone.svg') center 20px no-repeat;
+    background: url('../../../images/EN/svg/phone.svg') center 15px no-repeat;
   }
   .lm-sub-header .h-phone .phone-menu > p {
     background: url('../../../images/EN/svg/phone-bg.svg') left center no-repeat;
@@ -1039,7 +1039,7 @@ body {
     margin-top: 12px;
   }
   .lm-sub-header .h-lang > p {
-    background: url('../../../images/EN/svg/lang-en.svg') center 15px no-repeat;
+    background: url('../../../images/EN/svg/lang-en.svg') center 10px no-repeat;
   }
   .lm-sub-header .h-lang .lang-menu {
     left: -130px;
@@ -1067,6 +1067,9 @@ body {
   }
   .lm-sub-header .h-right .h-login {
     display: none;
+  }
+  .lm-subLogin-header .h-right .h-login {
+    display: block;
   }
   .lm-subLogin-header .h-right .h-phone {
     left: -50px;

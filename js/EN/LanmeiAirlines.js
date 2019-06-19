@@ -80,12 +80,7 @@ var LanmeiAirlines = {
 		if(document.all && document.addEventListener && !window.atob){ // IE9
 			
 		}else if (document.all && document.querySelector && !document.addEventListener) { //IE8
-			var screen = window.screen.width;
-			if(screen<=1480){
-				$('.content-com-wrap').hide();
-				$('.js-ticket-content').width(700);
-				$('.flight-com').css('top',100);
-			}
+			location.href = 'https://lanmeiairlines.com/lanmeiairlines2.0/default/others/browser/EN/browser.html';
 		}
 	},
 
