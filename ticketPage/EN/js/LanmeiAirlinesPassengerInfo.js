@@ -29,12 +29,16 @@ var LanmeiAirlinesPassengerInfo = {
 		});
 		// 输入框点击后特效 ---新增 LZQ 20190612
 		$('.text-field-content .text-field-input').click(function(e) {
-		    e.stopPropagation();
+				e.stopPropagation();
 		    $(this).siblings('.text-field-label').removeClass('float');
+		});
+		$('.text-field-content .text-field-input').focus(function(e) {
+			e.stopPropagation();
+			$(this).siblings('.text-field-label').removeClass('float');
 		});
 		// 兼容IE10
 		$('.text-field-content .text-field-label').click(function(e) {
-		    e.stopPropagation();
+				e.stopPropagation();
 		    $(this).removeClass('float');
 		    $(this).siblings('.text-field-input').focus();
 		});

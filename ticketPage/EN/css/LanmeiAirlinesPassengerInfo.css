@@ -161,7 +161,7 @@
 }
 .passengerInfoWrite .PassengersCommon .PassengersContentCommon {
   padding-top: 20px;
-  height: 436px;
+  height: 472px;
 }
 .passengerInfoWrite .PassengersCommon .PassengersContentCommon .nameSelect,
 .passengerInfoWrite .PassengersCommon .PassengersContentCommon .DocumentType,
@@ -176,7 +176,7 @@
 .passengerInfoWrite .PassengersCommon .PassengersContentCommon .FlyerCardNum,
 .passengerInfoWrite .PassengersCommon .PassengersContentCommon .joinUs {
   width: 300px;
-  height: 58px;
+  height: 70px;
   float: left;
   position: relative;
   margin-bottom: 10px;
@@ -450,7 +450,7 @@
 .passengerInfoWrite .PassengersCommon .PassengersContentCommon .IDNo,
 .passengerInfoWrite .PassengersCommon .PassengersContentCommon .FlyerCardNum {
   width: 300px;
-  height: 58px;
+  height: 70px;
   float: left;
   position: relative;
   margin-bottom: 10px;
@@ -613,7 +613,7 @@
 }
 .contactUsWrapper .contactUsContent .countryMobileSelect {
   width: 460px;
-  height: 70px;
+  height: 86px;
   position: relative;
 }
 .contactUsWrapper .contactUsContent .countryMobileSelect p {
@@ -681,7 +681,7 @@
 .contactUsWrapper .contactUsContent .contactEmail,
 .contactUsWrapper .contactUsContent .exampleTip {
   width: 460px;
-  height: 70px;
+  height: 86px;
   float: left;
   position: relative;
 }

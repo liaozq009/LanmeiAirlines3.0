@@ -35,13 +35,23 @@ var LanmeiAirlinesMultiCities = {
 		});
 
 		// 设置默认值
-		var adultDefault = 2;
+		var adultDefault = 3;
 		var childDefault = 3;
 		$('.js-p-adult span').html(adultDefault);
 		$('.js-s-adult').find('.adult-num').html(adultDefault);
-
 		$('.js-p-child span').html(childDefault);
 		$('.js-s-child').find('.child-num').html(childDefault);
+
+		if(Number(adultDefault) > 1) {
+			$('.js-adult-sub').removeClass('off-sub-operation');
+		}
+		if(Number(childDefault) > 0) {
+			$('.js-child-sub').removeClass('off-sub-operation').parent().removeClass('disable');
+		}
+		if(Number(adultDefault) + Number(childDefault) > 7) {
+			$('.js-child-add').addClass('off-add-operation');
+			$('.js-adult-add').addClass('off-add-operation');
+		}
 
 		// 成人
 		var adult = function(){
