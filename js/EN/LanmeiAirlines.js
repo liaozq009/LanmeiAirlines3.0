@@ -3611,7 +3611,7 @@ var LanmeiAirlines = {
 				anifun = setInterval(autoani,value.time);	//继续执行动画
 			});
 		};
-		slideUp();
+		// slideUp();
 
 		/* 语言选择 */
 		var $langMenu = $('.js-lang-menu');

@@ -196,6 +196,7 @@ var LanmeiAirlinesCommon = {
 		$('.selectAirCommon>div>div .inputDown').click(function(e){
 			e.stopPropagation();
 			if($(this).val()!==''){
+				$(this).select();
 				$(this).siblings('.clear').show();
 				if (document.all && document.addEventListener && !window.atob) {
 					$(this).siblings('.clear').hide();

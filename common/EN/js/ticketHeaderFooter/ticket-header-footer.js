@@ -9,7 +9,7 @@ var lmHeaderFooter = {
   /* 公共页头和页脚 */
   headerFooter: function(){
     var $header = '<div class="header-wrap">'+
-      '<a href="http://lanmeiairlines.com/index_cn.html?lang=cn" class="h-logo-wrap"></a>'+
+      '<a href="https://lanmeiairlines.com/index.html?lang=en" class="h-logo-wrap"></a>'+
       '<div class="h-right"> '+
         '<div class="h-phone js-h-phone"> '+
         '<div class="phone-menu js-phone-menu"> '+
@@ -21,15 +21,15 @@ var lmHeaderFooter = {
         '<p class="js-choose-lang"></p> '+
         '<div class="lang-menu js-lang-menu"> '+
           '<h2>Choose a language:</h2> '+
-          '<a href="http://lanmeiairlines.com?lang=en" class="lang-en" data="en">English</a> '+
-          '<a href="http://lanmeiairlines.com?lang=cn" class="lang-zh" data="zh">简体中文</a> '+
+          '<a href="https://lanmeiairlines.com/index.html?lang=en" class="lang-en" data="en">English</a> '+
+          '<a href="https://lanmeiairlines.com/index_cn.html?lang=cn" class="lang-zh" data="zh">简体中文</a> '+
         '</div> '+
         '</div> '+
       '</div> '+
     '</div>';
 
     var $footer = '<p class="lm-logo"></p>'+
-      '<p class="facebook"> <a href="https://www.facebook.com/lanmeiairlines/" class="a1 icon-facebook"></a> <a href="http://weibo.com/lanmeiair" class="icon-weibo"></a> </p> '+
+      '<p class="facebook"> <a href="https://www.facebook.com/lanmeiairlines/" class="a1 icon-facebook1"></a> <a href="http://weibo.com/lanmeiair" class="icon-weibo"></a> </p> '+
       '<p class="f-email"><img src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/common/images/EN/icon-email.png" class="icon-email" /><span>lm-ec@lanmeiairlines.com</span></p> '+
       '<p class="f-local"> <img src="http://b2c.lanmeiairlines.com/lqWeb/lqweb/common/images/EN/icon-location.png" class="icon-location" /> <a href="https://goo.gl/maps/7pyBze8BFe52" target="_Blank"> No.575 D&E, Russian Federation Boulevard, Phnom Penh, Cambodia</a> </p>'+ 
       '<p class="copyright">&copy; Copyright 2017 Lanmei Airlines. All Rights Reserved. ICP:Guangdong Province <a href="http://www.miitbeian.gov.cn" target="_Blank" rel="nofollow">ICP-17005494-1</a></p>';
