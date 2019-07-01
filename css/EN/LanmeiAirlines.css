@@ -242,11 +242,10 @@ body {
   background: url('../../images/EN/important.png') left center no-repeat;
 }
 .lm-important > a {
-  float: right;
-  display: block;
+  display: inline-block;
   height: 26px;
   line-height: 26px;
-  margin-right: 30px;
+  margin-left: 30px;
   color: #1f2c5c;
   font-size: 14px;
   font-family: CamptonBookBold;
@@ -264,7 +263,7 @@ body {
   overflow: hidden;
 }
 .lm-important > ul > li {
-  width: 900px;
+  width: 526px;
   height: 26px;
   line-height: 26px;
   margin-left: 10px;
@@ -566,11 +565,11 @@ body {
   outline: none;
   border-radius: 2px;
   background: #42958a;
-  background: -webkit-linear-gradient(left, #00908C 0%, #1f2c5c 100%);
-  background: -o-linear-gradient(right, #00908C 0%, #1f2c5c 100%);
-  background: -moz-linear-gradient(right, #00908C 0%, #1f2c5c 100%);
-  background: linear-gradient(to right, #00908C 0%, #1f2c5c 100%);
-  filter: alpha progid:DXImageTransform.Microsoft.gradient(startcolorstr=#00908C, endcolorstr=#1f2c5c, gradientType=1);
+  background: -webkit-linear-gradient(left, #B4EC80 0%, #00908C 100%);
+  background: -o-linear-gradient(right, #B4EC80 0%, #00908C 100%);
+  background: -moz-linear-gradient(right, #B4EC80 0%, #00908C 100%);
+  background: linear-gradient(to right, #B4EC80 0%, #00908C 100%);
+  filter: alpha progid:DXImageTransform.Microsoft.gradient(startcolorstr=#B4EC80, endcolorstr=#00908C, gradientType=1);
   /*ie8*/
   /*ie9*/
 }
@@ -755,6 +754,12 @@ body {
 .lm-section-service ul > li a p {
   margin-top: 20px;
   color: rgba(31, 44, 92, 0.7);
+}
+.lm-section-service ul > li:nth-child(3) a {
+  cursor: default;
+}
+.lm-section-service ul > li:nth-child(3) a p {
+  color: rgba(31, 44, 92, 0.3);
 }
 /* 澜湄酒店 */
 .lm-section-hotel {
@@ -1971,23 +1976,23 @@ body {
     padding-top: 50px;
   }
   .ticket-bg {
-    background: url('../../imgage_demo/ticket-bg-mobile.jpg') center no-repeat;
+    background: url('../../imgage_demo/flightStatus-bg-mobile.jpg') center no-repeat;
     background-size: cover;
   }
   .hotel-bg {
-    background: url('../../imgage_demo/ticket-bg-mobile.jpg') center no-repeat;
+    background: url('../../imgage_demo/flightStatus-bg-mobile.jpg') center no-repeat;
     background-size: cover;
   }
   .ticketHotel-bg {
-    background: url('../../imgage_demo/ticket-bg-mobile.jpg') center no-repeat;
+    background: url('../../imgage_demo/flightStatus-bg-mobile.jpg') center no-repeat;
     background-size: cover;
   }
   .car-bg {
-    background: url('../../imgage_demo/ticket-bg-mobile.jpg') center no-repeat;
+    background: url('../../imgage_demo/flightStatus-bg-mobile.jpg') center no-repeat;
     background-size: cover;
   }
   .fStatus-bg {
-    background: url('../../imgage_demo/ticket-bg-mobile.jpg') center no-repeat;
+    background: url('../../imgage_demo/flightStatus-bg-mobile.jpg') center no-repeat;
     background-size: cover;
   }
   .lm-aside-flight,
@@ -3384,6 +3389,8 @@ body {
   }
   .content-com-wrap .content-com-inner > h1 {
     height: 26px;
+    text-shadow: none;
+    text-align: left;
   }
   .lm-section-service {
     width: 100%;

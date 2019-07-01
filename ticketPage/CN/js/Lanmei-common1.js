@@ -196,6 +196,7 @@ var LanmeiAirlinesCommon = {
 		$('.selectAirCommon>div>div .inputDown').click(function(e){
 			e.stopPropagation();
 			if($(this).val()!==''){
+				$(this).select();
 				$(this).siblings('.clear').show();
 				if (document.all && document.addEventListener && !window.atob) {
 					$(this).siblings('.clear').hide();
@@ -502,10 +503,10 @@ var LanmeiAirlinesCommon = {
 
 		$('.BackToTop').mouseover(function(event) {
 			$(this).children('img').attr('src','http://'+window.location.host+'/lqWeb/lqweb/Lanmei_project/images/CN/ToTop-icon-active.png');
-//			$(this).children('.img01').hide().siblings('.img02').show();
+			// $(this).children('.img01').hide().siblings('.img02').show();
 		}).mouseout(function(){
 			$(this).children('img').attr('src','http://'+window.location.host+'/lqWeb/lqweb/Lanmei_project/images/CN/ToTop-icon.png');
-//			$(this).children('.img02').hide().siblings('.img01').show();
+			// $(this).children('.img02').hide().siblings('.img01').show();
 		});
 	},
 

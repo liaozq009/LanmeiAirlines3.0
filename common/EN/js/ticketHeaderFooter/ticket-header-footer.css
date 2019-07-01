@@ -247,10 +247,10 @@
   width: 26px;
   height: 26px;
 }
-.lm-footer .facebook .icon-facebook {
+.lm-footer .facebook .icon-facebook1 {
   background: url('http://b2c.lanmeiairlines.com/lqWeb/lqweb/common/images/EN/icon-facebook.png') center no-repeat;
 }
-.lm-footer .facebook .icon-facebook:hover {
+.lm-footer .facebook .icon-facebook1:hover {
   background: url('http://b2c.lanmeiairlines.com/lqWeb/lqweb/common/images/EN/icon-facebook-active.png') center no-repeat;
 }
 .lm-footer .facebook .icon-weibo {
