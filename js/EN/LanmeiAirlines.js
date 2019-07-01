@@ -531,6 +531,10 @@ var LanmeiAirlines = {
 						}else{
 							that.changeWidth('hotel');
 						}
+
+						dateBox.slideUp(function(){ //日期地隐藏
+							peopleBox.slideDown(); //人数显示
+						}); 
 						
 						setTimeout(function(){
 							box.addClass('hotelPeople-popup-box'); //移动before小箭头
@@ -542,16 +546,16 @@ var LanmeiAirlines = {
 							box.css({'top':-10,'left':320});
 						}
 					}else{ // 机票
-						if(peopleBox!=='0'){
+						/*if(peopleBox!=='0'){
 							box.css('left',730);
 							setTimeout(function(){
 								box.addClass('ticket-popup-box'); //移动before小箭头
 							},600);
-						}
+						}*/
 					} 
 					if(peopleBox!=='0'){
 						dateBox.slideUp(function(){ //日期地隐藏
-							peopleBox.slideDown(); //人数显示
+							// peopleBox.slideDown(); //人数显示
 						}); 
 					}else{
 						$('.js-fStatusPopup-content').removeClass('popup-active').addClass('popup-inactive'); 
