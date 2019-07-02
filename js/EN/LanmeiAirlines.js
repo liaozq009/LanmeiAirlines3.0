@@ -3584,6 +3584,9 @@ var LanmeiAirlines = {
 		$('.js-section-main').height(437);
 		$('.js-aside-code').height(winHeight-50);
 
+		/* 首页页脚增加class */
+		$('.lm-footer').addClass('lm-main-footer');
+
 		/* 文字滚动 */
 		var slideUp = function(){
 			var docthis = $(".js-important-line");
