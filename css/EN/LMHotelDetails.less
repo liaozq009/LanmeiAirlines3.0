@@ -1,0 +1,138 @@
+.hotel-detail {
+  width: 1200px;
+  margin: 0 auto 30px;
+  .common-box-1 {
+    margin-bottom: 30px;
+    >h3 {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .box {
+      border: 1px solid #ccc;
+      border-radius: 2px;
+      padding: 20px;
+      overflow: hidden;
+      .title {
+        float: left;
+        width: 20%;
+        font-size: 18px;
+        font-weight: 400;
+      }
+      >ul {
+        float: left;
+        width: 80%;
+        overflow: hidden;
+        >li {
+          float: left;
+          width: 25%;
+          text-align: center;
+          >p {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+  .common-box-2 {
+    margin-bottom: 30px;
+    .box {
+      overflow: hidden;
+      .title {
+        float: left;
+        width: 20%;
+        padding: 20px 20px 20px 0;
+        margin-right: 2%;
+        font-size: 18px;
+        font-weight: 400;
+        border-top: 1px solid #ccc;
+      }
+      .first-title {
+        border: none;
+      }
+      .details {
+        float: left;
+        width: 78%;
+        padding: 0 20px 0 0;
+        border-top: 1px solid #ccc;
+        .feature-group {
+          margin-top: 20px;
+          overflow: hidden;
+          >.icon {
+            float: left;
+            width: 10%;
+          }
+          >.category {
+            float: left;
+            width: 90%;
+            padding-left: 20px;
+            border-left: 2px solid #ccc;
+            >h3 {
+              font-size: 14px;
+              font-weight: 700;
+              margin-bottom: 10px;
+            }
+            >ul {
+              overflow: hidden;
+              li {
+                float: left;
+                width: 32%;
+                margin-bottom: 10px;
+                >img {margin-right: 10px;}
+              }
+            }
+          }
+          >.category2 {
+            width: 100%;
+            padding-left: 0;
+            margin-bottom: 10px;
+            border: none;
+            >ul {
+              >li {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+      .first-details {
+        border: none;
+      }
+    }
+  }
+}
+.booking-now {
+  position: absolute;
+  right: 0;
+  bottom: 110px;
+  button {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    border: none;
+    outline: none;
+    background: linear-gradient(to right,#B4EC80 0,#00908C 100%);
+    color: #fff;
+    font-size: 14px;
+  }
+}
+.hotel-price {
+  position: absolute;
+  left: 50%;
+  bottom: 110px;
+  margin-left: -80px;
+  width: 160px;
+  padding: 10px 20px;
+  text-align: center;
+  background: rgba(31,44,92,.79);
+  .concessional-rate {
+    color: #ee595d;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  .original-price {
+    font-size: 14px;
+    text-decoration: line-through;
+    color: #ccc;
+  }
+}
