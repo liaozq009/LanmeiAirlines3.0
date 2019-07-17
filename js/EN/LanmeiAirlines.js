@@ -18,6 +18,7 @@ var LanmeiAirlines = {
 		this.selectThPeople();
 		this.selectHotelRooms();
 		this.ticketCommon();
+		this.quickTicket();
 		this.otherEvent();
 		this.isPc();
 		this.isIE();
@@ -1266,6 +1267,39 @@ var LanmeiAirlines = {
 					error:function(e){
 							
 					}
+			});
+		});
+	},
+
+	/* 快捷机票查询 */
+	quickTicket:function(){
+		// 日期选择--动态加载
+		var formatDate = function(ymd) { //日期格式化
+		    return ymd.replace(/(\d{4})\-(\d{1,2})\-(\d{1,2})/g, function(ymdFormatDate, y, m, d){
+		        m < 10 && (m = '0' + m);
+		        d < 10 && (d = '0' + d);
+		        return y + '-' + m + '-' + d;
+		    });
+		};
+		var today  = new Date();
+		var startTimeStr = new Date(today.getTime()+86400000*1); 
+		var endTimeStr = new Date(today.getTime()+86400000*2); 
+		var startTime = formatDate(startTimeStr.getFullYear()+'-'+(startTimeStr.getMonth()+1)+'-'+startTimeStr.getDate());
+		var endTime = formatDate(endTimeStr.getFullYear()+'-'+(endTimeStr.getMonth()+1)+'-'+endTimeStr.getDate());
+
+		$('.js-ticket-inquiry').click(function(event) {
+			var orgCity = 'PNH';
+			var dstCity = 'REP';
+	    $.ajax({
+				url:"http://b2c.lanmeiairlines.com/lqWeb/reservation/AVQuery.do",
+				type:"POST",
+				data:{tripType:'RT',cabinType:'ECONOMY',orgcity:orgCity,dstcity:dstCity,takeoffDate:startTime,returnDate:endTime,adultCount:'1',childCount:'0',language:'CN',CURRENCY:'CNY'},
+				success:function(data){
+						alert('成功')
+				},
+				error:function(e){
+						
+				}
 			});
 		});
 	},
@@ -2885,22 +2919,22 @@ var LanmeiAirlines = {
 
 	/* PC和移动端都使用的事件 */
 	ticketCommon:function(){
-        /*二维码下载*/
-        $('.js-car-search').click(function () {
-        	$(this).html('Loading...');
-        	setTimeout(function(){
-        		layer.open({
-        		  area: ['90%', 'auto'],
-        		  type: 1,
-        		  id: 'bus-download-id',
-        		  shadeClose: true,
-        		  title: false, //不显示标题 
-        		  content: '<div class="bus-download-wrap"><div class="bus-code-wrap"><div class="bus-code-img"><img src="./images/EN/bus-code.jpg" /><a href="javascript:;" class="download-code-btn js-download-code">Download</a><p class="download-code-tips">Long press and save image</p></div><div class="bus-code-info"><h2>Instructions:</h2><p>1. Please download and keep the QR code which is the only certificate for ticket discount. Please keep it well!</p><p>2. Please show the QR code to the staff of ticket office and passenger will be given the preferential price of 3.5 USD/one-way/seat (Original price is 5 USD/one-way/seat).</p><p>3. There is no limit to service term of the QR code. Passengers can buy tickets with the QR code at KKSTAR ticket counter at any time.</p><a href="javascript:;" class="bus-info-more js-busInfo-more">More</a></div></div></div>'
-        		});     
-        	},3000);
-        	setTimeout(function(){
-	        	$('.js-car-search').html('Search');
-        	},4000);
+    /*二维码下载*/
+    $('.js-car-search').click(function () {
+    	$(this).html('Loading...');
+    	setTimeout(function(){
+    		layer.open({
+    		  area: ['90%', 'auto'],
+    		  type: 1,
+    		  id: 'bus-download-id',
+    		  shadeClose: true,
+    		  title: false, //不显示标题 
+    		  content: '<div class="bus-download-wrap"><div class="bus-code-wrap"><div class="bus-code-img"><img src="./images/EN/bus-code.jpg" /><a href="javascript:;" class="download-code-btn js-download-code">Download</a><p class="download-code-tips">Long press and save image</p></div><div class="bus-code-info"><h2>Instructions:</h2><p>1. Please download and keep the QR code which is the only certificate for ticket discount. Please keep it well!</p><p>2. Please show the QR code to the staff of ticket office and passenger will be given the preferential price of 3.5 USD/one-way/seat (Original price is 5 USD/one-way/seat).</p><p>3. There is no limit to service term of the QR code. Passengers can buy tickets with the QR code at KKSTAR ticket counter at any time.</p><a href="javascript:;" class="bus-info-more js-busInfo-more">More</a></div></div></div>'
+    		});     
+    	},3000);
+    	setTimeout(function(){
+      	$('.js-car-search').html('Search');
+    	},4000);
 		});
 
 		$(document).on('click','.js-download-code',function(){

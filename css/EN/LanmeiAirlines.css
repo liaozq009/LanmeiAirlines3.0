@@ -818,6 +818,12 @@ body {
 .lm-section-hotel .hotel-content .nth-child4 {
   margin-right: 0;
 }
+.lm-section-hotel .ticket-content > li a > div {
+  top: 132px;
+}
+.lm-section-hotel .ticket-content > li a h2 {
+  font-size: 32px;
+}
 /* 澜湄banner */
 .lm-section-banner {
   width: 1200px;
