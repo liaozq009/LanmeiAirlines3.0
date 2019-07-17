@@ -1295,7 +1295,7 @@ var LanmeiAirlines = {
 				type:"POST",
 				data:{tripType:'RT',cabinType:'ECONOMY',orgcity:orgCity,dstcity:dstCity,takeoffDate:startTime,returnDate:endTime,adultCount:'1',childCount:'0',language:'CN',CURRENCY:'CNY'},
 				success:function(data){
-						alert('成功')
+						// alert('成功')
 				},
 				error:function(e){
 						
