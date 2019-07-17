@@ -118,6 +118,8 @@
 	<link rel="icon" href="../../images/EN/lanmeiLogo.ico">
 	<link rel="stylesheet" type="text/css" href="../../libs/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../../common/EN/fonts/lm-iconfont.css">
+	<link rel="stylesheet" type="text/css" href="../../images/hotelDetails/fonts/hotel-iconfont.css">
+	<link rel="stylesheet" type="text/css" href="../../images/hotelDetails/fonts/hotel-iconfont-edit.css">
 	<link rel="stylesheet" type="text/css" href="../../common/EN/css/Lanmei-common.css">
 	<link rel="stylesheet" type="text/css" href="../../libsEdit/css/lanmeiLibsEdit.css">
 	<link rel="stylesheet" type="text/css" href="../../css/EN/LMHotelDetails.css">
@@ -214,7 +216,7 @@
 		</div>
 		<!-- booking -->
 		<div class="booking-now">
-			<button>现在就预订</button>
+			<button class="booking-btn js-booking-btn">现在就预订</button>
 		</div>
 	</div>
 
@@ -226,16 +228,128 @@
 			<div class="box">
 				<div class="title">推荐亮点</div>
 				<ul>
-					<li><img src="../../images/hotelDetails/icon.png">
+					<li>
+						<span class="iconfont2 icon-coachparking hotel-icon1"></span>
 						<p>距离公交设施840米</p>
 					</li>
-					<li><img src="../../images/hotelDetails/icon.png">
+					<li>
+						<span class="iconfont2 icon-AirportShuttle hotel-icon1"></span>
 						<p>机场接送服务</p>
 					</li>
-					<li><img src="../../images/hotelDetails/icon.png">
+					<li>
+						<span class="iconfont2 icon-currencyexchange hotel-icon1"></span>
 						<p>货币兑换</p>
 					</li>
 				</ul>
+			</div>
+		</div>
+		<!-- 房型选择 -->
+		<div class="common-box-3">
+			<h2>房型选择</h2>
+			<div class="box">
+				<h3>标准房（特大床）</h3>
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>房型</th>
+							<th>相关条款</th>
+							<th>人数限制</th>
+							<th>今日房价</th>
+							<th>房数</th>
+							<th>用户首选</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="rooms-type">
+								<img src="../../libs/miniSlide/imgs/thumb-02.jpg" alt="">
+								<p>1张特大床</p>
+								<p>客房面积：29 m²</p>
+								<p>禁烟房</p>
+							</td>
+							<td class="discount">
+								<h4>优惠</h4>
+								<p><span class="glyphicon glyphicon-ok hotel-ok" aria-hidden="true"></span>含2人早餐</p>
+								<p><span class="glyphicon glyphicon-ok hotel-ok" aria-hidden="true"></span>免费WiFi</p>
+								<p><span class="glyphicon glyphicon-ok hotel-ok" aria-hidden="true"></span>2019年8月17日前免费取消</p>
+								<p><span class="glyphicon glyphicon-ok hotel-ok" aria-hidden="true"></span>立即确认</p>
+							</td>
+							<td>
+								<img src="../../images/hotelDetails/icon4.jpg" title="每间对多入住2人">
+							</td>
+							<td class="table-price">
+								<p class="original-price">$ <span>320</span></p>
+								<p class="concessional-rate">$ <span>280</span></p>
+								<p class="tips">每晚低至</p>
+							</td>
+							<td>
+								<select>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+								</select>
+							</td>
+							<td>
+								<button class="booking-btn js-booking-btn">现在就预订</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="box">
+				<h3>标准房（双床）</h3>
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>房型</th>
+							<th>相关条款</th>
+							<th>人数限制</th>
+							<th>今日房价</th>
+							<th>房数</th>
+							<th>用户首选</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="rooms-type">
+								<img src="../../libs/miniSlide/imgs/thumb-02.jpg" alt="">
+								<p>1张特大床</p>
+								<p>客房面积：29 m²</p>
+								<p>禁烟房</p>
+							</td>
+							<td class="discount">
+								<h4>优惠</h4>
+								<p><span class="glyphicon glyphicon-ok hotel-ok" aria-hidden="true"></span>含2人早餐</p>
+								<p><span class="glyphicon glyphicon-ok hotel-ok" aria-hidden="true"></span>免费WiFi</p>
+								<p><span class="glyphicon glyphicon-ok hotel-ok" aria-hidden="true"></span>2019年8月17日前免费取消</p>
+								<p><span class="glyphicon glyphicon-ok hotel-ok" aria-hidden="true"></span>立即确认</p>
+							</td>
+							<td>
+								<img src="../../images/hotelDetails/icon4.jpg" title="每间对多入住2人">
+							</td>
+							<td class="table-price">
+								<p class="original-price">$ <span>360</span></p>
+								<p class="concessional-rate">$ <span>300</span></p>
+								<p class="tips">每晚低至</p>
+							</td>
+							<td>
+								<select>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+								</select>
+							</td>
+							<td>
+								<button class="booking-btn js-booking-btn">现在就预订</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 		</div>
 		<!-- 酒店介绍box2 -->
@@ -258,22 +372,22 @@
 				<div class="title">酒店住宿设施</div>
 				<div class="details">
 					<div class="feature-group">
-						<div class="icon"><img src="../../images/hotelDetails/icon.png"></div>
+						<div class="icon"><span class="glyphicon glyphicon-thumbs-up hotel-icon2" aria-hidden="true"></span></div>
 						<div class="category">
 							<h3>热门设施</h3>
 							<ul>
-								<li><img src="../../images/hotelDetails/icon2.jpg">健身中心</li>
-								<li><img src="../../images/hotelDetails/icon2.jpg">厨房</li>
+								<li><span class="iconfont2 icon-Pool hotel-icon3"></span>室外游泳池</li>
+								<li><span class="iconfont2 icon--hour-reception hotel-icon3"></span>24h前台</li>
 							</ul>
 						</div>
 					</div>
 					<div class="feature-group">
-						<div class="icon"><img src="../../images/hotelDetails/icon.png"></div>
+						<div class="icon"><span class="iconfont2 icon-WLANaccess hotel-icon2"></span></div>
 						<div class="category">
-							<h3>热门设施</h3>
+							<h3>上网服务</h3>
 							<ul>
-								<li><img src="../../images/hotelDetails/icon2.jpg">健身中心</li>
-								<li><img src="../../images/hotelDetails/icon2.jpg">厨房</li>
+								<li><span class="iconfont2 icon-WLANaccess hotel-icon3"></span>公用区WiFi</li>
+								<li><span class="iconfont2 icon-Mobile-phonenetwork hotel-icon3"></span>所有客房免费WiFi</li>
 							</ul>
 						</div>
 					</div>
@@ -286,40 +400,81 @@
 				<div class="title">位置及周边</div>
 				<div class="details">
 					<div class="feature-group">
-						<div class="icon"><img src="../../images/hotelDetails/icon.png"></div>
+						<div class="icon"><span class="glyphicon glyphicon-plane hotel-icon2"></div>
 						<div class="category">
-							<h3>热门设施</h3>
+							<h3>附近机场</h3>
 							<ul>
-								<li><img src="../../images/hotelDetails/icon2.jpg">健身中心</li>
-								<li><img src="../../images/hotelDetails/icon2.jpg">厨房</li>
+								<li>
+									<p>金边国际机场 (PNH) - 柬埔寨</p>
+									<p class="distance">8.9公里</p>
+								</li>
 							</ul>
 						</div>
 					</div>
 					<div class="feature-group">
-						<div class="icon"><img src="../../images/hotelDetails/icon.png"></div>
+						<div class="icon"><span class="iconfont2 icon-Shops hotel-icon2"></div>
 						<div class="category">
-							<h3>热门设施</h3>
+							<h3>逛街购物</h3>
 							<ul>
-								<li><img src="../../images/hotelDetails/icon2.jpg">健身中心</li>
-								<li><img src="../../images/hotelDetails/icon2.jpg">厨房</li>
+								<li>
+									<p>中心市场</p>
+									<p class="distance">1.1公里</p>
+								</li>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- 周边 -->
+		<!-- 入住政策 -->
 		<div class="common-box-2">
 			<div class="box">
-				<div class="title">周边</div>
+				<div class="title">入住政策</div>
 				<div class="details">
 					<div class="feature-group">
-						<div class="icon"><img src="../../images/hotelDetails/icon.png"></div>
-						<div class="category">
-							<h3>热门地标</h3>
+						<div class="category category2">
+							<h3>儿童及加床</h3>
 							<ul>
-								<li>国家博物馆</li>
-								<li>国家博物馆</li>
+								<li>加床政策根据您所选定的客房而有所不同，更多详情请查看您所选定的客房人数限制。</li>
+								<li>欢迎带儿童入住</li>
+							</ul>
+						</div>
+						<div class="category category2">
+							<table class="table table-hover" style="margin-bottom:0;">
+								<thead>
+									<tr>
+										<th>客人年龄</th>
+										<th>加床</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><b>0-2岁婴儿 [含2岁]</b></td>
+										<th>
+											<b>在不加床的情况下可免费入住</b>
+											<p>可按要求提供婴儿床/儿童床</p>
+										</th>
+									</tr>
+									<tr>
+										<td><b>3-12岁儿童 [含12岁]</b></td>
+										<td>
+											<b>需要加床</b>
+											<p>如使用加床，需额外收费</p>
+										</td>
+									</tr>
+									<tr>
+										<td><b>13岁及以上客人将被视为大人</b></td>
+										<td>
+											<p>必须使用加床，需额外收费</p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="category category2">
+							<h3>其他</h3>
+							<ul>
+								<li>预订超过5间客房时，需遵循不同的政策和额外的补充条款。</li>
 							</ul>
 						</div>
 					</div>
@@ -357,6 +512,7 @@
 	<!-- 第三方库-->
 	<script src="../../libs/jQuery/jquery-1.11.3.js"></script>
 	<script src="../../libs/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../../libs/layer/layer.js"></script>
 	<script src="../../libs/miniSlide/js/jssor.slider.mini.js"></script>
 	<!-- 公共JS -->
 	<script src="../../common/EN/js/Lanmei-common.js"></script>
@@ -427,6 +583,23 @@
 			$(window).bind("resize", ScaleSlider);
 			$(window).bind("orientationchange", ScaleSlider);
 			//responsive code end
+		});
+
+		$('.js-booking-btn').click(function () {
+			layer.open({
+				title: '温馨提示'
+				, content: '您选择的特价房已售罄，是否选择其他房型？'
+				, btn: ['取消', '马上看']
+				, btnAlign: 'c'
+				, yes: function (index, layero) {
+					layer.close(index);
+				}
+				, btn2: function (index, layero) {
+					location.href = 'https://hotels.lanmeiairlines.com/en-us/hotels-in-phnom-penh/sunway-hotel-phnom-penh-202957';
+					return false; 
+				}
+			});
+
 		});
 	</script>
 </body>
