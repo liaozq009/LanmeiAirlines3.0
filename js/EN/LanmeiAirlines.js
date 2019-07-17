@@ -1283,24 +1283,15 @@ var LanmeiAirlines = {
 		};
 		var today  = new Date();
 		var startTimeStr = new Date(today.getTime()+86400000*1); 
-		var endTimeStr = new Date(today.getTime()+86400000*2); 
+		// var endTimeStr = new Date(today.getTime()+86400000*2); 
 		var startTime = formatDate(startTimeStr.getFullYear()+'-'+(startTimeStr.getMonth()+1)+'-'+startTimeStr.getDate());
-		var endTime = formatDate(endTimeStr.getFullYear()+'-'+(endTimeStr.getMonth()+1)+'-'+endTimeStr.getDate());
+		// var endTime = formatDate(endTimeStr.getFullYear()+'-'+(endTimeStr.getMonth()+1)+'-'+endTimeStr.getDate());
 
 		$('.js-ticket-inquiry').click(function(event) {
-			var orgCity = 'PNH';
-			var dstCity = 'REP';
-	    $.ajax({
-				url:"http://b2c.lanmeiairlines.com/lqWeb/reservation/AVQuery.do",
-				type:"POST",
-				data:{tripType:'RT',cabinType:'ECONOMY',orgcity:orgCity,dstcity:dstCity,takeoffDate:startTime,returnDate:endTime,adultCount:'1',childCount:'0',language:'CN',CURRENCY:'CNY'},
-				success:function(data){
-						// alert('成功')
-				},
-				error:function(e){
-						
-				}
-			});
+			event.preventDefault();
+			var orgCity = $(this).attr('data-from');
+			var dstCity = $(this).attr('data-to');
+			window.open('http://b2c.lanmeiairlines.com/lqWeb/reservation/AVQuery.do?orgcity='+orgCity+'&dstcity='+dstCity+'&language=US&CURRENCY=USD&tripType=OW&takeoffDate='+startTime+'&returnDate=&cabinType=ECONOMY&adultCount=1&childCount=0');
 		});
 	},
 
