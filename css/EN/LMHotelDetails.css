@@ -186,3 +186,6 @@
   font-size: 12px;
   color: #333;
 }
+.layui-layer-btn a:hover {
+  color: #fff;
+}
