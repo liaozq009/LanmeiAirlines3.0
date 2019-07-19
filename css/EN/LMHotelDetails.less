@@ -97,6 +97,9 @@
             margin-bottom: 0;
           }
         }
+        .hotel-info {
+          line-height: 26px;
+        }
       }
       .first-details {
         border: none;
@@ -125,6 +128,10 @@
         p {
           margin-top: 4px;
         }
+        >img {
+          width: 80px;
+          height: 80px;
+        }
       }
       .discount {
         h4 {
@@ -144,7 +151,7 @@
 .booking-now {
   position: absolute;
   right: 0;
-  bottom: 110px;
+  bottom: 100px;
 }
 .booking-btn {
   height: 40px;
@@ -157,6 +164,7 @@
   font-size: 14px;
 }
 .hotel-price {
+  display: none;
   position: absolute;
   left: 50%;
   bottom: 110px;
@@ -174,6 +182,18 @@
     font-size: 14px;
     text-decoration: line-through;
     color: #ccc;
+  }
+}
+.hotel-name {
+  position: absolute;
+  left: 0;
+  bottom: 100px;
+  padding: 10px 20px;
+  text-align: center;
+  background: rgba(31,44,92,.79);
+  p {
+    color: #fff;
+    font-size: 20px;
   }
 }
 .table-price {

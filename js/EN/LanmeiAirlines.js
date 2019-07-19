@@ -1046,7 +1046,7 @@ var LanmeiAirlines = {
 		
 		// 初始化
 		$fromInput.val('Phnom Penh/PNH').attr('data-city','Phnom Penh/PNH/Cambodia');
-		$toInput.val('Guangzhou/CAN').attr('data-city','Guangzhou/CAN/China');
+		$toInput.val('HongKong/HKG').attr('data-city','HongKong/HKG/HongKong,China');
 
 		/* c3动画 */
 		var popupShow = function(){
@@ -1235,39 +1235,39 @@ var LanmeiAirlines = {
 			var takeoffDate = $('#takeoffDate').val();
 			var returnDate = $('#returnDate').val();
 
-		    var adultNum = $('.js-ticket-content .js-p-adult>span').text();
-		    var childNum = $('.js-ticket-content .js-p-child>span').text();
-		    var infantNum = $('.js-ticket-content .js-p-infant>span').text();
+	    var adultNum = $('.js-ticket-content .js-p-adult>span').text();
+	    var childNum = $('.js-ticket-content .js-p-child>span').text();
+	    var infantNum = $('.js-ticket-content .js-p-infant>span').text();
 
-		    var startDate = $('.js-date-result').attr('data-start');
-		    var endDate = $('.js-date-result').attr('data-end');
-		    var orgCity = ($('.js-from-input').val()).substring(($('.js-from-input').val()).indexOf('/') + 1);
-		    var dstCity = ($('.js-to-input').val()).substring(($('.js-to-input').val()).indexOf('/') + 1);
+	    var startDate = $('.js-date-result').attr('data-start');
+	    var endDate = $('.js-date-result').attr('data-end');
+	    var orgCity = ($('.js-from-input').val()).substring(($('.js-from-input').val()).indexOf('/') + 1);
+	    var dstCity = ($('.js-to-input').val()).substring(($('.js-to-input').val()).indexOf('/') + 1);
 
-		    $('#adultCount').val(adultNum);
-		    $('#childCount').val(childNum);
-		    $('#infantCount').val(infantNum);
+	    $('#adultCount').val(adultNum);
+	    $('#childCount').val(childNum);
+	    $('#infantCount').val(infantNum);
 
-		    $('#takeoffDate').val(startDate);
-		    $('#returnDate').val(endDate);
+	    $('#takeoffDate').val(startDate);
+	    $('#returnDate').val(endDate);
 
-		    $('#orgcity').val(orgCity);
-		    $('#dstcity').val(dstCity);
-		    // console.log(adultNum);
-		    var data = {tripType:tripType,cabinType:'ECONOMY',orgcity:orgCity,dstcity:dstCity,takeoffDate:takeoffDate,returnDate:returnDate,adultCount:adultNum,childCount:childNum,language:'CN',CURRENCY:'CNY'};
-		    // $('#air-ticket-form').submit(); 
-		    // window.open('http://b2c.lanmeiairlines.com/lqWeb/reservation/AVQuery.do?tripType=RT&cabinType=ECONOMY&orgcity=CAN&dstcity=PNH&takeoffDate=2018-8-02&returnDate=2018-8-03&adultCount=1&childCount=0&language=CN&CURRENCY=CNY');
-		    $.ajax({
-					url:"http://b2c.lanmeiairlines.com/lqWeb/reservation/AVQuery.do",
-					type:"get",
-					data:data,
-					success:function(data){
-							
-					},
-					error:function(e){
-							
-					}
-			});
+	    $('#orgcity').val(orgCity);
+	    $('#dstcity').val(dstCity);
+	    // console.log(adultNum);
+	    $('#air-ticket-form').submit(); 
+	    /*var data = {tripType:tripType,cabinType:'ECONOMY',orgcity:orgCity,dstcity:dstCity,takeoffDate:takeoffDate,returnDate:returnDate,adultCount:adultNum,childCount:childNum,language:'CN',CURRENCY:'CNY'};
+	    window.open('http://b2c.lanmeiairlines.com/lqWeb/reservation/AVQuery.do?tripType=RT&cabinType=ECONOMY&orgcity=CAN&dstcity=PNH&takeoffDate=2018-8-02&returnDate=2018-8-03&adultCount=1&childCount=0&language=CN&CURRENCY=CNY');
+	    $.ajax({
+				url:"http://b2c.lanmeiairlines.com/lqWeb/reservation/AVQuery.do",
+				type:"get",
+				data:data,
+				success:function(data){
+						
+				},
+				error:function(e){
+						
+				}
+			});*/
 		});
 	},
 
@@ -1289,9 +1289,10 @@ var LanmeiAirlines = {
 
 		$('.js-ticket-inquiry').click(function(event) {
 			event.preventDefault();
-			var orgCity = $(this).attr('data-from');
-			var dstCity = $(this).attr('data-to');
-			window.open('http://b2c.lanmeiairlines.com/lqWeb/reservation/AVQuery.do?orgcity='+orgCity+'&dstcity='+dstCity+'&language=US&CURRENCY=USD&tripType=OW&takeoffDate='+startTime+'&returnDate=&cabinType=ECONOMY&adultCount=1&childCount=0');
+			$('#quick-orgcity').val($(this).attr('data-from'));
+			$('#quick-dstcity').val($(this).attr('data-to'));
+			$('#quick-takeoffDate').val(startTime);
+			$('#quick-ticket-form').submit();
 		});
 	},
 

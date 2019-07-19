@@ -770,7 +770,7 @@ body{
 				height: 100%;
 				border-radius:8px;
 				text-align: center;
-				.purpleBgRgb(.29);
+				.purpleBgRgb(.2);
 				color: #fff;
 				>div {
 					position: absolute;
@@ -1854,7 +1854,12 @@ body{
 	.lm-section-hotel {
 		.hotel-content {
 			>li {
+				>a {.transition3;}
 				&:hover {
+					>a {
+						.purpleBgRgb(.29);
+						.transition3;
+					}
 					.hotel-bg-img {
 						transform: scale(1.2);
 						transform: scale(1.1, 1.1);
@@ -3329,6 +3334,9 @@ body{
 			}
 			.nth-child1 ,.nth-child3 {margin-right: 2%;}
 			.nth-child3 ,.nth-child4 {margin-bottom: 0;}
+		}
+		.ticket-content {
+			> li a > div {top: 75px;}
 		}
 	}
 	.lm-section-banner {

@@ -780,7 +780,7 @@ body {
   height: 100%;
   border-radius: 8px;
   text-align: center;
-  background: rgba(31, 44, 92, 0.29);
+  background: rgba(31, 44, 92, 0.2);
   color: #fff;
 }
 .lm-section-hotel .hotel-content > li a > div {
@@ -1914,6 +1914,15 @@ body {
     -webkit-animation-delay: .8s;
   }
   /* 澜湄酒店 */
+  .lm-section-hotel .hotel-content > li > a {
+    transition: all .3s;
+    -webkit-transition: all .3s;
+  }
+  .lm-section-hotel .hotel-content > li:hover > a {
+    background: rgba(31, 44, 92, 0.29);
+    transition: all .3s;
+    -webkit-transition: all .3s;
+  }
   .lm-section-hotel .hotel-content > li:hover .hotel-bg-img {
     transform: scale(1.2);
     transform: scale(1.1, 1.1);
@@ -3465,6 +3474,9 @@ body {
   .lm-section-hotel .hotel-content .nth-child3,
   .lm-section-hotel .hotel-content .nth-child4 {
     margin-bottom: 0;
+  }
+  .lm-section-hotel .ticket-content > li a > div {
+    top: 75px;
   }
   .lm-section-banner {
     width: 100%;

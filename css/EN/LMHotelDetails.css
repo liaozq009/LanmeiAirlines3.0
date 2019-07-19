@@ -101,6 +101,9 @@
 .hotel-detail .common-box-2 .box .details .feature-group .category2:last-child {
   margin-bottom: 0;
 }
+.hotel-detail .common-box-2 .box .details .hotel-info {
+  line-height: 26px;
+}
 .hotel-detail .common-box-2 .box .first-details {
   border: none;
 }
@@ -127,6 +130,10 @@
 .hotel-detail .common-box-3 .box .rooms-type p {
   margin-top: 4px;
 }
+.hotel-detail .common-box-3 .box .rooms-type > img {
+  width: 80px;
+  height: 80px;
+}
 .hotel-detail .common-box-3 .box .discount h4 {
   font-size: 14px;
   font-weight: bold;
@@ -140,7 +147,7 @@
 .booking-now {
   position: absolute;
   right: 0;
-  bottom: 110px;
+  bottom: 100px;
 }
 .booking-btn {
   height: 40px;
@@ -153,6 +160,7 @@
   font-size: 14px;
 }
 .hotel-price {
+  display: none;
   position: absolute;
   left: 50%;
   bottom: 110px;
@@ -171,6 +179,18 @@
   font-size: 14px;
   text-decoration: line-through;
   color: #ccc;
+}
+.hotel-name {
+  position: absolute;
+  left: 0;
+  bottom: 100px;
+  padding: 10px 20px;
+  text-align: center;
+  background: rgba(31, 44, 92, 0.79);
+}
+.hotel-name p {
+  color: #fff;
+  font-size: 20px;
 }
 .table-price .concessional-rate {
   color: #ee595d;
