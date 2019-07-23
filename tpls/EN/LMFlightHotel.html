@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- 让 Bootstrap 兼容 IE 兼容模型 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- 让 Bootstrap 兼容 国产浏览器的高速模型 -->
+	<meta name="renderer" content="webkit">
+	<!-- 实现响应式的设置 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Flight+Hotel</title>
+	<!-- 引入图标 -->
+	<link rel="icon" href="../../images/EN/lanmeiLogo.ico">
+	<link rel="stylesheet" type="text/css" href="../../common/EN/fonts/lm-iconfont.css">
+	<link rel="stylesheet" type="text/css" href="../../common/EN/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="../../libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../libs/daterange/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="../../libs/viewer/viewer.min.css">
+	<link rel="stylesheet" type="text/css" href="../../libsEdit/css/lanmeiLibsEdit.css">
+	<link rel="stylesheet" type="text/css" href="../../common/EN/css/Lanmei-common.css">
+	<link rel="stylesheet" type="text/css" href="../../css/EN/LMFlightHotel.css">
+
+	<!--[if IE 8]>
+		<html class="ie8 lte_ie9" lang="en">
+	<![endif]-->
+
+	<!--[if lt IE 9]>
+		<script src="../../libs/bootstrap/js/html5shiv.min.js"></script>
+		<script src="../../libs/bootstrap/js/respond.min.js"></script>
+		<html class="lte_ie9" lang="en">
+	<![endif]-->
+
+	<!--[if !IE]><!-->
+	    <script>
+	        // 针对IE10
+	        if (/*@cc_on!@*/false) {
+	            document.documentElement.className += ' ie' + document.documentMode;
+	        }
+	        // 针对IE11及非IE浏览器，
+	        if (/*@cc_on!@*/true) {
+	            document.documentElement.className += ' ie' + document.documentMode;
+	        }
+	    </script>
+	<!--<![endif]-->
+</head>
+<body>
+	<!-- 页面顶部 -->
+	<header class="lm-header lm-sub-header lm-subLogin-header"></header>
+
+	<!-- 登录模态框 -->
+	<div class="modal fade" id="logonModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"></div>
+
+	<!-- 注册模态框 -->
+	<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"></div>
+
+	<!-- 忘记密码模态框 -->
+	<div class="modal fade" id="forgetModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"></div>
+
+	<!-- 主体内容 -->
+	<section class="lm-section js-lm-section">
+		<div class="lm-section-main">
+			<div class="mobile-mask js-mobile-mask"><p class="js-mobileMask-close"></p></div>
+			<div class="main-data-wrap">
+				<form>
+					<div class="main-data-title">
+						<div class="stroke-type-wrap mobile-stroke-type">
+							<div class="select-way js-select-way">
+								<a href="javascript:;" class="round-trip active" data-way="round">Round trip</a>
+								<a href="javascript:;" class="one-way" data-way="one">One-way</a>
+							</div>
+						</div>
+						<div class="from-city-wrap city-wrap-com">
+							<p class="three-code">CAN</p>
+							<div class="from-city city-com">
+								<a href="javascript:;" class="js-from-city">Guangzhou</a>
+								<input type="text" class="js-from-input" data="fromcityMenu" data-city="CAN" placeholder="From" autocomplete="off">
+								<div class="cityMenu-wrap frome-cityMenu-wrap">
+									<ul class="fromcityMenu menu-com js-fromcityMenu">
+										
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="stroke-type-wrap pc-stroke-type">
+							<p class="flight-img"><img src="../../images/resource/flight-img-arrow.png"></p>
+							<div class="select-way js-select-way">
+								<a href="javascript:;" class="round-trip active" data-way="round">Round trip</a>
+								<a href="javascript:;" class="one-way" data-way="one">One-way</a>
+							</div>
+						</div>
+						<div class="to-city-wrap city-wrap-com">
+							<p class="three-code">PNH</p>
+							<div class="to-city city-com">
+								<a href="javascript:;" class="js-to-city">Phnom Penh</a>
+								<input type="text" class="js-to-input" data="tocityMenu" data-city="PNH" placeholder="To" autocomplete="off">
+								<div class="cityMenu-wrap to-cityMenu-wrap">
+									<ul class="tocityMenu menu-com js-tocityMenu">
+										
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="main-data-content">
+						<div class="date-com">
+							<span class="date-result js-date-result" data-start="2018-8-04" data-end="2018-8-05" placeholder="">4 Aug - 5 Aug</span>
+							<div class="cityMenu-wrap dataMenu-wrap js-dataMenu-wrap">
+								<div class="date-container js-date-container"></div>
+							</div>
+						</div>
+						<div class="date-com">
+							<input type="text" class="hotel-date-result js-hotelDate-result" data-start="2018-8-04" data-end="2018-8-05" placeholder="Check-in" readonly autocomplete="off">
+							<p class="hotel-day">1</p>
+							<div class="cityMenu-wrap hotel-dataMenu-wrap js-hotelDataMenu-wrap">
+								<div class="date-container js-hotelDate-container"></div>
+							</div>
+						</div>
+						<div class="data-people date-com">
+							<div class="t-people-result js-people-result">
+								<p class="p-hotelRooms js-p-ticketHotelRooms">x <span></span></p>
+								<p class="p-hotelAdult js-p-ticketHotelAdult">x <span></span></p>
+								<p class="p-hotelChild js-p-ticketHotelChild">x <span></span></p>
+							</div>
+							<div class="cityMenu-wrap people-cityMenu-wrap">
+								<div class="popup-people hotel-popus-people th-popus-people js-ticketHotelPopup-people">
+									<div class="select-people-container js-thPeople-container">
+										<div class="s-rooms s-people-com js-s-thRoom">
+											<div class="people-prompt people-rooms-prompt">
+												<p class="p1">Rooms</p>
+												<!-- <p class="p2 thRooms-tip">( 12+ )</p> -->
+											</div>
+											<div class="people-number">
+												<a href="javascript:;" class="sub-people off-sub-operation js-thRooms-sub"></a>
+												<span class="rooms-num">1</span>
+												<a href="javascript:;" class="add-people js-thRooms-add"></a>
+											</div>
+										</div>
+										<div class="s-adult s-people-com js-s-thAdult">
+											<div class="people-prompt people-rooms-prompt">
+												<p class="p1">Adult</p>
+												<p class="p2 thAdult-tip">( 12+ )</p>
+											</div>
+											<div class="people-number">
+												<a href="javascript:;" class="sub-people off-sub-operation js-thAdult-sub"></a>
+												<span class="adult-num">1</span>
+												<a href="javascript:;" class="add-people js-thAdult-add"></a>
+											</div>
+										</div>
+										<div class="s-child s-people-com js-s-thChild">
+											<div class="people-prompt people-rooms-prompt">
+												<p class="p1">Child</p>
+												<p class="p2 thChild-tip">(2-11)</p>
+											</div>
+											<div class="people-number disable">
+												<a href="javascript:;" class="sub-people off-sub-operation js-thChild-sub"></a>
+												<span class="child-num">0</span>
+												<a href="javascript:;" class="add-people js-thChild-add"></a>
+											</div>
+										</div>
+										<div class="child-age-container js-child-container">
+											<p class="child-age-title js-childAge-title">Age of children</p>
+										</div>
+									</div>
+									<div class="m-select-people"><a href="javascript:;" class="js-mThSelect-people">SAVE</a></div>
+								</div>
+							</div>
+						</div>
+						<a href="javascript:;" class="search-btn js-search-btn">SEARCH</a>
+					</div>
+					<div class="clear-both"></div>
+				</form>
+			</div>
+			<div class="main-result-wrap">
+				<div class="main-flight-wrap js-flight-wrap">
+					<p class="main-flight-title">TICKETS</p>
+					<p class="main-flight-img"><img src="../../images/resource/ticketHotel-aircraft.png"></p>
+					<p class="main-flight-rules"><span>!</span><a href="javascript:;" class="js-open-rules">Return and change rules</a></p>
+					<div class="main-flight-content">
+						<div class="flight-tips">
+							<p class="p1">1. 起降时间均为当地时间； </p>
+							<p class="p2">2. 如果航班是夜间航班，请注意您的酒店入住时间；</p>
+							<p class="p3">3. 机票和酒店资源为实时动态资源，价格会实时变动，请以订单实际支付金额为准。</p>
+						</div>
+						<div class="flight-info-wrap">
+							<div class="flight-info-inner">
+								<div class="mobile-flight-info">
+									<p class="from-city">Guangzhou</p>
+									<p class="line">—</p>
+									<p class="to-city">Phnom Penh</p>
+									<p class="from-date">14 Nov</p>
+								</div>
+								<div class="flight-info flight-info-1">
+									<p class="p1">14 Nov.</p>
+									<div>
+										<p class="p2"><span class="time">05:10</span></p>
+										<p class="p3">Guangzhou Baiyun International Airport Terminal T1</p>
+									</div>
+								</div>
+								<div class="flight-num">
+									<span>LQ909</span>
+									<img src="../../images/resource/ticketHotel-line.png" class="pc-right-arrow">
+									<img src="../../images/resource/ticketHotel-line-mobile.png" class="mobile-right-arrow">
+								</div>
+								<div class="flight-info flight-info-2">
+									<div>
+										<p class="p2"><span class="time">07:10</span><span class="one-day hidden">+1</span></p>
+										<p class="p3">Phnom Penh International Airport</p>
+									</div>
+									<p class="p1 space-num-green"><img src="../../images/resource/icon-space.png"> <span>&gt;9</span></p>
+								</div>
+							</div>
+							<div class="flight-info-inner">
+								<div class="mobile-flight-info">
+									<p class="from-city">Phnom Penh</p>
+									<p class="line">—</p>
+									<p class="to-city">Guangzhou</p>
+									<p class="from-date">15 Nov</p>
+								</div>
+								<div class="flight-info flight-info-1">
+									<p class="p1">15 Nov.</p>
+									<div>
+										<p class="p2"><span class="time">22:20</span></p>
+										<p class="p3">Phnom Penh International Airport</p>
+									</div>
+								</div>
+								<div class="flight-num">
+									<span>LQ908</span>
+									<img src="../../images/resource/ticketHotel-line.png" class="pc-right-arrow">
+									<img src="../../images/resource/ticketHotel-line-mobile.png" class="mobile-right-arrow">
+								</div>
+								<div class="flight-info flight-info-2">
+									<div>
+										<p class="p2"><span class="time">02:20</span><span class="one-day">+1</span></p>
+										<p class="p3">Guangzhou Baiyun International Airport Terminal T1</p>
+									</div>
+									<p class="p1 space-num-red"><img src="../../images/resource/icon-space.png"> <span>&gt;2</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a href="javascript:;" class="flight-next js-flight-next">Next<i class="iconfont icon-right-arrow2"></i></a>
+				</div>
+				<div class="main-hotel-wrap js-hotel-wrap">
+					<p class="main-flight-title">HOTEL</p>
+					<a href="javascript:;" class="flight-previous js-hotel-previous"><i class="iconfont icon-left-arrow2"></i>Previous</a>
+					<div class="main-hotel-inner">
+						<div class="main-hotel-result pc-hotel-result">
+							<img src="../../images/resource/ticketHotel-hotel.png">
+							<div class="hotel-pay-wrap">
+								<div class="hotel-info-tips">
+									<h2>Air tickets + Hotel</h2>
+									<p>The price per person includes airfare + hotel + tax</p>
+								</div>
+								<p class="ticket-hotel-price">$ 7632</p>
+								<button class="ticket-hotel-pay js-ticketHotel-pay">Next <img src="../../images/resource/circle-arrow-right.png" class="circle-arrow-img"></button>
+							</div>
+						</div>
+						<div class="main-hotel-content js-hotel-content">
+							<div class="hotel-content-inner hotel-select-active js-content-inner">
+								<div class="hotel-bg">
+									<div class="hotel-info-wrap">
+										<img src="../../images/resource/hotel-img-1.jpg" class="hotel-img">
+										<div class="hotel-info">
+											<a href="javascript:;" class="hotel-title js-hotel-title" target="_blank">Mandarin Hotel Managed By Centre Point</a>
+											<div class="hotel-stars-wrap">
+												<div class="hotel-stars">
+													<img src="../../images/resource/hotel-stars.png" class="stars-1" alt="">
+													<img src="../../images/resource/hotel-stars.png" class="stars-2" alt="">
+													<img src="../../images/resource/hotel-stars.png" class="stars-3" alt="">
+													<img src="../../images/resource/hotel-stars.png" class="stars-4" alt="">
+													<img src="../../images/resource/hotel-stars.png" class="stars-5" alt="">
+													<img src="../../images/resource/hotel-stars-more.png" class="stars-more" alt="">
+												</div>
+												<p class="hotel-popular">Popular promotions</p>
+											</div>
+											<p class="hotel-country">Republic of Bashkortostan Russia</p>
+											<p class="hotel-address">Gogolya 155 Pribrezhny District Sterlitamak</p>
+										</div>
+									</div>
+									<div class="hotel-roomType-wrap">
+										<ul class="room-type-title">
+											<li class="n1">Room type</li>
+											<li class="n2">Policy</li>
+											<li class="n3">Spread</li>
+										</ul>
+										<div class="room-type-content js-rooms-type">
+											<ul class="ul-1 active">
+												<li class="n1">
+													<a href="javascript:;">Double Bed/Double Standard with Breakfast</a>
+													<div class="details-menu rooms-details">
+														<p>客房面积：25平方米；</p>
+														<p>床型：2张单人床；</p>
+														<p>最多入住人数：2人。</p>
+													</div>
+												</li>
+												<li class="n2">
+													<a href="javascript:;">Regression rule</a>
+													<div class="details-menu rule-details">
+														<p>规则实时变动，请以最终订单详情为准。</p>
+													</div>
+												</li>
+												<li class="n3">$ 0</li>
+											</ul>
+											<ul class="ul-2">
+												<li class="n1"><a href="javascript:;">Double or twin club</a></li>
+												<li class="n2"><a href="javascript:;">Regression rule</a></li>
+												<li class="n3">- $ 40</li>
+											</ul>
+											<ul class="ul-3">
+												<li class="n1"><a href="javascript:;">Executive room, 2 twin beds, business lounge access</a></li>
+												<li class="n2"><a href="javascript:;">Regression rule</a></li>
+												<li class="n3">+ $ 130</li>
+											</ul>
+										</div>
+									</div>
+									<div class="hotel-viewOther-wrap">
+										<p>9 people booked the hotel in the past 48 hours</p>
+										<a href="javascript:;" class="js-view-room view-room">View other room types</a>
+										<a href="javascript:;" class="js-close-room close-room">Close</a>
+									</div>
+								</div>
+							</div>
+							<div class="hotel-content-inner js-content-inner">
+								<div class="hotel-bg">
+									<div class="hotel-info-wrap">
+										<img src="../../images/resource/hotel-img-1.jpg" class="hotel-img">
+										<div class="hotel-info">
+											<a href="javascript:;" class="hotel-title js-hotel-title" target="_blank">Mandarin Hotel Managed By Centre Point</a>
+											<div class="hotel-stars-wrap">
+												<div class="hotel-stars">
+													<img src="../../images/resource/hotel-stars.png" class="stars-1" alt="">
+													<img src="../../images/resource/hotel-stars.png" class="stars-2" alt="">
+													<img src="../../images/resource/hotel-stars.png" class="stars-3" alt="">
+													<img src="../../images/resource/hotel-stars.png" class="stars-4" alt="">
+													<img src="../../images/resource/hotel-stars.png" class="stars-5" alt="">
+													<img src="../../images/resource/hotel-stars-more.png" class="stars-more" alt="">
+												</div>
+												<p class="hotel-popular hidden">Popular promotions</p>
+											</div>
+											<p class="hotel-country">Republic of Bashkortostan Russia</p>
+											<p class="hotel-address">Gogolya 155 Pribrezhny District Sterlitamak</p>
+										</div>
+									</div>
+									<div class="hotel-roomType-wrap">
+										<ul class="room-type-title">
+											<li class="n1">Room type</li>
+											<li class="n2">Policy</li>
+											<li class="n3">Spread</li>
+										</ul>
+										<div class="room-type-content js-rooms-type">
+											<ul class="ul-1 active">
+												<li class="n1">
+													<a href="javascript:;">Double Bed/Double Standard with Breakfast</a>
+													<div class="details-menu rooms-details">
+														<p>客房面积：25平方米；</p>
+														<p>床型：2张单人床；</p>
+														<p>最多入住人数：2人。</p>
+													</div>
+												</li>
+												<li class="n2">
+													<a href="javascript:;">Regression rule</a>
+													<div class="details-menu rule-details">
+														<p>规则实时变动，请以最终订单详情为准。</p>
+													</div>
+												</li>
+												<li class="n3">$ 0</li>
+											</ul>
+											<ul class="ul-2">
+												<li class="n1"><a href="javascript:;">Double or twin club</a></li>
+												<li class="n2"><a href="javascript:;">Regression rule</a></li>
+												<li class="n3">- $ 40</li>
+											</ul>
+											<ul class="ul-3">
+												<li class="n1"><a href="javascript:;">Executive room, 2 twin beds, business lounge access</a></li>
+												<li class="n2"><a href="javascript:;">Regression rule</a></li>
+												<li class="n3">+ $ 130</li>
+											</ul>
+										</div>
+									</div>
+									<div class="hotel-viewOther-wrap">
+										<p>9 people booked the hotel in the past 48 hours</p>
+										<a href="javascript:;" class="js-view-room view-room">View other room types</a>
+										<a href="javascript:;" class="js-close-room close-room">Close</a>
+									</div>
+								</div>
+							</div>
+							<div class="hotel-content-inner js-content-inner">
+								<div class="hotel-bg">
+									<div class="hotel-info-wrap">
+										<img src="../../images/resource/hotel-img-1.jpg" class="hotel-img">
+										<div class="hotel-info">
+											<a href="javascript:;" class="hotel-title js-hotel-title" target="_blank">Mandarin Hotel Managed By Centre Point</a>
+											<div class="hotel-stars-wrap">
+												<div class="hotel-stars">
+													<img src="../../images/resource/hotel-stars.png" class="stars-1" alt="">
+													<img src="../../images/resource/hotel-stars.png" class="stars-2" alt="">
+													<img src="../../images/resource/hotel-stars.png" class="stars-3" alt="">
+													<img src="../../images/resource/hotel-stars.png" class="stars-4" alt="">
+													<img src="../../images/resource/hotel-stars.png" class="stars-5" alt="">
+													<img src="../../images/resource/hotel-stars-more.png" class="stars-more" alt="">
+												</div>
+												<p class="hotel-popular hidden">Popular promotions</p>
+											</div>
+											<p class="hotel-country">Republic of Bashkortostan Russia</p>
+											<p class="hotel-address">Gogolya 155 Pribrezhny District Sterlitamak</p>
+										</div>
+									</div>
+									<div class="hotel-roomType-wrap">
+										<ul class="room-type-title">
+											<li class="n1">Room type</li>
+											<li class="n2">Policy</li>
+											<li class="n3">Spread</li>
+										</ul>
+										<div class="room-type-content js-rooms-type">
+											<ul class="ul-1 active">
+												<li class="n1">
+													<a href="javascript:;">Double Bed/Double Standard with Breakfast</a>
+													<div class="details-menu rooms-details">
+														<p>客房面积：25平方米；</p>
+														<p>床型：2张单人床；</p>
+														<p>最多入住人数：2人。</p>
+													</div>
+												</li>
+												<li class="n2">
+													<a href="javascript:;">Regression rule</a>
+													<div class="details-menu rule-details">
+														<p>规则实时变动，请以最终订单详情为准。</p>
+													</div>
+												</li>
+												<li class="n3">$ 0</li>
+											</ul>
+											<ul class="ul-2">
+												<li class="n1"><a href="javascript:;">Double or twin club</a></li>
+												<li class="n2"><a href="javascript:;">Regression rule</a></li>
+												<li class="n3">- $ 40</li>
+											</ul>
+											<ul class="ul-3">
+												<li class="n1"><a href="javascript:;">Executive room, 2 twin beds, business lounge access</a></li>
+												<li class="n2"><a href="javascript:;">Regression rule</a></li>
+												<li class="n3">+ $ 130</li>
+											</ul>
+										</div>
+									</div>
+									<div class="hotel-viewOther-wrap">
+										<p>9 people booked the hotel in the past 48 hours</p>
+										<a href="javascript:;" class="js-view-room view-room">View other room types</a>
+										<a href="javascript:;" class="js-close-room close-room">Close</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main-hotel-result mobile-hotel-result">
+			<div class="hotel-info-tips">
+				<h2>Air tickets + Hotel</h2>
+				<p>The price per person includes airfare + hotel + tax</p>
+			</div>
+			<p class="ticket-hotel-price">$ 7632</p>
+			<!-- <span class="hotel-detail">Detail</span> -->
+			<button class="ticket-hotel-pay">Pay <img src="../../images/resource/circle-arrow-right.png" class="circle-arrow-img"></button>
+		</div>
+	</section>
+
+	<!-- 酒店详情弹出框 -->
+	<div class="modal fade hotel-modal" id="hotelModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				</div>
+				<div class="modal-body">
+					<div class="hotel-title-wrap">
+						<div class="hotel-title">
+							<h2>Mandarin Hotel Managed By Centre Point</h2>
+							<div class="hotel-stars">
+								<img src="../../images/resource/hotel-stars.png" class="stars-1" alt="">
+								<img src="../../images/resource/hotel-stars.png" class="stars-2" alt="">
+								<img src="../../images/resource/hotel-stars.png" class="stars-3" alt="">
+								<img src="../../images/resource/hotel-stars.png" class="stars-4" alt="">
+								<img src="../../images/resource/hotel-stars.png" class="stars-5" alt="">
+								<img src="../../images/resource/hotel-stars-more.png" class="stars-more" alt="">
+							</div>
+						</div>
+						<div class="hotel-address">
+							<p class="p1"><span>Address :</span>Republic of Bashkortostan Russia Gogolya 155 Pribrezhny District Sterlitamak</p>
+							<p class="p2"><span>Contact :</span>+855 23981363</p>
+						</div>
+					</div>
+					<div class="hotel-img-wrap">
+						<ul class="js-hotelImg-wrap">
+							<li class="li-com n1"><img data-original="../../imgage_demo/hotel-detail-1.png" src="../../imgage_demo/hotel-detail-1.png" alt=""></li>
+							<li class="li-com n2"><img data-original="../../imgage_demo/hotel-detail-2.png" src="../../imgage_demo/hotel-detail-2.png" alt=""></li>
+							<li class="li-com n3"><img data-original="../../imgage_demo/hotel-detail-3.png" src="../../imgage_demo/hotel-detail-3.png" alt=""></li>
+							<li class="li-com n4"><img data-original="../../imgage_demo/hotel-detail-4.png" src="../../imgage_demo/hotel-detail-4.png" alt=""></li>
+							<li class="li-com n5"><span class="mask">More 45 photos</span><img data-original="../../imgage_demo/hotel-detail-4.png" src="../../imgage_demo/hotel-detail-4.png" alt=""></li>
+							<li class="li-com n6"><img data-original="../../imgage_demo/hotel-detail-5.jpg" src="../../imgage_demo/hotel-detail-5.jpg" alt=""></li>
+							<li class="li-com n7"><img data-original="../../imgage_demo/hotel-detail-6.jpg" src="../../imgage_demo/hotel-detail-6.jpg" alt=""></li>
+							<li class="li-com n8"><img data-original="../../imgage_demo/hotel-detail-7.jpg" src="../../imgage_demo/hotel-detail-7.jpg" alt=""></li>
+							<li class="li-com n9"><img data-original="../../imgage_demo/hotel-detail-8.jpg" src="../../imgage_demo/hotel-detail-8.jpg" alt=""></li>
+							<li class="li-com n10"><img data-original="../../imgage_demo/hotel-detail-9.jpg" src="../../imgage_demo/hotel-detail-9.jpg" alt=""></li>
+							<li class="li-com n11"><img data-original="../../imgage_demo/hotel-detail-10.jpg" src="../../imgage_demo/hotel-detail-10.jpg" alt=""></li>
+						</ul>
+					</div>
+					<div class="hotel-map-wrap">
+						<div class="hotel-map" id="hotelMap"></div>
+					</div>
+					<div class="hotel-detail-wrap">
+						<h2>Hotel details</h2>
+						<div class="hotel-content">
+							<div class="hotel-inner">
+								<h3>Hotel facilities</h3>
+								<p>Wireless Broadband Internet Common Area Air Conditioning 24 Hour Reception Reception Buffet Breakfast Hotel Safe Currency Exchange Facilities Café Shop Salon Garden Golf Course Bar Theatre / Concert Hall Seminar Room Restaurant Non-smoking Area Laundry Service Medical Service Bicycle Storage Bicycle Rental Bicycle / Mountain Bike Kids Club Sun Lounger Hot Tub Sauna Tennis Massage SPA Physiotherapy Gym</p>
+							</div>
+							<div class="hotel-inner">
+								<h3>Hotel Introduction</h3>
+								<p>Wireless Broadband Internet Common Area Air Conditioning 24 Hour Reception Reception Buffet Breakfast Hotel Safe Currency Exchange Facilities Café Shop Salon Garden Golf Course Bar Theatre / Concert Hall Seminar Room Restaurant Non-smoking Area Laundry Service Medical Service Bicycle Storage Bicycle Rental Bicycle / Mountain Bike Kids Club Sun Lounger Hot Tub Sauna Tennis Massage SPA Physiotherapy Gym</p>
+							</div>
+							<div class="hotel-inner">
+								<h3>Hotel facilities</h3>
+								<p>Wireless Broadband Internet Common Area Air Conditioning 24 Hour Reception Reception Buffet Breakfast Hotel Safe Currency Exchange Facilities Café Shop Salon Garden Golf Course Bar Theatre / Concert Hall Seminar Room Restaurant Non-smoking Area Laundry Service Medical Service Bicycle Storage Bicycle Rental Bicycle / Mountain Bike Kids Club Sun Lounger Hot Tub Sauna Tennis Massage SPA Physiotherapy Gym</p>
+							</div>
+							<div class="hotel-inner">
+								<h3>Hotel Introduction</h3>
+								<p>Wireless Broadband Internet Common Area Air Conditioning 24 Hour Reception Reception Buffet Breakfast Hotel Safe Currency Exchange Facilities Café Shop Salon Garden Golf Course Bar Theatre / Concert Hall Seminar Room Restaurant Non-smoking Area Laundry Service Medical Service Bicycle Storage Bicycle Rental Bicycle / Mountain Bike Kids Club Sun Lounger Hot Tub Sauna Tennis Massage SPA Physiotherapy Gym</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 机票退改签规则弹出框 -->
+	<div class="modal fade hotel-modal rules-modal" id="ruleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				</div>
+				<div class="modal-body">
+					<h2 class="lm-title1">机票退改签规定</h2>
+					<h3 class="lm-title2">一、规定</h3>
+					<p>团队旅客误机，仅退民航发展基金和燃油费，客票款不退。</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 页脚 -->
+	<footer class="lm-footer"></footer>
+
+	<!-- 回到顶部 -->
+	<div class="BackToTop"></div>
+
+	<!-- 第三方库-->
+	<script type="text/javascript" src="../../libs/jQuery/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="../../libs/jQuery/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../../libs/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../../libs/layer/layer.js"></script>
+	<script type="text/javascript" src="../../libs/daterange/moment.js"></script>
+	<script type="text/javascript" src="../../libs/daterange/daterangepicker.js"></script>
+	<script type="text/javascript" src="../../libs/auto-complete-mail.js"></script>
+	<script type="text/javascript" src="../../libs/viewer/viewer-jquery.min.js"></script>
+	<!-- 公共JS -->
+	<script type="text/javascript" src="../../common/EN/js/head-footer.js"></script>
+	<script type="text/javascript" src="../../common/EN/js/login-register.js"></script>
+	<script type="text/javascript" src="../../common/EN/js/common-autoComplete.js"></script>
+	<script type="text/javascript" src="../../common/EN/js/common-daterange.js"></script>
+	<script type="text/javascript" src="../../common/EN/js/common-data.js"></script>
+	<script type="text/javascript" src="../../common/EN/js/Lanmei-common.js"></script>
+	<!-- 业务代码 -->
+	<script type="text/javascript" src="../../js/EN/LMFlightHotel.js"></script>
+	<!-- google -->
+	<script src="http://ditu.google.cn/maps/api/js?sensor=false&libraries=geometry"></script>
+	<script type="text/javascript" src="../../js/EN/LMGoogleJS.js"></script>
+</body>
+</html>
