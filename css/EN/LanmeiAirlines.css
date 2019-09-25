@@ -123,7 +123,7 @@ body {
 .content-com-inner > h1 {
   height: 72px;
   line-height: 72px;
-  font-size: 50px;
+  font-size: 80px;
   font-family: CamptonBookBold;
   text-align: center;
   text-shadow: 0px 0px 30px rgba(31, 44, 92, 0.5);
@@ -1769,6 +1769,12 @@ body {
   .pc-section-main .lm-aside-flight > ul .li-child5 .mobile-news {
     display: none;
   }
+  .pc-section-main .lm-aside-flight > ul .li-child6 a {
+    background: url('../../images/EN/ticket-icon.png') 10% center no-repeat;
+  }
+  .pc-section-main .lm-aside-flight > ul .li-child6 a span {
+    padding-left: 30px;
+  }
   /* PC端航班选择 */
   .pc-section-main .select-air-com > div > input {
     font-size: 16px;
@@ -2473,7 +2479,7 @@ body {
     padding-right: 6px;
     margin-right: 0;
   }
-  .flight-com .select-way .one-way {
+  .flight-com .select-way .round-trip {
     margin-left: 8px;
     margin-right: 8px;
   }
@@ -2780,6 +2786,9 @@ body {
     background: url('../../images/EN/svg/news-icon-active.svg') center 30% no-repeat;
   }
   .lm-aside-flight > ul .li-child5 .pc-news {
+    display: none;
+  }
+  .lm-aside-flight > ul .li-child6 {
     display: none;
   }
   .popup-title-wrap {

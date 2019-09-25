@@ -1061,7 +1061,7 @@ var LanmeiAirlines = {
 		
 		/* 日期选择 */
 		var that = this;
-		this.dateSelect(false,'.js-date-result','.js-popup-date',false,$box,$dateBox,$peopleBox,'Choose your departure date :','Choose your return date :');
+		this.dateSelect(true,'.js-date-result','.js-popup-date',false,$box,$dateBox,$peopleBox,'Choose your departure date :','Choose your return date :');
 		
 		/* 单程往返切换 */
 		$('.js-ticket-radio label').click(function(e){
@@ -1432,7 +1432,7 @@ var LanmeiAirlines = {
 		this.autoComplete('.js-city-search');
 
 		// 日期选择
-		this.mDateSelect(false,'.js-date-result','.js-popup-date',false);
+		this.mDateSelect(true,'.js-date-result','.js-popup-date',false);
 		$date.click(function(event) {
 			$('.js-popup-content>div').hide(); //初始化隐藏出发地、目的地、日期、人数
 			$('.js-popup-date').show();

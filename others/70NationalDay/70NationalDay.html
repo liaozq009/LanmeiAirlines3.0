@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>庆祝中华人民共和国成立70周年</title>
+  <style>
+    #fileList {
+      display: none;
+    }
+    button {
+      display: inline-block;
+      line-height: 1;
+      white-space: nowrap;
+      cursor: pointer;
+      background: #fff;
+      border: 1px solid #dcdfe6;
+      color: #606266;
+      -webkit-appearance: none;
+      text-align: center;
+      box-sizing: border-box;
+      outline: none;
+      margin: 0;
+      transition: .1s;
+      font-weight: 500;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      padding: 12px 20px;
+      font-size: 14px;
+      border-radius: 4px;
+      color: #fff;
+      background-color: #409eff;
+      border-color: #409eff;
+    }
+    .download {
+      background-color:#67c23a;
+      border-color: #67c23a;
+      margin-left: 10px;
+    }
+    .img-wrap {
+      position: relative;
+      width: 320px;
+      margin: 80px auto 0;
+      text-align: center;
+    }
+    .img-wrap a {
+      position: absolute;
+      top: 46%;
+      font-size: 30px;
+      color: #67C23A;
+      text-decoration: none;
+    }
+    .prev-img {
+      left: -20px;
+    }
+    .next-img {
+      right: -20px;
+    }
+    .operation-wrap {
+      width: 320px;
+      margin: 20px auto;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="img-wrap">
+    <a href="javascript:;" class="prev-img" onclick="prevImg()">《</a>
+    <a href="javascript:;" class="next-img" onclick="nextImg()">》</a>
+    <canvas id="canvas"></canvas>
+  </div>
+
+  <div class="operation-wrap">
+    <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this)" style="display:none;">
+    <div id="fileList" style="width:200px;height:200px; border:1px solid #ccc;"></div>
+    <button onclick="submitImg1('img1')">上传头像</button>
+    <button onclick="submitImg2('img2')" style="display:none;">上传相框</button>
+    <button class="download" onclick="download()">下载canvas</button>
+    <img src="./70Yimgs/01.png" id="bg" style="display:none;">
+    <img src="./70Yimgs/codeImg01.png" id="codeImg" style="display:none;">
+  </div>
+  <script>
+    /** 切换背景图片 */
+    let count = 1;
+    function prevImg() {
+      count--;
+      if(count > 4) {
+        count = 1;
+      }else if(count <1 ) {
+        count = 4;
+      }
+      let src = `./70Yimgs/codeImg0${count}.png`;
+      document.getElementById('codeImg').src = src;
+    }
+    function nextImg() {
+      count++;
+      if(count > 4) {
+        count = 1;
+      }else if(count <1 ) {
+        count = 4;
+      }
+      let src = `./70Yimgs/codeImg0${count}.png`;
+      document.getElementById('codeImg').src = src;
+    }
+    
+    /** 给图片src赋值 */
+    function srcVal(data,src) {
+      if (data == 'img1') {
+          document.getElementById('bg').src = src;
+          canvasImg()
+        } else if (data == 'img2') {
+          document.getElementById('codeImg').src = src;
+          canvasImg()
+        }
+    }
+    /** 上传图片 */
+    window.URL = window.URL || window.webkitURL;
+    var fileElem = document.getElementById("fileElem"),
+      fileList = document.getElementById("fileList");
+
+    function handleFiles(obj) {
+      var data = obj.attributes["data"].nodeValue;
+      var files = obj.files,
+        img = new Image();
+      if (window.URL) {
+        //File API
+        // alert(files[0].name + "," + files[0].size + " bytes");
+        img.src = window.URL.createObjectURL(files[0]); //创建一个object URL，并不是你的本地路径
+
+        // 给图片src赋值
+        srcVal(data,window.URL.createObjectURL(files[0]));
+
+        img.width = 200;
+        img.onload = function (e) {
+          window.URL.revokeObjectURL(this.src); //图片加载后，释放object URL
+        }
+        fileList.appendChild(img);
+      } else if (window.FileReader) {
+        //opera不支持createObjectURL/revokeObjectURL方法。用FileReader对象来处理
+        var reader = new FileReader();
+        reader.readAsDataURL(files[0]);
+        reader.onload = function (e) {
+          // alert(files[0].name + "," + e.total + " bytes");
+          img.src = this.result;
+          img.width = 200;
+          fileList.appendChild(img);
+        }
+      } else {
+        //ie
+        obj.select();
+        obj.blur();
+        var nfile = document.selection.createRange().text;
+        document.selection.empty();
+        img.src = nfile;
+        img.width = 200;
+        img.onload = function () {
+          // alert(nfile + "," + img.fileSize + " bytes");
+        }
+        fileList.appendChild(img);
+      }
+    }
+    function submitImg1(img) {
+      fileElem.setAttribute('data', img);
+      fileElem.click();
+    }
+    function submitImg2(img) {
+      fileElem.setAttribute('data', img);
+      fileElem.click();
+    }
+
+    /** 生成和下载图片 */
+    var canvas = "";
+    function canvasImg() {
+      var bg = document.getElementById("bg");
+      var code = document.getElementById("codeImg");
+
+      canvas = document.getElementById("canvas");
+      canvas.width = 280;
+      canvas.height = 280;
+      var ctx = canvas.getContext("2d");
+      bg.onload = function () {
+        ctx.drawImage(bg, 0, 0, 280, 280);
+        ctx.drawImage(code, 0, 0, 280, 280);
+      };
+      code.onload = function () {
+        ctx.drawImage(bg, 0, 0, 280, 280);
+        ctx.drawImage(code, 0, 0, 280, 280);
+      };
+    }
+    canvasImg();
+
+    /** 下载canvas */
+    var saveFile = function (data, filename) {
+      var save_link = document.createElementNS('http://www.w3.org/1999/xhtml', 'a');
+      save_link.href = data;
+      save_link.download = filename;
+
+      var event = document.createEvent('MouseEvents');
+      event.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+      save_link.dispatchEvent(event);
+    }
+    function download() {
+      var date = new Date();
+      var year = date.getFullYear();
+      var month = date.getMonth() + 1;
+      var day = date.getDate();
+      var hour = date.getHours();
+      var minute = date.getMinutes();
+      var second = date.getSeconds();
+
+      var dataURL = canvas.toDataURL("image/png");
+      saveFile(dataURL, `NationalDay${year + '' + month + '' + day + '' + hour + '' + minute + '' + second}.jpg`);
+    }
+  </script>
+</body>
+
+</html>
