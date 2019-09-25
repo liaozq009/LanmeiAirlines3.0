@@ -43,7 +43,7 @@
     .img-wrap {
       position: relative;
       width: 320px;
-      margin: 80px auto 0;
+      margin: 0 auto;
       text-align: center;
     }
     .img-wrap a {
@@ -64,10 +64,17 @@
       margin: 20px auto;
       text-align: center;
     }
+    h1 {
+      margin-top: 60px;
+      margin-bottom: 20px;
+      font-size: 20px;
+      text-align: center;
+    }
   </style>
 </head>
 
 <body>
+  <h1>庆祝中华人民共和国成立70周年</h1>
   <div class="img-wrap">
     <a href="javascript:;" class="prev-img" onclick="prevImg()">《</a>
     <a href="javascript:;" class="next-img" onclick="nextImg()">》</a>
@@ -79,7 +86,7 @@
     <div id="fileList" style="width:200px;height:200px; border:1px solid #ccc;"></div>
     <button onclick="submitImg1('img1')">上传头像</button>
     <button onclick="submitImg2('img2')" style="display:none;">上传相框</button>
-    <button class="download" onclick="download()">下载canvas</button>
+    <button class="download" onclick="download()">下载头像</button>
     <img src="./70Yimgs/01.png" id="bg" style="display:none;">
     <img src="./70Yimgs/codeImg01.png" id="codeImg" style="display:none;">
   </div>
