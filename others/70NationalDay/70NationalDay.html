@@ -153,6 +153,10 @@
         reader.onload = function (e) {
           // alert(files[0].name + "," + e.total + " bytes");
           img.src = this.result;
+
+          // 给图片src赋值
+          srcVal(data,this.result);
+
           img.width = 200;
           fileList.appendChild(img);
         }
@@ -163,6 +167,10 @@
         var nfile = document.selection.createRange().text;
         document.selection.empty();
         img.src = nfile;
+
+        // 给图片src赋值
+        srcVal(data,nfile);
+
         img.width = 200;
         img.onload = function () {
           // alert(nfile + "," + img.fileSize + " bytes");
