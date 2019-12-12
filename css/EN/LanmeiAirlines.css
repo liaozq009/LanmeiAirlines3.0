@@ -48,8 +48,8 @@
   filter: none;
 }
 .transition3 {
-  transition: all .3s;
-  -webkit-transition: all .3s;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
 }
 /* 公共样式 */
 input {
@@ -173,13 +173,13 @@ body {
 }
 .lm-aside-code .facebook-icon a {
   color: #D2D5DE;
-  transition: all .3s;
-  -webkit-transition: all .3s;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
 }
 .lm-aside-code .facebook-icon a:hover {
   color: #8ec060;
-  transition: all .3s;
-  -webkit-transition: all .3s;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
 }
 .lm-aside-code .facebook-icon .img-2 {
   margin-left: 50px;
@@ -204,7 +204,7 @@ body {
   font-size: 16px;
   font-family: CamptonBookBold;
   color: #000;
-  opacity: .5;
+  opacity: 0.5;
   filter: alpha(opacity=50);
   margin-top: 50px;
   margin-left: 20px;
@@ -244,13 +244,13 @@ body {
   color: #1f2c5c;
   font-size: 14px;
   font-family: CamptonBookBold;
-  transition: all .3s;
-  -webkit-transition: all .3s;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
 }
 .lm-important > a:hover {
   color: #8ec060;
-  transition: all .3s;
-  -webkit-transition: all .3s;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
 }
 .lm-important > ul {
   height: 26px;
@@ -268,13 +268,13 @@ body {
 }
 .lm-important > ul > li > a {
   color: rgba(31, 44, 92, 0.7);
-  transition: all .3s;
-  -webkit-transition: all .3s;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
 }
 .lm-important > ul > li > a:hover {
   color: #8ec060;
-  transition: all .3s;
-  -webkit-transition: all .3s;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
 }
 /* 航班选择公共样式 */
 .flight-com {
@@ -291,15 +291,15 @@ body {
   filter: alpha(opacity=50);
   color: #fff;
   font-size: 24px;
-  animation-delay: .3s;
-  -webkit-animation-delay: .3s;
+  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
   /* Safari 和 Chrome */
 }
 .flight-com .select-way {
   margin-top: 0;
   overflow: hidden;
-  transition: all .6s;
-  -webkit-transition: all .6s;
+  transition: all 0.6s;
+  -webkit-transition: all 0.6s;
 }
 .flight-com .select-way > a {
   display: inline-block;
@@ -312,14 +312,14 @@ body {
   background: #fff;
   box-shadow: 0 0 50px 0 rgba(31, 44, 92, 0.1);
   border-radius: 2px;
-  transition: all .3s;
-  -webkit-transition: all .3s;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
 }
 .flight-com .select-way > a:hover {
   background: #8ec060;
   color: #fff;
-  transition: all .3s;
-  -webkit-transition: all .3s;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
 }
 .flight-com .select-way .active {
   background: #8ec060;
@@ -407,36 +407,36 @@ body {
 }
 .select-air-com .to-com {
   visibility: visible;
-  animation-delay: .2s;
-  -webkit-animation-delay: .2s;
+  animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
   /* Safari 和 Chrome */
 }
 .select-air-com .route-from-box {
   visibility: visible;
-  animation-delay: .3s;
-  -webkit-animation-delay: .3s;
+  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
   /* Safari 和 Chrome */
 }
 .select-air-com .route-to-box {
   visibility: visible;
-  animation-delay: .2s;
-  -webkit-animation-delay: .2s;
+  animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
   /* Safari 和 Chrome */
 }
 .select-air-com .route-date-box {
   visibility: visible;
-  animation-delay: .6s;
-  -webkit-animation-delay: .6s;
+  animation-delay: 0.6s;
+  -webkit-animation-delay: 0.6s;
   /* Safari 和 Chrome */
 }
 .select-air-com .date-com-2 {
-  animation-delay: .2s;
-  -webkit-animation-delay: .2s;
+  animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
   /* Safari 和 Chrome */
 }
 .select-air-com .date-com-3 {
-  animation-delay: .4s;
-  -webkit-animation-delay: .4s;
+  animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
   /* Safari 和 Chrome */
 }
 .select-air-com .local-change {
@@ -482,8 +482,8 @@ body {
 }
 .select-air-com .people-com {
   margin-right: 0;
-  animation-delay: .6s;
-  -webkit-animation-delay: .6s;
+  animation-delay: 0.6s;
+  -webkit-animation-delay: 0.6s;
   /* Safari 和 Chrome */
 }
 .select-air-com .people-com .t-people-result {
@@ -585,7 +585,7 @@ body {
   background: #000;
 }
 .lm-flight-mask2 {
-  opacity: .1;
+  opacity: 0.1;
   filter: alpha(opacity=10);
   z-index: 10;
 }
@@ -661,13 +661,13 @@ body {
   margin: 0 auto;
   padding: 5px;
   background: #1f2c5c;
-  transition: all .3s;
-  -webkit-transition: all .3s;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
 }
 .bus-download-wrap .bus-code-wrap .download-code-btn:hover {
   background: #8ec060;
-  transition: all .3s;
-  -webkit-transition: all .3s;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
 }
 .bus-download-wrap .bus-code-wrap .download-code-tips {
   display: none;
@@ -738,13 +738,13 @@ body {
   float: left;
   width: 25%;
   text-align: center;
-  transition: all .3s;
-  -webkit-transition: all .3s;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
 }
 .lm-section-service ul > li:hover p {
   color: #8ec060;
-  transition: all .3s;
-  -webkit-transition: all .3s;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
 }
 .lm-section-service ul > li a p {
   margin-top: 20px;
@@ -812,8 +812,8 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: all .3s;
-  -webkit-transition: all .3s;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
 }
 .lm-section-hotel .hotel-content .nth-child4 {
   margin-right: 0;
@@ -904,7 +904,7 @@ body {
   color: #767E9C;
 }
 .ie8 .lm-section-hotel .hotel-com:hover .hotel-img > b {
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F1f2c5c, 5c, endColorstr=#7F1f2c5c, 5c);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F1f2c5c, endColorstr=#7F1f2c5c);
 }
 .ie8 .lm-section-news .news-detail .news-arrow .news-arrow-box > p {
   color: #C8C9CC;
@@ -916,7 +916,7 @@ body {
   color: #999;
 }
 .ie8 .lm-section-news .news-mask {
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000, 0, endColorstr=#7F000000, 0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000, endColorstr=#7F000000);
 }
 .ie8 .daterangepicker {
   width: 588px;
@@ -1087,14 +1087,14 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
   }
   .popup-content .popup-airport .flight-list-wrap > li:hover {
     color: #8ec060;
     background: url('../../images/EN/city-icon-active.png') left center no-repeat;
-    transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
   }
   .popup-content .popup-airport .flight-list-wrap > li > span {
     color: #1f2c5c;
@@ -1204,6 +1204,13 @@ body {
   .popup-content .popup-people .s-infant .people-prompt .p1 {
     background: url('../../images/EN/infant-icon.png') left center no-repeat;
   }
+  .popup-content .popup-people .infant-buy-tips {
+    padding: 20px 10px 0;
+  }
+  .popup-content .popup-people .infant-buy-tips span {
+    word-break: break-all;
+    color: #00908C;
+  }
   .popup-content .popup-people .people-prompt {
     float: left;
   }
@@ -1254,8 +1261,8 @@ body {
     height: 42px;
     color: #fff;
     border-radius: 2px;
-    transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
   }
   .popup-content .popup-people .people-number .add-people {
     float: right;
@@ -1263,8 +1270,8 @@ body {
   }
   .popup-content .popup-people .people-number .add-people:hover {
     background: url('../../images/EN/add-people.png') center no-repeat rgba(255, 255, 255, 0.7);
-    transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
   }
   .popup-content .popup-people .people-number .sub-people {
     float: left;
@@ -1272,8 +1279,8 @@ body {
   }
   .popup-content .popup-people .people-number .sub-people:hover {
     background: url('../../images/EN/sub-people.png') center no-repeat rgba(255, 255, 255, 0.7);
-    transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
   }
   .popup-content .popup-people .people-number .off-sub-operation {
     background: url('../../images/EN/sub-people.png') center no-repeat rgba(255, 255, 255, 0.1);
@@ -1305,16 +1312,16 @@ body {
   }
   .popup-content .popup-people .disable .add-people:hover {
     background: url('../../images/EN/add-people.png') center no-repeat rgba(31, 44, 92, 0.7);
-    transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
   }
   .popup-content .popup-people .disable .sub-people {
     background: url('../../images/EN/sub-people.png') center no-repeat rgba(31, 44, 92, 0.3);
   }
   .popup-content .popup-people .disable .sub-people:hover {
     background: url('../../images/EN/sub-people.png') center no-repeat rgba(31, 44, 92, 0.7);
-    transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
   }
   .popup-content .popup-people .disable .off-sub-operation {
     background: url('../../images/EN/sub-people.png') center no-repeat rgba(31, 44, 92, 0.1);
@@ -1339,8 +1346,8 @@ body {
     padding: 20px;
     transition: width 0.2s ease-out;
     -webkit-transition: width 0.2s ease-out;
-    animation-delay: .3s;
-    -webkit-animation-delay: .3s;
+    animation-delay: 0.3s;
+    -webkit-animation-delay: 0.3s;
   }
   .popup-content .hotel-popus-people .s-room-com {
     padding: 0;
@@ -1490,13 +1497,13 @@ body {
     color: rgba(31, 44, 92, 0.3);
     background: url('../../images/EN/add-rooms.png') 20px center no-repeat #fff;
     cursor: pointer;
-    transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
   }
   .popup-content .hotel-popus-people .add-rooms-wrap .add-rooms-btn:hover {
     color: rgba(31, 44, 92, 0.7);
-    transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
   }
   .popup-content .th-popus-people {
     width: 340px;
@@ -1652,13 +1659,13 @@ body {
   }
   .pc-nav-container .m-nav-3 > ul > li a {
     color: rgba(31, 44, 92, 0.7);
-    transition: color .3s;
-    -webkit-transition: color .3s;
+    transition: color 0.3s;
+    -webkit-transition: color 0.3s;
   }
   .pc-nav-container .m-nav-3 > ul > li a:hover {
     color: #8ec060;
-    transition: color .3s;
-    -webkit-transition: color .3s;
+    transition: color 0.3s;
+    -webkit-transition: color 0.3s;
   }
   .pc-nav-container .m-nav-3 .three-f-list-2.nth-child1,
   .pc-nav-container .m-nav-3 .three-f-list-2.nth-child2,
@@ -1832,8 +1839,8 @@ body {
     filter: alpha progid:DXImageTransform.Microsoft.gradient(startcolorstr=#B4EC80, endcolorstr=#00908C, gradientType=1);
     /*ie8*/
     /*ie9*/
-    transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
   }
   .pc-section-main .search-flight-wrap .flight-search :root .gradient {
     filter: none;
@@ -1847,8 +1854,8 @@ body {
     filter: alpha progid:DXImageTransform.Microsoft.gradient(startcolorstr=#8EC060, endcolorstr=#00908C, gradientType=1);
     /*ie8*/
     /*ie9*/
-    transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
   }
   .pc-section-main .search-flight-wrap .flight-search:hover :root .gradient {
     filter: none;
@@ -1916,18 +1923,18 @@ body {
     position: absolute;
     top: 65px;
     right: 30px;
-    animation-delay: .8s;
-    -webkit-animation-delay: .8s;
+    animation-delay: 0.8s;
+    -webkit-animation-delay: 0.8s;
   }
   /* 澜湄酒店 */
   .lm-section-hotel .hotel-content > li > a {
-    transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
   }
   .lm-section-hotel .hotel-content > li:hover > a {
     background: rgba(31, 44, 92, 0.29);
-    transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
   }
   .lm-section-hotel .hotel-content > li:hover .hotel-bg-img {
     transform: scale(1.2);
@@ -1935,8 +1942,8 @@ body {
     -webkit-transform: scale(1.1, 1.1);
     transform-origin: center;
     -webkit-transform-origin: center;
-    transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
   }
   /* 澜湄banner */
   .lm-section-banner .banner a:hover img {
@@ -1945,12 +1952,12 @@ body {
     -webkit-transform: scale(1.1, 1.1);
     transform-origin: center;
     -webkit-transform-origin: center;
-    transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
   }
   .lm-section-banner .banner a img {
-    transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
   }
   /* 日期样式 */
   .daterangepicker.ltr {
@@ -2081,16 +2088,16 @@ body {
     margin-right: 10px;
     border-radius: 50%;
     visibility: hidden;
-    transition: visibility .1s;
-    -webkit-transition: visibility .1s;
+    transition: visibility 0.1s;
+    -webkit-transition: visibility 0.1s;
   }
   .nav-container .m-nav-1 > li > a {
     font-size: 20px;
     color: #fff;
-    opacity: .7;
+    opacity: 0.7;
     filter: alpha(opacity=70);
-    transition: opacity .3s;
-    -webkit-transition: opacity .3s;
+    transition: opacity 0.3s;
+    -webkit-transition: opacity 0.3s;
   }
   .nav-container .m-nav-1 > li:hover > i {
     visibility: visible;
@@ -2136,16 +2143,16 @@ body {
     background: #fff;
     margin-right: 10px;
     visibility: hidden;
-    transition: visibility .1s;
-    -webkit-transition: visibility .1s;
+    transition: visibility 0.1s;
+    -webkit-transition: visibility 0.1s;
   }
   .nav-container .m-nav-2 li > a {
     font-size: 20px;
     color: #fff;
-    opacity: .7;
+    opacity: 0.7;
     filter: alpha(opacity=70);
-    transition: opacity .3s;
-    -webkit-transition: opacity .3s;
+    transition: opacity 0.3s;
+    -webkit-transition: opacity 0.3s;
   }
   .nav-container .m-nav-2 li:hover > i {
     visibility: visible;
@@ -2185,10 +2192,10 @@ body {
   .nav-container .m-nav-3 li > a {
     font-size: 20px;
     color: #fff;
-    opacity: .7;
+    opacity: 0.7;
     filter: alpha(opacity=70);
-    transition: opacity .3s;
-    -webkit-transition: opacity .3s;
+    transition: opacity 0.3s;
+    -webkit-transition: opacity 0.3s;
   }
   .nav-container .m-nav-3 li:hover > a {
     opacity: 1;
@@ -2313,13 +2320,13 @@ body {
     margin-top: 10px;
     margin-left: 10px;
     padding-left: 40px;
-    transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
   }
   .lm-nav-wrap .nav-container .nav-settings .h-lang .lang-menu > a:hover {
     color: #8ec060;
-    transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
   }
   .lm-nav-wrap .nav-container .nav-settings .h-lang .lang-menu .lang-en {
     margin-top: 0;
@@ -2364,9 +2371,9 @@ body {
   .lm-nav-wrap .nav-container .nav-settings .customer-service .phone-menu {
     display: none;
     position: absolute;
-    top: -40px;
+    top: -50px;
     width: 180px;
-    height: 90px;
+    height: auto;
     border-radius: 2px;
     background: #fff;
     padding: 10px;
@@ -2708,8 +2715,8 @@ body {
     transform-origin: top;
     -webkit-animation: fadeInUp 1.5s;
     animation: fadeInUp 1.5s;
-    animation-delay: .6s;
-    -webkit-animation-delay: .6s;
+    animation-delay: 0.6s;
+    -webkit-animation-delay: 0.6s;
   }
   .lm-aside-flight > ul {
     border-radius: 2px;
@@ -2837,7 +2844,7 @@ body {
     transform: translateY(100%);
     visibility: hidden;
     transition: visibility 0s 0.3s, -webkit-transform 0.3s;
-    transition: transform .3s,visibility 0s .3s;
+    transition: transform 0.3s, visibility 0s 0.3s;
     transition: transform 0.3s, visibility 0s 0.3s, -webkit-transform 0.3s;
     -webkit-overflow-scrolling: touch;
   }
@@ -2964,8 +2971,8 @@ body {
     height: 42px;
     color: #fff;
     border-radius: 2px;
-    transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
   }
   .popup-content .popup-people .people-number .add-people {
     float: right;
@@ -2973,8 +2980,8 @@ body {
   }
   .popup-content .popup-people .people-number .add-people:hover {
     background: url('../../images/EN/add-people.png') center no-repeat rgba(255, 255, 255, 0.7);
-    transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
   }
   .popup-content .popup-people .people-number .sub-people {
     float: left;
@@ -2982,8 +2989,8 @@ body {
   }
   .popup-content .popup-people .people-number .sub-people:hover {
     background: url('../../images/EN/sub-people.png') center no-repeat rgba(255, 255, 255, 0.7);
-    transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
   }
   .popup-content .popup-people .people-number .off-sub-operation {
     background: url('../../images/EN/sub-people.png') center no-repeat rgba(255, 255, 255, 0.1);
@@ -3015,16 +3022,16 @@ body {
   }
   .popup-content .popup-people .disable .add-people:hover {
     background: url('../../images/EN/add-people.png') center no-repeat rgba(31, 44, 92, 0.7);
-    transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
   }
   .popup-content .popup-people .disable .sub-people {
     background: url('../../images/EN/sub-people.png') center no-repeat rgba(31, 44, 92, 0.3);
   }
   .popup-content .popup-people .disable .sub-people:hover {
     background: url('../../images/EN/sub-people.png') center no-repeat rgba(31, 44, 92, 0.7);
-    transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
   }
   .popup-content .popup-people .disable .off-sub-operation {
     background: url('../../images/EN/sub-people.png') center no-repeat rgba(31, 44, 92, 0.1);
@@ -3044,6 +3051,13 @@ body {
     position: relative;
     z-index: 3;
     padding: 0 20px 20px;
+  }
+  .popup-content .popup-people .infant-buy-tips {
+    padding: 20px;
+  }
+  .popup-content .popup-people .infant-buy-tips span {
+    word-break: break-all;
+    color: #00908C;
   }
   .popup-content .popup-people .m-select-people {
     position: absolute;
@@ -3068,8 +3082,8 @@ body {
     padding-top: 0 12px 20px 20px;
     transition: width 0.2s ease-out;
     -webkit-transition: width 0.2s ease-out;
-    animation-delay: .3s;
-    -webkit-animation-delay: .3s;
+    animation-delay: 0.3s;
+    -webkit-animation-delay: 0.3s;
   }
   .popup-content .hotel-popus-people .people-prompt {
     width: 120px;
@@ -3316,7 +3330,7 @@ body {
     -webkit-transform: translateY(-150px);
     transform: translateY(-150px);
     transition: -webkit-transform 0.3s;
-    transition: transform .3s;
+    transition: transform 0.3s;
     transition: transform 0.3s, -webkit-transform 0.3s;
   }
   .daterangepicker {

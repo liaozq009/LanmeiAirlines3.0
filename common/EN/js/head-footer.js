@@ -9,6 +9,7 @@ $(document).ready(function($) {
 							'<div class="phone-menu js-phone-menu">'+
 								'<h2>Hotline:</h2>'+
 								'<p class="p1">+855 23981363</p>'+
+								'<p class="p2">+855 15331852</p>'+
 							'</div>'+
 						'</div>'+
 						'<div class="v-line"></div>'+
